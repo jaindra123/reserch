@@ -1,0 +1,25 @@
+uuid: 974a98ed-1454-4a6f-afee-094ac955a2f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.matching_user_question
+    - paragraphs.paragraphs_type.quiz_matching_answer
+_core:
+  default_config_hash: XDfAlYqm5TMzc7GFTV5FuQ2lZLdycq-Wy5NbdJ2qyOg
+id: paragraph.quiz_matching_answer.matching_user_question
+field_name: matching_user_question
+entity_type: paragraph
+bundle: quiz_matching_answer
+label: matching_user_question
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

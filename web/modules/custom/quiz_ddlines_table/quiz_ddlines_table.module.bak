@@ -1,0 +1,93 @@
+<?php
+use Drupal\Core\Entity\BundleEntityFormBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\quiz\Entity\QuizQuestionType;
+use Symfony\Component\HttpFoundation\Cookie;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_help().
+ */
+function quiz_ddlines_table_help($path, $args) {
+  if ($path == 'admin/help#quiz_ddlines_table') {
+    return t("Help text TBD");
+  }
+}
+
+
+/**
+ * Implements hook_quiz_question_info().
+ */
+function quiz_ddlines_table_quiz_question_info() {
+  return array(
+    'quiz_ddlines_table' => array(
+      'name' => t('Drag and drop table question with lines'),
+      'description' => t('This provides drag and drop table question types with lines for the Quiz module.'),
+      'question provider' => 'DDLinesTableQuestion',
+      'response provider' => 'DDLinesTableResponse',
+      'module' => 'quiz_question', // All wrapper functions are in that module.
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function quiz_ddlines_table_theme() {
+  // Theme function for quiz question feedback.
+  return array(
+    'quiz_question_feedback__quiz_ddlines_table' => array(
+      'variables' => array('metadata' => NULL, 'data' => NULL),
+      'path' => drupal_get_path('module', 'quiz_ddlines_table') . '/theme',
+     // 'file' => 'quiz_ddlines_table.theme.inc',
+    ),
+  );
+}
+
+
+/**
+ * A Custom function to include necessary js and css.
+ */
+function quiz_ddlines_table_add_js_and_css() {
+  $module_path = drupal_get_path('module', 'quiz_ddlines_table');
+}
+
+
+/**
+ * Implements hook_entity_update().
+ *
+ * Set configuration.
+ */
+
+function quiz_ddlines_table_entity_update(EntityInterface $entity) {
+    $all_values = $_COOKIE;
+    $all_dragged_values = $all_values['draggedData'];
+    if (empty($all_dragged_values)) {
+      return false;
+    }
+    $arr = array(
+      'bundle' => 'ddlines_table',
+      'deleted' => 0,
+      'entity_id' => $entity->id(),
+      'revision_id' => $entity->id(),
+      'langcode' => 'und',
+      'delta' => 0,
+      'field_drag_drop_tb_ans_res_value' => $all_dragged_values,
+    );
+     print_r($arr);
+    die();
+    $conn = \Drupal::database();
+    $conn->insert('quiz_result_answer__field_drag_drop_tb_ans_res')->fields($arr)->execute();
+
+    if (!$entity instanceof QuizQuestionType) {
+      return;
+    }
+ 
+  if($entity->bundle() == 'drag_and_drop_table') {
+    $config = Drupal::configFactory()->getEditable('quiz_ddlines_table.settings');
+    $config->set('scoring', $entity->scoring);
+    $config->save();
+  }
+}
+

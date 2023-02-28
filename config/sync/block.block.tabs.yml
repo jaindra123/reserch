@@ -1,0 +1,30 @@
+uuid: 25cc83e3-1f2a-412d-95eb-4fe09924bb1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - research
+id: tabs
+theme: research
+region: tabs
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: visible
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      bloomsbury_editor: bloomsbury_editor

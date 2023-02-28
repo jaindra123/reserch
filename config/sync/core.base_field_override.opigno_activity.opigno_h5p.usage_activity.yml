@@ -1,0 +1,22 @@
+uuid: f21e5710-5602-4bb0-971a-e27ff3a9b627
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_h5p
+  module:
+    - options
+id: opigno_activity.opigno_h5p.usage_activity
+field_name: usage_activity
+entity_type: opigno_activity
+bundle: opigno_h5p
+label: 'Usage of activity'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: local
+default_value_callback: ''
+settings: {  }
+field_type: list_string

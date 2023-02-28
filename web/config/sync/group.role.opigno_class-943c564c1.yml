@@ -1,0 +1,17 @@
+uuid: c8f40d47-f227-4fb3-ab82-a664c8049a57
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_class
+  enforced:
+    config:
+      - user.role.institute
+id: opigno_class-943c564c1
+label: Institute
+weight: 3
+internal: true
+audience: outsider
+group_type: opigno_class
+permissions_ui: false
+permissions: {  }

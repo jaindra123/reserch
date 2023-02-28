@@ -1,0 +1,8 @@
+quiz_ddlines.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    quiz_ddlines_feedback_correct:
+      type: string
+    quiz_ddlines_feedback_wrong:
+      type: string

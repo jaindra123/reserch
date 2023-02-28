@@ -1,0 +1,28 @@
+uuid: 6a8a0701-ab58-40d0-baba-9a0c00693c9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_parent
+    - node.type.modules_content_type
+id: node.modules_content_type.field_select_parent
+field_name: field_select_parent
+entity_type: node
+bundle: modules_content_type
+label: 'Select Parent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      modules_content_type: modules_content_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: faqs
+field_type: entity_reference

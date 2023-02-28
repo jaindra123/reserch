@@ -1,0 +1,24 @@
+uuid: 083131f0-d4e0-4082-8c0d-5fe258f47f69
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: BhMwbaI867x1EpoWB7POvIUzAutO8c5eclfn5ADcI90
+id: quiz_question.answer_text_processing
+field_name: answer_text_processing
+entity_type: quiz_question
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

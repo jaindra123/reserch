@@ -1,0 +1,21 @@
+uuid: 99312194-49cf-4d65-bd63-a74f42f9b133
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.embed
+  module:
+    - text
+id: paragraph.embed.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: embed
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div class="container search-page">
+  <div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {{ title }}
+    {{ title_suffix }}
+      <div class="text-center">
+        {{ exposed }}
+      </div>
+        {{ header }}
+      <ul class="tabs">
+        <li{% if query_type is empty or query_type == 'All' %} class="active" {% endif %}>
+          <a href="/search?keyword={{ keyword }}">ALL results ({{ all_search_count }})</a>
+        </li>
+          <li {% if query_type == 'modules_content_type'%} class="active" {% endif %}>
+          <a href="/search?type=modules_content_type&keyword={{ keyword }}&type_display=Modules">Module & Sub Modules ({{ modules_content_type_search_count }})</a>
+        </li>
+        <li {% if query_type == 'topic' %} class="active" {% endif %}>
+          <a href="/search?type=topic&keyword={{ keyword }}&type_display=Topic">Topic ({{ topic_search_count }})</a>
+        </li>
+        <li {% if query_type == 'practice' %} class="active" {% endif %}>
+          <a href="/search?type=practice&keyword={{ keyword }}&type_display=Practice">Practice ({{ practice_search_count }})</a>
+        </li>
+        <li {% if query_type == 'faqs' %} class="active" {% endif %}>
+          <a href="/search?type=faqs&keyword={{ keyword }}&type_display=FAQs">FAQs  ({{ faqs_search_count }})</a>
+        </li>
+      </ul>
+        {% if rows -%}
+        <div class="search-content">
+          {{ rows }}
+        </div>
+        {% elseif empty -%}
+        {% if query_type is empty or query_type == 'All' %}
+         {% if  all_search_count <= 0 %}
+          <div class="search-content"><p>No results for <b>{{ keyword }}</b>.</p></div>
+         {% else %}
+          {{ empty }}
+        
+        {% endif %}
+
+
+          {% else %}
+          {{ empty }}
+        
+        {% endif %}
+        {% endif %}
+        {{ pager }}
+        {{ attachment_after }}
+        {{ more }}
+        {% if footer %}
+          <footer>
+            {{ footer }}
+          </footer>
+        {% endif %}
+      {{ feed_icons }}
+    </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+uuid: 225ed86c-5dbe-4163-b5ef-b3ebd36b6d88
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a5a955c1-e0aa-4e91-8707-efe9ee83a8fc'
+  module:
+    - block_content
+  theme:
+    - research
+id: videodescription
+theme: research
+region: video_description
+weight: 0
+provider: null
+plugin: 'block_content:a5a955c1-e0aa-4e91-8707-efe9ee83a8fc'
+settings:
+  id: 'block_content:a5a955c1-e0aa-4e91-8707-efe9ee83a8fc'
+  label: 'Video Description'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

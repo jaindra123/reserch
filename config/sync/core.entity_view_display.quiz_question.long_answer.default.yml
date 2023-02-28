@@ -1,0 +1,72 @@
+uuid: a822580d-368a-4167-ad39-c35869357033
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.long_answer.answer_text_processing
+    - field.field.quiz_question.long_answer.field_accordion_collapsed
+    - field.field.quiz_question.long_answer.field_click_to_reveal
+    - field.field.quiz_question.long_answer.field_link
+    - field.field.quiz_question.long_answer.field_question_title_name
+    - field.field.quiz_question.long_answer.field_upload_document
+    - field.field.quiz_question.long_answer.field_visibility_mode
+    - field.field.quiz_question.long_answer.long_answer_rubric
+    - quiz.question.type.long_answer
+  module:
+    - file
+    - link
+    - text
+  enforced:
+    module:
+      - quiz_long_answer
+_core:
+  default_config_hash: p1EQpf8t-6PJDzjUsUJYsJ2IQLYG0J_M9SdzuV34cbE
+id: quiz_question.long_answer.default
+targetEntityType: quiz_question
+bundle: long_answer
+mode: default
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_click_to_reveal:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_upload_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  answer_text_processing: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_accordion_collapsed: true
+  field_question_title_name: true
+  field_visibility_mode: true
+  long_answer_rubric: true
+  search_api_excerpt: true

@@ -1,0 +1,6 @@
+title: 'Administrator hub'
+description:
+  value: "<p>main description</p>\r\n"
+  format: full_html
+bottom_title: 'bottom title'
+not: -1

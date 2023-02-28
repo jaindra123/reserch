@@ -1,0 +1,14 @@
+uuid: 9c3bc786-9639-4fc7-beb5-d5851c5651ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bloomsbury_staff
+  module:
+    - user
+id: user_remove_role_action.bloomsbury_staff
+label: 'Remove the Bloomsbury staff role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bloomsbury_staff

@@ -1,0 +1,25 @@
+uuid: b688035a-71c7-4c77-b9ef-457d18eddb72
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3391aa28-9375-406f-ad20-6eaa9e52a54f'
+  module:
+    - block_content
+  theme:
+    - research
+id: administratorhubinstitute
+theme: research
+region: administrator_hub_institute
+weight: 0
+provider: null
+plugin: 'block_content:3391aa28-9375-406f-ad20-6eaa9e52a54f'
+settings:
+  id: 'block_content:3391aa28-9375-406f-ad20-6eaa9e52a54f'
+  label: 'Administrator Hub Institute'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

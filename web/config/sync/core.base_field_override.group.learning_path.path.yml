@@ -1,0 +1,20 @@
+uuid: 9aeed645-4f9d-4620-8723-6f3dda9ecd67
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+  module:
+    - path
+id: group.learning_path.path
+field_name: path
+entity_type: group
+bundle: learning_path
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

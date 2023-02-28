@@ -1,0 +1,35 @@
+uuid: 0cc15ac5-6e33-4982-babd-e7326bf18cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.practice_page.field_practice_page_description
+    - field.field.paragraph.practice_page.field_practice_page_title
+    - paragraphs.paragraphs_type.practice_page
+  module:
+    - text
+id: paragraph.practice_page.default
+targetEntityType: paragraph
+bundle: practice_page
+mode: default
+content:
+  field_practice_page_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_practice_page_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

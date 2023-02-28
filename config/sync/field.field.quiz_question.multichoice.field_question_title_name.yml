@@ -1,0 +1,19 @@
+uuid: 1fef9074-f627-40f9-8876-7d1439561c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.multichoice
+id: quiz_question.multichoice.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: multichoice
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

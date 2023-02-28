@@ -1,0 +1,19 @@
+uuid: 73039f3d-9c5c-44d1-9ac0-cf36987c7cfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breadcrumb
+    - node.type.modules_content_type
+id: node.modules_content_type.field_breadcrumb
+field_name: field_breadcrumb
+entity_type: node
+bundle: modules_content_type
+label: Breadcrumb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

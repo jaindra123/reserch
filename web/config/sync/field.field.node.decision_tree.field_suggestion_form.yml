@@ -1,0 +1,23 @@
+uuid: 62b9f616-43c7-40f9-bae1-e37e3b28ddd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suggestion_form
+    - node.type.decision_tree
+  module:
+    - opigno_module
+id: node.decision_tree.field_suggestion_form
+field_name: field_suggestion_form
+entity_type: node
+bundle: decision_tree
+label: 'Suggestion form'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

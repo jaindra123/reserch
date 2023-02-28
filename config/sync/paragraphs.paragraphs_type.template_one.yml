@@ -1,0 +1,10 @@
+uuid: 936d504c-d950-4bef-b0e7-75a707b984df
+langcode: en
+status: true
+dependencies: {  }
+id: template_one
+label: 'Tile With Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

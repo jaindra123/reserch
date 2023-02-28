@@ -1,0 +1,26 @@
+uuid: 0b97d980-065f-41fa-8bb2-2c17b537055a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    module:
+      - quiz_matching
+_core:
+  default_config_hash: bPP1HI_VRU-goQ6LkZyBITodgAFNoSz66-qKPbZQs0w
+id: paragraph.matching_question
+field_name: matching_question
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

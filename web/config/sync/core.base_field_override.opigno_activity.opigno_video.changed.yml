@@ -1,0 +1,18 @@
+uuid: e0bfc61a-50df-408c-ac2c-b78ca9f0a5cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_video
+id: opigno_activity.opigno_video.changed
+field_name: changed
+entity_type: opigno_activity
+bundle: opigno_video
+label: Changed
+description: 'The time that the Module was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

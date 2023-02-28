@@ -1,0 +1,22 @@
+uuid: 7033c434-fafd-4414-beaf-adfe4c922d70
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aristotle
+_core:
+  default_config_hash: Q-Q-n5XRtF4UHMFpo-WR6WPmn6GgKAaGVIp0I4jPCJk
+id: messages
+theme: aristotle
+region: status_messages
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

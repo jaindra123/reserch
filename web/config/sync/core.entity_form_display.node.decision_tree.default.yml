@@ -1,0 +1,64 @@
+uuid: a88d0b2e-7ffa-4046-a93d-baa37649516c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.decision_tree.body
+    - field.field.node.decision_tree.field_admin_option
+    - field.field.node.decision_tree.field_breadcrumb
+    - field.field.node.decision_tree.field_slider_option
+    - field.field.node.decision_tree.field_suggestion_form
+    - field.field.node.decision_tree.field_template_type
+    - field.field.node.decision_tree.field_visible_to_anonymous_users
+    - node.type.decision_tree
+  module:
+    - opigno_module
+    - path
+    - text
+id: node.decision_tree.default
+targetEntityType: node
+bundle: decision_tree
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: Content
+      show_summary: false
+    third_party_settings: {  }
+  field_visible_to_anonymous_users:
+    type: opigno_true_false_widget_type
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: Title
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_admin_option: true
+  field_breadcrumb: true
+  field_slider_option: true
+  field_suggestion_form: true
+  field_template_type: true
+  langcode: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,29 @@
+uuid: eaf42461-8864-4e89-826a-13e508a035fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_quiz
+    - node.type.basic_cms_page
+    - quiz.type.quiz
+id: node.basic_cms_page.field_select_quiz
+field_name: field_select_quiz
+entity_type: node
+bundle: basic_cms_page
+label: 'Select Quiz'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:quiz'
+  handler_settings:
+    target_bundles:
+      quiz: quiz
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 5a2af900-7120-4592-a329-27a979c1834e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.topic_faq
+id: node.topic_faq.status
+field_name: status
+entity_type: node
+bundle: topic_faq
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

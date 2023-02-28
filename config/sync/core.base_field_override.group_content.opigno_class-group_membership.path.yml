@@ -1,0 +1,20 @@
+uuid: 8a48b8cf-4ee7-4ea4-8689-9487426c4ba6
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.opigno_class-group_membership
+  module:
+    - path
+id: group_content.opigno_class-group_membership.path
+field_name: path
+entity_type: group_content
+bundle: opigno_class-group_membership
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

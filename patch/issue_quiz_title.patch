@@ -1,0 +1,30 @@
+diff --git a/src/Form/QuizQuestionAnsweringForm.php b/src/Form/QuizQuestionAnsweringForm.php
+index 3413afb..08a9594 100644
+--- a/src/Form/QuizQuestionAnsweringForm.php
++++ b/src/Form/QuizQuestionAnsweringForm.php
+@@ -92,6 +92,14 @@ class QuizQuestionAnsweringForm extends FormBase {
+       if (!$qra->get('display_number')->isEmpty()) {
+         $header_markup = ['#markup' => "<h2>" . $this->t("Question @question", ['@question' => $qra->get('display_number')->getString()]) . "</h2>"];
+       }
++      $title_markup = NULL;
++      $questionId = $question->id();
++      $title_query = \Drupal::database()->query("SELECT field_question_title_name_value FROM quiz_question__field_question_title_name WHERE entity_id = '$questionId'")->fetchField();
++      if ($title_query) {
++        $title_markup = ['#markup' => "<h2>" . $title_query . "</h2>"];
++      }else{
++        $title_markup = ['#markup' => "<h2>" . $this->t("Question @question", ['@question' => $qra->get('display_number')->getString()]) . "</h2>"];
++      }
+ 
+       $form['question'][$question->id()] = [
+         '#attributes' => ['class' => [$class]],
+@@ -100,6 +108,10 @@ class QuizQuestionAnsweringForm extends FormBase {
+         'question' => $build,
+         'answer' => $element,
+       ];
++      $form['question'][$question->id()]['title'] = [
++        '#type' => 'hidden',
++        'value' => $title_markup,
++      ];
+       $form['question'][$question->id()]['answer']['#quiz_result_answer'] = $qra;
+ 
+       $blank_and_change = $qra->get('is_skipped')->getString() && $quiz->get('allow_change_blank')->getString();

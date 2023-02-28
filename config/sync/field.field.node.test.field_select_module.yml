@@ -1,0 +1,29 @@
+uuid: ebcb7532-ca02-4400-bb5f-a9647b6fb42c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_module
+    - node.type.modules_content_type
+    - node.type.test
+id: node.test.field_select_module
+field_name: field_select_module
+entity_type: node
+bundle: test
+label: 'Select Module'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      modules_content_type: modules_content_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,45 @@
+uuid: cca33703-ecc8-496a-b695-8a2d628d43a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketing_page_bottom_content.field_marketing_bottom_page_imag
+    - field.field.paragraph.marketing_page_bottom_content.field_marketing_description
+    - field.field.paragraph.marketing_page_bottom_content.field_title_marketing
+    - paragraphs.paragraphs_type.marketing_page_bottom_content
+  module:
+    - image
+    - text
+id: paragraph.marketing_page_bottom_content.default
+targetEntityType: paragraph
+bundle: marketing_page_bottom_content
+mode: default
+content:
+  field_marketing_bottom_page_imag:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_marketing_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title_marketing:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

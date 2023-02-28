@@ -1,0 +1,19 @@
+uuid: be36fc9e-bee6-47ea-ba47-27f320f88642
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_option_text
+    - paragraphs.paragraphs_type.single_choice_answer_option
+id: paragraph.single_choice_answer_option.field_option_text
+field_name: field_option_text
+entity_type: paragraph
+bundle: single_choice_answer_option
+label: 'Option Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

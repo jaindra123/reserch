@@ -1,0 +1,13 @@
+uuid: b81ace3d-3657-4d1d-84e0-7dd539945cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.gallery
+_core:
+  default_config_hash: VGXYQIsSEMfwxmQ_Y3B9vOvgQtj7kIWtKHqz3Nuv7Bw
+id: media.gallery
+target_entity_type_id: media
+target_bundle: gallery
+default_langcode: current_interface
+language_alterable: false

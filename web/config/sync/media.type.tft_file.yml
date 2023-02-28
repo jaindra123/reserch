@@ -1,0 +1,15 @@
+uuid: 3235f5f1-a530-4578-b979-7440c60a1303
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3uEx12VxaTs-jv-vV_udHgK_qJkn5OvsIwQCPR-1p2M
+id: tft_file
+label: File
+description: 'TFT File'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: tft_file
+field_map: {  }

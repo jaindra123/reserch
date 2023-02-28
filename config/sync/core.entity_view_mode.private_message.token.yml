@@ -1,0 +1,12 @@
+uuid: 724bcc32-faff-4235-abbc-b5fc4c54dab2
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+_core:
+  default_config_hash: j4uqGvWShTt6VBa1516Db6yj68BR8SqM1-i9BHqyJJ4
+id: private_message.token
+label: Token
+targetEntityType: private_message
+cache: true

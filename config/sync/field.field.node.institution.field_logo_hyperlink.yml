@@ -1,0 +1,19 @@
+uuid: 5882e1bb-2e21-4c8f-a23b-6076933dd339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo_hyperlink
+    - node.type.institution
+id: node.institution.field_logo_hyperlink
+field_name: field_logo_hyperlink
+entity_type: node
+bundle: institution
+label: 'Logo hyperlink'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

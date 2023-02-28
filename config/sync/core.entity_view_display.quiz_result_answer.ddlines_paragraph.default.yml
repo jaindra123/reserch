@@ -1,0 +1,41 @@
+uuid: 4b315fa2-a859-46da-976f-7ae92cee1e03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_result_answer.ddlines_paragraph.field_drag_drop_paragraph_answer
+    - quiz.result.answer.type.ddlines_paragraph
+  module:
+    - options
+id: quiz_result_answer.ddlines_paragraph.default
+targetEntityType: quiz_result_answer
+bundle: ddlines_paragraph
+mode: default
+content:
+  field_drag_drop_paragraph_answer:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  table:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  answer_feedback: true
+  attempt: true
+  choice: true
+  correct: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  question_feedback: true
+  quiz_feedback: true
+  quiz_question_view_full: true
+  quiz_question_view_question: true
+  score: true
+  search_api_excerpt: true
+  solution: true

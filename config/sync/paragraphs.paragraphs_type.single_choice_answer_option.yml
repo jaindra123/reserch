@@ -1,0 +1,10 @@
+uuid: 1216e939-98b2-47a1-a680-ab6e7a494b6e
+langcode: en
+status: true
+dependencies: {  }
+id: single_choice_answer_option
+label: 'Single choice answer Option'
+icon_uuid: null
+icon_default: null
+description: 'Single choice answer option will be used in ''Single choice option'' paragraph '
+behavior_plugins: {  }

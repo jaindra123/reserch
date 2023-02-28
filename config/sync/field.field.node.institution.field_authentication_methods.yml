@@ -1,0 +1,21 @@
+uuid: e4091be5-c589-4cd5-8113-902f95cb24c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authentication_methods
+    - node.type.institution
+  module:
+    - options
+id: node.institution.field_authentication_methods
+field_name: field_authentication_methods
+entity_type: node
+bundle: institution
+label: 'Authentication Methods'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

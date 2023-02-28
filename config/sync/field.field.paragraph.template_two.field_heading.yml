@@ -1,0 +1,19 @@
+uuid: 3d64c70e-cbdf-471a-acee-170c445b514e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.template_two
+id: paragraph.template_two.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: template_two
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

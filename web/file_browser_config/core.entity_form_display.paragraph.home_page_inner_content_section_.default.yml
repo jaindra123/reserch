@@ -1,0 +1,51 @@
+uuid: 00dd38b8-baea-4218-9515-c9236d41c704
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+    - field.field.paragraph.home_page_inner_content_section_.field_home_inner_section_image_2
+    - field.field.paragraph.home_page_inner_content_section_.field_home_inner_section_link_2
+    - field.field.paragraph.home_page_inner_content_section_.field_home_inner_section_title_2
+    - paragraphs.paragraphs_type.home_page_inner_content_section_
+  module:
+    - entity_browser
+    - link
+id: paragraph.home_page_inner_content_section_.default
+targetEntityType: paragraph
+bundle: home_page_inner_content_section_
+mode: default
+content:
+  field_home_inner_section_image_2:
+    type: entity_browser_file
+    weight: 1
+    region: content
+    settings:
+      entity_browser: browse_files
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: file_entity_browser_small
+    third_party_settings: {  }
+  field_home_inner_section_link_2:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_home_inner_section_title_2:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

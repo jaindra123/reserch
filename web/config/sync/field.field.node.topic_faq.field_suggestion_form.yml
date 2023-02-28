@@ -1,0 +1,23 @@
+uuid: 21655392-8ff5-4987-b990-a22f4f8bdbc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suggestion_form
+    - node.type.topic_faq
+  module:
+    - opigno_module
+id: node.topic_faq.field_suggestion_form
+field_name: field_suggestion_form
+entity_type: node
+bundle: topic_faq
+label: 'Suggestion form'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

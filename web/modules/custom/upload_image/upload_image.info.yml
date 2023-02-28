@@ -1,0 +1,5 @@
+type: module
+name: upload_image
+description: 'This Module provide to upload image'
+package: upload_image
+core_version_requirement: ^8.8 || ^9

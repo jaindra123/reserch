@@ -1,0 +1,25 @@
+uuid: 6658e7c2-971c-45d2-b1b6-aa98b4caf301
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f5bd37a3-56d2-47fc-af80-b965f0a2e4e8'
+  module:
+    - block_content
+  theme:
+    - research
+id: templattwo
+theme: research
+region: template_two
+weight: 0
+provider: null
+plugin: 'block_content:f5bd37a3-56d2-47fc-af80-b965f0a2e4e8'
+settings:
+  id: 'block_content:f5bd37a3-56d2-47fc-af80-b965f0a2e4e8'
+  label: 'Templat Two'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

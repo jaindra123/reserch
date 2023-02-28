@@ -1,0 +1,19 @@
+uuid: a261e12a-8430-4c98-99a8-f1fdb5618df0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.long_answer
+id: quiz_question.long_answer.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: long_answer
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

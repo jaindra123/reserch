@@ -1,0 +1,23 @@
+uuid: e58892b8-9dc2-4335-8d4a-2b80a26d739f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz.field_select_the_maximum_number
+    - quiz.type.quiz
+  module:
+    - options
+id: quiz.quiz.field_select_the_maximum_number
+field_name: field_select_the_maximum_number
+entity_type: quiz
+bundle: quiz
+label: 'Select the maximum number of attempts'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_float

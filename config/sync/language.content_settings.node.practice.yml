@@ -1,0 +1,11 @@
+uuid: bdba952d-f601-42d4-a5b0-5202ae1aa3a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.practice
+id: node.practice
+target_entity_type_id: node
+target_bundle: practice
+default_langcode: site_default
+language_alterable: false

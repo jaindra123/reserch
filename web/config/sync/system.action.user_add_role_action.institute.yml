@@ -1,0 +1,14 @@
+uuid: ec3bffd9-2566-4534-8449-1dc96120a03a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.institute
+  module:
+    - user
+id: user_add_role_action.institute
+label: 'Add the Institute role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: institute

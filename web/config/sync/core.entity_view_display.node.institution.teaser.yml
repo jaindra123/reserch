@@ -1,0 +1,66 @@
+uuid: ebfda9cb-879e-4768-a94e-81b03549f00d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.institution.field_admin_option
+    - field.field.node.institution.field_authentication_hub_id
+    - field.field.node.institution.field_authentication_methods
+    - field.field.node.institution.field_breadcrumb
+    - field.field.node.institution.field_ga_tracking_code
+    - field.field.node.institution.field_licence_renewal_date
+    - field.field.node.institution.field_licence_renewal_month
+    - field.field.node.institution.field_logo
+    - field.field.node.institution.field_logo_hyperlink
+    - field.field.node.institution.field_meta_tags
+    - field.field.node.institution.field_modules
+    - field.field.node.institution.field_number_of_licences
+    - field.field.node.institution.field_slider_option
+    - field.field.node.institution.field_subscription_expiry_date
+    - field.field.node.institution.field_subscription_limit
+    - field.field.node.institution.field_subscription_used
+    - field.field.node.institution.field_suggestion_form
+    - field.field.node.institution.field_template_type
+    - field.field.node.institution.field_u
+    - field.field.node.institution.field_visible_to_anonymous_users
+    - node.type.institution
+  module:
+    - user
+id: node.institution.teaser
+targetEntityType: node
+bundle: institution
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_authentication_hub_id: true
+  field_authentication_methods: true
+  field_breadcrumb: true
+  field_ga_tracking_code: true
+  field_licence_renewal_date: true
+  field_licence_renewal_month: true
+  field_logo: true
+  field_logo_hyperlink: true
+  field_meta_tags: true
+  field_modules: true
+  field_number_of_licences: true
+  field_slider_option: true
+  field_subscription_expiry_date: true
+  field_subscription_limit: true
+  field_subscription_used: true
+  field_suggestion_form: true
+  field_template_type: true
+  field_u: true
+  field_visible_to_anonymous_users: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

@@ -1,0 +1,37 @@
+name: researchright
+recipe: drupal9
+config:
+  via: apache
+  php: '7.4'
+  webroot: web/
+  drush: ^10
+  database: mysql
+services:
+  solr:
+    type: solr:7
+    core: tests
+    portforward: true
+    config:
+      dir: docroot/modules/contrib/search_api_solr/jump-start/solr7/config-set
+  pma:
+    type: phpmyadmin
+
+# services:
+#   node:
+#     type: node:12.16
+#   appserver:
+#     type: php:7.4
+#   solr:
+#     type: solr:4.10
+#     core: collection1
+#     portforward: true
+#     config:
+#       dir: docroot/modules/contrib/search_api_solr/solr-conf/4.x
+
+#   npm:
+#     service: node
+#   node:
+#     service: node
+proxy:
+  appserver:
+    - researchright.lndo.site

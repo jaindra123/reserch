@@ -1,0 +1,10 @@
+uuid: 87932495-fb7d-464c-837d-6b1e019dcacb
+langcode: en
+status: true
+dependencies: {  }
+id: carousel
+label: Carousel
+icon_uuid: null
+icon_default: null
+description: 'This will contain multiple slides paragraphs'
+behavior_plugins: {  }

@@ -1,0 +1,101 @@
+uuid: ec935496-3790-40a7-b8cb-7dd5a387c836
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.se2e_square
+    - field.field.media.remote_video.field_media_cover_image
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_provider
+    - media.type.remote_video
+  module:
+    - ds
+    - image
+    - varbase_media
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_media_oembed_video
+        - field_media_cover_image
+_core:
+  default_config_hash: BpuGtQ4jS0HrA8SYgqwPU27U00Q3TpaGR6vU0fSD8uk
+id: media.remote_video.se2e_square
+targetEntityType: media
+bundle: remote_video
+mode: se2e_square
+content:
+  field_media_cover_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_oembed_video:
+    type: varbase_oembed
+    label: hidden
+    settings:
+      max_width: 1600
+      max_height: 1600
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: ''
+            ow-cl: 'varbase-video-player embed-responsive embed-responsive-1by1'
+            ow-at: ''
+            ow-def-at: true
+            ow-def-cl: true
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_media_in_library: true
+  field_provider: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

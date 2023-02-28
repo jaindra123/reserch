@@ -1,0 +1,25 @@
+uuid: e6c3f7ca-7867-4f4f-9003-d2b099da78c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_result_answer.field_drag_drop_answer
+field_name: field_drag_drop_answer
+entity_type: quiz_result_answer
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

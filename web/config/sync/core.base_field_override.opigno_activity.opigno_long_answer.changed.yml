@@ -1,0 +1,18 @@
+uuid: acf5481f-ec55-4f39-be4e-2b8ffd80529a
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_long_answer
+id: opigno_activity.opigno_long_answer.changed
+field_name: changed
+entity_type: opigno_activity
+bundle: opigno_long_answer
+label: Changed
+description: 'The time that the Module was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

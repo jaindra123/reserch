@@ -1,0 +1,20 @@
+uuid: d00c722d-f0c3-4253-a54e-ac094cf483b8
+langcode: en
+status: false
+dependencies:
+  module:
+    - private_message
+  theme:
+    - research
+id: privatemessageactions
+theme: research
+region: status_messages
+weight: 0
+provider: null
+plugin: private_message_actions_block
+settings:
+  id: private_message_actions_block
+  label: 'Private Message Actions'
+  label_display: '0'
+  provider: private_message
+visibility: {  }

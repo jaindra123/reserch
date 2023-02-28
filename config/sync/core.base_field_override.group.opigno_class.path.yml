@@ -1,0 +1,20 @@
+uuid: 61cef7d6-5987-4ca0-9cc0-257a6fc52791
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_class
+  module:
+    - path
+id: group.opigno_class.path
+field_name: path
+entity_type: group
+bundle: opigno_class
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,10 @@
+uuid: e4d0f27b-2474-4250-9fbc-bafb3c437c06
+langcode: en
+status: true
+dependencies: {  }
+id: answer_option
+label: 'Answer Option'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,103 @@
+<style>
+    .self-study h2 {
+        color: #d30649;
+    }
+</style>
+
+{% include directory ~ '/templates/system/admin-option.html.twig' %}
+
+<div class="main-content3">
+    <div class="container">
+        <div class="manage-topicTest">
+            <h1 class="page-title">Manage Topic tests</h1>
+            <div class="description">
+                Here you can use the options below to choose how your students interact with topic tests (multiple choice assessment questions).
+            </div>
+        
+            <div class="topicTest-mode self-study">
+                <h2 class="mode-title">Self-study</h2>
+                <div class="description">
+                    <p>By default, topic test pages are accessible to students irrespective of the access method used to enter Research Right.</p>
+                    <p>After completing a topic test, students can click to see their results on screen. Students have unlimited attempts, so can retake a topic test as many times as like.</p>
+                    <p>Results are not stored and cannot be passed back via LTI. Refreshing or navigating away from the page clears results.</p>
+                </div>
+            </div>
+            <div class="topicTest-mode">
+                <h2 class="mode-title">Restrict topic tests for LTI users only</h2>
+                <div class="description">
+                    <p>If you wish to keep a record of student scores, you will need to integrate LTI within your VLE. You can learn more here.</p>
+                    <p>If you select ‘Restrict topic tests for LTI users only’, you can set whether students will only be able to carry out topic tests when coming directly from an LTI link within your VLE.</p>
+                    <p>This means scores can be passed back to your VLE grade book.</p>
+                    <p>When enabled, students who enter Research Right, without using a direct LTI topic test link, will not be able to access these assessments outside of your VLE.</p>
+                    <p>You can also set the number of attempts per topic test.</p>
+                </div>
+            </div>
+        
+            <!-- Select option start -->
+            <form action="/manage-topictest-save" method="post">
+                <div class="selectOption-wrapper">
+                    <h6>Select option(s)</h6>
+                        <div class="question-topic-item">
+                            <ul>
+                                {% set count = 1 %}
+                                {% for index, value in values['field_topic_test_mode']['options'] %}
+                                    {% if values['field_topic_test_mode']['default'] == index %}
+                                        {% set checked = 'checked' %}
+                                    {% else %}
+                                        {% set checked = '' %}
+                                    {% endif %}
+
+                                    {% if values['field_topic_test_mode']['default'] %}
+                                    <li>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="customRadio{{count}}" name="topictest_mode" value="{{index}}" {{checked}}>
+                                            <label class="custom-control-label" for="customRadio{{count}}">{{value}}</label>
+                                        </div>
+                                    </li>
+                                    {# set default checked for self study if no default mode in DB #}
+                                    {% else %}
+                                        {% if value == 'Self-study' %}
+                                        <li>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="customRadio{{count}}" name="topictest_mode" value="{{index}}" checked="checked">
+                                                <label class="custom-control-label" for="customRadio{{count}}">{{value}}</label>
+                                            </div>
+                                        </li> 
+                                        {% else %}
+                                        <li>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="customRadio{{count}}" name="topictest_mode" value="{{index}}" {{checked}}>
+                                                <label class="custom-control-label" for="customRadio{{count}}">{{value}}</label>
+                                            </div>
+                                        </li>
+                                        {% endif %}
+                                    {% endif %}
+
+                                    
+                                    {% set count = count + 1 %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    <div class="attempt-box">
+                        <label>Attempts</label>
+                        <select name="topictest_attempts" class="form-control">
+                            {% for index, value in values['field_topic_test_attempts']['options'] %}
+                                {% if values['field_topic_test_attempts']['default'] == index %}
+                                    {% set selected = 'selected' %}
+                                {% else %}
+                                    {% set selected = '' %}
+                                {% endif %}
+                                <option value="{{index}}" {{selected}}>{{value}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="button-groups mt-5">
+                        <button class="form-submit" type="submit">Save</button>
+                    </div>
+                </div>
+            </form>
+            <!-- Select option end -->
+
+        </div>
+    </div>
+</div>

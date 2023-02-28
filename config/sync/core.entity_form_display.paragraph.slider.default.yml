@@ -1,0 +1,54 @@
+uuid: 107cee74-404d-4901-acbb-c7119edcea85
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+    - field.field.paragraph.slider.field_slider_description
+    - field.field.paragraph.slider.field_slider_image
+    - field.field.paragraph.slider.field_slider_link
+    - paragraphs.paragraphs_type.slider
+  module:
+    - entity_browser
+    - link
+    - text
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_slider_description:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_slider_image:
+    type: entity_browser_file
+    weight: 1
+    region: content
+    settings:
+      entity_browser: browse_files
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: file_entity_browser_small
+    third_party_settings: {  }
+  field_slider_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

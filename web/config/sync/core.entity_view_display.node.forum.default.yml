@@ -1,0 +1,85 @@
+uuid: d471b970-fb56-4ebf-808b-a276eec9de9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_forum.default
+    - field.field.node.forum.body
+    - field.field.node.forum.comment_forum
+    - field.field.node.forum.field_admin_option
+    - field.field.node.forum.field_breadcrumb
+    - field.field.node.forum.field_meta_tags
+    - field.field.node.forum.field_slider_option
+    - field.field.node.forum.field_suggestion_form
+    - field.field.node.forum.field_template_type
+    - field.field.node.forum.field_visible_to_anonymous_users
+    - field.field.node.forum.taxonomy_forums
+    - node.type.forum
+  module:
+    - comment
+    - metatag
+    - opigno_module
+    - text
+    - user
+_core:
+  default_config_hash: ipzVP57UiuSE3ixt_lV1XzR2l-hqw_tGClp8eHN7zbw
+id: node.forum.default
+targetEntityType: node
+bundle: forum
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_forum:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_suggestion_form:
+    type: opigno_true_false_formatter_type
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  taxonomy_forums:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_breadcrumb: true
+  field_slider_option: true
+  field_template_type: true
+  field_visible_to_anonymous_users: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

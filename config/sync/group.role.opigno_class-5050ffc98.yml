@@ -1,0 +1,17 @@
+uuid: e1601119-7fc2-4e9d-a5a9-4b76b6a2bd16
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_class
+  enforced:
+    config:
+      - user.role.bloomsbury_editor
+id: opigno_class-5050ffc98
+label: 'Bloomsbury Editor'
+weight: 5
+internal: true
+audience: outsider
+group_type: opigno_class
+permissions_ui: false
+permissions: {  }

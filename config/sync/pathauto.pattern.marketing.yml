@@ -1,0 +1,22 @@
+uuid: 6935b77b-c9cd-4ec0-b3c3-9ee0f75a8bf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: marketing
+label: Marketing
+type: 'canonical_entities:node'
+pattern: '/marketing/[node:title]'
+selection_criteria:
+  692522ee-dd4c-4bdc-9ddf-d48a7777b320:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 692522ee-dd4c-4bdc-9ddf-d48a7777b320
+    context_mapping:
+      node: node
+    bundles:
+      marketing_page: marketing_page
+selection_logic: and
+weight: -5
+relationships: {  }

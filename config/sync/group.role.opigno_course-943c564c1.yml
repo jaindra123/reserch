@@ -1,0 +1,17 @@
+uuid: 5466eb5c-5a39-41a0-9325-89233135e95e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_course
+  enforced:
+    config:
+      - user.role.institute
+id: opigno_course-943c564c1
+label: Institute
+weight: 3
+internal: true
+audience: outsider
+group_type: opigno_course
+permissions_ui: false
+permissions: {  }

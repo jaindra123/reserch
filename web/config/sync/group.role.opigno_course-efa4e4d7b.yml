@@ -1,0 +1,17 @@
+uuid: cf289013-cf28-4dd0-9e08-951ede569981
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_course
+  enforced:
+    config:
+      - user.role.bloomsbury_staff
+id: opigno_course-efa4e4d7b
+label: 'Bloomsbury staff'
+weight: 5
+internal: true
+audience: outsider
+group_type: opigno_course
+permissions_ui: false
+permissions: {  }

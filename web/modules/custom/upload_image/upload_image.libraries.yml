@@ -1,0 +1,9 @@
+upload-lib:
+  css:
+    theme:
+      css/upload.css: {}
+  js:
+    js/upload.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

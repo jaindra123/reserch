@@ -1,0 +1,31 @@
+uuid: 824d8b90-b912-4ee0-8218-550b591c0e98
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_question.field_visibility_mode
+field_name: field_visibility_mode
+entity_type: quiz_question
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: accordion
+      label: Accordion
+    -
+      value: normal_mode
+      label: 'Normal Mode'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

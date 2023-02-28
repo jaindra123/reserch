@@ -1,0 +1,22 @@
+uuid: b05340b5-04dc-466d-b083-bbda95022e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_video
+id: opigno_activity.opigno_video.status
+field_name: status
+entity_type: opigno_activity
+bundle: opigno_video
+label: 'Publishing status'
+description: 'A boolean indicating whether the Activity is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

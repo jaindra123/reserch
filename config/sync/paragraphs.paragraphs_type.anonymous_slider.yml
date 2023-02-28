@@ -1,0 +1,10 @@
+uuid: ea89a16c-9c48-4b9f-a542-1ff11137d733
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous_slider
+label: 'Anonymous Slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

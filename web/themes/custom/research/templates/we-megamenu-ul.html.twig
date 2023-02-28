@@ -1,0 +1,35 @@
+<ul {{ attributes }}>
+  {{ content }}
+
+
+
+  <li class="nav-item d-sm-block d-md-block d-lg-none mobile-menu">  
+   {% if logged_in %} 
+          <a href="#" class="top-link bgthdsf w-100 mr-0 "><b class="pr-3 dgfss">Administrator hub</b><span class="btnddddd mr-0 float-right" type="submit"><i class="fa fa-home" aria-hidden="true"></i></span>
+          </a>
+          <a href="" class="top-link bgthdsf w-100 mr-0">
+          <b class="pr-3 dgfss">Welcome {{ username}}</b>
+          <span class="btnddddd mr-0 float-right" type="submit"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+          </a> 
+          <a href="/user/logout" class="top-link bgthds">
+           <b class="pr-3 dgfss">Log out</b>
+           <i class="pl-0 mr-0 float-right arrowed"><img  src="/{{ base_path ~ directory }}/research/img/Vector Smart Object-pdf(1).png" alt="image" style="height:20px;"></i>
+           </a> 
+          {% else %} 
+          <a href="#" class="top-link  mr-5">
+          <b class="pr-3 dgfss">Welcome</b>
+          <span class="btnddddd mr-0 float-right" type="submit"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+          </a> 
+          <a href="/user/login" class="top-link bgthds">
+                <b class="pr-3 dgfss">Log in</b>
+                <i class="pl-0 mr-0 float-right arrowed">
+                <img  src="/{{ base_path ~ directory }}/research/img/Vector Smart Object-pdf(1).png" alt="image" style="height:20px;"></i>
+          </a>
+          {% endif %} 
+  </li>
+  <form class="form-inline ml-3 my-2 my-lg-0">
+    <div class="header-search">
+      {{ drupal_region('search_block') }}
+    </div>
+  </form>
+</ul>

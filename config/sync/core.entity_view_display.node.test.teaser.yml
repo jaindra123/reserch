@@ -1,0 +1,64 @@
+uuid: 6e6791e0-f847-49b8-8e13-fb38bf73337c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.test.body
+    - field.field.node.test.field_box_text
+    - field.field.node.test.field_breadcrumb
+    - field.field.node.test.field_exclude_from_search
+    - field.field.node.test.field_exclude_the_page_from_lti
+    - field.field.node.test.field_meta_tags
+    - field.field.node.test.field_paragraph_ref
+    - field.field.node.test.field_questions
+    - field.field.node.test.field_select_module
+    - field.field.node.test.field_select_topic
+    - field.field.node.test.field_sub_title
+    - field.field.node.test.field_summary
+    - field.field.node.test.field_visible_to_anonymous_users
+    - field.field.node.test.field_weight
+    - field.field.node.test.field_within_this_topic
+    - node.type.test
+  module:
+    - text
+    - user
+id: node.test.teaser
+targetEntityType: node
+bundle: test
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_box_text: true
+  field_breadcrumb: true
+  field_exclude_from_search: true
+  field_exclude_the_page_from_lti: true
+  field_meta_tags: true
+  field_paragraph_ref: true
+  field_questions: true
+  field_select_module: true
+  field_select_topic: true
+  field_sub_title: true
+  field_summary: true
+  field_visible_to_anonymous_users: true
+  field_weight: true
+  field_within_this_topic: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

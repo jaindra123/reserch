@@ -1,0 +1,22 @@
+uuid: 91a897c8-d349-4843-8ce3-3e11ee629b37
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_slide
+id: opigno_activity.opigno_slide.auto_skills
+field_name: auto_skills
+entity_type: opigno_activity
+bundle: opigno_slide
+label: 'Use activity in auto skills management'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

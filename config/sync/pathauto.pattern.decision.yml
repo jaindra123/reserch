@@ -1,0 +1,22 @@
+uuid: 41790ee9-7bb3-4246-b396-cdc834cbeb96
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: decision
+label: Decision
+type: 'canonical_entities:node'
+pattern: '/decision/[node:title]'
+selection_criteria:
+  316b08f0-0d6a-4d91-ac0b-dab2978b7999:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 316b08f0-0d6a-4d91-ac0b-dab2978b7999
+    context_mapping:
+      node: node
+    bundles:
+      decision_tree: decision_tree
+selection_logic: and
+weight: -5
+relationships: {  }

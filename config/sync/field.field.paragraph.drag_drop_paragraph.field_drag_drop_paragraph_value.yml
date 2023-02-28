@@ -1,0 +1,19 @@
+uuid: 87a4bac7-2750-4cb9-bb23-966d16a3179e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drag_drop_paragraph_value
+    - paragraphs.paragraphs_type.drag_drop_paragraph
+id: paragraph.drag_drop_paragraph.field_drag_drop_paragraph_value
+field_name: field_drag_drop_paragraph_value
+entity_type: paragraph
+bundle: drag_drop_paragraph
+label: 'Drag Drop Paragraph value'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

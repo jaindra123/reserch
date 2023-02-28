@@ -1,0 +1,32 @@
+uuid: c9b04f1d-f2d1-4208-9fdf-f606c4531c96
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_active_trainings
+  module:
+    - system
+    - views
+  theme:
+    - aristotle
+_core:
+  default_config_hash: phPbjidiPaGG5qrGMZZ1wDRy3HEOJJHZJp6mXw4blho
+id: dashboard_views_block_latest_active_trainings_block
+theme: aristotle
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:latest_active_trainings-block'
+settings:
+  id: 'views_block:latest_active_trainings-block'
+  label: 'Dashboard: Latest active trainings'
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

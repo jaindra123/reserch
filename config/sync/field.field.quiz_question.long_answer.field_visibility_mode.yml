@@ -1,0 +1,23 @@
+uuid: 6f055048-e62a-4f5f-8973-9351254fea0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_visibility_mode
+    - quiz.question.type.long_answer
+  module:
+    - options
+id: quiz_question.long_answer.field_visibility_mode
+field_name: field_visibility_mode
+entity_type: quiz_question
+bundle: long_answer
+label: 'Visibility Mode'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: accordion
+default_value_callback: ''
+settings: {  }
+field_type: list_string

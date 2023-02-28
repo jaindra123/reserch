@@ -1,0 +1,17 @@
+uuid: 716b4348-05e8-4cf4-bd91-4ae21001966d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_course
+  enforced:
+    config:
+      - user.role.bloomsbury_editor
+id: opigno_course-5050ffc98
+label: 'Bloomsbury Editor'
+weight: 5
+internal: true
+audience: outsider
+group_type: opigno_course
+permissions_ui: false
+permissions: {  }

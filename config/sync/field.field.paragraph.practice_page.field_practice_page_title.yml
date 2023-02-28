@@ -1,0 +1,19 @@
+uuid: 58be622e-307a-4865-8877-8a3c620b4afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_practice_page_title
+    - paragraphs.paragraphs_type.practice_page
+id: paragraph.practice_page.field_practice_page_title
+field_name: field_practice_page_title
+entity_type: paragraph
+bundle: practice_page
+label: 'practice page title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

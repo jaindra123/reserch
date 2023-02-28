@@ -1,0 +1,45 @@
+forum:
+  forum: 0
+add_statusforum: ''
+update_statusforum: ''
+delete_statusforum: ''
+institution:
+  institution: institution
+add_statusinstitution: 'Institution created'
+update_statusinstitution: 'Institution updated'
+delete_statusinstitution: 'Institution deleted'
+marketing_page:
+  marketing_page: marketing_page
+add_statusmarketing_page: 'Page created'
+update_statusmarketing_page: 'Page updated'
+delete_statusmarketing_page: 'Page deleted'
+modules_content_type:
+  modules_content_type: modules_content_type
+add_statusmodules_content_type: 'Page created'
+update_statusmodules_content_type: 'Page updated'
+delete_statusmodules_content_type: 'Page deleted'
+page:
+  page: page
+add_statuspage: 'Page created'
+update_statuspage: 'Page updated'
+delete_statuspage: 'Page deleted'
+webform:
+  webform: 0
+add_statuswebform: ''
+update_statuswebform: ''
+delete_statuswebform: ''
+submit: 'Save configuration'
+form_build_id: form-W8yozJd0QcEAEYZnEmmFrJ3ixW9dpiM0pd5BsJLcWak
+form_token: 6CcTRJYUHij-8UEK7xVDY9JgIAeSSE8_TExgeLyrbUs
+form_id: node_custom_status_messages_settings_form
+op: 'Save configuration'
+topic:
+  topic: topic
+add_statustopic: 'Topic created'
+update_statustopic: 'Topic updated'
+delete_statustopic: 'Topic deleted'
+decision_tree:
+  decision_tree: 0
+add_statusdecision_tree: ''
+update_statusdecision_tree: ''
+delete_statusdecision_tree: ''

@@ -1,0 +1,20 @@
+uuid: a3477aed-5d5d-4b35-8cb0-0602fa246844
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_scorm
+id: opigno_activity.opigno_scorm.skills_list
+field_name: skills_list
+entity_type: opigno_activity
+bundle: opigno_scorm
+label: Skill
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

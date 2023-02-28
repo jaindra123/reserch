@@ -1,0 +1,23 @@
+uuid: 081bdab8-04ca-48c7-8e02-9d5c718af446
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_visibility_mode
+    - quiz.question.type.ddlines_paragraph
+  module:
+    - options
+id: quiz_question.ddlines_paragraph.field_visibility_mode
+field_name: field_visibility_mode
+entity_type: quiz_question
+bundle: ddlines_paragraph
+label: 'Visibility Mode'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: accordion
+default_value_callback: ''
+settings: {  }
+field_type: list_string

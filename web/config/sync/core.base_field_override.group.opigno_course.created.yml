@@ -1,0 +1,18 @@
+uuid: 9fa2c958-4af8-4640-86c9-5ce176c3618a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_course
+id: group.opigno_course.created
+field_name: created
+entity_type: group
+bundle: opigno_course
+label: 'Created on'
+description: 'The time that the group was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

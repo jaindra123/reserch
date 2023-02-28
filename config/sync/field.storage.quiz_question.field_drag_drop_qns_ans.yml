@@ -1,0 +1,21 @@
+uuid: a5de7b3c-8393-4f93-acc5-b8b26e9ac8d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - quiz
+id: quiz_question.field_drag_drop_qns_ans
+field_name: field_drag_drop_qns_ans
+entity_type: quiz_question
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

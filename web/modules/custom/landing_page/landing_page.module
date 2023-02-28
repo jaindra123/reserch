@@ -1,0 +1,156 @@
+<?php
+use \Drupal\node\NodeInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\path_alias\PathAliasInterface;
+use Drupal\redirect\Entity\Redirect;
+use Drupal\Core\Database\Query\Condition;
+function landing_page_theme($existing, $type, $theme, $path) {
+    $theme_hooks = array(
+        'admin_hub' => array(
+            'variables' => array(
+                'values' => NULL,
+            )
+        ),
+        'user_delete' => array(
+            'variables' => array(
+                'values' => NULL,
+            )
+        ),
+    );
+    return $theme_hooks;
+}
+function landing_page_preprocess_page(&$vars) {
+    $roles = \Drupal::currentUser()->getRoles();
+    if(in_array('administrator', $roles) || in_array('bloomsbury_editor', $roles)) {
+      $landing_page = \Drupal::service('config.factory')->getEditable('landing_page.admin.settings');
+    }else if(in_array('instructor', $roles)) {
+        $landing_page = \Drupal::service('config.factory')->getEditable('landing_page.instructor.settings');
+    }else if(in_array('institute', $roles)) {
+        $landing_page = \Drupal::service('config.factory')->getEditable('landing_page.institute.settings');
+    } else {
+      return;
+    }
+    $landing_page_data['title'] = $landing_page->get('title');
+    $landing_page_data['description'] = $landing_page->get('description')['value'];
+    
+    $card_groups = $landing_page->get('card_groups');
+    $card_groups_array = array();
+    for( $i = 0; $i < $card_groups; $i++ ) {
+      $cards = $landing_page->get('card_group_'.$i)['cards'];
+      $card_array = array();
+      for( $j = 0; $j < $cards; $j++ ) {
+        $card_array[] = $landing_page->get('card_group_'.$i)['card_'.$j];
+      }
+      $card_groups_array[$i] = $landing_page->get('card_group_'.$i);
+      $card_groups_array[$i]['inner_cards'] = $card_array;
+    }
+    $landing_page_data['card_groups'] = $card_groups_array;
+    $vars['landing_page'] = $landing_page_data;
+}
+function landing_page_preprocess_admin_hub(&$vars) {
+    $roles = \Drupal::currentUser()->getRoles();
+    if(in_array('administrator', $roles) || in_array('bloomsbury_editor', $roles)) {
+      $landing_page = \Drupal::service('config.factory')->getEditable('landing_page.admin.settings');
+    }else if(in_array('instructor', $roles)) {
+        $landing_page = \Drupal::service('config.factory')->getEditable('landing_page.instructor.settings');
+    }else if(in_array('institute', $roles)) {
+        $landing_page = \Drupal::service('config.factory')->getEditable('landing_page.institute.settings');
+    } else {
+      return;
+    }
+    $landing_page_data['title'] = $landing_page->get('title');
+    $landing_page_data['description'] = $landing_page->get('description')['value'];
+
+    $card_groups = $landing_page->get('card_groups');
+    $card_groups_array = array();
+    for( $i = 0; $i < $card_groups; $i++ ) {
+      $cards = $landing_page->get('card_group_'.$i)['cards'];
+      $card_array = array();
+      for( $j = 0; $j < $cards; $j++ ) {
+        $card_array[] = $landing_page->get('card_group_'.$i)['card_'.$j];
+      }
+      $card_groups_array[$i] = $landing_page->get('card_group_'.$i);
+      $card_groups_array[$i]['inner_cards'] = $card_array;
+    }
+    $landing_page_data['card_groups'] = $card_groups_array;
+    $vars['landing_page'] = $landing_page_data;
+}
+function landing_page_preprocess_views_view(&$vars) {
+    $vars['back_url'] = '/quiz/'. $vars['view']->args[0]. '/questions';
+}
+function landing_page_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    if ($form_id === "entity_embed_dialog") {
+    if ($form_state->get('step') == 'embed') {
+      // Entity element is calculated on every AJAX request/submit.
+      // See ::buildForm().
+      $entity_element = $form_state->get('entity_element');
+      $form['attributes']['data-caption']['#default_value'] = isset($entity_element['data-caption']) ? $entity_element['data-caption'] : ' '; 
+      $form['attributes']['alt'] = array(
+        '#title' => t('Descriptive text (alt) for media'),
+        '#description' => "This will override the default set on the media.<br>For more information on useful descriptive text see <a href='https://www.w3.org/WAI/tutorials/images/' target='_blank'>https://www.w3.org/WAI/tutorials/images/</a>",
+        '#type' => 'textfield',
+        '#default_value' => isset($entity_element['alt']) ? Html::decodeEntities($entity_element['alt']) : '',
+        '#element_validate' => array('::escapeValue'),
+        '#required' => true,
+      );
+      $form['attributes']['height'] = array(
+        '#title' => t('Height in px'),
+        '#type' => 'textfield',
+        '#default_value' => isset($entity_element['height']) ? Html::decodeEntities($entity_element['height']) : '',
+        '#element_validate' => array('::escapeValue'),
+      );
+      $form['attributes']['width'] = array(
+        '#title' => t('Width in px'),
+        '#type' => 'textfield',
+        '#default_value' => isset($entity_element['width']) ? Html::decodeEntities($entity_element['height']) : '',
+        '#element_validate' => array('::escapeValue'),
+      );
+    }
+   }
+   if($form_id == 'node_institution_edit_form' || $form_id == 'node_institution_form'){
+       $form['#attached']['library'][] = 'landing_page/landing_page.library';
+       $form['#validate'][] = 'custom_validation_for_title_and_hubid';
+    }
+}
+function custom_validation_for_title_and_hubid(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+    $hub_id = $form_state->getValue('field_authentication_hub_id')[0]['value'];
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $nid = $node ? $node->id() : 0;
+    $query2 = \Drupal::database()->query("SELECT entity_id FROM node__field_authentication_hub_id WHERE field_authentication_hub_id_value = '$hub_id' AND bundle LIKE 'institution' AND entity_id NOT IN($nid)")->fetchField();
+    if($query2){
+        $form_state->setErrorByName("field_authentication_hub_id","An Institute with this id already exists.");
+    }
+}
+function landing_page_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $routeMatch = \Drupal::routeMatch();
+  $node_preview = $routeMatch->getParameter('node_preview');
+  if ($node_preview instanceof NodeInterface) {
+    $suggestions[] = 'page__node__' . $node_preview->bundle();
+    $suggestions[] = 'page__node__preview__' . $node_preview->bundle();
+    if ($view_mode_id = $routeMatch->getParameter('view_mode_id')) {
+      $suggestions[] = 'page__node__preview__' . $node_preview->bundle() . '__' . $view_mode_id;
+    }
+  }
+}
+function landing_page_user_login(){
+    $current_route = Drupal::routeMatch()->getRouteName();
+    if (!in_array($current_route, ['user.reset', 'user.reset.login', 'change_pwd_page.reset'])) {
+		//print "hookup";exit;
+    // We want to redirect user on login.
+    $current_user = Drupal::currentUser();
+    $roles = $current_user->getRoles();
+    $login_redirection = Drupal::config('redirect_after_login.settings')
+      ->get('login_redirection');
+    if (in_array('instructor',$roles) || in_array('institute',$roles) || in_array('administrator',$roles) || in_array('bloomsbury_editor',$roles)) {
+		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+      //if (strpos($url,'/user/reset') == false) {
+		\Drupal::requestStack()->getCurrentRequest()->query->set('destination',Url::fromUserInput('/admin-hub')->toString());
+	  //}
+	  
+    }
+    else {
+      \Drupal::requestStack()->getCurrentRequest()->query->set('destination',URL::fromUserInput('/')->toString());
+    }
+  }
+}

@@ -1,0 +1,24 @@
+uuid: 6d3a67dc-aabe-4166-8285-87a95d9bdcf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.basic_cms_page
+  module:
+    - weight
+id: node.basic_cms_page.field_weight
+field_name: field_weight
+entity_type: node
+bundle: basic_cms_page
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '20'
+field_type: weight

@@ -1,0 +1,53 @@
+uuid: 878f3f1a-ad30-4c20-9074-a0396cd07a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_page_section_3.field_field_call_to_action_3
+    - field.field.paragraph.home_page_section_3.field_field_inner_section_2
+    - field.field.paragraph.home_page_section_3.field_title_3
+    - paragraphs.paragraphs_type.home_page_section_3
+  module:
+    - inline_entity_form
+    - link
+id: paragraph.home_page_section_3.default
+targetEntityType: paragraph
+bundle: home_page_section_3
+mode: default
+content:
+  field_field_call_to_action_3:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_field_inner_section_2:
+    type: inline_entity_form_complex
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_title_3:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

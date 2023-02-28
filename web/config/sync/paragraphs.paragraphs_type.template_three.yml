@@ -1,0 +1,10 @@
+uuid: 2d8d1e85-bd24-428c-9a93-690cac527a05
+langcode: en
+status: true
+dependencies: {  }
+id: template_three
+label: 'Title with arrow (Vertical)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

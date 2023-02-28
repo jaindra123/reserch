@@ -1,0 +1,10 @@
+uuid: 4868d4dc-4021-446e-9981-de1084511677
+langcode: en
+status: true
+dependencies: {  }
+id: quiz
+label: Quiz
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

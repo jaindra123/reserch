@@ -1,0 +1,23 @@
+uuid: ea907f13-19e2-4d05-9cf2-6078ce7872f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_admin_option
+    - node.type.topic_faq
+  module:
+    - opigno_module
+id: node.topic_faq.field_admin_option
+field_name: field_admin_option
+entity_type: node
+bundle: topic_faq
+label: 'Admin Option'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

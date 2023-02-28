@@ -1,0 +1,72 @@
+uuid: 2325259b-0f37-4e5b-8de4-7c6a715a0aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.ddlines_paragraph.field_accordion_collapsed
+    - field.field.quiz_question.ddlines_paragraph.field_correct_paragraph_answer
+    - field.field.quiz_question.ddlines_paragraph.field_drag_drop_paragraph_words
+    - field.field.quiz_question.ddlines_paragraph.field_paragraph_sentance
+    - field.field.quiz_question.ddlines_paragraph.field_question_title_name
+    - field.field.quiz_question.ddlines_paragraph.field_reveal_button_label
+    - field.field.quiz_question.ddlines_paragraph.field_visibility_mode
+    - quiz.question.type.ddlines_paragraph
+  module:
+    - entity_reference_revisions
+    - text
+  enforced:
+    module:
+      - quiz_page
+_core:
+  default_config_hash: FEXQGgCtcHDnsLQfCy-oqXI0UqyUcI2ZbGjDG6pXF3c
+id: quiz_question.ddlines_paragraph.default
+targetEntityType: quiz_question
+bundle: ddlines_paragraph
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_correct_paragraph_answer:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_drag_drop_paragraph_words:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph_sentance:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_reveal_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_accordion_collapsed: true
+  field_question_title_name: true
+  field_visibility_mode: true
+  search_api_excerpt: true

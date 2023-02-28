@@ -1,0 +1,19 @@
+uuid: d7598920-2409-4569-9f87-77b9919ffcf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_practice_analysis_title
+    - paragraphs.paragraphs_type.practice_analysis_inner
+id: paragraph.practice_analysis_inner.field_practice_analysis_title
+field_name: field_practice_analysis_title
+entity_type: paragraph
+bundle: practice_analysis_inner
+label: 'practice analysis title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

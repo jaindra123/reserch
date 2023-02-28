@@ -1,0 +1,21 @@
+uuid: cb46fe4a-0215-4384-a64b-eb29523c0095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_description
+    - node.type.modules_content_type
+  module:
+    - text
+id: node.modules_content_type.field_body_description
+field_name: field_body_description
+entity_type: node
+bundle: modules_content_type
+label: 'Body Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,5 @@
+type: module
+name: FormAlterModule
+description: 'This is custom Module develop for alter form '
+package: FormAlterModule
+core_version_requirement: ^8.8 || ^9

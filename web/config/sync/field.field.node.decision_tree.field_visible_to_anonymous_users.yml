@@ -1,0 +1,23 @@
+uuid: 45a703b1-1461-402d-9e13-ab6a4cd68719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visible_to_anonymous_users
+    - node.type.decision_tree
+  module:
+    - opigno_module
+id: node.decision_tree.field_visible_to_anonymous_users
+field_name: field_visible_to_anonymous_users
+entity_type: node
+bundle: decision_tree
+label: 'Visible to anonymous users'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

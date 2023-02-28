@@ -1,0 +1,19 @@
+uuid: f2858eb6-7c14-4096-b57b-783efef59ed0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drag_drop_paragraph_word
+    - paragraphs.paragraphs_type.drag_drop_paragraph
+id: paragraph.drag_drop_paragraph.field_drag_drop_paragraph_word
+field_name: field_drag_drop_paragraph_word
+entity_type: paragraph
+bundle: drag_drop_paragraph
+label: 'Drag Drop Paragraph Word'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

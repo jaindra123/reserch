@@ -1,0 +1,5 @@
+services:
+  custom_ah.route:
+    class: Drupal\custom_ah\Routing\CustomAhRouteSubscribe
+    tags:
+      - { name: event_subscriber }

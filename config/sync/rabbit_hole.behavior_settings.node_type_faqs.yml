@@ -1,0 +1,14 @@
+uuid: 748d7722-fd68-489e-93cd-e9ce87f89c68
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faqs
+id: node_type_faqs
+entity_type_id: node_type
+entity_id: faqs
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

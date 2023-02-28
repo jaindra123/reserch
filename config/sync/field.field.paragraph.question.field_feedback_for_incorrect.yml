@@ -1,0 +1,21 @@
+uuid: b93f2c6a-eb82-45b9-9df3-8225ff74a9d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feedback_for_incorrect
+    - paragraphs.paragraphs_type.question
+  module:
+    - text
+id: paragraph.question.field_feedback_for_incorrect
+field_name: field_feedback_for_incorrect
+entity_type: paragraph
+bundle: question
+label: 'Feedback for Incorrect'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

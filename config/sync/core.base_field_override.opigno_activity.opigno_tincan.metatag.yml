@@ -1,0 +1,18 @@
+uuid: 3b53c596-1517-4fce-b124-684bb4f37698
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_tincan
+id: opigno_activity.opigno_tincan.metatag
+field_name: metatag
+entity_type: opigno_activity
+bundle: opigno_tincan
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,20 @@
+uuid: 0e677345-7933-4564-9d28-ecfa969af66d
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_h5p
+id: opigno_activity.opigno_h5p.name
+field_name: name
+entity_type: opigno_activity
+bundle: opigno_h5p
+label: Name
+description: 'The name of the Activity entity plus.'
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

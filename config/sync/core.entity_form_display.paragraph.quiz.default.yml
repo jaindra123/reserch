@@ -1,0 +1,27 @@
+uuid: 18a11eb3-eb11-461b-8a55-47e365b13ec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quiz.field_select_quiz
+    - paragraphs.paragraphs_type.quiz
+  module:
+    - entity_reference_revisions
+id: paragraph.quiz.default
+targetEntityType: paragraph
+bundle: quiz
+mode: default
+content:
+  field_select_quiz:
+    type: entity_reference_revisions_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

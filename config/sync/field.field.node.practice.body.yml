@@ -1,0 +1,23 @@
+uuid: 93ed2c93-7811-4d2f-b6f2-2d526d100d49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.practice
+  module:
+    - text
+id: node.practice.body
+field_name: body
+entity_type: node
+bundle: practice
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

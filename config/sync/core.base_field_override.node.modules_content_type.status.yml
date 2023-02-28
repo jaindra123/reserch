@@ -1,0 +1,22 @@
+uuid: 143a9a4f-226f-4f44-a3df-d82155a0c267
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modules_content_type
+id: node.modules_content_type.status
+field_name: status
+entity_type: node
+bundle: modules_content_type
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

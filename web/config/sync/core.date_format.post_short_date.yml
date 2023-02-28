@@ -1,0 +1,10 @@
+uuid: f2408b67-884c-4bc4-9c29-3f2244d55b10
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LzXZvGN4_xcoYoywZE8b_yCIBewhr6WCaoNtAhW-Nsg
+id: post_short_date
+label: 'Post short date'
+locked: false
+pattern: 'd F Y'

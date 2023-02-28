@@ -1,0 +1,10 @@
+uuid: df7a612c-fce4-45f9-8b02-cdf377da9950
+langcode: en
+status: true
+dependencies: {  }
+id: marketing_page_sidebar
+label: 'Marketing Page Sidebar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

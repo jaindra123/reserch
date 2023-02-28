@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: 7e8242a6-b362-41df-966f-70ebb0ae48f1
+name: 'Research Right'
+mail: notification@bloomsburyresearchright.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/129
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

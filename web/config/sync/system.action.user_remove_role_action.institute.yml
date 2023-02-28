@@ -1,0 +1,14 @@
+uuid: 0194c698-a907-4c18-96a2-7ec2006304a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.institute
+  module:
+    - user
+id: user_remove_role_action.institute
+label: 'Remove the Institute role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: institute

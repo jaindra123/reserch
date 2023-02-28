@@ -1,0 +1,21 @@
+uuid: 29d85b35-779b-482d-9a07-ea716ce6f5da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_type
+    - node.type.institution
+  module:
+    - options
+id: node.institution.field_template_type
+field_name: field_template_type
+entity_type: node
+bundle: institution
+label: 'Template Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

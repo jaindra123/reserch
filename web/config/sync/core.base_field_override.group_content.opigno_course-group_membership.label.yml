@@ -1,0 +1,18 @@
+uuid: d5badcf5-35dc-4fa5-89ee-9757c25edfae
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.opigno_course-group_membership
+id: group_content.opigno_course-group_membership.label
+field_name: label
+entity_type: group_content
+bundle: opigno_course-group_membership
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

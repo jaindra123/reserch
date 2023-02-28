@@ -1,0 +1,20 @@
+uuid: 0fe73c59-10d8-4fec-acc0-d65d7c1bc265
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.duration
+  module:
+    - text
+id: taxonomy_term.duration.description
+field_name: description
+entity_type: taxonomy_term
+bundle: duration
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

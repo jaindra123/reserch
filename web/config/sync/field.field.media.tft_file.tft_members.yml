@@ -1,0 +1,30 @@
+uuid: de00b810-1680-4dc7-8968-140c5c5821c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.tft_members
+    - media.type.tft_file
+_core:
+  default_config_hash: og67H8-vjgKPrxx3oHQMwyLc6iaq7ytuAm3Z5oArcug
+id: media.tft_file.tft_members
+field_name: tft_members
+entity_type: media
+bundle: tft_file
+label: 'Members Restriction'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

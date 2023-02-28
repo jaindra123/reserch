@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Manage Instructor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+
+<div class="w-100 fixed-top d-inline-block">
+  <div class="top-header">
+    <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="#" class="top-link"><span><i class="fa fa-home" aria-hidden="true"></i></span>Administrator hub</a>    
+            </div>
+            <div class="col-sm-6">
+                <div class="text-right">
+                    <a href="#" class="top-link  mr-5"><i class="fa fa-user-circle fa-4 mr-2" aria-hidden="true"></i>Welcome <b>John</b></a>
+                    <a href="#" class="top-link bgthdsdffd"><i class="pl-0 arrowed"><img src="./img/Vector Smart Object-pdf(1).png" alt="image"></i>Log out</a> 
+                </div>
+            </div>
+          </div>  
+    </div>
+  </div>
+  <div class="header-below">  
+    <div class="container">
+      <header class="header">
+          <nav class="navbar navbar-expand-md  bg-white pl-0 pr-0">
+            <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse lateral-left" id="navbarTogglerDemo01">
+              
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item d-sm-block d-md-none">
+                  <a class="nav-link" href="./index.html">Home </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="./research-right.html">What is Research Right? </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Modules</a>
+                  <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
+                    <li><a href="./modules.html" class="dropdown-item">All Modules</a></li>
+                    <li><a href="./central-tendency-faq.html" class="dropdown-item">central-tendency-faq</a></li>
+                    <li><a href="./research-right2.html" class="dropdown-item">research-right2</a></li>
+                    <li><a href="./central-tendency-practice.html" class="dropdown-item">central-tendency-practice</a></li>
+                    <li><a href="./central-tendency.html" class="dropdown-item">central-tendency</a></li>
+                    <li><a href="./research-right3.html" class="dropdown-item">research-right3</a></li>
+                    <li><a href="./research-right4.html" class="dropdown-item">research-right4</a></li>
+        
+                    <!-- Level two dropdown-->
+                    <li class="dropdown-submenu">
+                      <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Introduction to Research Questions</a>
+                      <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                        <li>
+                          <a tabindex="-1" href="./research-methods.html" class="dropdown-item">Research Methods</a>
+                        </li>
+                        <li>
+                          <a tabindex="-1" href="./data-anaylsis.html" class="dropdown-item">Data Anaylsis</a>
+                        </li>
+        
+                        <!-- Level three dropdown
+                        <li class="dropdown-submenu">
+                          <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                          <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                            <li><a href="#" class="dropdown-item">3rd level</a></li>
+                            <li><a href="#" class="dropdown-item">3rd level</a></li>
+                          </ul>
+                        </li>-->
+                        <!-- End Level three -->
+        
+                      </ul>
+                    </li>
+                    <!-- End Level two -->
+                  </ul>
+                </li>
+                <!-- End Level one -->
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="">Contact us</a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                  <a href="#" class="top-link bgthdsf w-100 mr-0 "><b class="pr-3 dgfss">Administrator hub</b><button class="btnddd" type="submit"><i class="fa fa-home" aria-hidden="true"></i></button></a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                  <a href="#" class="top-link bgthdsf w-100 mr-0"><b class="pr-3 dgfss">Welcome John</b><button class="btnddd" type="submit"><i class="fa fa-user-circle" aria-hidden="true"></i></button></a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                  <a href="#" class="top-link bgthds"><b class="pr-3 dgfss">Log out</b><i class="pl-0 mr-0 float-right arrowed"><img src="./img/Vector Smart Object-pdf(1).png" alt="image"style="height:20px;"></i></a>
+                </li>
+              </ul>
+              <form class="form-inline ml-3 my-2 my-lg-0">
+                <input class="form-controls" type="search" placeholder="Search" aria-label="Search">
+                <button class="btndd" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </nav>
+      </header>
+    </div>
+  </div>
+</div>
+<div class="breadcrumb">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+              <form class="contact-uss">
+                <h3 class="mb-2">Admin options</h3>
+                <div class="form-group">
+                  <select class="form-text">
+                      <option>Select an option</option>
+                      <option>Manage Institutions</option>
+                      <option>Administrator hub</option>
+                      <option>Manage Institution Admins</option>
+                  </select>
+                </div>
+             </form>
+            </div>
+        </div>
+   </div>
+</div>
+<div class="main-content3">
+    <div class="container">
+         <h1 class="mb-3">Manage Instructor accounts</h1>
+         <div class="row mb-4">
+            <div class="col-md-2">
+              <div class="form-group"><label>&nbsp;</label><input type="text" placeholder="Filter by name or email" class="form-control"></div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                  <label>Filter by user status</label>
+                  <select class="form-control">
+                       <option>All users</option>
+                       <option>Active users</option>
+                       <option>Deactivated users</option>
+                  </select>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label>Items per page</label>
+                <select class="form-control">
+                     <option>30</option>
+                     <option>60</option>
+                     <option>90</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label class="w-100">&nbsp;</label>
+                <button type="submit" class="btn-contact top-link  bgthd float-left"><b class="">Apply</b></button>
+              </div>
+              
+            </div>
+            <div class="col-md-4">
+              <div class="float-right">
+                <div class="form-group">
+                  <label class="w-100">&nbsp;</label>
+                  <button type="submit" class="btn-contact top-link  bgthd float-left"><b class="">Add Instructor account</b></button>
+                </div>
+                
+              </div>
+            </div>
+         </div>
+         <div class="row">
+          <div class="col-md-12">
+            <div class="grey-box-2">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Bulk actions</label>
+                    <select class="form-control">
+                         <option>- Select action -</option>
+                         <option>Deactivate users</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="w-100">&nbsp;</label>
+                    <button type="submit" class="btn-contact top-link  bgthd float-left"><b class="">Apply to selected instructor(s) </b></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+         <table id="example" class="display table table-bordered" style="width:100%">
+          <thead>
+              <tr>
+                  <th><input type="checkbox" name="sample" class="selectall"/></th>
+                  <th>Full Name</th>
+                  <th>Email address</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="checkbox" name="sample[]"/></td>
+                  <td>Tiger Nixon</td>
+                  <td>a.grattan74@bristol.ac.uk</td>
+                  <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                  <td>Garrett Winters</td>
+                  <td>d.jfuirm57@bristol.ac.uk</td>
+                  <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                  <td>Ashton Cox</td>
+                  <td>j.d.olke98@bristol.ac.uk</td>
+                  <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                  <td>Cedric Kelly</td>
+                  <td>j.minetel3@bristol.ac.uk</td>
+                  <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                  <td>Airi Satou</td>
+                  <td>r.matchnison65@bristol.ac.uk</td>
+                  <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                  <td>Brielle Williamson</td>
+                  <td>s.beardsley9@bristol.ac.uk</td>
+                  <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Ann-Marrie Eisl</td>
+                <td>a.m.eisl93@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>David Heekjyh</td>
+                <td>d.heekjyh45@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Frank Kinsterminster</td>
+                <td>f.kinsterminster34@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Hubert Henry</td>
+                <td>h.henry3@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>John Smith</td>
+                <td>j.smtih31@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Kerry Kintery</td>
+                <td>k.kintery09@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Peter Richen</td>
+                <td>p.richen84@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Preti Tryuei</td>
+                <td>p.tyruei@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Sonja Djiuek</td>
+                <td>s.djiuek97@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Sebastian Greieves</td>
+                <td>s.greieves98@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Sophie Hether</td>
+                <td>s.hether78@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Steven Jones</td>
+                <td>s.jones65@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Stephen Macinilley</td>
+                <td>s.macinilley98@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="sample[]"/></td>
+                <td>Siobahn Obhan</td>
+                <td>s.obhan@sheffield.ac.uk</td>
+                <td><button class="btn btn-dark">Deactivate</button> </td>
+              </tr>
+              
+          </tbody>
+          
+        </table>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+       <div class="row pt-55">
+         <div class="col-md-12">
+              <img src="./img/footer-logo.png" alt="logo">
+         </div>
+         
+       </div>
+       <div class="row">
+          <div class="col-md-10">
+               <ul class="footer-nav">
+                  <li><a href="#">Copyright</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#">Privacy and Cookies</a></li>
+                  <li><a href="#">Terms and Conditions</a></li>
+                  <li><a href="https://www.bloomsbury.com/uk/discover/bloomsbury-digital-resources/ ">Bloomsbury Digital Resources</a></li>
+               </ul>
+          </div>
+          <div class="col-md-2">
+               <div class="text-right fg-small">
+                  <ul class="footer-nav2">
+                    <li><a href="https://twitter.com/BloomsburyAcad"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCtMEiwJMMarhUQfXdcXT7Iw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+               </div>
+          </div>
+       </div>
+  </div>
+</footer>
+<script>
+  const $menu = $('#navbarTogglerDemo01');
+
+  $menu.on('show.bs.collapse', function () {
+    $menu.addClass('menu-show');
+  });
+
+  $menu.on('hide.bs.collapse', function () {
+    $menu.removeClass('menu-show');
+  });
+</script>
+<script>
+  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+  }
+  var $subMenu = $(this).next(".dropdown-menu");
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+  });
+
+  return false;
+});
+
+/* for TOP LEVEL MENU */
+$('.dropdown>.dropdown-toggle').click(function() {
+  if ($(this).hasClass('caretDown')) {
+    $(this).removeClass('caretDown');
+  } else {
+    $(this).addClass('caretDown');
+  }
+});
+
+/* for SUB MENUS */
+$('.dropdown-submenu>.dropdown-toggle').click(function() {
+  if ($(this).hasClass('caretDown')) {
+    $(this).removeClass('caretDown');
+  } else {
+    $(this).addClass('caretDown');
+  }
+});
+</script>
+<script>
+  $(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+</script>
+<script>
+  var table; 
+$(document).ready(function() {
+  table =   $('#example').DataTable( {
+        "order": [[ 3, "desc" ]],
+  });
+} );
+
+
+$(document).on('click','.fas', function(event){
+      if(table){
+        let tr = $(this).closest('tr');
+        let index = table.row(tr).index();
+        let indexes = table.rows()[0];     
+        
+        let order = -1;
+        let buttonName = event.currentTarget.className;
+        if(buttonName.indexOf('circle-down')>0){
+          order = 1;
+        }
+        
+        let data1 = table.row(index).data();
+        let base_index = indexes.indexOf(index) + order;
+        let index2 = indexes[base_index];
+
+        var data2 = table.row(index2).data();
+
+        table.row(index).data(data2);
+        table.row(index2).data(data1);
+        
+      } 
+    });
+  
+
+</script>
+<script>
+  $('.selectall').click(function() {
+    if ($(this).is(':checked')) {
+        $('div input').attr('checked', true);
+    } else {
+        $('div input').attr('checked', false);
+    }
+});
+</script>
+</body>
+</html>

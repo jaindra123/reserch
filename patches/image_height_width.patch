@@ -1,0 +1,13 @@
+diff --git a/entity_embed/src/Plugin/entity_embed/EntityEmbedDisplay/ImageFieldFormatter.php b/entity_embed/src/Plugin/entity_embed/EntityEmbedDisplay/ImageFieldFormatter.php
+index c175ded..1356583 100644
+--- a/entity_embed/src/Plugin/entity_embed/EntityEmbedDisplay/ImageFieldFormatter.php
++++ b/entity_embed/src/Plugin/entity_embed/EntityEmbedDisplay/ImageFieldFormatter.php
+@@ -95,7 +95,7 @@ class ImageFieldFormatter extends FileFieldFormatter {
+     $value = parent::getFieldValue();
+     // File field support descriptions, but images do not.
+     unset($value['description']);
+-    $value += array_intersect_key($this->getAttributeValues(), ['alt' => '', 'title' => '']);
++    $value += array_intersect_key($this->getAttributeValues(), ['alt' => '', 'title' => '', 'height' => '', 'width' => '']);
+     return $value;
+   }
+ 

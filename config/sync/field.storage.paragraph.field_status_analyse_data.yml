@@ -1,0 +1,23 @@
+uuid: aa4fb65c-ba74-48cd-81e9-3f10f79eebe0
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - opigno_module
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_status_analyse_data
+field_name: field_status_analyse_data
+entity_type: paragraph
+type: opigno_true_false_field
+settings: {  }
+module: opigno_module
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

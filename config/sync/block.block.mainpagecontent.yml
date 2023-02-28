@@ -1,0 +1,20 @@
+uuid: 55fbaa6a-c5ac-471a-b865-06131c226525
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - research
+id: mainpagecontent
+theme: research
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

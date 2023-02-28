@@ -1,0 +1,74 @@
+base theme: false
+type: theme
+name: Research
+description: 'HTML5, SASS, Responsive grid base theme.'
+package: ''
+core_version_requirement: ^8 || ^9
+logo: logo.svg
+
+regions:
+  
+  menu: 'Menu'
+  administrator_hub_institute: 'Administrator Hub Institute'
+  administrator_hub_instructor: 'Administrator Hub Instructor'
+  banner: 'Main banner'
+  breadcrumbs: 'Breadcrumbs'
+  tabs: 'Tabs'
+  page_title: 'Page Title'
+  template_one: 'Template One'
+  template_two: 'Template Two'
+  template_Three: 'Template Three'
+  status_messages: 'Status messages'
+  sidebar_first: 'Sidebar first'
+  video_description: Video Description 
+  video_section: 'Video Section'
+  suggestion_form: 'Suggestion Form'
+  content: 'Content'
+  footer: 'Footer'
+  search_block: 'Search Block'
+
+libraries:
+  - research/global
+
+libraries-override:
+  tft/tft: 
+    css:
+      theme:
+        css/tft.css: false
+
+  tft/tft.select-folder:
+    css:
+      theme:
+        css/tft.css: false
+
+  calendar/calendar.theme:
+    css:
+      theme:
+        css/calendar.css: false
+        css/calendar_multiday.css: false
+
+  opigno_calendar/month_block:
+    css:
+      theme:
+        css/opigno_calendar_month_block.css: false
+
+ckeditor_stylesheets:
+  - assets/css/ckeditor.css
+
+
+
+
+## Use libraries-override to prevent rewrite unnecessary code.
+#libraries-override:
+#  multiselect/drupal.multiselect:
+#    css:
+#      theme:
+#        # Moved to styles/components/form/_multiselect.scss
+#        css/multiselect.css: false
+
+
+#  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+# Information added by Drupal.org packaging script on 2022-04-01
+version: '3.0.2'
+datestamp: 1648806103

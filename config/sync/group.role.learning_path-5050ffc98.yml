@@ -1,0 +1,17 @@
+uuid: 3c4ebec6-756d-4df2-a6dd-14ed0f18357b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+  enforced:
+    config:
+      - user.role.bloomsbury_editor
+id: learning_path-5050ffc98
+label: 'Bloomsbury Editor'
+weight: 5
+internal: true
+audience: outsider
+group_type: learning_path
+permissions_ui: false
+permissions: {  }

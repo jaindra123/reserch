@@ -1,0 +1,134 @@
+<?php
+use Drupal\Core\Entity\BundleEntityFormBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\quiz\Entity\QuizQuestionType;
+use Symfony\Component\HttpFoundation\Cookie;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Database\Connection;
+
+/**
+ * Implements hook_help().
+ */
+function quiz_ddlines_help($path, $args) {
+  if ($path == 'admin/help#quiz_ddlines') {
+    return t("Help text TBD");
+  }
+}
+
+
+/**
+ * Implements hook_quiz_question_info().
+ */
+function quiz_ddlines_quiz_question_info() {
+  return array(
+    'quiz_ddlines' => array(
+      'name' => t('Drag and drop question with lines'),
+      'description' => t('This provides drag and drop question types with lines for the Quiz module.'),
+      'question provider' => 'DDLinesQuestion',
+      'response provider' => 'DDLinesResponse',
+      'module' => 'quiz_question', // All wrapper functions are in that module.
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function quiz_ddlines_theme() {
+  // Theme function for quiz question feedback.
+  return array(
+    'quiz_question_feedback__quiz_ddlines' => array(
+      'variables' => array('metadata' => NULL, 'data' => NULL),
+      'path' => drupal_get_path('module', 'quiz_ddlines') . '/theme',
+      'file' => 'quiz_ddlines.theme.inc',
+    ),
+  );
+}
+
+
+/**
+ * A Custom function to include necessary js and css.
+ */
+function quiz_ddlines_add_js_and_css() {
+  $module_path = drupal_get_path('module', 'quiz_ddlines');
+}
+
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+/*function quiz_ddlines_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  // Fix langcode is empty when you use entity browser x inline entity form.
+  if ($entity->getEntityType()->id() == 'paragraph') {
+     $langcode_key = $entity->getEntityType()->getKey('langcode');
+    if (!empty($langcode_key)) {
+       $lang_value = $entity->get($langcode_key)->getLangcode();              // und
+      //die();
+      if (!empty($lang_value)) {
+        $entity->set($langcode_key, $lang_value);
+      }
+    }
+  }
+}*/
+
+
+/**
+ * Implements hook_entity_update().
+ *
+ * Set configuration.
+ */
+
+function quiz_ddlines_entity_update(EntityInterface $entity) {
+ // dump($entity);
+ // die();
+  $all_values = $_COOKIE;
+    if (empty($all_values['draggedData'])) {
+      return false;
+    } else {
+      $all_dragged_values = $all_values['draggedData'];
+    }
+
+ if($entity->bundle() == 'ddlines') {
+    $query6 = \Drupal::database();
+    $result6 = $query6->select('quiz_result_answer__field_drag_drop_answer','qrafdda')
+      ->condition('qrafdda.bundle','ddlines')
+      ->condition('qrafdda.entity_id',$entity->id())
+      ->condition('qrafdda.revision_id',$entity->id())
+      ->condition('qrafdda.langcode','und')
+      ->fields('qrafdda',['entity_id'])
+      ->execute()
+      ->fetchField();
+      //dump($result6);
+      //die();
+
+      if(empty($result6)) {
+        $arr = array(
+          'bundle' => 'ddlines',
+          'deleted' => 0,
+          'entity_id' => $entity->id(),
+          'revision_id' => $entity->id(),
+          'langcode' => 'und',
+          'delta' => 0,
+          'field_drag_drop_answer_value' => $all_dragged_values,
+        );
+        $conn = \Drupal::service('database');
+        $qry = $conn->insert('quiz_result_answer__field_drag_drop_answer')->fields($arr)->execute();
+        //dump($qry->sqlQuery->__toString());
+        // die();
+      }
+
+    if (!$entity instanceof QuizQuestionType) {
+      return;
+    }
+
+  }
+ 
+  if($entity->bundle() == 'drag_and_drop') {
+    $config = Drupal::configFactory()->getEditable('quiz_ddlines.settings');
+    $config->set('scoring', $entity->scoring);
+    $config->save();
+  }
+}
+

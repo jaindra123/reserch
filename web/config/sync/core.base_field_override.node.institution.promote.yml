@@ -1,0 +1,22 @@
+uuid: acc0b1cf-5e5c-4b02-9846-19a172516354
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.institution
+id: node.institution.promote
+field_name: promote
+entity_type: node
+bundle: institution
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

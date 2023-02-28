@@ -1,0 +1,18 @@
+uuid: ac9ec424-9e30-4111-8abb-deb442a4a3ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_h5p
+id: opigno_activity.opigno_h5p.changed
+field_name: changed
+entity_type: opigno_activity
+bundle: opigno_h5p
+label: Changed
+description: 'The time that the Module was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

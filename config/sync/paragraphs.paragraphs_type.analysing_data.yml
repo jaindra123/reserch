@@ -1,0 +1,10 @@
+uuid: 34c37261-9299-4968-8147-e66f7dbe2191
+langcode: en
+status: true
+dependencies: {  }
+id: analysing_data
+label: Accordian
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

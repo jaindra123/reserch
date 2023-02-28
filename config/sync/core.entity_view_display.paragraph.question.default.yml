@@ -1,0 +1,53 @@
+uuid: d6ed1dfb-9139-4d05-bd77-dd8ca103da0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question.field_answers
+    - field.field.paragraph.question.field_feedback_for_correct
+    - field.field.paragraph.question.field_feedback_for_incorrect
+    - field.field.paragraph.question.field_question_text
+    - paragraphs.paragraphs_type.question
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.question.default
+targetEntityType: paragraph
+bundle: question
+mode: default
+content:
+  field_answers:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_feedback_for_correct:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_feedback_for_incorrect:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_question_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

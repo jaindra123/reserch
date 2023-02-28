@@ -1,0 +1,10 @@
+uuid: a144f569-75a4-4f0a-878a-9e6000c0bf5f
+langcode: en
+status: true
+dependencies: {  }
+id: drag_and_drop
+label: 'Drag and Drop'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

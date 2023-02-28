@@ -1,0 +1,65 @@
+uuid: 4dfac0f7-5efc-4d85-ad16-eaad416c48fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.modules_content_type.field_admin_option
+    - field.field.node.modules_content_type.field_body_description
+    - field.field.node.modules_content_type.field_breadcrumb
+    - field.field.node.modules_content_type.field_choose_template
+    - field.field.node.modules_content_type.field_exclude_from_search
+    - field.field.node.modules_content_type.field_exclude_the_page_from_lti
+    - field.field.node.modules_content_type.field_meta_tags
+    - field.field.node.modules_content_type.field_select_parent
+    - field.field.node.modules_content_type.field_slider_option
+    - field.field.node.modules_content_type.field_sub_title
+    - field.field.node.modules_content_type.field_suggestion_form
+    - field.field.node.modules_content_type.field_summary
+    - field.field.node.modules_content_type.field_template_type
+    - field.field.node.modules_content_type.field_visible_to_anonymous_users
+    - field.field.node.modules_content_type.field_yoast_seo
+    - node.type.modules_content_type
+  module:
+    - entity_reference_revisions
+    - user
+id: node.modules_content_type.teaser
+targetEntityType: node
+bundle: modules_content_type
+mode: teaser
+content:
+  field_choose_template:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_body_description: true
+  field_breadcrumb: true
+  field_exclude_from_search: true
+  field_exclude_the_page_from_lti: true
+  field_meta_tags: true
+  field_select_parent: true
+  field_slider_option: true
+  field_sub_title: true
+  field_suggestion_form: true
+  field_summary: true
+  field_template_type: true
+  field_visible_to_anonymous_users: true
+  field_yoast_seo: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

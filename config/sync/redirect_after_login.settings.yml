@@ -1,0 +1,8 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  administrator: /adminhub
+  institute: /adminhub
+  instructor: /adminhub
+  bloomsbury_editor: /adminhub
+exclude_urls: ''

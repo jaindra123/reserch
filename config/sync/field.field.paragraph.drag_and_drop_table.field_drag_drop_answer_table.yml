@@ -1,0 +1,19 @@
+uuid: a0e6da41-2510-4531-a094-62f4abc3f5f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drag_drop_answer_table
+    - paragraphs.paragraphs_type.drag_and_drop_table
+id: paragraph.drag_and_drop_table.field_drag_drop_answer_table
+field_name: field_drag_drop_answer_table
+entity_type: paragraph
+bundle: drag_and_drop_table
+label: 'Drag Drop Answer Table'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

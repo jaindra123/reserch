@@ -1,0 +1,18 @@
+uuid: e45e8ad6-cf2e-408a-bfb6-7cc7690056a1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - research
+id: pagetitle_2
+theme: research
+region: page_title
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

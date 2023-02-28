@@ -1,0 +1,23 @@
+uuid: 4382784e-bbfa-4d82-b163-75f0e56b394f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - yoast_seo
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+type: yoast_seo
+settings: {  }
+module: yoast_seo
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

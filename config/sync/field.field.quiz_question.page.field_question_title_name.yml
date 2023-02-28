@@ -1,0 +1,19 @@
+uuid: f309f862-a689-466a-8d4e-c0d333c87135
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.page
+id: quiz_question.page.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: page
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

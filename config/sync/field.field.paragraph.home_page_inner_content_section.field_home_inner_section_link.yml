@@ -1,0 +1,23 @@
+uuid: 72a30319-b9b3-4104-8aa4-bff1119cb3fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_inner_section_link
+    - paragraphs.paragraphs_type.home_page_inner_content_section
+  module:
+    - link
+id: paragraph.home_page_inner_content_section.field_home_inner_section_link
+field_name: field_home_inner_section_link
+entity_type: paragraph
+bundle: home_page_inner_content_section
+label: 'PROMO LINK'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

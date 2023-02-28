@@ -1,0 +1,46 @@
+input::file-selector-button {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    padding-left: 16px;
+    padding-top: 4px;
+    font-size: 14px;
+}
+
+input[name="files[my_file]"] {
+    background-color: #20366F;
+    color: #fff !important;
+    padding: 5px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 150px;
+    font-weight: 500;
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 4;
+}
+
+input[name="files[my_file]"]:after {
+    content: '';
+    width: 34px;
+    height: 20px;
+    position: absolute;
+    left: 118px;
+    bottom: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    background: #20366F;
+}
+
+.grey-box-2 span.UpButton {
+    display: none;
+}
+
+label[for^="edit-my-file-upload"] {
+    display: none;
+}

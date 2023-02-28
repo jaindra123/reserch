@@ -1,0 +1,23 @@
+uuid: 5625bdbc-5c14-4b6b-862a-9f5fe8994974
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_option
+    - node.type.topic_faq
+  module:
+    - opigno_module
+id: node.topic_faq.field_slider_option
+field_name: field_slider_option
+entity_type: node
+bundle: topic_faq
+label: 'Slider Option'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

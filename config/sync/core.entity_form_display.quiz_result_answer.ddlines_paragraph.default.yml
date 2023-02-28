@@ -1,0 +1,29 @@
+uuid: 8678a335-ce5a-493d-9d48-b5c5cfde2686
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_result_answer.ddlines_paragraph.field_drag_drop_paragraph_answer
+    - quiz.result.answer.type.ddlines_paragraph
+  module:
+    - text
+id: quiz_result_answer.ddlines_paragraph.default
+targetEntityType: quiz_result_answer
+bundle: ddlines_paragraph
+mode: default
+content:
+  answer_feedback:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_drag_drop_paragraph_answer:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

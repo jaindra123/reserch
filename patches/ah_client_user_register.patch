@@ -1,0 +1,123 @@
+diff --git a/ah_client.module b/ah_client.module
+index 5b08f58..b60eb4d 100644
+--- a/ah_client.module
++++ b/ah_client.module
+@@ -47,6 +47,16 @@ function ah_client_form_alter(&$form, FormStateInterface $form_state, $form_id)
+       $form['#validate'][] = '_ah_client_user_pass_validate';
+       break;
+ 
++    case 'user_register_form':
++      if ( $_GET['act'] == 'add_instructor' ) {
++        // Add custom validate callback.
++        $form['#validate'][] = '_ah_client_user_register_form_validate';
++        // Add custom submit callback.
++        $form['actions']['submit']['#submit'] = ['_ah_client_user_register_form_submit'];
++        $form['#submit'] = ['_ah_client_user_register_form_submit'];
++      }
++      break;
++
+     case 'user_login_form':
+       if ($config->get('hub_url')) {
+         // Create institution login button.
+@@ -314,3 +324,75 @@ function _ah_client_append_uuid($string, $uuid = FALSE) {
+   }
+   return $string . '.' . _ah_client_short_uuid($uuid);
+ }
++
++
++
++
++/**
++ * Submit callback for user_login_form.
++ */
++function _ah_client_user_register_form_submit($form, FormStateInterface &$form_state) {
++  // Initialise AH.
++  $authentication_hub = \Drupal::service('ah_client.authentication_hub');
++  if ($ah_response = $authentication_hub->addUser($form_state->getValue('mail'),'testpass')) {
++    // Create user entity.
++    $user = User::create();
++    $user->setPassword('testpass');
++    $user->enforceIsNew();
++    $user->setEmail($ah_response->mail);
++    $user->setUsername($ah_response->mail);
++    $user->activate();
++    $user->save();
++
++    // Create AH entity.
++    $ah_data = AhData::create([
++      'uid' => $user->id(),
++      'institution_uuid' => $ah_response->institution_uuid,
++      'subscription_uuid' => $ah_response->subscription_uuid,
++    ]);
++    $ah_data->save();
++
++    // Allow other modules to react.
++    \Drupal::moduleHandler()
++      ->invokeAll('ah_client_email_user_register', [
++        $ah_data,
++        $ah_response,
++      ]
++    );
++
++    // Log user in and redirect to 'My account'.
++    user_login_finalize($user);
++    $response = new RedirectResponse('/');
++    $request = \Drupal::request();
++    $request->getSession()->save();
++    $response->prepare($request);
++    \Drupal::service('kernel')->terminate($request, $response);
++    $response->send();
++  }
++}
++
++/**
++ * Validate callback for user_register_form.
++ */
++function _ah_client_user_register_form_validate($form, FormStateInterface &$form_state) {
++  // Initialise AH.
++  $authentication_hub = \Drupal::service('ah_client.authentication_hub');
++
++  // Remove username warning.
++  $errors = $form_state->getErrors();
++  $form_state->clearErrors();
++  foreach ($errors as $field => $error) {
++    if ($field != 'name') {
++      $form_state->setErrorByName($field, $error);
++    }
++  }
++
++  // Custom form validation if no other errors.
++  if (!$form_state->hasAnyErrors()) {
++    // Check for valid email domain.
++    $is_email_valid = $authentication_hub->validateEmail($form_state->getValue('mail'));
++    if (!$is_email_valid) {
++      $form_state->setErrorByName('mail', t("Your email isn't associated with a subscribed institution."));
++    }
++  }
++}
+\ No newline at end of file
+diff --git a/src/AuthenticationHub.php b/src/AuthenticationHub.php
+index 7345f1f..41cc84e 100644
+--- a/src/AuthenticationHub.php
++++ b/src/AuthenticationHub.php
+@@ -174,6 +174,20 @@ class AuthenticationHub {
+     return FALSE;
+   }
+ 
++  /**
++   * Creates a new user account.
++   */
++  public function addUser($email, $password) {
++    if ($response = $this->request('/api/user/add', 'POST', [
++      'email' => $email,
++      'password' => $password,
++    ])) {
++      return $response;
++    }
++
++    return FALSE;
++  }
++
+   /**
+    * Changes user password.
+    */

@@ -1,0 +1,29 @@
+uuid: 9c6bfbbb-1533-44f9-b3ba-63235821c6ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_result_answer.ddlines.field_drag_drop_answer_response
+    - quiz.result.answer.type.ddlines
+  module:
+    - text
+id: quiz_result_answer.ddlines.default
+targetEntityType: quiz_result_answer
+bundle: ddlines
+mode: default
+content:
+  answer_feedback:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_drag_drop_answer_response:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

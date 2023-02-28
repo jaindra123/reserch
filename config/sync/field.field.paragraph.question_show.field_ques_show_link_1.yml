@@ -1,0 +1,23 @@
+uuid: 019d4f7f-e354-47a5-b484-56bb3fc0b0d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ques_show_link_1
+    - paragraphs.paragraphs_type.question_show
+  module:
+    - link
+id: paragraph.question_show.field_ques_show_link_1
+field_name: field_ques_show_link_1
+entity_type: paragraph
+bundle: question_show
+label: 'ques show link 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

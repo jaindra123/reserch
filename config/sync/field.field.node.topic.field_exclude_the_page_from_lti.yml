@@ -1,0 +1,23 @@
+uuid: fbc8bdef-8a8d-43d8-b601-a3d4012a8221
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exclude_the_page_from_lti
+    - node.type.topic
+  module:
+    - opigno_module
+id: node.topic.field_exclude_the_page_from_lti
+field_name: field_exclude_the_page_from_lti
+entity_type: node
+bundle: topic
+label: 'Exclude the page from LTI'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

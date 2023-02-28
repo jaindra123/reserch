@@ -1,0 +1,19 @@
+uuid: 51d44846-1e35-4258-9a30-678e7372bc11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.short_answer
+id: quiz_question.short_answer.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: short_answer
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

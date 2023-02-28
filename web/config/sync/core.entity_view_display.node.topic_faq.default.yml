@@ -1,0 +1,64 @@
+uuid: aa990faf-9d75-4b7f-bd2b-99a32e00417d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.topic_faq.field_admin_option
+    - field.field.node.topic_faq.field_breadcrumb
+    - field.field.node.topic_faq.field_meta_tags
+    - field.field.node.topic_faq.field_question_section
+    - field.field.node.topic_faq.field_slider_option
+    - field.field.node.topic_faq.field_suggestion_form
+    - field.field.node.topic_faq.field_template_type
+    - field.field.node.topic_faq.field_visible_to_anonymous_users
+    - field.field.node.topic_faq.field_within_this_topic
+    - field.field.node.topic_faq.field_yoast_seo
+    - node.type.topic_faq
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+    - yoast_seo
+id: node.topic_faq.default
+targetEntityType: node
+bundle: topic_faq
+mode: default
+content:
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_question_section:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_yoast_seo:
+    type: yoastseo_formatter
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_breadcrumb: true
+  field_slider_option: true
+  field_suggestion_form: true
+  field_template_type: true
+  field_visible_to_anonymous_users: true
+  field_within_this_topic: true
+  langcode: true
+  links: true
+  private_message_link: true
+  search_api_excerpt: true

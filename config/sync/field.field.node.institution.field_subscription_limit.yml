@@ -1,0 +1,25 @@
+uuid: 28e2d5c0-d1e9-4977-a68d-dd56618f356b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subscription_limit
+    - node.type.institution
+id: node.institution.field_subscription_limit
+field_name: field_subscription_limit
+entity_type: node
+bundle: institution
+label: 'Subscription Limit'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

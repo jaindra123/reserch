@@ -1,0 +1,58 @@
+uuid: babb46c7-7994-48cf-9589-e77da156c385
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.template_one.field_content
+    - field.field.paragraph.template_one.field_heading
+    - field.field.paragraph.template_one.field_image
+    - field.field.paragraph.template_one.field_page_url
+    - paragraphs.paragraphs_type.template_one
+  module:
+    - image
+    - link
+id: paragraph.template_one.default
+targetEntityType: paragraph
+bundle: template_one
+mode: default
+content:
+  field_content:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_page_url:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

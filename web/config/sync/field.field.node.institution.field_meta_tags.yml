@@ -1,0 +1,21 @@
+uuid: fd6b40d5-54bb-4c0a-ab68-3dd8ab037bfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.institution
+  module:
+    - metatag
+id: node.institution.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: institution
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

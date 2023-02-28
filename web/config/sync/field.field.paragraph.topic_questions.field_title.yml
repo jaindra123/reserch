@@ -1,0 +1,19 @@
+uuid: 335c9e38-1ef9-4c41-9461-6a6651f88fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.topic_questions
+id: paragraph.topic_questions.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: topic_questions
+label: 'Question name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

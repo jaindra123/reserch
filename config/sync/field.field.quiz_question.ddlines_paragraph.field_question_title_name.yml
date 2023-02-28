@@ -1,0 +1,19 @@
+uuid: 85b7ee16-cea0-4c92-b819-016828e521d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.ddlines_paragraph
+id: quiz_question.ddlines_paragraph.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: ddlines_paragraph
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

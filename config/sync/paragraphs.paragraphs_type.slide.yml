@@ -1,0 +1,10 @@
+uuid: 50236d5e-bda4-4450-a3a1-fe257d7f00e8
+langcode: en
+status: true
+dependencies: {  }
+id: slide
+label: Slide
+icon_uuid: null
+icon_default: null
+description: 'This will contain image and text for slide. This will be embedded in Carousel Paragraph'
+behavior_plugins: {  }

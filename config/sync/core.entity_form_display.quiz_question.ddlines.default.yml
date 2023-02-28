@@ -1,0 +1,94 @@
+uuid: fc053516-7135-439c-ab4e-0d3cc2bc266f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.ddlines.field_accordion_collapsed
+    - field.field.quiz_question.ddlines.field_correct_ordering_answer
+    - field.field.quiz_question.ddlines.field_drag_drop_question_answer
+    - field.field.quiz_question.ddlines.field_question_title
+    - field.field.quiz_question.ddlines.field_question_title_name
+    - field.field.quiz_question.ddlines.field_reveal_button_label
+    - field.field.quiz_question.ddlines.field_visibility_mode
+    - quiz.question.type.ddlines
+  module:
+    - inline_entity_form
+    - text
+id: quiz_question.ddlines.default
+targetEntityType: quiz_question
+bundle: ddlines
+mode: default
+content:
+  body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_accordion_collapsed:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_correct_ordering_answer:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_drag_drop_question_answer:
+    type: inline_entity_form_complex
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_question_title_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_reveal_button_label:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_visibility_mode:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  feedback: true
+  field_question_title: true

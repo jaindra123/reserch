@@ -1,0 +1,14 @@
+uuid: fdb82cd2-6b19-4a07-be96-4274aa902445
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bloomsbury_staff
+  module:
+    - user
+id: user_add_role_action.bloomsbury_staff
+label: 'Add the Bloomsbury staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bloomsbury_staff

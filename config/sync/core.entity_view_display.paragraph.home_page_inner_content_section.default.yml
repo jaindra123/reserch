@@ -1,0 +1,61 @@
+uuid: f7c52192-7b62-41c4-9614-42dcd74ed387
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_page_inner_content_section.field_home_inner_section_image
+    - field.field.paragraph.home_page_inner_content_section.field_home_inner_section_link
+    - field.field.paragraph.home_page_inner_content_section.field_home_inner_section_s_d
+    - field.field.paragraph.home_page_inner_content_section.field_home_inner_section_title
+    - image.style.catalog_thumbnail
+    - paragraphs.paragraphs_type.home_page_inner_content_section
+  module:
+    - image
+    - link
+    - text
+id: paragraph.home_page_inner_content_section.default
+targetEntityType: paragraph
+bundle: home_page_inner_content_section
+mode: default
+content:
+  field_home_inner_section_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: catalog_thumbnail
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_home_inner_section_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_home_inner_section_s_d:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_home_inner_section_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

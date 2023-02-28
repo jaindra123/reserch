@@ -1,0 +1,23 @@
+uuid: 61610afb-dd60-4e46-96fe-48745ca7ad14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic_test_attempts
+    - node.type.institution
+  module:
+    - options
+id: node.institution.field_topic_test_attempts
+field_name: field_topic_test_attempts
+entity_type: node
+bundle: institution
+label: 'Topic Test Attempts'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Unlimited
+default_value_callback: ''
+settings: {  }
+field_type: list_string

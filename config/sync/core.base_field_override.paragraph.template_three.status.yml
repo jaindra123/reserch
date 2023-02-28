@@ -1,0 +1,22 @@
+uuid: d53a2c45-4d77-40ad-933e-5c328bd446da
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.template_three
+id: paragraph.template_three.status
+field_name: status
+entity_type: paragraph
+bundle: template_three
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

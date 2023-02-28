@@ -1,0 +1,23 @@
+uuid: afabf678-0706-4a3a-9279-95c0fda6d013
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_practice_answer
+field_name: field_practice_answer
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

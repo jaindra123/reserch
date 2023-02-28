@@ -1,0 +1,21 @@
+uuid: df5923f7-b03b-4ee8-9811-83ae53d3fed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_question_text
+    - paragraphs.paragraphs_type.question
+  module:
+    - text
+id: paragraph.question.field_question_text
+field_name: field_question_text
+entity_type: paragraph
+bundle: question
+label: 'Question Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

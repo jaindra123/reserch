@@ -1,0 +1,30 @@
+uuid: da783da6-fc77-4d04-b416-8e46789e8cf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_institution
+    - node.type.institution
+  module:
+    - user
+id: user.user.field_institution
+field_name: field_institution
+entity_type: user
+bundle: user
+label: Institution
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      institution: institution
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 2cd5d88f-8501-4405-8106-c6635c00b1d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing_page
+id: node.marketing_page.changed
+field_name: changed
+entity_type: node
+bundle: marketing_page
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

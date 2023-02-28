@@ -1,0 +1,18 @@
+uuid: 705b0d8f-e6c5-4a99-9107-0e5d4480e793
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+id: group.learning_path.changed
+field_name: changed
+entity_type: group
+bundle: learning_path
+label: 'Changed on'
+description: 'The time that the group was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

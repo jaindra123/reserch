@@ -1,0 +1,23 @@
+uuid: c871fa28-3bb4-49e5-a4f6-9c447b01baba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_link
+    - quiz.question.type.multichoice
+  module:
+    - link
+id: quiz_question.multichoice.field_link
+field_name: field_link
+entity_type: quiz_question
+bundle: multichoice
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

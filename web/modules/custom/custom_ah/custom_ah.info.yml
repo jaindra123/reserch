@@ -1,0 +1,9 @@
+name: Custom Ah Client
+type: module
+description: Customize Ah client
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - ah_client
+

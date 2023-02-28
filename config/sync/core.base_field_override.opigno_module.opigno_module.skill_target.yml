@@ -1,0 +1,19 @@
+uuid: 14b6ae6c-80dc-4f82-86b8-009bbc96397f
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_module
+    - options
+id: opigno_module.opigno_module.skill_target
+field_name: skill_target
+entity_type: opigno_module
+bundle: opigno_module
+label: 'Target skill'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

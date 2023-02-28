@@ -1,0 +1,21 @@
+uuid: 18cdfcea-6471-4cc9-97ea-e383982d53a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_licence_renewal_month
+    - node.type.institution
+  module:
+    - options
+id: node.institution.field_licence_renewal_month
+field_name: field_licence_renewal_month
+entity_type: node
+bundle: institution
+label: 'Licence renewal month'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

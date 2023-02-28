@@ -1,0 +1,24 @@
+uuid: 2c874e0a-14c4-442e-8465-4e7e986ae89e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_topic_test_attempts
+  module:
+    - user
+id: user.user.field_topic_test_attempts
+field_name: field_topic_test_attempts
+entity_type: user
+bundle: user
+label: 'Topic test attempts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,16 @@
+<div class="drag-drop-box drop5">
+    <div class="drag-drop-left">
+        {% for i,item in items %} 
+            {{  item.content  }}
+        {% endfor %}
+    </div>
+    <div class="drag-drop-right">
+        {% for i,item in items %} 
+            <div class="drop-content">
+                <ul id="sortable1" class="connectedSortable dropzones ui-droppable occupied">
+                {# <li class="ui-state-default dragzones ui-draggable ui-draggable-handle" id="answer 1" style="position: relative;"><a herf="javascript:void(0)">question 1 question 1 </a></li> #}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>

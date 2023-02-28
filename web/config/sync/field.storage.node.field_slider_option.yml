@@ -1,0 +1,23 @@
+uuid: 029ff651-1033-41ec-adbe-1ae468015528
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - opigno_module
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_slider_option
+field_name: field_slider_option
+entity_type: node
+type: opigno_true_false_field
+settings: {  }
+module: opigno_module
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

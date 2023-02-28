@@ -1,0 +1,74 @@
+{% if form['direct_lti'] %}
+
+    {% if form['box_text']['#text'] %}
+        <div class="box-content">
+            {{ form['box_text'] }}
+        </div>
+    {% endif %}
+
+    {{ form['node_id'] }}
+
+    <!-- Topic Test start -->
+    <div class="w-100 topicText-wrapper mt-4">
+        {% set total_questions = form['question_ids']['#value']|length %}
+        {% for key, question_id in form['question_ids']['#value'] %}
+            {% set input_name = "question_#{question_id}" %}
+            {% set question_title = form[input_name]['#title'] %}
+            {% set input_type = form[input_name]['#type'] %}
+            
+            {% if input_type == 'radios' %}
+            <div class="question-topic-item">
+                <h4>Question {{key + 1}} of {{ total_questions }}</h4>
+                <h5>{{ question_title }}</h5>
+                <p class="intruction-text">Select one of the following options.</p>
+                <ul>
+                    {% for option in form[input_name]['#options'] %}
+                    <li>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="{{ input_name }}-{{ option }}" name="{{ input_name }}" value="{{ option }}">
+                            <label class="custom-control-label" for="{{ input_name }}-{{ option }}">{{ option }}</label>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% else %}
+            <div class="question-topic-item">
+                <h4>Question {{key + 1}} of {{ total_questions }}</h4>
+                <h5>{{ question_title }}</h5>
+                <p class="intruction-text">Select all options that apply.</p>
+                <ul>
+                    {% for option in form[input_name]['#options'] %}
+                    <li>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="{{ input_name }}-{{ option }}" name="{{ input_name }}[]" value="{{ option }}">
+                            <label class="custom-control-label" for="{{ input_name }}-{{ option }}">{{ option }}</label>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        
+        {% endfor %}
+
+        {{ form.question_ids }}
+
+        <div class="button-groups mt-5">
+            {% if form['user_has_attempts'] %}
+                <input id="finish_test" type="button" class="form-submit" value="Finish" />
+            {% endif %}
+        </div>
+    </div>
+    <!-- Topic Test end -->
+
+{% else %}
+
+    <div class="restrcit-test">
+        <h4 class="mb-4">This page is restricted.</h4>
+        <p>Your institution has restricted topic test pages on Research Right. Topic tests may now only be accessible via an LTI link within your VLE course.</p>
+        <p>If you cannot find the topic test link, please contact your course instructor.</p>
+    </div>
+    
+{% endif %} 
+    

@@ -1,0 +1,48 @@
+<div class="breadcrumb">
+  <div class="container">
+       <div class="row">
+           <div class="col-md-6">
+             <form class="contact-uss">
+               <h3 class="mb-2">Admin options</h3>
+               <div class="form-group">
+               <label for="selct" style="display:none">Select</label>
+                 <select class="form-text  MYclassList" id="selct">
+                 <option value="">Select an option</option>
+                     {% if ('administrator' in user.getroles(TRUE)) or ('bloomsbury_editor' in user.getroles(TRUE)) %} 
+                      <option value="/admin-hub">Administrator hub</option>
+                     {% for card_group in landing_page['card_group'] %}
+                        <option value="{{ card_group['link'] }}" {{ current_page==card_group['link'] ? 'selected' : '' }} >{{ card_group['title'] }}</option>
+                     {% endfor %}
+                     
+                     {% elseif 'institute' in user.getroles(TRUE) %} 
+                       <option value="/admin-hub" >Institution admin hub</option>
+                       
+                        {% for card_group in landing_page['card_group'] %}
+                          <option value="{{ card_group['link'] }}" {{ current_page==card_group['link'] ? 'selected' : '' }}  >{{ card_group['title'] }}</option>
+                        {% endfor %}
+
+                      {% elseif 'instructor' in user.getroles(TRUE) %} 
+                        <option value="/admin-hub" >Institution admin hub</option>
+                        
+                         {% for card_group in landing_page['card_group'] %}
+                           <option value="{{ card_group['link'] }}" {{ current_page==card_group['link'] ? 'selected' : '' }}  >{{ card_group['title'] }}</option>
+                         {% endfor %}
+
+                        {# <option value="/LTI-Integration"   {{ current_page=='/LTI-Integration' ? 'selected' : '' }}  >Create LTI keys</option>
+                        <option value="/Create-LTI-content-links"   {{ current_page=='/Create-LTI-content-links' ? 'selected' : '' }} >Create LTI content links</option>
+                        <option value="/manage-appearance"    {{ current_page=='/manage-appearance' ? 'selected' : '' }} >Manage my appearance  </option>
+                        <option value="/manage-instructor" > Mange instructors</option>
+                        <option value="/institution-licence-count"    {{ current_page=='/institution-licence-count' ? 'selected' : '' }} >View licence count</option>
+                        <option value="/site-usage" >View site usage</option> #}
+                      {% else %}
+                       <option value="/admin-hub" >Instructor hub</option>
+                         <option value="/LTI-Integration"   {{ current_page=='/LTI-Integration' ? 'selected' : '' }}  >Create LTI keys</option>
+                      <option value="/Create-LTI-content-links" {{ current_page=='/Create-LTI-content-links' ? 'selected' : '' }} >Create LTI content links</option>
+                   {% endif%}
+                 </select>
+               </div>
+            </form>
+           </div>
+       </div>
+  </div>
+</div> 

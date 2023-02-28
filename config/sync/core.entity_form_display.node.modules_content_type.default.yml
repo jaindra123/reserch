@@ -1,0 +1,154 @@
+uuid: ec96015c-d2a6-4a0c-b535-10bf4c430e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.modules_content_type.field_admin_option
+    - field.field.node.modules_content_type.field_body_description
+    - field.field.node.modules_content_type.field_breadcrumb
+    - field.field.node.modules_content_type.field_choose_template
+    - field.field.node.modules_content_type.field_exclude_from_search
+    - field.field.node.modules_content_type.field_exclude_the_page_from_lti
+    - field.field.node.modules_content_type.field_meta_tags
+    - field.field.node.modules_content_type.field_select_parent
+    - field.field.node.modules_content_type.field_slider_option
+    - field.field.node.modules_content_type.field_sub_title
+    - field.field.node.modules_content_type.field_suggestion_form
+    - field.field.node.modules_content_type.field_summary
+    - field.field.node.modules_content_type.field_template_type
+    - field.field.node.modules_content_type.field_visible_to_anonymous_users
+    - field.field.node.modules_content_type.field_yoast_seo
+    - node.type.modules_content_type
+  module:
+    - inline_entity_form
+    - metatag
+    - opigno_module
+    - path
+    - text
+id: node.modules_content_type.default
+targetEntityType: node
+bundle: modules_content_type
+mode: default
+content:
+  field_body_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_breadcrumb:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: Breadcrumb
+    third_party_settings: {  }
+  field_choose_template:
+    type: inline_entity_form_complex
+    weight: 9
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_exclude_from_search:
+    type: opigno_true_false_widget_type
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_exclude_the_page_from_lti:
+    type: opigno_true_false_widget_type
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 12
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_select_parent:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sub_title:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Sub title'
+    third_party_settings: {  }
+  field_summary:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: Summary
+    third_party_settings: {  }
+  field_template_type:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_visible_to_anonymous_users:
+    type: opigno_true_false_widget_type
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: Title
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_admin_option: true
+  field_slider_option: true
+  field_suggestion_form: true
+  field_yoast_seo: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

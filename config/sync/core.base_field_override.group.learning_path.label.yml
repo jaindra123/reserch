@@ -1,0 +1,18 @@
+uuid: 3ffd4b62-8e73-49c6-919e-3655a6d57a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+id: group.learning_path.label
+field_name: label
+entity_type: group
+bundle: learning_path
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

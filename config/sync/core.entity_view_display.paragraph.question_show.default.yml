@@ -1,0 +1,78 @@
+uuid: 340004a1-0013-42b9-94a3-aff264e422b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_show.field_ans_subtitle
+    - field.field.paragraph.question_show.field_ans_title
+    - field.field.paragraph.question_show.field_ques_how_title
+    - field.field.paragraph.question_show.field_ques_show_link_1
+    - field.field.paragraph.question_show.field_ques_show_link_2
+    - field.field.paragraph.question_show.field_ques_show_subtitle
+    - paragraphs.paragraphs_type.question_show
+  module:
+    - link
+id: paragraph.question_show.default
+targetEntityType: paragraph
+bundle: question_show
+mode: default
+content:
+  field_ans_subtitle:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ans_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ques_how_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ques_show_link_1:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ques_show_link_2:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ques_show_subtitle:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

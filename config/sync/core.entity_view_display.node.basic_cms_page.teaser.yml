@@ -1,0 +1,59 @@
+uuid: 3e348da3-24d1-43a1-812d-38ddeab9f419
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.basic_cms_page.body
+    - field.field.node.basic_cms_page.field_bod
+    - field.field.node.basic_cms_page.field_breadcrumb
+    - field.field.node.basic_cms_page.field_landing_page_ref
+    - field.field.node.basic_cms_page.field_select_quiz
+    - field.field.node.basic_cms_page.field_sub_title
+    - field.field.node.basic_cms_page.field_summary
+    - field.field.node.basic_cms_page.field_visible_to_anonymous_users
+    - field.field.node.basic_cms_page.field_weight
+    - node.type.basic_cms_page
+  module:
+    - text
+    - user
+id: node.basic_cms_page.teaser
+targetEntityType: node
+bundle: basic_cms_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_breadcrumb:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_bod: true
+  field_landing_page_ref: true
+  field_select_quiz: true
+  field_sub_title: true
+  field_summary: true
+  field_visible_to_anonymous_users: true
+  field_weight: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

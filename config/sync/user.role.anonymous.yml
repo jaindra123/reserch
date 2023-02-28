@@ -1,0 +1,155 @@
+uuid: 242dee7b-c90d-436f-902e-ae776e6ed5c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.forum
+    - node.type.institution
+    - node.type.marketing_page
+    - node.type.modules_content_type
+    - node.type.page
+    - node.type.webform
+  module:
+    - contact
+    - entity_print
+    - field_permissions
+    - filter
+    - media
+    - node
+    - opigno_certificate
+    - paragraphs_type_permissions
+    - quiz
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access site-wide contact form'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'create ddlines quiz_question'
+  - 'create ddlines_table quiz_question'
+  - 'create paragraph content analysing_data'
+  - 'create paragraph content anonymous_slider'
+  - 'create paragraph content anonymous_user_page_slider'
+  - 'create paragraph content home_page_content_section'
+  - 'create paragraph content home_page_inner_content_section'
+  - 'create paragraph content home_page_inner_content_section_'
+  - 'create paragraph content home_page_section_2'
+  - 'create paragraph content home_page_section_3'
+  - 'create paragraph content home_page_slider'
+  - 'create paragraph content inner_content_section_3'
+  - 'create paragraph content marketing_page_bottom_content'
+  - 'create paragraph content marketing_page_sidebar'
+  - 'delete any ddlines quiz_question'
+  - 'delete any ddlines_table quiz_question'
+  - 'delete own ddlines quiz_question'
+  - 'delete own ddlines_table quiz_question'
+  - 'entity print access bundle analysing_data'
+  - 'entity print access bundle ddlines'
+  - 'entity print access bundle ddlines_table'
+  - 'entity print access bundle drag_and_drop'
+  - 'entity print access bundle marketing_page_bottom_content'
+  - 'entity print access bundle page'
+  - 'restful post color_rest_resource'
+  - 'search content'
+  - 'update any ddlines quiz_question'
+  - 'update any ddlines_table quiz_question'
+  - 'update own ddlines quiz_question'
+  - 'update own ddlines_table quiz_question'
+  - 'update paragraph content anonymous_user_page_slider'
+  - 'use search_api_autocomplete for search'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view any ddlines quiz_question'
+  - 'view any ddlines_table quiz_question'
+  - 'view field_authentication_hub_id'
+  - 'view field_authentication_methods'
+  - 'view field_first_name'
+  - 'view field_ga_tracking_code'
+  - 'view field_institute_reference'
+  - 'view field_institution'
+  - 'view field_last_name'
+  - 'view field_licence_renewal_month'
+  - 'view field_logo'
+  - 'view field_logo_hyperlink'
+  - 'view field_modules'
+  - 'view field_number_of_licences'
+  - 'view field_subscription_expiry_date'
+  - 'view field_subscription_limit'
+  - 'view field_subscription_used'
+  - 'view field_u'
+  - 'view forum revisions'
+  - 'view institution revisions'
+  - 'view marketing_page revisions'
+  - 'view media'
+  - 'view modules_content_type revisions'
+  - 'view own ddlines quiz_question'
+  - 'view own ddlines_table quiz_question'
+  - 'view own field_authentication_hub_id'
+  - 'view own field_authentication_methods'
+  - 'view own field_first_name'
+  - 'view own field_ga_tracking_code'
+  - 'view own field_institute_reference'
+  - 'view own field_institution'
+  - 'view own field_last_name'
+  - 'view own field_licence_renewal_month'
+  - 'view own field_logo'
+  - 'view own field_logo_hyperlink'
+  - 'view own field_modules'
+  - 'view own field_number_of_licences'
+  - 'view own field_subscription_expiry_date'
+  - 'view own field_subscription_limit'
+  - 'view own field_subscription_used'
+  - 'view own field_u'
+  - 'view own user_picture'
+  - 'view page revisions'
+  - 'view paragraph content analysing_data'
+  - 'view paragraph content anonymous_slider'
+  - 'view paragraph content anonymous_user_page_slider'
+  - 'view paragraph content carousel'
+  - 'view paragraph content carousel_child'
+  - 'view paragraph content drag_and_drop'
+  - 'view paragraph content drag_and_drop_table'
+  - 'view paragraph content drag_drop_paragraph'
+  - 'view paragraph content embed'
+  - 'view paragraph content faq'
+  - 'view paragraph content faqs_outer_para'
+  - 'view paragraph content home_page_content_section'
+  - 'view paragraph content home_page_inner_content_section'
+  - 'view paragraph content home_page_inner_content_section_'
+  - 'view paragraph content home_page_section_2'
+  - 'view paragraph content home_page_section_3'
+  - 'view paragraph content home_page_slider'
+  - 'view paragraph content image'
+  - 'view paragraph content inner_content_section_3'
+  - 'view paragraph content marketing_page_bottom_content'
+  - 'view paragraph content marketing_page_sidebar'
+  - 'view paragraph content multichoice'
+  - 'view paragraph content practice_analysis_inner'
+  - 'view paragraph content practice_page'
+  - 'view paragraph content question_show'
+  - 'view paragraph content questions_'
+  - 'view paragraph content quiz'
+  - 'view paragraph content quiz_matching'
+  - 'view paragraph content quiz_matching_answer'
+  - 'view paragraph content quiz_question_answer'
+  - 'view paragraph content quiz_question_term_pool'
+  - 'view paragraph content quiz_result_feedback'
+  - 'view paragraph content slider'
+  - 'view paragraph content template_one'
+  - 'view paragraph content template_three'
+  - 'view paragraph content template_two'
+  - 'view paragraph content topic_questions'
+  - 'view paragraph content video'
+  - 'view published certificate entities'
+  - 'view unpublished certificate entities'
+  - 'view user_picture'
+  - 'view webform revisions'

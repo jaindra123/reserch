@@ -1,0 +1,17 @@
+uuid: fba15405-40a1-4236-8f0c-d74b4c225db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+  enforced:
+    config:
+      - user.role.instructor
+id: learning_path-0ebd5a288
+label: Instructor
+weight: 4
+internal: true
+audience: outsider
+group_type: learning_path
+permissions_ui: false
+permissions: {  }

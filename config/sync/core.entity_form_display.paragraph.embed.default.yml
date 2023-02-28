@@ -1,0 +1,33 @@
+uuid: 16e3c54b-5b44-43bc-9457-e720c627e1dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.embed.field_description
+    - field.field.paragraph.embed.field_padding
+    - paragraphs.paragraphs_type.embed
+  module:
+    - text
+id: paragraph.embed.default
+targetEntityType: paragraph
+bundle: embed
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_padding:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

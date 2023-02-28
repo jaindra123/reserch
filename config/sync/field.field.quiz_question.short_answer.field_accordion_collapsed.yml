@@ -1,0 +1,23 @@
+uuid: 49172eb7-4f7b-48f1-967d-9f25e7cd95d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_accordion_collapsed
+    - quiz.question.type.short_answer
+id: quiz_question.short_answer.field_accordion_collapsed
+field_name: field_accordion_collapsed
+entity_type: quiz_question
+bundle: short_answer
+label: 'Accordion Expand'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

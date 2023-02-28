@@ -1,0 +1,21 @@
+uuid: 9e93226f-f470-43a8-a82d-fe999af8da05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_type
+    - node.type.webform
+  module:
+    - options
+id: node.webform.field_template_type
+field_name: field_template_type
+entity_type: node
+bundle: webform
+label: 'Template Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

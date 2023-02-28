@@ -1,0 +1,21 @@
+uuid: 851d2a63-369f-44d6-952c-e668a8e21dfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_marketing_bottom_descripti
+    - node.type.marketing_page
+  module:
+    - text
+id: node.marketing_page.field_marketing_bottom_descripti
+field_name: field_marketing_bottom_descripti
+entity_type: node
+bundle: marketing_page
+label: 'Marketing Bottom Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

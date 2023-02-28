@@ -1,0 +1,8 @@
+uuid: 65986307-4838-48ae-8371-a40092f25753
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: S7hUpWnvjoaGyXUnmiboCTNbSnokozdVapT__SdV7pY
+id: opigno_scorm
+label: 'Scorm package'

@@ -1,0 +1,23 @@
+uuid: 26f69502-d199-4ec6-8baa-9e392d68247c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_option
+    - node.type.modules_content_type
+  module:
+    - opigno_module
+id: node.modules_content_type.field_slider_option
+field_name: field_slider_option
+entity_type: node
+bundle: modules_content_type
+label: 'Slider Option'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

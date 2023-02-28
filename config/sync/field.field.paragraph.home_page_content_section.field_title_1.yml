@@ -1,0 +1,19 @@
+uuid: baf362c2-0d1f-41c1-80f7-28634edf57d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_1
+    - paragraphs.paragraphs_type.home_page_content_section
+id: paragraph.home_page_content_section.field_title_1
+field_name: field_title_1
+entity_type: paragraph
+bundle: home_page_content_section
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

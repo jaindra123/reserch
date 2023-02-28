@@ -1,0 +1,26 @@
+uuid: c6ba2e84-9f27-4251-a992-b8880daabcae
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz
+  enforced:
+    module:
+      - quiz_short_answer
+_core:
+  default_config_hash: y8oSzhgKHHx1wLQHMHgUBk3mfL33W2MguzCzz9AOJ6U
+id: quiz_question.short_answer_correct
+field_name: short_answer_correct
+entity_type: quiz_question
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

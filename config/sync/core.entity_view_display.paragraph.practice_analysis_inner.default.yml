@@ -1,0 +1,43 @@
+uuid: bb98bc7a-1c5a-47fc-8198-1f2b3bfe7707
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.practice_analysis_inner.field_practice_analysis_descript
+    - field.field.paragraph.practice_analysis_inner.field_practice_analysis_title
+    - field.field.paragraph.practice_analysis_inner.field_practice_answer
+    - paragraphs.paragraphs_type.practice_analysis_inner
+  module:
+    - text
+id: paragraph.practice_analysis_inner.default
+targetEntityType: paragraph
+bundle: practice_analysis_inner
+mode: default
+content:
+  field_practice_analysis_descript:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_practice_analysis_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_practice_answer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

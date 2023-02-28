@@ -1,0 +1,67 @@
+uuid: d86804e4-fe7b-4692-b35f-53f7b3b6731c
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.marketing_page.body
+    - field.field.node.marketing_page.field_admin_option
+    - field.field.node.marketing_page.field_anonymous_user_slider
+    - field.field.node.marketing_page.field_breadcrumb
+    - field.field.node.marketing_page.field_home_page_top_slider
+    - field.field.node.marketing_page.field_marketing_bottom_descripti
+    - field.field.node.marketing_page.field_marketing_page_bottom_cont
+    - field.field.node.marketing_page.field_meta_tags
+    - field.field.node.marketing_page.field_sidebar_data
+    - field.field.node.marketing_page.field_sub_title
+    - field.field.node.marketing_page.field_suggestion_form
+    - field.field.node.marketing_page.field_summary
+    - field.field.node.marketing_page.field_template_type
+    - field.field.node.marketing_page.field_video_data
+    - field.field.node.marketing_page.field_visible_to_anonymous_users
+    - field.field.node.marketing_page.field_yoast_seo
+    - node.type.marketing_page
+  module:
+    - text
+    - user
+id: node.marketing_page.teaser
+targetEntityType: node
+bundle: marketing_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_anonymous_user_slider: true
+  field_breadcrumb: true
+  field_home_page_top_slider: true
+  field_marketing_bottom_descripti: true
+  field_marketing_page_bottom_cont: true
+  field_meta_tags: true
+  field_sidebar: true
+  field_sidebar_data: true
+  field_sub_title: true
+  field_suggestion_form: true
+  field_summary: true
+  field_template_type: true
+  field_video_data: true
+  field_visible_to_anonymous_users: true
+  field_yoast_seo: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

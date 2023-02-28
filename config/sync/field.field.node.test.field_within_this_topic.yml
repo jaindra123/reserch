@@ -1,0 +1,34 @@
+uuid: bd6d73b8-90a4-47a3-ad62-7065263145fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_within_this_topic
+    - node.type.faqs
+    - node.type.practice
+    - node.type.test
+    - node.type.topic
+id: node.test.field_within_this_topic
+field_name: field_within_this_topic
+entity_type: node
+bundle: test
+label: 'Within this topic'
+description: 'Please select the link by press ctrl/cmd to add/remove the option.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faqs: faqs
+      practice: practice
+      test: test
+      topic: topic
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: faqs
+field_type: entity_reference

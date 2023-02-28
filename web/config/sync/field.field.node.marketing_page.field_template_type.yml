@@ -1,0 +1,21 @@
+uuid: d47f9d4f-8987-4d31-a9cd-3570aed498f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_type
+    - node.type.marketing_page
+  module:
+    - options
+id: node.marketing_page.field_template_type
+field_name: field_template_type
+entity_type: node
+bundle: marketing_page
+label: 'Template Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

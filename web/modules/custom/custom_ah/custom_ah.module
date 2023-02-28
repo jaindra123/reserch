@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_ah_client_shibboleth_login().
+ */
+function custom_ah_ah_client_shibboleth_login(Request $request, $user) {
+  //dump($request);
+  //dump($user);
+  //\Drupal::logger('custom_ah')->log($request);
+  //\Drupal::logger('custom_ah')->log($user);
+
+}
+
+

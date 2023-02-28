@@ -1,0 +1,10 @@
+uuid: c7da2052-56f2-4184-b33e-8d782b74b8bc
+langcode: en
+status: true
+dependencies: {  }
+id: inner_content_section_3
+label: 'Home Page Inner Content Section 3'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

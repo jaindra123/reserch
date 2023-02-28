@@ -1,0 +1,23 @@
+uuid: 940714ad-3a4a-4db7-9262-74d266f0458d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_accordion_collapsed
+    - quiz.question.type.matching
+id: quiz_question.matching.field_accordion_collapsed
+field_name: field_accordion_collapsed
+entity_type: quiz_question
+bundle: matching
+label: 'Accordion Expand'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

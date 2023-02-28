@@ -1,0 +1,23 @@
+uuid: 93805b95-d54d-4147-8989-ebe35e11627e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_paragraph_sentance
+    - quiz.question.type.ddlines_paragraph
+  module:
+    - text
+id: quiz_question.ddlines_paragraph.field_paragraph_sentance
+field_name: field_paragraph_sentance
+entity_type: quiz_question
+bundle: ddlines_paragraph
+label: 'Paragraph Sentance (To add blank space (Input) into your paragraph. use ( _____ ) 5 times underscore.)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

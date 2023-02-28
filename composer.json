@@ -1,0 +1,262 @@
+{
+    "name": "opigno/opigno-composer",
+    "description": "Opigno LMS",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [],
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "bloomsbury/ah_client": {
+            "type": "vcs",
+            "url": "https://bitbucket.org/bloomsbury/authentication_hub_client.git"
+        },
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        "enyo/dropzone": {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "v5.5.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dropzone/dropzone/archive/refs/tags/v5.5.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "desandro/masonry": {
+            "type": "package",
+            "package": {
+                "name": "desandro/masonry",
+                "version": "3.3.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/masonry/archive/v3.3.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "desandro/imagesloaded": {
+            "type": "package",
+            "package": {
+                "name": "desandro/imagesloaded",
+                "version": "3.1.8",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/imagesloaded/archive/v3.1.8.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "mozilla/pdf.js": {
+            "type": "package",
+            "package": {
+                "name": "mozilla/pdf.js",
+                "version": "v2.4.456",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/mozilla/pdf.js/releases/download/v2.4.456/pdfjs-2.4.456-es5-dist.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "kenwheeler/slick": {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "1.8.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "furf/jquery-ui-touch-punch": {
+            "type": "package",
+            "package": {
+                "name": "furf/jquery-ui-touch-punch",
+                "version": "master",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/furf/jquery-ui-touch-punch/archive/refs/heads/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "almende/vis": {
+            "type": "package",
+            "package": {
+                "name": "almende/vis",
+                "version": "v4.21.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/almende/vis/archive/refs/tags/v4.21.0.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    },
+    "require": {
+        "wikimedia/composer-merge-plugin": "2.0",
+        "composer/installers": "v1.12.0",
+        "cweagans/composer-patches": "1.7.1",
+        "drupal/core-composer-scaffold": "~9.3.0",
+        "opigno/opigno_lms": "^3.0.0",
+        "drupal/webform": "^6.2@beta",
+        "drupal/paragraphs": "^1.14",
+        "drupal/pathauto": "^1.10",
+        "drupal/we_megamenu": "^1.13",
+        "drupal/yoast_seo": "^1.7",
+        "drupal/field_permissions": "^1.1",
+        "drupal/entity_reference_exposed_filters": "^1.0@alpha",
+        "drupal/better_exposed_filters": "^5.2",
+        "drupal/cancel_button": "^1.3",
+        "drupal/conditional_fields": "^4.0@alpha",
+        "drupal/datatables": "^2.0",
+        "drupal/dependent_fields": "^1.0",
+        "drupal/verf": "^1.0",
+        "drupal/entityreference_filter": "^1.4",
+        "drupal/views_bulk_operations": "^4.1",
+        "drupal/unique_entity_title": "^1.2",
+        "drupal/login_emailusername": "^2.0",
+        "drupal/auto_username": "^1.2",
+        "drupal/easy_breadcrumb": "^2.0",
+        "drupal/smtp": "^1.0",
+        "drupal/node_custom_status_messages": "^1.0",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/clientside_validation": "^3.0@RC",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "npm-asset/jquery-validation": "^1.17",
+        "drupal/field_formatter_class": "^1.5",
+        "drupal/stringoverrides": "1.x-dev@dev",
+        "drupal/devel": "^4.1",
+        "drupal/devel_kint_extras": "^1.0",
+        "drupal/genpass": "^1.1",
+        "drupal/nocurrent_pass": "^1.1",
+        "drupal/search_api_solr": "^4.2",
+        "drupal/ckeditor_media_embed": "^1.11",
+        "drupal/video_embed_field": "^2.4",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/ckeditor_details": "^2.0",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/login_onlyemail": "^2.0@RC",
+        "drupal/change_pwd_page": "^1.0",
+        "drupal/quiz": "^6.0@alpha",
+        "drupal/h5p": "^2.0@alpha",
+        "drupal/varbase_heroslider_media": "^9.0",
+        "drupal/advanced_text_formatter": "^2.1.",
+        "drupal/crop": "^2.2",
+        "drupal/editor_file": "^1.6",
+        "drupal/tabtamer": "^2.0@beta",
+        "drupal/httpswww": "2.x-dev@dev",
+        "drupal/jcarousel": "^6.0@alpha",
+        "drupal/vimeo_embed_field": "^1.3",
+        "drupal/file_browser": "^1.3",
+        "desandro/masonry": "3.3.1",
+        "desandro/imagesloaded": "3.1.8",
+        "drupal/redirect_after_login": "^2.7",
+        "bloomsbury/authentication_hub_client": "dev-master",
+        "drupal/config_delete": "^1.17",
+        "drupal/tooltip_ckeditor": "^4.0",
+        "drupal/config_ignore": "^2.3",
+        "drupal/maxlength": "^2.0",
+        "drupal/redirect": "^1.8",
+        "drupal/token_filter": "^1.4",
+        "drupal/token_views_filter": "^1.5",
+        "drupal/search_api_autocomplete": "^1.7",
+        "drupal/weight": "^3.3",
+        "drupal/views_exposed_filter_blocks": "^1.1"
+    },
+    "require-dev": {
+        "drush/drush": "^10",
+        "drupal/console": "~1.0"
+    },
+    "replace": {
+        "h5p/h5p-core": "*",
+        "h5p/h5p-editor": "*"
+    },
+    "config": {
+        "sort-packages": false,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "wikimedia/composer-merge-plugin": true,
+            "drupal/console-extend-plugin": true,
+            "topfloor/composer-cleanup-vcs-dirs": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/libraries/ckeditor": [
+                "type:drupal-library-ckeditor"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "enable-patching": "true",
+		"patches": {
+			"drupal/opigno_dashboard": {
+				"login submit issue": "https://www.drupal.org/files/issues/2022-03-08/opigno_dashboard-fix-error-produced-by-missing-homepage-during-login-2.patch"
+			},
+
+			"drupal/quiz": {
+				"adding filters in quiz entitylist page": "./patches/quiz.patch",
+                "Question Label change": "patch/quiz.patch",
+                "Remove Pop up form from edit question": "patches/quizquestion.patch",
+				"Dynamic title for question answering form": "patch/issue_quiz_title.patch",
+                "add Label for quiz page": "patch/quiz-page.patch",
+                "Change textfield to textarea for short answer type questions" : "patch/quiz_textarea.patch"
+
+			},
+            "drupal/entity_embed": {
+                "height width attributes": "patches/image_height_width.patch"
+            },
+			"drupal/redirect_after_login": {
+                "reset password redirect": "patches/redirect_reset_pass.patch"
+            }
+
+
+		},
+        "composer-exit-on-patch-failure": false,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+diff --git a/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php b/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php
+index 9a7f4bf..8818e69 100644
+--- a/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php
++++ b/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php
+@@ -70,7 +70,7 @@ class ShortAnswerQuestion extends QuizQuestion {
+     $element = parent::getAnsweringForm($form_state, $quizQuestionResultAnswer);
+ 
+     $element += [
+-      '#type' => 'textfield',
++      '#type' => 'textarea',
+       '#title' => $this->t('Answer'),
+       '#description' => $this->t('Enter your answer here'),
+       '#default_value' => '',
+@@ -78,6 +78,8 @@ class ShortAnswerQuestion extends QuizQuestion {
+       '#maxlength' => 256,
+       '#required' => FALSE,
+       '#attributes' => ['autocomplete' => 'off'],
++      '#rows' => 1,
++      '#cols' => 60,
+     ];
+ 
+     if ($quizQuestionResultAnswer->isAnswered()) {

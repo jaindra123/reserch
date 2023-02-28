@@ -1,0 +1,25 @@
+uuid: d8684f09-71a2-4b77-a79c-3dc19e0178d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - research_right_general
+    - system
+  theme:
+    - research
+id: licencecount
+theme: research
+region: content
+weight: 0
+provider: null
+plugin: licence_count
+settings:
+  id: licence_count
+  label: 'Licence Count'
+  label_display: visible
+  provider: research_right_general
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /institution-licence-count

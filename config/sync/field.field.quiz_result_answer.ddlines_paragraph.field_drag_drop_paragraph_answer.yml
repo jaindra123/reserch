@@ -1,0 +1,21 @@
+uuid: 7b71d71d-ffc0-4fc8-8b7c-dfc575093baa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_result_answer.field_drag_drop_paragraph_answer
+    - quiz.result.answer.type.ddlines_paragraph
+  module:
+    - options
+id: quiz_result_answer.ddlines_paragraph.field_drag_drop_paragraph_answer
+field_name: field_drag_drop_paragraph_answer
+entity_type: quiz_result_answer
+bundle: ddlines_paragraph
+label: 'Drag Drop Paragraph Answer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

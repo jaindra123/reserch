@@ -1,0 +1,23 @@
+uuid: 3a337f8a-19c3-4205-92c4-e359420dc2e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - opigno_module
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_suggestion_form
+field_name: field_suggestion_form
+entity_type: node
+type: opigno_true_false_field
+settings: {  }
+module: opigno_module
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 51d1c71d-17d4-4094-844f-74dcf7a69334
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - unique_entity_title
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  unique_entity_title:
+    enabled: false
+name: Test
+type: test
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

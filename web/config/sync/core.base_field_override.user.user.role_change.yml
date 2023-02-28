@@ -1,0 +1,21 @@
+uuid: e032f39f-8a87-4d1f-b88f-b0e39b668ef7
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.role_change
+field_name: role_change
+entity_type: user
+bundle: user
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value:
+  - __role_delegation_empty_field_value__
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 17308f8d-d8ff-4d25-83c5-f0ed3624004f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.learning_path-group_membership
+  module:
+    - path
+id: group_content.learning_path-group_membership.path
+field_name: path
+entity_type: group_content
+bundle: learning_path-group_membership
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

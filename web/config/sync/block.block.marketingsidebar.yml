@@ -1,0 +1,25 @@
+uuid: 72e9c546-15ee-486d-af5c-c0d956e00447
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4073f3d0-d2e6-48ca-a762-ee09c3aefae8'
+  module:
+    - block_content
+  theme:
+    - research
+id: marketingsidebar
+theme: research
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:4073f3d0-d2e6-48ca-a762-ee09c3aefae8'
+settings:
+  id: 'block_content:4073f3d0-d2e6-48ca-a762-ee09c3aefae8'
+  label: 'Marketing Side bar'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

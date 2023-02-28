@@ -1,0 +1,10 @@
+uuid: c48d3363-a722-4156-881f-b7ea7a4f1be7
+langcode: en
+status: true
+dependencies: {  }
+id: practice_analysis_inner
+label: 'practice analysis inner'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

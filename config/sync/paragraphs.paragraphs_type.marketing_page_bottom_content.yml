@@ -1,0 +1,10 @@
+uuid: 0e746495-cc19-440f-b0b6-1a32b7fbbeb4
+langcode: en
+status: true
+dependencies: {  }
+id: marketing_page_bottom_content
+label: 'Marketing Page Bottom Content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

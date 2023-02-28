@@ -1,0 +1,179 @@
+uuid: ae81c8a8-9a42-4cf2-8f5f-318c9646b670
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.practice.body
+    - field.field.node.practice.field_breadcrumb
+    - field.field.node.practice.field_exclude_from_search
+    - field.field.node.practice.field_exclude_the_page_from_lti
+    - field.field.node.practice.field_meta_tags
+    - field.field.node.practice.field_para_refer
+    - field.field.node.practice.field_paragraph
+    - field.field.node.practice.field_select_topic
+    - field.field.node.practice.field_sub_title
+    - field.field.node.practice.field_summary
+    - field.field.node.practice.field_visible_to_anonymous_users
+    - field.field.node.practice.field_weight
+    - node.type.practice
+  module:
+    - metatag
+    - opigno_module
+    - paragraphs
+    - path
+    - weight
+id: node.practice.default
+targetEntityType: node
+bundle: practice
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_breadcrumb:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exclude_from_search:
+    type: opigno_true_false_widget_type
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_exclude_the_page_from_lti:
+    type: opigno_true_false_widget_type
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 15
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_paragraph:
+    type: paragraphs
+    weight: 16
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_select_topic:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sub_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_summary:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_visible_to_anonymous_users:
+    type: opigno_true_false_widget_type
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_weight:
+    type: weight_selector
+    weight: 51
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_para_refer: true

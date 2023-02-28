@@ -1,0 +1,23 @@
+uuid: 3d13c20a-668a-4f59-bd9a-8c2c248634e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visible_to_anonymous_users
+    - node.type.faqs
+  module:
+    - opigno_module
+id: node.faqs.field_visible_to_anonymous_users
+field_name: field_visible_to_anonymous_users
+entity_type: node
+bundle: faqs
+label: 'Visible to anonymous users'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

@@ -1,0 +1,18 @@
+uuid: b16ad17d-d7c0-4457-96df-1217b631d5bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.learning_path-opigno_ilt_group
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: group_content.learning_path-opigno_ilt_group
+target_entity_type_id: group_content
+target_bundle: learning_path-opigno_ilt_group
+default_langcode: site_default
+language_alterable: false

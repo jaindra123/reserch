@@ -1,0 +1,21 @@
+uuid: 1022ad3d-c0be-48aa-bb22-900976966513
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_practice_answer
+    - paragraphs.paragraphs_type.practice_analysis_inner
+  module:
+    - text
+id: paragraph.practice_analysis_inner.field_practice_answer
+field_name: field_practice_answer
+entity_type: paragraph
+bundle: practice_analysis_inner
+label: 'Practice Answer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

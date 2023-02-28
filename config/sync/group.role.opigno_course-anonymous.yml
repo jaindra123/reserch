@@ -1,0 +1,16 @@
+uuid: 1c675d10-e47e-4914-9c70-1d7a22874145
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.opigno_course
+_core:
+  default_config_hash: GvexB_RW_2EjWU7TzXt4IgWTxEwCPNVZ7XjtWh66i2Y
+id: opigno_course-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: opigno_course
+permissions_ui: true
+permissions: {  }

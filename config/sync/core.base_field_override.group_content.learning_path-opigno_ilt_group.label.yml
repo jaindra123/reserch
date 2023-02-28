@@ -1,0 +1,18 @@
+uuid: fe97d647-3617-4448-8189-f83a11191fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.learning_path-opigno_ilt_group
+id: group_content.learning_path-opigno_ilt_group.label
+field_name: label
+entity_type: group_content
+bundle: learning_path-opigno_ilt_group
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

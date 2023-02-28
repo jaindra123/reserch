@@ -1,0 +1,21 @@
+uuid: 8329be07-6780-4637-b877-06f72f318735
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_module
+    - options
+id: opigno_module.opigno_module.takes
+field_name: takes
+entity_type: opigno_module
+bundle: opigno_module
+label: 'Allowed number of attempts'
+description: 'The number of times a user is allowed to take this Module. <strong>Anonymous users are only allowed to take Module that allow an unlimited number of attempts.</strong>'
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

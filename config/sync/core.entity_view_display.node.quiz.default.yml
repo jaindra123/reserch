@@ -1,0 +1,45 @@
+uuid: 3f580db1-b1eb-4f1a-b366-219741044049
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz.body
+    - field.field.node.quiz.field_quiz_question_answer
+    - node.type.quiz
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.quiz.default
+targetEntityType: node
+bundle: quiz
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_quiz_question_answer:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: 7eb79cc4-8a7e-4373-9ae8-6b3daf43a4e6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8TfqRTJNEwC2TKJNr1Fpg7JuGsh0bnCfCkDu7uK5BPw
+id: date_short_with_time
+label: 'Date short with the time'
+locked: false
+pattern: 'd M Y - H\h:i'

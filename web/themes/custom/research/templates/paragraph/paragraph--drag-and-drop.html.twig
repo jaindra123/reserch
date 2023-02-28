@@ -1,0 +1,16 @@
+{# <div class="drag-drop-box drop5">
+  <div class="drop-content">
+      <ul id="sortable1" class="connectedSortable dropzones">
+        <li class="ui-state-default dragzones" id="{{ paragraph.field_drag_drop_answer.value}}"><a herf="javascript:void(0)">{{content.field_drag_drop_question}}</a></li> 
+      </ul>
+    </div>
+    <div class="drop-content"> 
+      <ul id="sortable2" class="connectedSortable dropzones"> </ul>
+    </div>
+</div> #}
+
+<div class="drop-content">
+  <ul id="sortable1" class="connectedSortable dropzones ui-droppable occupied">
+    <li class="ui-state-default dragzones ui-draggable ui-draggable-handle" id="{{ paragraph.field_drag_drop_answer.value}}" style="position: relative;"><a herf="javascript:void(0)">{{content.field_drag_drop_question}}</a></li>
+  </ul>
+</div>

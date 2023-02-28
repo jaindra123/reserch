@@ -1,0 +1,23 @@
+uuid: 978bbf91-7905-4d24-8929-4d7bd0899aa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_analysing_data_content
+field_name: field_analysing_data_content
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

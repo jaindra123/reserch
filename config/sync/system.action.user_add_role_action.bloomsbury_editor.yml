@@ -1,0 +1,14 @@
+uuid: 75263fc0-4608-4535-8e72-dd9fb66cae33
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bloomsbury_editor
+  module:
+    - user
+id: user_add_role_action.bloomsbury_editor
+label: 'Add the Bloomsbury Editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bloomsbury_editor

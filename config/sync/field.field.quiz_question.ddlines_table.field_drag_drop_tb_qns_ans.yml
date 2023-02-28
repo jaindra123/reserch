@@ -1,0 +1,130 @@
+uuid: f693a4f7-cd65-4761-b9a2-7b314ecd1521
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_drag_drop_tb_qns_ans
+    - paragraphs.paragraphs_type.drag_and_drop_table
+    - quiz.question.type.ddlines_table
+  module:
+    - entity_reference_revisions
+id: quiz_question.ddlines_table.field_drag_drop_tb_qns_ans
+field_name: field_drag_drop_tb_qns_ans
+entity_type: quiz_question
+bundle: ddlines_table
+label: 'Drag Drop Table Question Answer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      drag_and_drop_table: drag_and_drop_table
+    negate: 0
+    target_bundles_drag_drop:
+      analysing_data:
+        weight: 35
+        enabled: false
+      anonymous_slider:
+        weight: 36
+        enabled: false
+      carousel:
+        weight: 37
+        enabled: false
+      carousel_child:
+        weight: 38
+        enabled: false
+      drag_and_drop:
+        weight: 39
+        enabled: false
+      drag_and_drop_table:
+        weight: 40
+        enabled: true
+      embed:
+        weight: 41
+        enabled: false
+      faq:
+        weight: 42
+        enabled: false
+      faqs_outer_para:
+        weight: 43
+        enabled: false
+      home_page_content_section:
+        weight: 44
+        enabled: false
+      home_page_inner_content_section:
+        weight: 45
+        enabled: false
+      home_page_inner_content_section_:
+        weight: 46
+        enabled: false
+      home_page_section_2:
+        weight: 47
+        enabled: false
+      home_page_section_3:
+        weight: 48
+        enabled: false
+      image:
+        weight: 49
+        enabled: false
+      inner_content_section_3:
+        weight: 50
+        enabled: false
+      marketing_page_bottom_content:
+        weight: 51
+        enabled: false
+      marketing_page_sidebar:
+        weight: 52
+        enabled: false
+      multichoice:
+        weight: 53
+        enabled: false
+      practice_analysis_inner:
+        weight: 54
+        enabled: false
+      practice_page:
+        weight: 55
+        enabled: false
+      question_show:
+        weight: 56
+        enabled: false
+      quiz:
+        weight: 57
+        enabled: false
+      quiz_matching:
+        weight: 58
+        enabled: false
+      quiz_matching_answer:
+        weight: 59
+        enabled: false
+      quiz_question_answer:
+        weight: 60
+        enabled: false
+      quiz_question_term_pool:
+        weight: 61
+        enabled: false
+      quiz_result_feedback:
+        weight: 62
+        enabled: false
+      slider:
+        weight: 63
+        enabled: false
+      template_one:
+        weight: 64
+        enabled: false
+      template_three:
+        weight: 65
+        enabled: false
+      template_two:
+        weight: 66
+        enabled: false
+      topic_questions:
+        weight: 67
+        enabled: false
+      video:
+        weight: 68
+        enabled: false
+field_type: entity_reference_revisions

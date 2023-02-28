@@ -1,0 +1,87 @@
+uuid: abc54054-d4ad-4093-946a-2febeb5a1390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.short_answer.field_accordion_collapsed
+    - field.field.quiz_question.short_answer.field_click_to_reveal
+    - field.field.quiz_question.short_answer.field_question_title_name
+    - field.field.quiz_question.short_answer.field_reveal_button_label
+    - field.field.quiz_question.short_answer.field_visibility_mode
+    - field.field.quiz_question.short_answer.short_answer_correct
+    - field.field.quiz_question.short_answer.short_answer_evaluation
+    - quiz.question.type.short_answer
+  module:
+    - text
+  enforced:
+    module:
+      - quiz_short_answer
+_core:
+  default_config_hash: gEPLc518GOjEfLyriZw4qw7KRcoCrIZf0S9a9FFhN2g
+id: quiz_question.short_answer.default
+targetEntityType: quiz_question
+bundle: short_answer
+mode: default
+content:
+  body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_accordion_collapsed:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_click_to_reveal:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_question_title_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_reveal_button_label:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_visibility_mode:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  short_answer_evaluation:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  feedback: true
+  short_answer_correct: true

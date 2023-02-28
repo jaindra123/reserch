@@ -1,0 +1,21 @@
+uuid: d71d07e7-fe43-456c-b511-46ff0e21c3ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - unique_entity_title
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  unique_entity_title:
+    enabled: true
+name: 'Modules Content Type'
+type: modules_content_type
+description: 'Landing Page (Template 1, Template 2, Template 3)'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

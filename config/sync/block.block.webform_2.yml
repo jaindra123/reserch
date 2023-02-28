@@ -1,0 +1,25 @@
+uuid: f40990ca-dfed-490e-b218-07f547766fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.suggested_questions_to_bloomsbur
+  module:
+    - webform
+  theme:
+    - research
+id: webform_2
+theme: research
+region: suggestion_form
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: suggested_questions_to_bloomsbur
+  default_data: ''
+  redirect: false
+visibility: {  }

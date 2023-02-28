@@ -1,0 +1,17 @@
+uuid: 0a284977-5c2f-4dc4-9dbf-59bd81579f9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+  enforced:
+    config:
+      - user.role.institute
+id: learning_path-943c564c1
+label: Institute
+weight: 3
+internal: true
+audience: outsider
+group_type: learning_path
+permissions_ui: false
+permissions: {  }

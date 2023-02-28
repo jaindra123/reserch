@@ -1,0 +1,51 @@
+uuid: a526376c-7c02-4f52-a4b9-e20a8dd1f9f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_page_inner_content_section_.field_home_inner_section_image_2
+    - field.field.paragraph.home_page_inner_content_section_.field_home_inner_section_link_2
+    - field.field.paragraph.home_page_inner_content_section_.field_home_inner_section_title_2
+    - paragraphs.paragraphs_type.home_page_inner_content_section_
+  module:
+    - image
+    - link
+id: paragraph.home_page_inner_content_section_.default
+targetEntityType: paragraph
+bundle: home_page_inner_content_section_
+mode: default
+content:
+  field_home_inner_section_image_2:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_home_inner_section_link_2:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_home_inner_section_title_2:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

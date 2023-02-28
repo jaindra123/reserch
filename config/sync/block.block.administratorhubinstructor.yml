@@ -1,0 +1,25 @@
+uuid: e1306a77-6ea8-40b8-8e98-b5ce6fcfa951
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:834fd1ca-008d-4457-b671-9713267fae1c'
+  module:
+    - block_content
+  theme:
+    - research
+id: administratorhubinstructor
+theme: research
+region: administrator_hub_instructor
+weight: 0
+provider: null
+plugin: 'block_content:834fd1ca-008d-4457-b671-9713267fae1c'
+settings:
+  id: 'block_content:834fd1ca-008d-4457-b671-9713267fae1c'
+  label: 'Administrator Hub Instructor'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

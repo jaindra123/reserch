@@ -1,0 +1,36 @@
+uuid: 165500a9-08fb-4ee6-9ccf-822969d67dbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.page.field_accordion_collapsed
+    - field.field.quiz_question.page.field_question_title_name
+    - field.field.quiz_question.page.field_visibility_mode
+    - quiz.question.type.page
+  module:
+    - text
+  enforced:
+    module:
+      - quiz_page
+_core:
+  default_config_hash: 85aXetVeccejDGKEns93Cm8M6V1pNQI9PZAUE_-0f2k
+id: quiz_question.page.default
+targetEntityType: quiz_question
+bundle: page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_accordion_collapsed: true
+  field_question_title_name: true
+  field_visibility_mode: true
+  search_api_excerpt: true

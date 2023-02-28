@@ -1,0 +1,88 @@
+uuid: 242dee7b-c90d-436f-902e-ae776e6ed5c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.forum
+    - node.type.institution
+    - node.type.marketing_page
+    - node.type.modules_content_type
+    - node.type.page
+    - node.type.webform
+  module:
+    - contact
+    - entity_print
+    - field_permissions
+    - filter
+    - media
+    - node
+    - opigno_certificate
+    - paragraphs_type_permissions
+    - search_api_solr_admin
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access site-wide contact form'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'entity print access bundle page'
+  - 'execute solr admin task'
+  - 'restful post color_rest_resource'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view field_authentication_hub_id'
+  - 'view field_authentication_methods'
+  - 'view field_first_name'
+  - 'view field_ga_tracking_code'
+  - 'view field_institute_reference'
+  - 'view field_institution'
+  - 'view field_last_name'
+  - 'view field_licence_renewal_month'
+  - 'view field_logo'
+  - 'view field_logo_hyperlink'
+  - 'view field_modules'
+  - 'view field_number_of_licences'
+  - 'view field_subscription_expiry_date'
+  - 'view field_subscription_limit'
+  - 'view field_subscription_used'
+  - 'view field_u'
+  - 'view forum revisions'
+  - 'view institution revisions'
+  - 'view marketing_page revisions'
+  - 'view media'
+  - 'view modules_content_type revisions'
+  - 'view own field_authentication_hub_id'
+  - 'view own field_authentication_methods'
+  - 'view own field_first_name'
+  - 'view own field_ga_tracking_code'
+  - 'view own field_institute_reference'
+  - 'view own field_institution'
+  - 'view own field_last_name'
+  - 'view own field_licence_renewal_month'
+  - 'view own field_logo'
+  - 'view own field_logo_hyperlink'
+  - 'view own field_modules'
+  - 'view own field_number_of_licences'
+  - 'view own field_subscription_expiry_date'
+  - 'view own field_subscription_limit'
+  - 'view own field_subscription_used'
+  - 'view own field_u'
+  - 'view own user_picture'
+  - 'view page revisions'
+  - 'view paragraph content questions_'
+  - 'view paragraph content template_one'
+  - 'view paragraph content template_three'
+  - 'view paragraph content template_two'
+  - 'view published certificate entities'
+  - 'view unpublished certificate entities'
+  - 'view user_picture'
+  - 'view webform revisions'

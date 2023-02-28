@@ -1,0 +1,21 @@
+uuid: a323e8ac-a2cb-4d26-83df-6b7e1b170788
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_type
+    - node.type.decision_tree
+  module:
+    - options
+id: node.decision_tree.field_template_type
+field_name: field_template_type
+entity_type: node
+bundle: decision_tree
+label: 'Template Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

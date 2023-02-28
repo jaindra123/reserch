@@ -1,0 +1,28 @@
+uuid: a45ab341-97a9-47ba-a8a2-e25da3a5aafb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multichoice_answer.field_answer_options
+    - paragraphs.paragraphs_type.multichoice_answer
+  module:
+    - entity_reference_revisions
+id: paragraph.multichoice_answer.default
+targetEntityType: paragraph
+bundle: multichoice_answer
+mode: default
+content:
+  field_answer_options:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

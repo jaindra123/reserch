@@ -1,0 +1,23 @@
+uuid: 2c639c6b-aa13-4408-a768-c2b251c65ad7
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - quiz
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_question.field_click_to_reveal
+field_name: field_click_to_reveal
+entity_type: quiz_question
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

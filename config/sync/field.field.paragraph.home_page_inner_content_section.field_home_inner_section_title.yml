@@ -1,0 +1,19 @@
+uuid: 9d2996c8-c453-4087-ab8d-5ec9255e7bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_inner_section_title
+    - paragraphs.paragraphs_type.home_page_inner_content_section
+id: paragraph.home_page_inner_content_section.field_home_inner_section_title
+field_name: field_home_inner_section_title
+entity_type: paragraph
+bundle: home_page_inner_content_section
+label: 'Promo title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

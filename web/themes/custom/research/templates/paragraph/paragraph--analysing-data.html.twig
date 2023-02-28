@@ -1,0 +1,37 @@
+
+<div class="accordion" id="accordionExample">
+		{% if paragraph.field_analysing_data_title is not empty %}
+		<div class="cards">
+				<div class="card-headers" id="heading{{ paragraph.id()}}">
+						<h2 class="mb-0">
+						{% if content.field_status_analyse_data[0]['#markup']==0 %}
+								<button type="button" class="btn-linkssr w-100 collapsed" data-toggle="collapse"
+									data-target="#collapse{{ paragraph.id()}}" > 
+									{{  content.field_analysing_data_title  }}<i class="fa fa-plus-circle"></i></button>
+
+						{%  else %}
+									<button type="button" class="btn-linkssr w-100 " data-toggle="collapse"
+									data-target="#collapse{{ paragraph.id()}}" > 
+									{{  content.field_analysing_data_title  }}<i class="fa fa-minus-circle"></i></button>
+						{% endif %}
+						</h2>
+				</div>
+
+				{% if content.field_status_analyse_data[0]['#markup']==0 %}
+						<div id="collapse{{ paragraph.id()}}" class="collapse" aria-labelledby="heading{{ paragraph.id()}}" data-parent="#accordionExample">
+								<div class="card-bodys" style="padding-top: {{ content.field_margin|render|striptags|trim }}px"> {{ content.field_analysing_data_content }} 
+								{{ content.field_select_quiz }}
+								</div>
+						</div>
+				{% else %}
+						<div id="collapse{{ paragraph.id()}}" class="collapse show" aria-labelledby="heading{{ paragraph.id()}}" data-parent="#accordionExample">
+								<div class="card-bodys" style="padding-top: {{ content.field_margin|render|striptags|trim }}px"> {{ content.field_analysing_data_content }} 
+								{{ content.field_select_quiz }}
+								</div>
+						</div>
+				{% endif %}
+		</div>
+		{% endif %}
+</div>
+
+

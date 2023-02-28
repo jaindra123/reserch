@@ -1,0 +1,6 @@
+landing_page.admin-landing-page:
+  title: Landing page
+  description: Configure Landing Page.
+  parent: system.admin_config_ui
+  route_name: landing_page.admin-landing-page
+  weight: 10   

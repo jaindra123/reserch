@@ -1,0 +1,29 @@
+<div class="w-100  tender-practice mt-4">
+    <div class="accordion" id="accordionExample">
+        <div class="cards">
+            <div class="card-headers" id="heading{{ paragraph.id()}}">
+                <h2 class="mb-0">
+                {% if content.field_status_quiz[0]['#markup']==0 %}
+                    <button type="button" class="btn-linkssr w-100 collapsed" data-toggle="collapse"
+                     data-target="#collapse{{ paragraph.id()}}" aria-expanded="false"> 
+                     A Question<i class="fa fa-plus-circle"></i></button>
+                     {%  else %}
+                     <button type="button" class="btn-linkssr w-100 " data-toggle="collapse"
+                     data-target="#collapse{{ paragraph.id()}}" aria-expanded="false"> 
+                     {{  content.field_quiz_question  }}<i class="fa fa-minus-circle"></i></button>
+                {% endif %}
+                </h2>
+            </div>
+
+            {% if content.field_status_quiz[0]['#markup']==0 %}
+                <div id="collapse{{ paragraph.id()}}" class="collapse" aria-labelledby="heading{{ paragraph.id()}}" data-parent="#accordionExample">
+                    <div class="card-bodys"> {{ content.field_quiz_answer}} </div>
+                </div>
+            {% else %}
+            <div id="collapse{{ paragraph.id()}}" class="collapse show" aria-labelledby="heading{{ paragraph.id()}}" data-parent="#accordionExample">
+                <div class="card-bodys"> {{ content.field_quiz_answer}} </div>
+            </div>
+            {% endif %}
+        </div> 
+    </div> 
+</div> 

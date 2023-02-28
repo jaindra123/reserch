@@ -1,0 +1,70 @@
+uuid: bc4e9448-f8b5-44a0-9b1b-afc3e145e326
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_marketing_page_bottom_cont
+    - node.type.marketing_page
+    - paragraphs.paragraphs_type.marketing_page_bottom_content
+  module:
+    - entity_reference_revisions
+id: node.marketing_page.field_marketing_page_bottom_cont
+field_name: field_marketing_page_bottom_cont
+entity_type: node
+bundle: marketing_page
+label: 'Marketing Page Bottom Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      marketing_page_bottom_content: marketing_page_bottom_content
+    negate: 0
+    target_bundles_drag_drop:
+      analysing_data:
+        weight: 16
+        enabled: false
+      anonymous_user_page_slider:
+        weight: 17
+        enabled: false
+      home_page_content_section:
+        weight: 18
+        enabled: false
+      home_page_inner_content_section:
+        weight: 19
+        enabled: false
+      home_page_inner_content_section_:
+        weight: 20
+        enabled: false
+      home_page_section_2:
+        weight: 21
+        enabled: false
+      home_page_section_3:
+        weight: 22
+        enabled: false
+      home_page_slider:
+        weight: 23
+        enabled: false
+      inner_content_section_3:
+        weight: 24
+        enabled: false
+      marketing_page_bottom_content:
+        weight: 15
+        enabled: true
+      template_one:
+        weight: 25
+        enabled: false
+      template_three:
+        weight: 26
+        enabled: false
+      template_two:
+        weight: 27
+        enabled: false
+      topic_questions:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

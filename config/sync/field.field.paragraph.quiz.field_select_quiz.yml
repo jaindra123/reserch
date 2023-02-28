@@ -1,0 +1,31 @@
+uuid: 2e69643a-7ced-457b-b60f-a86ce147375c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_select_quiz
+    - paragraphs.paragraphs_type.quiz
+    - quiz.type.quiz
+  module:
+    - entity_reference_revisions
+id: paragraph.quiz.field_select_quiz
+field_name: field_select_quiz
+entity_type: paragraph
+bundle: quiz
+label: 'Select Quiz'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:quiz'
+  handler_settings:
+    target_bundles:
+      quiz: quiz
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: quiz
+field_type: entity_reference_revisions

@@ -1,0 +1,39 @@
+uuid: 026f0e60-7ace-404b-b8f3-08f08f0a6e79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.directions.field_accordion_collapsed
+    - field.field.quiz_question.directions.field_question_title_name
+    - field.field.quiz_question.directions.field_visibility_mode
+    - quiz.question.type.directions
+id: quiz_question.directions.default
+targetEntityType: quiz_question
+bundle: directions
+mode: default
+content:
+  field_accordion_collapsed:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_question_title_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_visibility_mode:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  feedback: true
+  title: true

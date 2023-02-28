@@ -1,0 +1,38 @@
+uuid: fe9b8217-834a-4f36-ac98-820bb1a5282c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quiz.body
+    - field.field.node.quiz.field_quiz_question_answer
+    - node.type.quiz
+  module:
+    - text
+    - user
+id: node.quiz.teaser
+targetEntityType: node
+bundle: quiz
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_quiz_question_answer: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 2170618e-d825-42b2-ba91-12f1b3ea6344
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - link
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_call_to_action_1
+field_name: field_call_to_action_1
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

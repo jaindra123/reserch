@@ -1,0 +1,25 @@
+uuid: adcdd4f6-1cd1-4448-8adf-061f9a94337a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_drag_drop_answer_table
+field_name: field_drag_drop_answer_table
+entity_type: paragraph
+type: string
+settings:
+  max_length: 35
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

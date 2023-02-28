@@ -1,0 +1,118 @@
+uuid: 9d8e45e3-c880-480c-8911-61f1cc43d2a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_field_inner_section_2
+    - paragraphs.paragraphs_type.home_page_section_3
+    - paragraphs.paragraphs_type.inner_content_section_3
+  module:
+    - entity_reference_revisions
+id: paragraph.home_page_section_3.field_field_inner_section_2
+field_name: field_field_inner_section_2
+entity_type: paragraph
+bundle: home_page_section_3
+label: 'PROMO BLOCKS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      inner_content_section_3: inner_content_section_3
+    negate: 0
+    target_bundles_drag_drop:
+      analysing_data:
+        weight: 31
+        enabled: false
+      anonymous_slider:
+        weight: 32
+        enabled: false
+      embed:
+        weight: 33
+        enabled: false
+      faq:
+        weight: 34
+        enabled: false
+      faqs_outer_para:
+        weight: 35
+        enabled: false
+      home_page_content_section:
+        weight: 12
+        enabled: false
+      home_page_inner_content_section:
+        weight: 13
+        enabled: false
+      home_page_inner_content_section_:
+        weight: 14
+        enabled: false
+      home_page_section_2:
+        weight: 15
+        enabled: false
+      home_page_section_3:
+        weight: 11
+        enabled: false
+      image:
+        weight: 41
+        enabled: false
+      inner_content_section_3:
+        weight: 16
+        enabled: true
+      marketing_page_bottom_content:
+        weight: 43
+        enabled: false
+      marketing_page_sidebar:
+        weight: 44
+        enabled: false
+      multichoice:
+        weight: 45
+        enabled: false
+      practice_analysis_inner:
+        weight: 46
+        enabled: false
+      practice_page:
+        weight: 47
+        enabled: false
+      question_show:
+        weight: 48
+        enabled: false
+      quiz:
+        weight: 49
+        enabled: false
+      quiz_matching:
+        weight: 50
+        enabled: false
+      quiz_matching_answer:
+        weight: 51
+        enabled: false
+      quiz_question_answer:
+        weight: 52
+        enabled: false
+      quiz_question_term_pool:
+        weight: 53
+        enabled: false
+      quiz_result_feedback:
+        weight: 54
+        enabled: false
+      slider:
+        weight: 55
+        enabled: false
+      template_one:
+        weight: 17
+        enabled: false
+      template_three:
+        weight: 18
+        enabled: false
+      template_two:
+        weight: 19
+        enabled: false
+      topic_questions:
+        weight: 20
+        enabled: false
+      video:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

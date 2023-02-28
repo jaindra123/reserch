@@ -1,0 +1,21 @@
+uuid: 37e2709d-0bd0-4ef6-b401-337f374282c6
+langcode: en
+status: false
+dependencies:
+  theme:
+    - research
+id: videoblock
+theme: research
+region: menu
+weight: 0
+provider: null
+plugin: 'block_content:48f0dc75-4b11-475c-b212-626a725b4846'
+settings:
+  id: 'block_content:48f0dc75-4b11-475c-b212-626a725b4846'
+  label: 'Video Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: b0393962-8d5c-4cd8-9328-0868a7cdeb8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drag_and_drop_table.field_drag_drop_answer_table
+    - field.field.paragraph.drag_and_drop_table.field_drag_drop_question_table
+    - paragraphs.paragraphs_type.drag_and_drop_table
+  module:
+    - text
+id: paragraph.drag_and_drop_table.default
+targetEntityType: paragraph
+bundle: drag_and_drop_table
+mode: default
+content:
+  field_drag_drop_answer_table:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_drag_drop_question_table:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

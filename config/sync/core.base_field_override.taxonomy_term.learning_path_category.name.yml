@@ -1,0 +1,18 @@
+uuid: 72037f16-42d7-40d2-af94-47f8405de633
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.learning_path_category
+id: taxonomy_term.learning_path_category.name
+field_name: name
+entity_type: taxonomy_term
+bundle: learning_path_category
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

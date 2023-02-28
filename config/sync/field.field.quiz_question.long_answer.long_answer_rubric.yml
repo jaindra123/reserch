@@ -1,0 +1,26 @@
+uuid: 87e91e4a-3fda-42f5-bf17-af55b7c322ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.long_answer_rubric
+    - quiz.question.type.long_answer
+  module:
+    - text
+  enforced:
+    module:
+      - quiz_long_answer
+_core:
+  default_config_hash: AKQUwrRI1fBSRQzDqY0h_oCNgWGYzu0ygIlKeh0FqRo
+id: quiz_question.long_answer.long_answer_rubric
+field_name: long_answer_rubric
+entity_type: quiz_question
+bundle: long_answer
+label: 'Grading rubric'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

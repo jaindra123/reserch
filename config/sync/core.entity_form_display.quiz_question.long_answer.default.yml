@@ -1,0 +1,94 @@
+uuid: dc9f2e29-0278-49a5-94be-8eab7b99452c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.long_answer.answer_text_processing
+    - field.field.quiz_question.long_answer.field_accordion_collapsed
+    - field.field.quiz_question.long_answer.field_click_to_reveal
+    - field.field.quiz_question.long_answer.field_link
+    - field.field.quiz_question.long_answer.field_question_title_name
+    - field.field.quiz_question.long_answer.field_upload_document
+    - field.field.quiz_question.long_answer.field_visibility_mode
+    - field.field.quiz_question.long_answer.long_answer_rubric
+    - quiz.question.type.long_answer
+  module:
+    - file
+    - link
+    - text
+_core:
+  default_config_hash: K8Jcy2ZvXN4G2OlvZP_iCt_xEhn4q77oA-1lxPQX5PI
+id: quiz_question.long_answer.default
+targetEntityType: quiz_question
+bundle: long_answer
+mode: default
+content:
+  answer_text_processing:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_accordion_collapsed:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_click_to_reveal:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_question_title_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_upload_document:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_visibility_mode:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  feedback: true
+  long_answer_rubric: true

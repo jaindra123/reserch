@@ -1,0 +1,55 @@
+uuid: 1bf41213-3b7c-452f-92be-0f4bcdbe8fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.solr
+    - views.view.search
+  module:
+    - views
+    - search_api_autocomplete
+    - search_api_solr
+id: search
+label: Search
+index_id: solr
+suggester_settings:
+  live_results:
+    fields:
+      - aggregated_field
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes:
+      'entity:node':
+        basic_cms_page: ''
+        forum: ''
+        marketing_page: ''
+        modules_content_type: ''
+        practice: ''
+        test: ''
+        topic: ''
+  server:
+    fields:
+      - aggregated_field
+  search_api_solr_suggester:
+    search_api_solr/site_hash: 1
+    search_api/index: solr
+    drupal/langcode: any
+suggester_weights:
+  live_results: 0
+  server: 0
+  search_api_solr_suggester: 0
+suggester_limits: {  }
+search_settings:
+  'views:search':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: false
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: true

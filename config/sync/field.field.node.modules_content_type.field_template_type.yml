@@ -1,0 +1,21 @@
+uuid: 8b072111-c6ca-407f-abf7-fac0b8298cc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_type
+    - node.type.modules_content_type
+  module:
+    - options
+id: node.modules_content_type.field_template_type
+field_name: field_template_type
+entity_type: node
+bundle: modules_content_type
+label: 'Number of columns'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

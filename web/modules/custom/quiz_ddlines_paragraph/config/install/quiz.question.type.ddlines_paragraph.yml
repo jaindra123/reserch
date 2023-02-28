@@ -1,0 +1,8 @@
+id: ddlines_paragraph
+label: Drag & Drop Paragraph
+dependencies:
+  enforced:
+    module:
+      - quiz_ddlines_paragraph
+  module:
+    - quiz_ddlines_paragraph

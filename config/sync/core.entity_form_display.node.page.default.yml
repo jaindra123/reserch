@@ -1,0 +1,123 @@
+uuid: 2f7811bb-aec5-4b1a-8342-96917192eb81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_anonymous_user_slider
+    - field.field.node.page.field_banner_section
+    - field.field.node.page.field_breadcrumb
+    - field.field.node.page.field_components
+    - field.field.node.page.field_home_page_top_slider
+    - field.field.node.page.field_hotel_video
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_pdf_file
+    - field.field.node.page.field_template_type
+    - field.field.node.page.field_visible_to_anonymous_users
+    - field.field.node.page.field_yoast_seo
+    - node.type.page
+  module:
+    - inline_entity_form
+    - metatag
+    - path
+_core:
+  default_config_hash: R-zL35suvFiRXtuM-hIJpw7MuQhmEZyZou3b7TDdMtw
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_anonymous_user_slider:
+    type: inline_entity_form_complex
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_components:
+    type: inline_entity_form_complex
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_home_page_top_slider:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 5
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: Title
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  field_banner_section: true
+  field_breadcrumb: true
+  field_hotel_video: true
+  field_pdf_file: true
+  field_template_type: true
+  field_visible_to_anonymous_users: true
+  field_yoast_seo: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

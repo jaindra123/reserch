@@ -1,0 +1,8 @@
+id: ddlines
+label: Drag & Drop 
+dependencies:
+  enforced:
+    module:
+      - quiz_ddlines
+  module:
+    - quiz_ddlines

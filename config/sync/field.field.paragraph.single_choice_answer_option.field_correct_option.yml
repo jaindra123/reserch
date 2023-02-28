@@ -1,0 +1,23 @@
+uuid: 22cd6b9e-eab7-4503-9624-5dd8e96b3028
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_correct_option
+    - paragraphs.paragraphs_type.single_choice_answer_option
+id: paragraph.single_choice_answer_option.field_correct_option
+field_name: field_correct_option
+entity_type: paragraph
+bundle: single_choice_answer_option
+label: 'Correct Option'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

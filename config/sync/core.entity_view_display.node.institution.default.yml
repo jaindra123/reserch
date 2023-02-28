@@ -1,0 +1,150 @@
+uuid: 28d137c8-54ad-4ed7-9890-a5c09d364aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.institution.field_authentication_hub_id
+    - field.field.node.institution.field_authentication_methods
+    - field.field.node.institution.field_breadcrumb
+    - field.field.node.institution.field_ga_tracking_code
+    - field.field.node.institution.field_licence_renewal_date
+    - field.field.node.institution.field_licence_renewal_month
+    - field.field.node.institution.field_logo
+    - field.field.node.institution.field_logo_hyperlink
+    - field.field.node.institution.field_meta_tags
+    - field.field.node.institution.field_modules
+    - field.field.node.institution.field_number_of_licences
+    - field.field.node.institution.field_subscription_expiry_date
+    - field.field.node.institution.field_subscription_limit
+    - field.field.node.institution.field_subscription_used
+    - field.field.node.institution.field_suggestion_form
+    - field.field.node.institution.field_topic_test_attempts
+    - field.field.node.institution.field_topic_test_mode
+    - field.field.node.institution.field_u
+    - field.field.node.institution.field_visible_to_anonymous_users
+    - field.field.node.institution.field_yoast_seo
+    - node.type.institution
+  module:
+    - image
+    - options
+    - user
+id: node.institution.default
+targetEntityType: node
+bundle: institution
+mode: default
+content:
+  field_authentication_hub_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_breadcrumb:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_licence_renewal_date:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_licence_renewal_month:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_logo_hyperlink:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_number_of_licences:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_subscription_limit:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_subscription_used:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_topic_test_attempts:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_topic_test_mode:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_u:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_authentication_methods: true
+  field_ga_tracking_code: true
+  field_meta_tags: true
+  field_modules: true
+  field_subscription_expiry_date: true
+  field_suggestion_form: true
+  field_visible_to_anonymous_users: true
+  field_yoast_seo: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

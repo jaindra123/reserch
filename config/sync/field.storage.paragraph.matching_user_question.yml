@@ -1,0 +1,22 @@
+uuid: cd7acc68-db8a-49f7-9bf7-48e9f89407ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: P4Vy2QBZW-I8ZbTcxl6prQQMGlJ6HD3dF8qjoVlmDwI
+id: paragraph.matching_user_question
+field_name: matching_user_question
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

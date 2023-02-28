@@ -1,0 +1,20 @@
+uuid: 636a9fb3-87f3-46f4-9028-27947aab5533
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - research
+id: messages_2
+theme: research
+region: status_messages
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

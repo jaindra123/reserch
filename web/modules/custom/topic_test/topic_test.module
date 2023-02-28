@@ -1,0 +1,99 @@
+<?php
+
+// use Drupal\Core\Form\FormState;
+// use Drupal\topic_test\Controller\TopicTest;
+
+function topic_test_theme($existing, $type, $theme, $path) {
+    return [
+        'topic_test_form' => [
+            'render element' => 'form',
+        ],
+        'topic_test_manage' => [
+            'variables' => [
+                'values' => NULL
+            ]
+        ],
+    ];
+}
+
+// preprocess for question answers on test content-type
+function topic_test_preprocess_node__test(&$variables) {
+    $form = \Drupal::formBuilder()->getForm('Drupal\topic_test\Form\QuestionsTest');
+    $variables['content']['questions_form'] = $form;
+}
+
+function topic_test_page_attachments_alter(array &$page) {
+    $page['#attached']['library'][] = 'topic_test/topic-test-lib';
+}
+
+// passing value in admin option for manage-topictest
+function topic_test_preprocess_page(&$variables) {
+    $path = \Drupal::service('path.current')->getPath();
+    if( strpos($path, '/manage-topictest') > -1 ) {
+        $landing_page['card_group']['title'] = 'Manage Topic Test';
+        $landing_page['card_group']['link'] = '/manage-topictest';
+        $variables['topic_test'] = $landing_page;
+    }
+}
+
+function topic_test_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    if( $form_id == 'questions_test' ) {
+        $user_current = \Drupal::currentUser()->id();
+        $user_info_current = \Drupal\user\Entity\User::load( $user_current );
+        $user_current_id = $user_info_current->uid->value;
+
+        // restrict topic test if not came from direct lti link for lti users
+        if( $user_info_current->get('field_institution')->getValue() ) {
+            $institution_id = $user_info_current->get('field_institution')->getValue()[0]['target_id'];
+            $load_institution = \Drupal\node\Entity\Node::load( $institution_id );
+            if( is_object($load_institution) ) {
+                $mode_default = $load_institution->get('field_topic_test_mode')->value;
+                $attempts_default = $load_institution->get('field_topic_test_attempts')->value;
+                $test_mode = $mode_default;
+                define("LTI_MODE", "Restrict topic tests for LTI users only");
+            } else {
+                $test_mode = 'Self-study';
+            }
+        } else {
+            $test_mode = 'Self-study';
+        }
+
+        if( $test_mode == LTI_MODE ) {
+            // putting static validation for direct lti link
+            $is_direct_lti_link = true;
+            // here we will write validation for direct lti link
+        } else {
+            $is_direct_lti_link = true;
+        }
+        $form['direct_lti'] = $is_direct_lti_link;
+
+        // check the default attempts is unlimited
+        $current_attempts = $user_info_current->get('field_topic_test_attempts')->value;
+        if( $current_attempts == NULL || $attempts_default == 'Unlimited' ) {
+            if( $current_attempts != $attempts_default ) {
+                $current_attempts = $attempts_default;
+                $user_info_current->set('field_topic_test_attempts', $current_attempts);
+                $user_info_current->save();
+            }
+        }
+        $current_attempts = $user_info_current->get('field_topic_test_attempts')->value;
+
+        // set user has attempts or not
+        if( $current_attempts > 0 || $current_attempts == 'Unlimited' || $test_mode != 'Restrict topic tests for LTI users only' ) {
+            $form['user_has_attempts'] = true;
+        } else {
+            $form['user_has_attempts'] = false;
+        }
+    }
+}
+
+// click to reveal in quiz questions
+function topic_test_preprocess_quiz_question(&$vars) {
+    $quiz_question = $vars['quiz_question'];
+    if( $quiz_question->hasField('field_reveal_button_label') ) {
+        $reveal_label = $quiz_question->get('field_reveal_button_label')->value;
+        if( empty($reveal_label) ) {
+            $vars['button_exist'] = true;
+        } 
+    }
+}

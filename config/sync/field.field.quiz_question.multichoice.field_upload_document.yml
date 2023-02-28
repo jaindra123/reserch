@@ -1,0 +1,27 @@
+uuid: f6c9b4a9-1249-470e-ac69-a6ce67a400b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_upload_document
+    - quiz.question.type.multichoice
+  module:
+    - file
+id: quiz_question.multichoice.field_upload_document
+field_name: field_upload_document
+entity_type: quiz_question
+bundle: multichoice
+label: 'Upload Document'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf ppt doc docx pptx'
+  max_filesize: ''
+  description_field: false
+field_type: file

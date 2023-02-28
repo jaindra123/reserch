@@ -1,0 +1,24 @@
+uuid: e0300510-e142-4e2b-a901-f0d83342f60b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_select_quiz
+field_name: field_select_quiz
+entity_type: node
+type: entity_reference
+settings:
+  target_type: quiz
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

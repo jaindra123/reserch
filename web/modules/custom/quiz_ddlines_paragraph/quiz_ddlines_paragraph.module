@@ -1,0 +1,112 @@
+<?php
+use Drupal\Core\Entity\BundleEntityFormBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\quiz\Entity\QuizQuestionType;
+use Symfony\Component\HttpFoundation\Cookie;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Database\Connection;
+
+/**
+ * Implements hook_help().
+ */
+function quiz_ddlines_paragraph_help($path, $args) {
+  if ($path == 'admin/help#quiz_ddlines_paragraph') {
+    return t("Help text TBD");
+  }
+}
+
+
+/**
+ * Implements hook_quiz_question_info().
+ */
+function quiz_ddlines_paragraph_quiz_question_info() {
+  return array(
+    'quiz_ddlines_paragraph' => array(
+      'name' => t('Drag and drop paragraph question with lines'),
+      'description' => t('This provides drag and drop paragraph question types with lines for the Quiz module.'),
+      'question provider' => 'DDLinesparagraphQuestion',
+      'response provider' => 'DDLinesparagraphResponse',
+      'module' => 'quiz_question', // All wrapper functions are in that module.
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function quiz_ddlines_paragraph_theme() {
+  // Theme function for quiz question feedback.
+  return array(
+    'quiz_question_feedback__quiz_ddlines_paragraph' => array(
+      'variables' => array('metadata' => NULL, 'data' => NULL),
+      'path' => drupal_get_path('module', 'quiz_ddlines_paragraph') . '/theme',
+     // 'file' => 'quiz_ddlines_paragraph.theme.inc',
+    ),
+  );
+}
+
+
+/**
+ * A Custom function to include necessary js and css.
+ */
+function quiz_ddlines_paragraph_add_js_and_css() {
+  $module_path = drupal_get_path('module', 'quiz_ddlines_paragraph');
+}
+
+
+/**
+ * Implements hook_entity_update().
+ *
+ * Set configuration.
+ */
+
+function quiz_ddlines_paragraph_entity_update(EntityInterface $entity) {
+    $all_values = $_COOKIE;
+
+    if (empty($all_values['draggedData'])) {
+      return false;
+    } else {
+      $all_dragged_values = $all_values['draggedData'];
+    }
+
+
+    if($entity->bundle() == 'ddlines_paragraph') {
+      $query6 = \Drupal::database();
+      $result6 = $query6->select('quiz_result_answer__3cf8e754c6','qra')
+        ->condition('qra.bundle','ddlines_paragraph')
+        ->condition('qra.entity_id',$entity->id())
+        ->condition('qra.revision_id',$entity->id())
+        ->condition('qra.langcode','und')
+        ->fields('qra',['entity_id'])
+        ->execute()
+        ->fetchField();
+
+       if(empty($result6)) {
+          $arr = array(
+            'bundle' => 'ddlines_paragraph',
+            'deleted' => 0,
+            'entity_id' => $entity->id(),
+            'revision_id' => $entity->id(),
+            'langcode' => 'und',
+            'delta' => 0,
+            'field_drag_drop_paragraph_answer_value' => $all_dragged_values,
+          );
+        //print_r($arr);
+        //die();
+        $conn = \Drupal::service('database');
+        $qry = $conn->insert('quiz_result_answer__3cf8e754c6')->fields($arr)->execute();
+        //dump($qry->sqlQuery->__toString());
+      }
+
+    if (!$entity instanceof QuizQuestionType) {
+      return;
+    }
+  }
+ 
+  if($entity->bundle() == 'drag_and_drop_paragraph') {
+    $config = Drupal::configFactory()->getEdiparagraph('quiz_ddlines_paragraph.settings');
+    $config->set('scoring', $entity->scoring);
+    $config->save();
+  }
+}

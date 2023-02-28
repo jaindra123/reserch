@@ -1,0 +1,23 @@
+uuid: 51a5e24e-e45e-4115-9155-d093e403b49b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic_test_mode
+    - node.type.institution
+  module:
+    - options
+id: node.institution.field_topic_test_mode
+field_name: field_topic_test_mode
+entity_type: node
+bundle: institution
+label: 'Topic Test Mode'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Self-study
+default_value_callback: ''
+settings: {  }
+field_type: list_string

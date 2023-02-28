@@ -1,0 +1,156 @@
+uuid: a3609db2-ef73-46f6-ad53-4a4d43b8b6b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.forum.body
+    - field.field.node.forum.comment_forum
+    - field.field.node.forum.field_admin_option
+    - field.field.node.forum.field_breadcrumb
+    - field.field.node.forum.field_meta_tags
+    - field.field.node.forum.field_slider_option
+    - field.field.node.forum.field_suggestion_form
+    - field.field.node.forum.field_template_type
+    - field.field.node.forum.field_visible_to_anonymous_users
+    - field.field.node.forum.taxonomy_forums
+    - node.type.forum
+  module:
+    - comment
+    - metatag
+    - opigno_module
+    - path
+    - text
+_core:
+  default_config_hash: diOVWc36Ch9NdYFiQ--GTypW8ibCB37SHdkkqLCHP8g
+id: node.forum.default
+targetEntityType: node
+bundle: forum
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 27
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_forum:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_admin_option:
+    type: opigno_true_false_widget_type
+    weight: 121
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_breadcrumb:
+    type: string_textfield
+    weight: 127
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 124
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_slider_option:
+    type: opigno_true_false_widget_type
+    weight: 122
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_suggestion_form:
+    type: opigno_true_false_widget_type
+    weight: 128
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_template_type:
+    type: options_select
+    weight: 123
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_visible_to_anonymous_users:
+    type: opigno_true_false_widget_type
+    weight: 126
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  taxonomy_forums:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

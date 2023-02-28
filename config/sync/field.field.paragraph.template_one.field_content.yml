@@ -1,0 +1,19 @@
+uuid: 0355d017-c8cb-455f-888d-2d4b88c08789
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.template_one
+id: paragraph.template_one.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: template_one
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

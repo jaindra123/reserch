@@ -1,0 +1,7 @@
+global-scripts:
+
+  js:
+   
+  dependencies:
+    - core/drupal
+    - core/jquery 

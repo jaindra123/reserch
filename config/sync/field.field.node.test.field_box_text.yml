@@ -1,0 +1,21 @@
+uuid: 9ca76100-df7f-44af-98af-bf4c5611d978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_box_text
+    - node.type.test
+  module:
+    - text
+id: node.test.field_box_text
+field_name: field_box_text
+entity_type: node
+bundle: test
+label: 'Box Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

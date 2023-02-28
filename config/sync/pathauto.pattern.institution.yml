@@ -1,0 +1,22 @@
+uuid: f593f294-0419-408f-b640-ccee431e71b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: institution
+label: Institution
+type: 'canonical_entities:node'
+pattern: '/institution/[node:title]'
+selection_criteria:
+  2f19d0ba-19b2-4c79-84d6-d54464a0dec3:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2f19d0ba-19b2-4c79-84d6-d54464a0dec3
+    context_mapping:
+      node: node
+    bundles:
+      institution: institution
+selection_logic: and
+weight: -5
+relationships: {  }

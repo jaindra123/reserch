@@ -1,0 +1,26 @@
+diff --git a/quiz/question_types/quiz_multichoice/src/Plugin/quiz/QuizQuestion/MultichoiceQuestion.php b/quiz/question_types/quiz_multichoice/src/Plugin/quiz/QuizQuestion/MultichoiceQuestion.php
+index 11e337f..4e39966 100644
+--- a/quiz/question_types/quiz_multichoice/src/Plugin/quiz/QuizQuestion/MultichoiceQuestion.php
++++ b/quiz/question_types/quiz_multichoice/src/Plugin/quiz/QuizQuestion/MultichoiceQuestion.php
+@@ -13,7 +13,7 @@ use function check_markup;
+ /**
+  * @QuizQuestion (
+  *   id = "multichoice",
+- *   label = @Translation("Multiple choice question"),
++ *   label = @Translation("Click to reveal and Multiple choice"),
+  *   handlers = {
+  *     "response" = "\Drupal\quiz_multichoice\Plugin\quiz\QuizQuestion\MultichoiceResponse"
+  *   }
+diff --git a/quiz/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php b/quiz/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php
+index 7985fb2..9a7f4bf 100644
+--- a/quiz/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php
++++ b/quiz/question_types/quiz_short_answer/src/Plugin/quiz/QuizQuestion/ShortAnswerQuestion.php
+@@ -11,7 +11,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
+ /**
+  * @QuizQuestion (
+  *   id = "short_answer",
+- *   label = @Translation("Short answer question"),
++ *   label = @Translation("Click to reveal with input"),
+  *   handlers = {
+  *     "response" = "\Drupal\quiz_short_answer\Plugin\quiz\QuizQuestion\ShortAnswerResponse"
+  *   }

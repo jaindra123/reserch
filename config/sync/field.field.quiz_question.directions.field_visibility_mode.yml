@@ -1,0 +1,23 @@
+uuid: 4994d68a-44fb-40b1-8fd5-ebe846f38ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_visibility_mode
+    - quiz.question.type.directions
+  module:
+    - options
+id: quiz_question.directions.field_visibility_mode
+field_name: field_visibility_mode
+entity_type: quiz_question
+bundle: directions
+label: 'Visibility Mode'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: accordion
+default_value_callback: ''
+settings: {  }
+field_type: list_string

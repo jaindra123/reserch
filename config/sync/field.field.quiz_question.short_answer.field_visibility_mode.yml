@@ -1,0 +1,23 @@
+uuid: 21edc69c-7819-4826-aac7-5382e86ef5e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_visibility_mode
+    - quiz.question.type.short_answer
+  module:
+    - options
+id: quiz_question.short_answer.field_visibility_mode
+field_name: field_visibility_mode
+entity_type: quiz_question
+bundle: short_answer
+label: 'Visibility Mode'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: accordion
+default_value_callback: ''
+settings: {  }
+field_type: list_string

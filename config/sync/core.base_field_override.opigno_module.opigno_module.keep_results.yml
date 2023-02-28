@@ -1,0 +1,21 @@
+uuid: 744d09ff-1ec8-4034-a6d5-1bbe3c12656f
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_module
+    - options
+id: opigno_module.opigno_module.keep_results
+field_name: keep_results
+entity_type: opigno_module
+bundle: opigno_module
+label: 'Store results'
+description: 'These results should be stored for each user.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '2'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

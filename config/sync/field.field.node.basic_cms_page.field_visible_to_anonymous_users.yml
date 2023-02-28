@@ -1,0 +1,23 @@
+uuid: 041a68f7-918b-4143-af86-f85acafe1279
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visible_to_anonymous_users
+    - node.type.basic_cms_page
+  module:
+    - opigno_module
+id: node.basic_cms_page.field_visible_to_anonymous_users
+field_name: field_visible_to_anonymous_users
+entity_type: node
+bundle: basic_cms_page
+label: 'Visible to anonymous users'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

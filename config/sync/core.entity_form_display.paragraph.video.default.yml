@@ -1,0 +1,35 @@
+uuid: 9216ebf6-0b63-481e-8ad9-b07793178810
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_editor_content
+    - field.field.paragraph.video.field_video_vimeo
+    - paragraphs.paragraphs_type.video
+  module:
+    - text
+    - vimeo_embed_field
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_editor_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_vimeo:
+    type: vimeo
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,169 @@
+uuid: bc313613-e7d2-4763-9776-2252413ec3ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - media.type.image_png
+    - node.type.forum
+    - node.type.institution
+    - node.type.marketing_page
+    - node.type.modules_content_type
+    - node.type.page
+    - node.type.webform
+  module:
+    - block_content
+    - comment
+    - conditional_fields
+    - entity_print
+    - field_permissions
+    - field_ui
+    - group
+    - media
+    - node
+    - opigno_calendar_event
+    - opigno_certificate
+    - opigno_ilt
+    - opigno_module
+    - opigno_moxtra
+    - paragraphs_type_permissions
+    - system
+id: institute
+label: Institute
+weight: 3
+is_admin: null
+permissions:
+  - 'access activity overview'
+  - 'access answer overview'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access module overview'
+  - 'access user module status overview'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer group form display'
+  - 'administer node fields'
+  - 'administer permissions'
+  - 'administer user fields'
+  - 'administer users'
+  - 'cancel account'
+  - 'change own username'
+  - 'create field_first_name'
+  - 'create field_institute_reference'
+  - 'create field_kaa'
+  - 'create field_last_name'
+  - 'create field_logo'
+  - 'create field_number_of_licences'
+  - 'create field_user_refrence'
+  - 'create image media'
+  - 'create image_png media'
+  - 'create institution content'
+  - 'edit any institution content'
+  - 'edit field_first_name'
+  - 'edit field_institute_reference'
+  - 'edit field_kaa'
+  - 'edit field_last_name'
+  - 'edit field_logo'
+  - 'edit field_number_of_licences'
+  - 'edit field_user_refrence'
+  - 'edit own field_first_name'
+  - 'edit own field_institute_reference'
+  - 'edit own field_kaa'
+  - 'edit own field_last_name'
+  - 'edit own field_logo'
+  - 'edit own field_number_of_licences'
+  - 'edit own field_user_refrence'
+  - 'edit own image media'
+  - 'edit own image_png media'
+  - 'edit own institution content'
+  - 'edit user_picture'
+  - 'entity print access bundle modules_content_type'
+  - 'entity print access bundle opigno_calendar_event'
+  - 'entity print access bundle opigno_file_upload'
+  - 'entity print access type group_content'
+  - 'entity print access type learning_path_content'
+  - 'entity print access type node'
+  - 'entity print access type opigno_group_content'
+  - 'revert forum revisions'
+  - 'revert institution revisions'
+  - 'revert marketing_page revisions'
+  - 'revert modules_content_type revisions'
+  - 'revert page revisions'
+  - 'revert webform revisions'
+  - 'select account cancellation method'
+  - 'view all answer revisions'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view conditional fields'
+  - 'view field_authentication_hub_id'
+  - 'view field_authentication_methods'
+  - 'view field_first_name'
+  - 'view field_ga_tracking_code'
+  - 'view field_institute_reference'
+  - 'view field_institution'
+  - 'view field_kaa'
+  - 'view field_last_name'
+  - 'view field_licence_renewal_month'
+  - 'view field_logo'
+  - 'view field_logo_hyperlink'
+  - 'view field_modules'
+  - 'view field_number_of_licences'
+  - 'view field_subscription_expiry_date'
+  - 'view field_subscription_limit'
+  - 'view field_subscription_used'
+  - 'view field_u'
+  - 'view field_user_refrence'
+  - 'view forum revisions'
+  - 'view ilt entities'
+  - 'view ilt result entities'
+  - 'view institution revisions'
+  - 'view marketing_page revisions'
+  - 'view media'
+  - 'view meeting entities'
+  - 'view meeting result entities'
+  - 'view module results'
+  - 'view modules_content_type revisions'
+  - 'view opigno_calendar_event'
+  - 'view own field_authentication_hub_id'
+  - 'view own field_authentication_methods'
+  - 'view own field_first_name'
+  - 'view own field_ga_tracking_code'
+  - 'view own field_institute_reference'
+  - 'view own field_institution'
+  - 'view own field_kaa'
+  - 'view own field_last_name'
+  - 'view own field_licence_renewal_month'
+  - 'view own field_logo'
+  - 'view own field_logo_hyperlink'
+  - 'view own field_modules'
+  - 'view own field_number_of_licences'
+  - 'view own field_subscription_expiry_date'
+  - 'view own field_subscription_limit'
+  - 'view own field_subscription_used'
+  - 'view own field_u'
+  - 'view own field_user_refrence'
+  - 'view own module results'
+  - 'view own unpublished media'
+  - 'view own user_picture'
+  - 'view page revisions'
+  - 'view paragraph content template_one'
+  - 'view paragraph content template_three'
+  - 'view paragraph content template_two'
+  - 'view published activity entities'
+  - 'view published answer entities'
+  - 'view published certificate entities'
+  - 'view published module entities'
+  - 'view published user module status entities'
+  - 'view unpublished activity entities'
+  - 'view unpublished answer entities'
+  - 'view unpublished certificate entities'
+  - 'view unpublished module entities'
+  - 'view unpublished user module status entities'
+  - 'view user email addresses'
+  - 'view user_picture'
+  - 'view webform revisions'
+  - 'view workspace entities'

@@ -1,0 +1,21 @@
+uuid: 61293c67-0a8a-44f2-8a7e-e3a12b5e45b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_module
+    - text
+id: opigno_module.opigno_module.description
+field_name: description
+entity_type: opigno_module
+bundle: opigno_module
+label: Description
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: text_long

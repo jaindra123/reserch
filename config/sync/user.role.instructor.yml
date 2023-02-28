@@ -1,0 +1,104 @@
+uuid: 912b102f-5fad-4fe9-a6fb-3fdaa7d93ea8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.text_only
+    - node.type.forum
+    - node.type.institution
+    - node.type.marketing_page
+    - node.type.modules_content_type
+    - node.type.page
+    - node.type.webform
+  module:
+    - comment
+    - conditional_fields
+    - field_permissions
+    - filter
+    - node
+    - opigno_calendar_event
+    - opigno_certificate
+    - opigno_ilt
+    - opigno_module
+    - paragraphs_type_permissions
+    - system
+    - webform_node
+id: instructor
+label: Instructor
+weight: 4
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'bypass paragraphs type content access'
+  - 'create field_first_name'
+  - 'create field_last_name'
+  - 'edit field_first_name'
+  - 'edit field_last_name'
+  - 'edit own field_first_name'
+  - 'edit own field_last_name'
+  - 'revert forum revisions'
+  - 'revert institution revisions'
+  - 'revert marketing_page revisions'
+  - 'revert modules_content_type revisions'
+  - 'revert page revisions'
+  - 'revert webform revisions'
+  - 'use text format text_only'
+  - 'view all answer revisions'
+  - 'view all revisions'
+  - 'view conditional fields'
+  - 'view field_authentication_hub_id'
+  - 'view field_authentication_methods'
+  - 'view field_first_name'
+  - 'view field_ga_tracking_code'
+  - 'view field_institute_reference'
+  - 'view field_institution'
+  - 'view field_last_name'
+  - 'view field_licence_renewal_month'
+  - 'view field_logo'
+  - 'view field_logo_hyperlink'
+  - 'view field_modules'
+  - 'view field_number_of_licences'
+  - 'view field_subscription_expiry_date'
+  - 'view field_subscription_limit'
+  - 'view field_subscription_used'
+  - 'view field_u'
+  - 'view forum revisions'
+  - 'view ilt entities'
+  - 'view ilt result entities'
+  - 'view institution revisions'
+  - 'view marketing_page revisions'
+  - 'view modules_content_type revisions'
+  - 'view opigno_calendar_event'
+  - 'view own field_authentication_hub_id'
+  - 'view own field_authentication_methods'
+  - 'view own field_first_name'
+  - 'view own field_ga_tracking_code'
+  - 'view own field_institute_reference'
+  - 'view own field_institution'
+  - 'view own field_last_name'
+  - 'view own field_licence_renewal_month'
+  - 'view own field_logo'
+  - 'view own field_logo_hyperlink'
+  - 'view own field_modules'
+  - 'view own field_number_of_licences'
+  - 'view own field_subscription_expiry_date'
+  - 'view own field_subscription_limit'
+  - 'view own field_subscription_used'
+  - 'view own field_u'
+  - 'view own user_picture'
+  - 'view page revisions'
+  - 'view paragraph content home_page_content_section'
+  - 'view paragraph content home_page_section_2'
+  - 'view paragraph content home_page_section_3'
+  - 'view paragraph content marketing_page_sidebar'
+  - 'view paragraph content slider'
+  - 'view paragraph content template_three'
+  - 'view paragraph content template_two'
+  - 'view published certificate entities'
+  - 'view published user module status entities'
+  - 'view user_picture'
+  - 'view webform revisions'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'

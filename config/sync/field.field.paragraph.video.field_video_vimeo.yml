@@ -1,0 +1,21 @@
+uuid: 2d7647fc-c62f-4ec9-8242-bc6ef6cc05c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_vimeo
+    - paragraphs.paragraphs_type.video
+  module:
+    - vimeo_embed_field
+id: paragraph.video.field_video_vimeo
+field_name: field_video_vimeo
+entity_type: paragraph
+bundle: video
+label: 'video vimeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vimeo

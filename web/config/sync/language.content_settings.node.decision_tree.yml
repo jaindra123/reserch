@@ -1,0 +1,11 @@
+uuid: b6b8159e-d918-4a19-8e7e-a1def72314b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.decision_tree
+id: node.decision_tree
+target_entity_type_id: node
+target_bundle: decision_tree
+default_langcode: site_default
+language_alterable: false

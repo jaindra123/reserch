@@ -1,0 +1,45 @@
+uuid: ea415ffe-f569-4b65-b60a-1a03d4b2db34
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.marketing_page.body
+    - field.field.node.marketing_page.field_admin_option
+    - field.field.node.marketing_page.field_breadcrumb
+    - field.field.node.marketing_page.field_meta_tags
+    - field.field.node.marketing_page.field_slider_option
+    - field.field.node.marketing_page.field_suggestion_form
+    - field.field.node.marketing_page.field_template_type
+    - field.field.node.marketing_page.field_visible_to_anonymous_users
+    - node.type.marketing_page
+  module:
+    - text
+    - user
+id: node.marketing_page.full
+targetEntityType: node
+bundle: marketing_page
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_breadcrumb: true
+  field_meta_tags: true
+  field_slider_option: true
+  field_suggestion_form: true
+  field_template_type: true
+  field_visible_to_anonymous_users: true
+  langcode: true
+  links: true
+  private_message_link: true
+  search_api_excerpt: true

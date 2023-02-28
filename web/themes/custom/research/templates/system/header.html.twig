@@ -1,0 +1,52 @@
+<div class="w-100 sticky-top d-inline-block">
+    <a class="skip-content-link visually-hidden focusable" href="#section2">Skip to main content</a>
+    
+	<div class="top-header">
+		<div class="container">
+			<div class="row">
+				{% if ('administrator' in user.getroles(TRUE)) or ('bloomsbury_editor' in user.getroles(TRUE)) or ('institute' in user.getroles(TRUE)) or ('instructor' in user.getroles(TRUE)) %}
+					{# {% set user_link = "/user/#{user_id}" %} #}
+					{% set user_link = "/admin-hub" %}
+				{% else %}
+					{% set user_link = 'javascript:void(0)' %}
+				{% endif %}
+				<div class="col-sm-6"> <a href="{{user_link}}" class="top-link"><span><i class="fa fa-home" aria-hidden="true"></i></span>Administrator hub</a> </div>
+				<div class="col-sm-6">
+					<div class="d-flex justify-content-end"> {% if logged_in %} <a href="/user/{{user_id}}/edit" class="top-link  mr-5"><i class="fa fa-user-circle fa-4 mr-2" aria-hidden="true"></i>
+          Welcome <b>
+          {{ first_name }}</b></a> <a href="/user/logout" class="top-link bgthdsdffd"><i class="pl-0 arrowed">
+          <img  src="{{ base_path ~ directory }}/research/img/logout-arrow.png" alt="image"></i>Log out</a> {% else %} <a href="#" class="top-link  mr-5"><i class="fa fa-user-circle fa-4 mr-2" aria-hidden="true"></i>
+          Welcome <b> 
+		  </b></a> <a href="/user/login" class="top-link bgthdsdffd"><i class="pl-0 arrowed">
+                 <img  src="{{ base_path ~ directory }}/research/img/logout-arrow.png" alt="image"></i>Log in</a> {% endif %} </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-below">
+		<div class="container header_logo ">
+			<div class="row">
+				<div class="col-8 col-sm-4 col-lg-3 col-xl-4">
+				
+				 {% if site_logo %}
+					<a href="{{ path('<front>') }}" rel="home" class="navbar-brand"> 
+					<img class="logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> </a> 
+					
+					{% else %}
+					<a href="{{ path('<front>') }}" rel="home" class="navbar-brand"> 
+					<img class="logo" src="{{ base_path ~ directory }}/research/img/logo.png" alt="{{ 'Home'|t }}" /> </a> 
+					{% endif %} 
+					
+					
+					
+					
+					</div>
+				<div class="col-4 col-sm-8 col-lg-9 col-xl-8"> {{ page.menu }}
+					<div class="header-search">
+						{{ page.search_block }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

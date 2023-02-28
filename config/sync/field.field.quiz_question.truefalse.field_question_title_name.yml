@@ -1,0 +1,19 @@
+uuid: 5f08170b-06c9-4f06-991f-93c0652c56f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.truefalse
+id: quiz_question.truefalse.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: truefalse
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

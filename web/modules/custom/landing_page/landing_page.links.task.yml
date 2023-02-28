@@ -1,0 +1,14 @@
+landing_page.admin-landing-page:
+  route_name: landing_page.admin-landing-page
+  base_route: landing_page.landing-page
+  title: 'Admin Landing Page'
+
+landing_page.instructor-landing-page:
+  route_name: landing_page.instructor-landing-page
+  base_route: landing_page.landing-page
+  title: 'Instructor Landing page'
+  
+landing_page.institute-landing-page:
+  route_name: landing_page.institute-landing-page
+  base_route: landing_page.landing-page
+  title: 'Institute Admin Landing page'

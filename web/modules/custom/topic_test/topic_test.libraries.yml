@@ -1,0 +1,10 @@
+topic-test-lib:
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

@@ -1,0 +1,48 @@
+uuid: e3ebfaf3-2f6b-42ad-8537-a602f397b7f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.s04_traditional
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - image
+_core:
+  default_config_hash: kaNzFeBnHSNGsYaIm2ijiwTk5MTIYfSfWr8auZhSn7Y
+id: media.video.s04_traditional
+targetEntityType: media
+bundle: video
+mode: s04_traditional
+content:
+  field_media_cover_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  thumbnail:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_media_in_library: true
+  field_media_video_file: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

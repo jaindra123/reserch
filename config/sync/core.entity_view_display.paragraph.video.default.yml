@@ -1,0 +1,45 @@
+uuid: 43cb5f6c-27fb-4405-975b-a50eae8b0033
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_editor_content
+    - field.field.paragraph.video.field_video_vimeo
+    - paragraphs.paragraphs_type.video
+  module:
+    - text
+    - vimeo_embed_field
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_editor_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_video_vimeo:
+    type: vimeo
+    label: hidden
+    settings:
+      vimeo_size: '640*480'
+      vimeo_width: '640'
+      vimeo_height: '480'
+      vimeo_autoplay: 0
+      vimeo_loop: 0
+      vimeo_title: 0
+      vimeo_byline: 0
+      vimeo_portrait: 0
+      vimeo_color: 0
+      vimeo_color_value: 0093cb
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

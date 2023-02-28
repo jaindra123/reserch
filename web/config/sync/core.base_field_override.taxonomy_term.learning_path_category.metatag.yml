@@ -1,0 +1,18 @@
+uuid: 2408096d-5c5e-4b5e-acf0-4cc43d296961
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.learning_path_category
+id: taxonomy_term.learning_path_category.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: learning_path_category
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,14 @@
+uuid: 26ec9341-0bdd-4c6b-8f35-53122c38a990
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.practice
+id: node_type_practice
+entity_type_id: node_type
+entity_id: practice
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

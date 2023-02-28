@@ -1,0 +1,94 @@
+uuid: 54b24c31-6a9c-48a6-a3a6-09a8cbe33d19
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+    - ckeditor_bgimage
+    - editor_file
+third_party_settings:
+  ckeditor_bgimage:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'png jpg'
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: txt
+    max_size: ''
+_core:
+  default_config_hash: R2pmU-BYvUkhKBLcj40HDrk91sYfe1Dlv0UsNrIUaSE
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Underline
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - file_browser
+            - inserthtml4x
+            - insertbutton
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Styles
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+  plugins:
+    stylescombo:
+      styles: "h2.font-light.tealColor.h2_30|<h2 style=\"color:#007681;font-size: 30px;\">H2 Teal Color</h2>\r\nh2.font-light.blueColor.h2_30|<h2 style=\"color:#20366f;font-size: 30px;\">H2 Blue Color</h2>\r\nh2.font-light.pinkColor.h2_30|<h2 style=\"color:#c40d56;font-size: 30px;\">H2 Pink Color</h2>\r\nh2.font-light.whiteColor.h2_30.blueBgColor|<h2 style=\"color:#ffffff;font-size: 30px;background: #20366F;\">H2 White Color</h2>\r\nh3.font-light.tealColor.h3_26|<h3 style=\"color:#007681;font-size: 26px;\">H3 Teal Color</h3>\r\nh3.font-light.blueColor.h3_26|<h3 style=\"color:#20366f;font-size: 26px;\">H3 Blue Color</h3>\r\nh3.font-light.pinkColor.h3_26|<h3 style=\"color:#c40d56;font-size: 26px;\">H3 Pink Color</h3>\r\nh3.font-light.whiteColor.h3_26.blueBgColor|<h3 style=\"color:#ffffff;font-size: 26px;background: #20366F;\">H3 White Color</h3>\r\nh4.tealColor.font-light.h4_22|<h4 style=\"color:#007681;font-size: 22px;\">H4 teal</h4>\r\nh4.blueColor.font-light.h4_22|<h4 style=\"color:#20366f;font-size: 22px;\">H4 BlueColor</h4>\r\nh4.pinkColor.font-light.h4_22|<h4 style=\"color:#c40d56;font-size: 22px;\">H4 Pink Color</h4>\r\nh4.whiteColor.font-light.h4_22.blueBgColor|<h4 style=\"color:#ffffff;font-size: 22px;background: #20366F;\">H4 White Color</h4>\r\nh5.font-medium.tealColor.h5_20|<h5 style=\"color:#007681;font-size: 20px;\">H5 Teal Color</h5>\r\nh5.font-medium.blueColor.h5_20|<h5 style=\"color:#20366f;font-size: 20px;\">H5 Blue Color</h5>\r\nh5.font-medium.pinkColor.h5_20|<h5 style=\"color:#c40d56;font-size: 20px;\">H5 Pink Color</h5>\r\nh5.font-medium.whiteColor.h5_20.blueBgColor|<h5 style=\"color:#ffffff;font-size: 20px;background: #20366F;\">H5 White Color</h5>\r\nh6.font-medium.tealColor.h6_18|<h6 style=\"color:#007681;font-size: 18px;\">H6 Teal Color</h6>\r\nh6.font-medium.blueColor.h6_18|<h6 style=\"color:#20366f;font-size: 18px;\">H6 Blue Color</h6>\r\nh6.font-medium.pinkColor.h6_18|<h6 style=\"color:#c40d56;font-size: 18px;\">H6 Pink Color</h6>\r\nh6.font-medium.whiteColor.h6_18.blueBgColor|<h6 style=\"color:#ffffff;font-size: 18px;background: #20366F;\">H6 White Color</h6>\r\nli.ol_li.darkGreyColor|<ol> <li style=\"color:#333333;font-size: 14px;line-height: 20px;\"> Numbered list </li> </ol>\r\np.p_14 .darkGreyColor.font-light|<p style=\"color:#333333;font-size: 14px;line-height: 20px;font-weight: 400;\"> Paragraph</p>\r\ntable.custom_table|<table style=\"background:#c40d56;color:#ffffff;font-weight:700;\">Custom Table 1</table>\r\nth.blueBgColor.whiteColor.font-medium|<th style=\"background:#20366f;\">Table heading 1</th>\r\ntable.custom_table.w_50|<table style=\"background:#c40d56;color:#ffffff;font-weight:700;\">Custom Table 2</table>\r\nth.tealBgColor.whiteColor.font-medium|<th style=\"border-collapse:collapse;background:#007681;\">Table heading 2</th>\r\ntable.custom_table.w_100|<table style=\"background:#c40d56;color:#ffffff;font-weight:700;\">Custom Table 3</table>\r\nth.pinkBgColor.whiteColor.font-medium|<th style=\"border-collapse:collapse;background:#c40d56;\">Table heading 3</th>\r\nhr.horizontal_hr|<hr style=\"border: 2px solid #F0F0F0;margin-bottom: 20px;margin-top: 20px;\">Horizontal Line</hr>"
+    language:
+      language_list: un
+    font:
+      font_names: ''
+      font_sizes: ''
+    tokenbrowser:
+      token_types: {  }
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

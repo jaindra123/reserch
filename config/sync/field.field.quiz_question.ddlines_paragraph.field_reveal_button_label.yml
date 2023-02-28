@@ -1,0 +1,19 @@
+uuid: 742f87e5-8369-4971-b26c-25934f1a6a7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_reveal_button_label
+    - quiz.question.type.ddlines_paragraph
+id: quiz_question.ddlines_paragraph.field_reveal_button_label
+field_name: field_reveal_button_label
+entity_type: quiz_question
+bundle: ddlines_paragraph
+label: 'Reveal Button Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

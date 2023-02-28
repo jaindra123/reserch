@@ -1,0 +1,41 @@
+uuid: e98e30c2-d886-4294-8f99-00187ca33272
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+    - field.field.paragraph.carousel_child.field_slider_image
+    - field.field.paragraph.carousel_child.field_title
+    - paragraphs.paragraphs_type.carousel_child
+  module:
+    - entity_browser
+id: paragraph.carousel_child.default
+targetEntityType: paragraph
+bundle: carousel_child
+mode: default
+content:
+  field_slider_image:
+    type: entity_browser_file
+    weight: 0
+    region: content
+    settings:
+      entity_browser: browse_files
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: file_entity_browser_small
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,20 @@
+uuid: 68b3884c-baa4-4271-aa35-ac6450d067db
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.skills
+  module:
+    - text
+id: taxonomy_term.skills.description
+field_name: description
+entity_type: taxonomy_term
+bundle: skills
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

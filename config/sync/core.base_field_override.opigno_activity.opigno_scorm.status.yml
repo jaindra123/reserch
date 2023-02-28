@@ -1,0 +1,22 @@
+uuid: 37617d4c-1c96-4f60-8174-02e28ab5d206
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_scorm
+id: opigno_activity.opigno_scorm.status
+field_name: status
+entity_type: opigno_activity
+bundle: opigno_scorm
+label: 'Publishing status'
+description: 'A boolean indicating whether the Activity is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

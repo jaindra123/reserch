@@ -1,0 +1,23 @@
+uuid: 9ecad6aa-91d4-4277-bd0e-aa1805a10112
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drag_drop_question_table
+    - paragraphs.paragraphs_type.drag_and_drop_table
+  module:
+    - text
+id: paragraph.drag_and_drop_table.field_drag_drop_question_table
+field_name: field_drag_drop_question_table
+entity_type: paragraph
+bundle: drag_and_drop_table
+label: 'Drag Drop Question Table'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

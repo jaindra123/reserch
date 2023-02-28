@@ -1,0 +1,38 @@
+uuid: 09c72bb6-165d-4f16-a7fa-bde56405346b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.se2e_standard
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: T8pcTCt0wi8EZK4q5A-cbYBXWGWzHNLOYpaQC9NhqOE
+id: media.image.se2e_standard
+targetEntityType: media
+bundle: image
+mode: se2e_standard
+content:
+  field_media_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

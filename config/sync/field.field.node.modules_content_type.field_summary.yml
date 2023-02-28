@@ -1,0 +1,21 @@
+uuid: 6e897291-3dcc-4d3d-b5ba-81952ae7cf0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.modules_content_type
+id: node.modules_content_type.field_summary
+field_name: field_summary
+entity_type: node
+bundle: modules_content_type
+label: 'Summary for Search (Optional)'
+description: 'Summary for Search'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Summary for Search'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

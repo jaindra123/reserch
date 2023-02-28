@@ -1,0 +1,129 @@
+uuid: 566058f8-33cd-4fb8-bc0a-f8b5da80d61f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.institution.field_admin_option
+    - field.field.node.institution.field_authentication_hub_id
+    - field.field.node.institution.field_authentication_methods
+    - field.field.node.institution.field_breadcrumb
+    - field.field.node.institution.field_ga_tracking_code
+    - field.field.node.institution.field_licence_renewal_date
+    - field.field.node.institution.field_licence_renewal_month
+    - field.field.node.institution.field_logo
+    - field.field.node.institution.field_logo_hyperlink
+    - field.field.node.institution.field_meta_tags
+    - field.field.node.institution.field_modules
+    - field.field.node.institution.field_number_of_licences
+    - field.field.node.institution.field_slider_option
+    - field.field.node.institution.field_subscription_expiry_date
+    - field.field.node.institution.field_subscription_limit
+    - field.field.node.institution.field_subscription_used
+    - field.field.node.institution.field_suggestion_form
+    - field.field.node.institution.field_template_type
+    - field.field.node.institution.field_u
+    - field.field.node.institution.field_visible_to_anonymous_users
+    - image.style.media_entity_browser_thumbnail
+    - node.type.institution
+  module:
+    - image
+    - opigno_module
+    - path
+id: node.institution.default
+targetEntityType: node
+bundle: institution
+mode: default
+content:
+  field_admin_option:
+    type: opigno_true_false_widget_type
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_authentication_hub_id:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_licence_renewal_date:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_licence_renewal_month:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: media_entity_browser_thumbnail
+    third_party_settings: {  }
+  field_logo_hyperlink:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_number_of_licences:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_slider_option:
+    type: opigno_true_false_widget_type
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_template_type:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_authentication_methods: true
+  field_breadcrumb: true
+  field_ga_tracking_code: true
+  field_meta_tags: true
+  field_modules: true
+  field_subscription_expiry_date: true
+  field_subscription_limit: true
+  field_subscription_used: true
+  field_suggestion_form: true
+  field_u: true
+  field_visible_to_anonymous_users: true
+  langcode: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

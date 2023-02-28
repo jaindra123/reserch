@@ -1,0 +1,28 @@
+uuid: 7bac5b00-6a6d-464b-b3f2-689c9cdb5f08
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_learning_path
+    - system
+  theme:
+    - aristotle
+_core:
+  default_config_hash: xd8bSjjJlL4GuSHcTkMGwo5vQhOeHk7aewCmFVd9DGo
+id: lp_steps_block
+theme: aristotle
+region: sidebar_first
+weight: 0
+provider: null
+plugin: lp_steps_block
+settings:
+  id: lp_steps_block
+  label: 'LP Steps'
+  label_display: '0'
+  provider: opigno_learning_path
+visibility:
+  request_path:
+    id: request_path
+    pages: "/module/*/result/*\r\n/group/*/module/*"
+    negate: false
+    context_mapping: {  }

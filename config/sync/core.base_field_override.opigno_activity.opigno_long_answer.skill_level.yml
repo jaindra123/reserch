@@ -1,0 +1,22 @@
+uuid: b2154097-822c-49e3-83ec-8ca12e012a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_long_answer
+  module:
+    - options
+id: opigno_activity.opigno_long_answer.skill_level
+field_name: skill_level
+entity_type: opigno_activity
+bundle: opigno_long_answer
+label: 'Level of skill'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: local
+default_value_callback: ''
+settings: {  }
+field_type: list_string

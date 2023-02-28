@@ -1,0 +1,22 @@
+uuid: b9eb32a9-f888-43ad-bab0-9a21cc2d8eb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: practice
+label: Practice
+type: 'canonical_entities:node'
+pattern: '/practice/[node:title]'
+selection_criteria:
+  419fb723-d9b4-41d8-927f-57ceb21765f8:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 419fb723-d9b4-41d8-927f-57ceb21765f8
+    context_mapping:
+      node: node
+    bundles:
+      practice: practice
+selection_logic: and
+weight: -5
+relationships: {  }

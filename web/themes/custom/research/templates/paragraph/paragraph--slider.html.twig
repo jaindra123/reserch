@@ -1,0 +1,20 @@
+{% if paragraph.field_slider_image.entity.uri.value is not empty %} 
+	<div class="banner" style="background: url('{{file_url(paragraph.field_slider_image.entity.uri.value)}}') ">
+		<div class="container">
+			<div class="banner-content" id="section2">
+					<div class="short_description">
+							<h1> {{  paragraph.field_slider_description.value|render|striptags|trim|raw }} </h1>
+					</div>
+					{% if paragraph.field_slider_link.title is not empty %}
+						<div class="top-link">
+							<b class="pr-3 link_text">{{ content.field_slider_link }}</b>
+							<i class="pl-0 arrowed">
+							<img src="/{{ base_path ~ directory }}/assets/img/arrow.png" alt="">
+							</i>
+						</div>
+					{% endif %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+

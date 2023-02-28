@@ -1,0 +1,14 @@
+workshop_register.sign-up:
+  path: '/manage-appearance'
+  defaults:
+    _form: '\Drupal\upload_image\Form\SignUp'
+    _title: 'Manage Appearance'
+  requirements:
+    _role: 'institute+bloomsbury_editor+administrator'
+# workshop_register.listing:
+#   path: '/workshop_listing'
+#   defaults:
+#     _controller: '\Drupal\workshop_register\Controller\DisplayTableController::display'
+#     _title: 'display'
+#   requirements:
+#     _permission: 'TRUE'

@@ -1,0 +1,22 @@
+uuid: 3731ed91-26f6-4347-808b-08e82e154785
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: test
+label: Test
+type: 'canonical_entities:node'
+pattern: '/test/[node:title]'
+selection_criteria:
+  99defe21-7c0a-403c-9e5b-0942262fc59c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 99defe21-7c0a-403c-9e5b-0942262fc59c
+    context_mapping:
+      node: node
+    bundles:
+      test: test
+selection_logic: and
+weight: -5
+relationships: {  }

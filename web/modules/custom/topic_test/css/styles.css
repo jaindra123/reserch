@@ -1,0 +1,68 @@
+.question-topic-item h5 > * {
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.attempt-box {
+    display: none;
+}
+
+.topicTest-description {
+    background-color: #efefef;;
+}
+
+.scoreboard {
+    background-color: #006d78;;
+}
+
+.scoreboard * {
+    color: #fff;
+}
+
+.retake-test-confirmation {
+    display: none;
+}
+
+.restrcit-test h4 {
+    color: #d30649;
+}
+
+.self-study h2 {
+    color: #d30649;
+}
+
+.rightAnswer.not-chosen {
+    color: #333333 !important;
+}
+
+.not-attempted {
+    color: #c83435;
+    margin-bottom: 10px;
+}
+
+/* quiz try again button */
+.try-again-button {
+    margin-top: 10px;
+    order: 6;
+    text-align: right;
+}
+.try-again-button button {
+    position: relative;
+    bottom: 0px;
+    border: 1px solid #20366f;
+    background: #20366f;
+    display: inline-flex;
+    padding: 10px 20px;
+    color: #fff !important;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    font-size: 14px;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 0px;
+}

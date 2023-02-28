@@ -1,0 +1,48 @@
+<footer class="footer">
+	<div class="container">
+		<div class="row pt-55">
+			<div class="col-md-12"> 
+	
+				{% if institution_logo %}
+				
+					{% if institution_logo_hyperlink %}
+						{% set logo_link = institution_logo_hyperlink %}
+						{% set target = '_blank' %}
+					{% else %}
+						{% set logo_link = path('<front>') %}
+						{% set target = '' %}
+					{% endif %}
+					<a href="{{ logo_link }}" rel="home" class="footer-logo" target="{{target}}"> 
+					<img class="logo" src="{{ institution_logo }}" alt="{{ 'Home'|t }}" /> </a>
+
+				{% else %}
+
+					{% if site_logo %}
+					<a href="{{ path('<front>') }}" rel="home" class="footer-logo"> 
+					<img class="logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> </a> 
+					
+					{% else %}
+					<a href="{{ path('<front>') }}" rel="home" class="footer-logo"> 
+					<img class="logo" src="{{ base_path ~ directory }}/research/img/logo.png" alt="{{ 'Home'|t }}" /> </a> 
+					{% endif %} 
+
+				{% endif %}
+					
+	
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10"> {{ page.footer }} </div>
+			<div class="col-md-2">
+				<div class="text-right fg-small">
+					<ul class="footer-nav2">
+            <li><a href="https://twitter.com/BloomsburyAcad" class="twitter">twitter</a></li>
+            <li><a href="https://www.youtube.com/channel/UCtMEiwJMMarhUQfXdcXT7Iw" class="youtube">youtube</a></li>
+          </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -1,0 +1,18 @@
+uuid: e7a87905-8877-42b6-9730-39cc17806d6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing_page
+id: node.marketing_page.created
+field_name: created
+entity_type: node
+bundle: marketing_page
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,11 @@
+uuid: d15da771-728a-4104-8667-43041c8eb8f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_cms_page
+id: node.basic_cms_page
+target_entity_type_id: node
+target_bundle: basic_cms_page
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,40 @@
+uuid: 46d93fee-e781-465d-b9b9-59c9ddd74c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_question_section
+    - node.type.topic
+    - paragraphs.paragraphs_type.topic_questions
+  module:
+    - entity_reference_revisions
+id: node.topic.field_question_section
+field_name: field_question_section
+entity_type: node
+bundle: topic
+label: 'Question section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      topic_questions: topic_questions
+    negate: 0
+    target_bundles_drag_drop:
+      template_one:
+        weight: 6
+        enabled: false
+      template_three:
+        weight: 7
+        enabled: false
+      template_two:
+        weight: 8
+        enabled: false
+      topic_questions:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

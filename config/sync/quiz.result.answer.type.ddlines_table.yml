@@ -1,0 +1,11 @@
+uuid: d2c99782-205c-4b62-81bc-77de7cb2f3c6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - quiz_ddlines_table
+_core:
+  default_config_hash: BTHuiDO_th1NHytw782IWh67AVcdNij_3eNEt-EUCp0
+id: ddlines_table
+label: 'Drag & Drop Table response'

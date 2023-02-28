@@ -1,0 +1,42 @@
+uuid: be5730d3-7f26-450d-9a57-2235bc118031
+langcode: en
+status: true
+dependencies: {  }
+id: entity_solr_field_type_collection
+label: entity.solr_field_type.collection
+tabs:
+  -
+    label: entity.search_api_server.canonical
+    link: View
+    weight: -10
+    access: true
+  -
+    label: entity.search_api_server.edit_form
+    link: Edit
+    weight: -10
+    access: true
+  -
+    label: search_api_solr.solr_config_files
+    link: Files
+    weight: 5
+    access: true
+  -
+    label: entity.solr_cache.collection
+    link: Caches
+    weight: 9
+    access: true
+  -
+    label: entity.solr_request_handler.collection
+    link: 'Request Handlers'
+    weight: 10
+    access: true
+  -
+    label: entity.solr_request_dispatcher.collection
+    link: 'Request Dispatchers'
+    weight: 11
+    access: true
+  -
+    label: entity.solr_field_type.collection
+    link: 'Custom Field Types'
+    weight: 12
+    access: true

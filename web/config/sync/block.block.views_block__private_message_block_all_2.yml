@@ -1,0 +1,24 @@
+uuid: 99dcc7f1-f9d3-49fb-b39e-294dfa5b674d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.private_message
+  module:
+    - views
+  theme:
+    - research
+id: views_block__private_message_block_all_2
+theme: research
+region: status_messages
+weight: 0
+provider: null
+plugin: 'views_block:private_message-block_all'
+settings:
+  id: 'views_block:private_message-block_all'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

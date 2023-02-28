@@ -1,0 +1,10 @@
+uuid: 141e87bc-8d5b-4e88-8892-9a22ca383c1a
+langcode: en
+status: true
+dependencies: {  }
+id: practice_page
+label: 'practice page'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

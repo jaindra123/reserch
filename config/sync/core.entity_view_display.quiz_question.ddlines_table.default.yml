@@ -1,0 +1,64 @@
+uuid: 7668417c-98bc-4182-9359-e8b0c3cca092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.ddlines_table.field_accordion_collapsed
+    - field.field.quiz_question.ddlines_table.field_correct_ans
+    - field.field.quiz_question.ddlines_table.field_drag_drop_tb_qns_ans
+    - field.field.quiz_question.ddlines_table.field_question_title_name
+    - field.field.quiz_question.ddlines_table.field_reveal_button_label
+    - field.field.quiz_question.ddlines_table.field_visibility_mode
+    - quiz.question.type.ddlines_table
+  module:
+    - entity_reference_revisions
+    - text
+  enforced:
+    module:
+      - quiz_page
+_core:
+  default_config_hash: UoW0cjZoCx38BYtsAb66z-OEULiVmpbWjVZtcx_Ogbo
+id: quiz_question.ddlines_table.default
+targetEntityType: quiz_question
+bundle: ddlines_table
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_correct_ans:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_drag_drop_tb_qns_ans:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_reveal_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_accordion_collapsed: true
+  field_question_title_name: true
+  field_visibility_mode: true
+  search_api_excerpt: true

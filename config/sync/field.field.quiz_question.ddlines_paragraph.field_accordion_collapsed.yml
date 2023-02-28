@@ -1,0 +1,23 @@
+uuid: 9102cb57-9b81-42e3-b052-ccc6c32f4ec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_accordion_collapsed
+    - quiz.question.type.ddlines_paragraph
+id: quiz_question.ddlines_paragraph.field_accordion_collapsed
+field_name: field_accordion_collapsed
+entity_type: quiz_question
+bundle: ddlines_paragraph
+label: 'Accordion Expand'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

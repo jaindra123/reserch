@@ -1,0 +1,23 @@
+uuid: cc7ec434-c3c6-416e-b41e-4a6600694979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_description
+    - paragraphs.paragraphs_type.slider
+  module:
+    - text
+id: paragraph.slider.field_slider_description
+field_name: field_slider_description
+entity_type: paragraph
+bundle: slider
+label: 'Slider Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

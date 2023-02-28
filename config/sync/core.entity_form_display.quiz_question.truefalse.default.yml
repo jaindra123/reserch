@@ -1,0 +1,92 @@
+uuid: 4b8ec4bb-e61a-46da-9bfd-8cbaa119f9ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_question.truefalse.field_accordion_collapsed
+    - field.field.quiz_question.truefalse.field_link
+    - field.field.quiz_question.truefalse.field_question_title_name
+    - field.field.quiz_question.truefalse.field_upload_document
+    - field.field.quiz_question.truefalse.field_visibility_mode
+    - field.field.quiz_question.truefalse.truefalse_correct
+    - quiz.question.type.truefalse
+  module:
+    - file
+    - link
+    - text
+  enforced:
+    module:
+      - quiz_truefalse
+_core:
+  default_config_hash: QIGvoDz5UA5SjE-oIGdMFzHF4BDn7iX1YMhKwd6Z1lI
+id: quiz_question.truefalse.default
+targetEntityType: quiz_question
+bundle: truefalse
+mode: default
+content:
+  body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  correct_answer:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_accordion_collapsed:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_question_title_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_upload_document:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_visibility_mode:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  truefalse_correct:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  feedback: true

@@ -1,0 +1,46 @@
+uuid: 31c29905-2707-445d-a72d-1e82350ce529
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.topic_faq.field_admin_option
+    - field.field.node.topic_faq.field_breadcrumb
+    - field.field.node.topic_faq.field_meta_tags
+    - field.field.node.topic_faq.field_question_section
+    - field.field.node.topic_faq.field_slider_option
+    - field.field.node.topic_faq.field_suggestion_form
+    - field.field.node.topic_faq.field_template_type
+    - field.field.node.topic_faq.field_visible_to_anonymous_users
+    - field.field.node.topic_faq.field_within_this_topic
+    - field.field.node.topic_faq.field_yoast_seo
+    - node.type.topic_faq
+  module:
+    - user
+id: node.topic_faq.teaser
+targetEntityType: node
+bundle: topic_faq
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_admin_option: true
+  field_breadcrumb: true
+  field_meta_tags: true
+  field_question_section: true
+  field_slider_option: true
+  field_suggestion_form: true
+  field_template_type: true
+  field_visible_to_anonymous_users: true
+  field_within_this_topic: true
+  field_yoast_seo: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 76aed866-0d30-4dc7-9486-75959d5d6d97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_field_call_to_action_3
+    - paragraphs.paragraphs_type.home_page_section_3
+  module:
+    - link
+id: paragraph.home_page_section_3.field_field_call_to_action_3
+field_name: field_field_call_to_action_3
+entity_type: paragraph
+bundle: home_page_section_3
+label: 'Call to Action 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

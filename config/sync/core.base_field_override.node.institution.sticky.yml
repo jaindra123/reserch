@@ -1,0 +1,22 @@
+uuid: fa015416-32fa-4f79-84ec-de8e19f8946e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.institution
+id: node.institution.sticky
+field_name: sticky
+entity_type: node
+bundle: institution
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

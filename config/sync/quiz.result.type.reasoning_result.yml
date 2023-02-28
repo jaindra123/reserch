@@ -1,0 +1,6 @@
+uuid: 9d0d89d0-a49b-4739-9043-f8b2b8b6b904
+langcode: en
+status: true
+dependencies: {  }
+id: reasoning_result
+label: 'Reasoning Result'

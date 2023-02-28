@@ -1,0 +1,23 @@
+uuid: 15e2866c-bb89-4cdf-9ce5-bf568ce18270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subscription_used
+    - node.type.institution
+id: node.institution.field_subscription_used
+field_name: field_subscription_used
+entity_type: node
+bundle: institution
+label: 'Subscription Used'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

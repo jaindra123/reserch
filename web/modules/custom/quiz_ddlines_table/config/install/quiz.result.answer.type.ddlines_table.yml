@@ -1,0 +1,8 @@
+id: ddlines_table
+label: Drag & Drop Table response
+dependencies:
+  enforced:
+    module:
+      - quiz_ddlines_table
+  module:
+    - quiz_ddlines_table

@@ -1,0 +1,110 @@
+uuid: 7642da79-be23-4585-8dfa-5535386c1fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.topic_faq.field_admin_option
+    - field.field.node.topic_faq.field_breadcrumb
+    - field.field.node.topic_faq.field_meta_tags
+    - field.field.node.topic_faq.field_question_section
+    - field.field.node.topic_faq.field_slider_option
+    - field.field.node.topic_faq.field_suggestion_form
+    - field.field.node.topic_faq.field_template_type
+    - field.field.node.topic_faq.field_visible_to_anonymous_users
+    - field.field.node.topic_faq.field_within_this_topic
+    - field.field.node.topic_faq.field_yoast_seo
+    - node.type.topic_faq
+  module:
+    - metatag
+    - opigno_module
+    - paragraphs
+    - path
+    - yoast_seo
+id: node.topic_faq.default
+targetEntityType: node
+bundle: topic_faq
+mode: default
+content:
+  field_breadcrumb:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: Breadcumb
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 7
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_question_section:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_suggestion_form:
+    type: opigno_true_false_widget_type
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_visible_to_anonymous_users:
+    type: opigno_true_false_widget_type
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_within_this_topic:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_yoast_seo:
+    type: yoast_seo_widget
+    weight: 8
+    region: content
+    settings:
+      body: body
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Title*'
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_admin_option: true
+  field_slider_option: true
+  field_template_type: true
+  langcode: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

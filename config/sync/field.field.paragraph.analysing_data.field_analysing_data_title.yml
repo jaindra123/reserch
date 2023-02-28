@@ -1,0 +1,19 @@
+uuid: 19ffdb15-0e5c-4d76-ae75-86e0a1c863f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_analysing_data_title
+    - paragraphs.paragraphs_type.analysing_data
+id: paragraph.analysing_data.field_analysing_data_title
+field_name: field_analysing_data_title
+entity_type: paragraph
+bundle: analysing_data
+label: 'Accordion Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

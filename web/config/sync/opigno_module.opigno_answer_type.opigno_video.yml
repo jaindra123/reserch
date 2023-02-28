@@ -1,0 +1,8 @@
+uuid: ba385b7b-df17-422d-80dc-65e1c2c12aa9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lz7D9YlkIejPhtc17SS_zFHqcw8OhLzuCuMzdKyN_h8
+id: opigno_video
+label: Video

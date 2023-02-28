@@ -1,0 +1,19 @@
+uuid: 96941704-ca6a-4fd7-b50b-0da424ea6479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_3
+    - paragraphs.paragraphs_type.home_page_section_3
+id: paragraph.home_page_section_3.field_title_3
+field_name: field_title_3
+entity_type: paragraph
+bundle: home_page_section_3
+label: 'Title 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

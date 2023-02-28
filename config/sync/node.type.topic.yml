@@ -1,0 +1,21 @@
+uuid: 9f6c234d-4138-4541-8744-9fe5044f9f6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - unique_entity_title
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  unique_entity_title:
+    enabled: true
+name: Topic
+type: topic
+description: 'This is for topic pages '
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

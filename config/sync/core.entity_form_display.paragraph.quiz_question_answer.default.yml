@@ -1,0 +1,46 @@
+uuid: 388d6b43-3e2d-4f59-9d08-4c2ef2c55085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quiz_question_answer.field_quiz_answer
+    - field.field.paragraph.quiz_question_answer.field_quiz_question
+    - field.field.paragraph.quiz_question_answer.field_status_quiz
+    - paragraphs.paragraphs_type.quiz_question_answer
+  module:
+    - opigno_module
+    - text
+id: paragraph.quiz_question_answer.default
+targetEntityType: paragraph
+bundle: quiz_question_answer
+mode: default
+content:
+  field_quiz_answer:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_quiz_question:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_status_quiz:
+    type: opigno_true_false_widget_type
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

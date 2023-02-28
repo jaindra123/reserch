@@ -1,0 +1,70 @@
+uuid: 32e33980-a6e6-40ef-b7ef-fa5547a8a779
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_tem2
+    - paragraphs.paragraphs_type.template_three
+    - paragraphs.paragraphs_type.template_two
+  module:
+    - entity_reference_revisions
+id: paragraph.template_three.field_heading_tem2
+field_name: field_heading_tem2
+entity_type: paragraph
+bundle: template_three
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      template_two: template_two
+    negate: 0
+    target_bundles_drag_drop:
+      analysing_data:
+        weight: 15
+        enabled: false
+      anonymous_user_page_slider:
+        weight: 16
+        enabled: false
+      home_page_content_section:
+        weight: 17
+        enabled: false
+      home_page_inner_content_section:
+        weight: 18
+        enabled: false
+      home_page_inner_content_section_:
+        weight: 19
+        enabled: false
+      home_page_section_2:
+        weight: 20
+        enabled: false
+      home_page_section_3:
+        weight: 21
+        enabled: false
+      home_page_slider:
+        weight: 22
+        enabled: false
+      inner_content_section_3:
+        weight: 23
+        enabled: false
+      marketing_page_bottom_content:
+        weight: 24
+        enabled: false
+      template_one:
+        weight: 4
+        enabled: false
+      template_three:
+        weight: 5
+        enabled: false
+      template_two:
+        weight: 6
+        enabled: true
+      topic_questions:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

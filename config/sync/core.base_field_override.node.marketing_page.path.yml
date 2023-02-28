@@ -1,0 +1,20 @@
+uuid: 6cdbdd79-31bc-4a2e-bd73-e98f29c2ab41
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing_page
+  module:
+    - path
+id: node.marketing_page.path
+field_name: path
+entity_type: node
+bundle: marketing_page
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

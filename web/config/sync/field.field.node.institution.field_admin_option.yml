@@ -1,0 +1,21 @@
+uuid: 1346b4af-c1ef-4bce-84e2-b093d1bff9d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_admin_option
+    - node.type.institution
+  module:
+    - opigno_module
+id: node.institution.field_admin_option
+field_name: field_admin_option
+entity_type: node
+bundle: institution
+label: 'Admin Option'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

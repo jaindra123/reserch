@@ -1,0 +1,18 @@
+uuid: 6430d2b6-1d31-4543-8630-9be72ac0e570
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_h5p
+id: opigno_activity.opigno_h5p.metatag
+field_name: metatag
+entity_type: opigno_activity
+bundle: opigno_h5p
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,21 @@
+uuid: e6e69759-629c-46d7-887c-18637c26089a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_u
+    - node.type.institution
+  module:
+    - options
+id: node.institution.field_u
+field_name: field_u
+entity_type: node
+bundle: institution
+label: 'Unlimited Licences'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

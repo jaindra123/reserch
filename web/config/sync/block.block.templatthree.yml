@@ -1,0 +1,25 @@
+uuid: 07282fc5-0fa9-41cb-832d-ac93a5ab874c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e4f5ba28-9b9f-4f2e-b877-358139d41239'
+  module:
+    - block_content
+  theme:
+    - research
+id: templatthree
+theme: research
+region: template_Three
+weight: 0
+provider: null
+plugin: 'block_content:e4f5ba28-9b9f-4f2e-b877-358139d41239'
+settings:
+  id: 'block_content:e4f5ba28-9b9f-4f2e-b877-358139d41239'
+  label: 'Templat Three'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

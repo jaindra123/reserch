@@ -1,0 +1,23 @@
+uuid: f0de49d5-192a-44a0-967e-58dd52230aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_admin_option
+    - node.type.decision_tree
+  module:
+    - opigno_module
+id: node.decision_tree.field_admin_option
+field_name: field_admin_option
+entity_type: node
+bundle: decision_tree
+label: 'Admin Option'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

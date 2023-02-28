@@ -1,0 +1,32 @@
+uuid: 8a820ab7-45c8-4579-b51f-e8c32d6a75ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+    - field.field.paragraph.image.field_images
+    - paragraphs.paragraphs_type.image
+  module:
+    - entity_browser
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content:
+  field_images:
+    type: entity_browser_file
+    weight: 0
+    region: content
+    settings:
+      entity_browser: browse_files
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: file_entity_browser_small
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

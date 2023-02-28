@@ -1,0 +1,23 @@
+uuid: 90590893-28d4-442e-8b9f-bc0b10081b3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz.field_information_mode
+    - quiz.type.quiz
+  module:
+    - options
+id: quiz.quiz.field_information_mode
+field_name: field_information_mode
+entity_type: quiz
+bundle: quiz
+label: 'Information Mode'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: student_self_mode
+default_value_callback: ''
+settings: {  }
+field_type: list_string

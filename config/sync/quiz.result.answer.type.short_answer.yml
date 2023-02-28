@@ -1,0 +1,11 @@
+uuid: 3433db12-e4b5-4f80-bdbf-2bbfcabac4b1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - quiz_short_answer
+_core:
+  default_config_hash: 3M74koZVKOks8FoKLsn6HAPxzzWO0Q-UNpQ_97mRiAc
+id: short_answer
+label: 'Short answer response'

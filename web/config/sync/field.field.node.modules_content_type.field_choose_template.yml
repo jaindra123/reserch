@@ -1,0 +1,44 @@
+uuid: c92498fd-05b6-4434-8aba-ffd2ec86ba9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_choose_template
+    - node.type.modules_content_type
+    - paragraphs.paragraphs_type.template_one
+    - paragraphs.paragraphs_type.template_three
+    - paragraphs.paragraphs_type.template_two
+  module:
+    - entity_reference_revisions
+id: node.modules_content_type.field_choose_template
+field_name: field_choose_template
+entity_type: node
+bundle: modules_content_type
+label: 'Choose paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      template_one: template_one
+      template_two: template_two
+      template_three: template_three
+    negate: 0
+    target_bundles_drag_drop:
+      template_one:
+        weight: 3
+        enabled: true
+      template_three:
+        weight: 1
+        enabled: true
+      template_two:
+        weight: 2
+        enabled: true
+      topic_questions:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,31 @@
+uuid: c24edaa7-7d36-4792-9bbe-7271961b11ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.answer_option.field_correct
+    - field.field.paragraph.answer_option.field_text
+    - paragraphs.paragraphs_type.answer_option
+id: paragraph.answer_option.default
+targetEntityType: paragraph
+bundle: answer_option
+mode: default
+content:
+  field_correct:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: 98f56da4-8dac-4274-bd66-60a98685a3dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - unique_entity_title
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  unique_entity_title:
+    enabled: false
+name: Practice
+type: practice
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,10 @@
+uuid: 3385c906-4214-4615-bbe1-d3c2a3ec4af6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FVXuVD-tA2JBxDN_6ommRFMUWUsvGLsfZMGh_vOs06k
+id: datepicker
+label: Datepicker
+locked: false
+pattern: m/d/Y

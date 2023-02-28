@@ -1,0 +1,19 @@
+uuid: 9d2a424a-c4c8-4c6a-acbc-6173faf35be6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drag_drop_question
+    - paragraphs.paragraphs_type.drag_and_drop
+id: paragraph.drag_and_drop.field_drag_drop_question
+field_name: field_drag_drop_question
+entity_type: paragraph
+bundle: drag_and_drop
+label: 'Drag Drop Question'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

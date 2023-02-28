@@ -1,0 +1,19 @@
+uuid: fad9fe76-9732-42c2-8543-55ddb6b7a42d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.marketing_page
+id: node.marketing_page.field_summary
+field_name: field_summary
+entity_type: node
+bundle: marketing_page
+label: 'Summary for Search (Optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

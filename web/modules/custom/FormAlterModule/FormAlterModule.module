@@ -1,0 +1,984 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Url;
+use Drupal\user\Entity\User;
+use Drupal\node\Entity\Node;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\Core\Menu\MenuTreeParameters;
+/**
+ * Implements hook_theme().
+ */
+
+/**
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ *
+ * @return \string[][]
+ *
+ * Implements hook_theme
+ */
+
+function FormAlterModule_form_alter(&$form, $form_state, $form_id)
+{
+    $roles = \Drupal::currentUser()->getRoles();
+    $current_user = \Drupal::currentUser();
+    $uid = $current_user->id();
+    $institute_reference_id = $uid;
+
+    switch ($form_id) {
+        case "user_register_form":
+            // print '<pre>';print_r($form['account']);exit;
+            $form["#prefix"] =
+                "When you create an instructor they will be notified by email";
+            $form["account"]["field_first_name"]["#required"] = false;
+            $form["account"]["field_last_name"]["#required"] = false;
+            $form["account"]["mail"]["#required"] = false;
+            $form["account"]["pass"]["#required"] = false;
+            $form["account"]["notify"]["#default_value"] = true;
+            $form["account"]["notify"]["#access"] = false;
+            unset($form["field_private_profile"]);
+            unset($form["account"]["name"]);
+            $form["account"]["pass"]["#access"] = false;
+            $form["account"]["name"]["#required"] = false;
+            unset($form["field_private_profile"]);
+
+            unset($form["account"]["status"]);
+            if (in_array("institute", $roles)) {
+                $form["account"]["roles"]["#default_value"] = ["instructor"];
+                $form["field_institute_reference"]["widget"][0]["value"][
+                    "#default_value"
+                ] = $institute_reference_id;
+            } else {
+                $form["account"]["roles"]["#default_value"] = ["institute"];
+                $form["field_institute_reference"]["widget"][0]["value"][
+                    "#default_value"
+                ] = $institute_reference_id;
+            }
+            $form["#validate"][] = "FormAlterModule_user_register_validate";
+            $form["actions"]["submit"]["#submit"][] =
+                "FormAlterModule_user_register_form_submit";
+
+            break;
+        case "user_form":
+            //$form['#prefix'] = 'When you create an instructor they will be notified by email';
+            $form["account"]["mail"]["#required"] = false;
+            $form["account"]["pass"]["#required"] = false;
+            $form["account"]["name"]["#access"] = false;
+            $form["account"]["field_first_name"]["#required"] = false;
+            $form["account"]["field_last_name"]["#required"] = false;
+            $form["field_institution"]["#required"] = false;
+            if (isset($_GET["pass-reset-token"])) {
+                // Do something
+            } else {
+                //$form['account']['pass']['#access']  = FALSE;
+                //hide($form['account']['pass']);
+            }
+
+            hide($form["account"]["status"]);
+            hide($form["account"]["name"]);
+            hide($form["field_institution"]);
+
+            hide($form["account"]["current_pass"]);
+            hide($form["account"]["roles"]);
+            hide($form["field_private_profile"]);
+            $roles = \Drupal::currentUser()->getRoles();
+            $current_user = \Drupal::currentUser();
+            $uid = $current_user->id();
+            $uid = \Drupal::currentUser()->id();
+            $user = User::load($uid);
+            if (!in_array("administrator", $roles)) {
+                $form["account"]["mail"]["#disabled"] = true;
+            }
+
+            $form["field_institute_reference"]["widget"][0]["value"][
+                "#default_value"
+            ] = $institute_reference_id;
+            $form["#validate"][] = "FormAlterModule_user_register_validate";
+            $form["actions"]["submit"]["#submit"][] =
+                "FormAlterModule_user_form_submit";
+
+            break;
+
+        case "user_login_form":
+        case "user_login_block":
+            $form["name"]["#required"] = false;
+            $form["pass"]["#required"] = false;
+            //print'<pre>';print_r($form);exit;
+            $form["name"]["widget"][0]["value"]["#title"] = "";
+
+            $form["pass"]["#title_display"] = "invisible";
+            $form["name"]["#title_display"] = "invisible";
+            $form["name"]["#placeholder"] = t("placeholder for username");
+            //$form['name']['#attributes']['placeholder'] = t( 'Username or E-Mail' );
+            //$form['actions']['submit']['#attributes']['class'][] = 'button glow button-primary expanded';
+            $form["keys"]["#attributes"]["placeholder"]["password"] = t(
+                "Password"
+            );
+            $form["#validate"][] = "FormAlterModule_user_login_form_validate";
+            $form["name"]["#element_validate"][] =
+                "login_onlyemail_user_login_validate";
+            //$form['actions']['submit']['#submit'][] = 'FormAlterModule_user_login_form_submit';
+            break;
+
+        case "node_institution_form":
+        case "node_institution_edit_form":
+            //    dump($form);
+
+            $form["field_licence_renewal_month"]["widget"]["#title"] =
+                "Licence renewal month*";
+
+            $form["field_licence_renewal_date"]["widget"]["#title"] =
+                "Licence renewal date*";
+
+            $form["field_authentication_hub_id"]["widget"][0]["value"][
+                "#title"
+            ] = "Authentication Hub ID*";
+
+            $form["field_number_of_licences"]["widget"][0]["value"]["#title"] =
+                "Number of licences*";
+
+            $form["title"]["widget"][0]["value"]["#title"] = "Title*";
+
+            $form["field_licence_renewal_month"]["widget"]["#options"] = [
+                "" => "Select a month",
+                1 => "Jan",
+                2 => "Feb",
+                3 => "Mar",
+                4 => "Apr",
+                5 => "May",
+                6 => "Jun",
+                7 => "Jul",
+                8 => "Aug",
+                9 => "Sep",
+                10 => "Oct",
+                11 => "Nov",
+                12 => "Dec",
+            ];
+            $form["field_licence_renewal_date"]["widget"]["#options"] = [
+                "" => "Select a date",
+                1 => "1",
+                2 => "2",
+                3 => "3",
+                4 => "4",
+                5 => "5",
+                6 => "6",
+                7 => "7",
+                8 => "8",
+                9 => "9",
+                10 => "10",
+                11 => "11",
+                12 => "12",
+                13 => "13",
+                14 => "14",
+                15 => "15",
+                16 => "16",
+                17 => "17",
+                18 => "18",
+                19 => "19",
+                20 => "20",
+                21 => "21",
+                22 => "22",
+                23 => "23",
+                24 => "24",
+                25 => "25",
+                26 => "26",
+                27 => "27",
+                28 => "28",
+                29 => "29",
+                30 => "30",
+                31 => "31",
+            ];
+
+            $form["field_logo"]["widget"][0][
+                "#description"
+            ] = '<p>Upload your institution\'s logo. Optionally, you can hyperlink the image.</p>
+      <ul>
+      <li> Allowed types: png, gif, jpg or jpeg</li>
+      <li> Image must be larger than 100x100 pixels. Landscape images work best</li>
+      <li> 2 MB limit</li>
+      </ul>
+      <span for="edit-field-logo-0-upload" class="UpButton">Choose file</span>
+      ';
+
+            $form["field_logo"]["#prefix"] = '<div class="first">';
+            $form["field_logo"]["#suffix"] = "</div>";
+
+            $form["#validate"][] =
+                "FormAlterModule_node_institution_edit_form_validate";
+
+            break;
+
+        case "user_cancel_form":
+            $form["user_cancel_method"]["#default_value"] =
+                "user_cancel_delete";
+            $form["actions"]["submit"]["#value"] = "Delete";
+            $form["#title"] = "Are you sure you want to delete the account?";
+            $form["actions"]["submit"]["#submit"][] =
+                "FormAlterModule_user_cancel_form_submit";
+            break;
+
+        case "user_pass":
+            $form["name"]["#required"] = false;
+            $form["name"]["#title_display"] = "invisible";
+            $form["name"]["#description"] = t(
+                "Password reset instructions will be sent to your registered email address."
+            );
+            $form["#validate"][] = "FormAlterModule_user_pass_validate";
+            $form["name"]["#element_validate"][] =
+                "login_onlyemail_user_pass_validate";
+            $form["actions"]["submit"]["#submit"][] =
+                "FormAlterModule_user_pass_submit";
+
+            break;
+
+        case "change_pwd_form":
+            $form["#validate"][] = "research_user_change_password_validate";
+
+            break;
+    }
+}
+
+function research_user_change_password_validate(array &$form, &$form_state)
+{
+    $values = $form_state->getValues();
+
+    if (isset($_GET["pass-reset-token"])) {
+        if (!$values["pass"]) {
+            $form_state->setErrorByName("pass", t("New Password is required"));
+        }
+    } else {
+        if (!$values["current_pass"][0]["value"]) {
+            $form_state->setErrorByName(
+                "current_pass",
+                t("Current Password is required.")
+            );
+        }
+        if (!$values["pass"]) {
+            $form_state->setErrorByName("pass", t("New Password is required"));
+        }
+    }
+}
+
+function FormAlterModule_node_institution_edit_form_validate(
+    array &$form,
+    &$form_state
+) {
+    if (!empty($form_state->getValue("title"))) {
+        //$title = $node->label();
+        $title = $form_state->getValue("title");
+        $tval = $title[0]["value"];
+    }
+    $errors = $form_state->getErrors();
+    if ($form_state->getErrors()) {
+        $string_error = $errors["name"];
+        foreach ($errors as $name => $error) {
+            if (
+                strpos($error, "is already in use. It must be unique.") !==
+                false
+            ) {
+                $form_state->clearErrors();
+                $form_state->setErrorByName(
+                    "help",
+                    " '" .
+                        $tval .
+                        "' " .
+                        t(" is already in use. It must be unique.")
+                );
+            }
+        }
+    }
+}
+
+function FormAlterModule_user_login_form_validate(array &$form, &$form_state)
+{
+    $errors = $form_state->getErrors();
+    $form["name"]["#title_display"] = "invisible";
+    if ($form_state->getErrors()) {
+        $string_error = $errors["name"];
+        foreach ($errors as $name => $error) {
+            if (strpos($error, "Unrecognized username or password") !== false) {
+                $form_state->clearErrors();
+                $form_state->setErrorByName(
+                    "help",
+                    t("Unrecognised username or password")
+                );
+            }
+        }
+    }
+    $values = $form_state->getValues();
+
+    if (!$values["name"]) {
+        $form_state->setErrorByName(
+            "field_name",
+            t("Email address is required")
+        );
+    }
+    if (!$values["pass"]) {
+        $form_state->setErrorByName("field_pass", t("Password is required"));
+    }
+}
+function FormAlterModule_user_pass_validate(array &$form, &$form_state)
+{
+    $errors = $form_state->getErrors();
+    $form["name"]["#title_display"] = "invisible";
+    if ($form_state->getErrors()) {
+        $form_state->clearErrors();
+    }
+    $values = $form_state->getValues();
+
+    $db = \Drupal::database();
+    /*$exist = $db->select('users_field_data', 'us')
+        ->fields('us', 'uid')
+        ->condition('mail', $values['name'], '=')
+        ->condition('status', 1, '=')
+        ->execute()
+    ->fetchAllKeyed(0,1);*/
+    //print'<pre>';print_r($values['name']);exit;
+    $users = \Drupal::entityTypeManager()
+        ->getStorage("user")
+        ->loadByProperties(["name" => $values["name"]]);
+    $user = reset($users);
+    if ($user) {
+        $uid = $user->id();
+        $mail = $user->getEmail();
+        $status = user_is_blocked($values["name"]);
+    }
+
+    if (!$values["name"]) {
+        $form_state->setErrorByName("field_name", t("Email address required"));
+    } elseif (!$mail || $status) {
+        $form_state->setErrorByName(
+            "field_name",
+            t("The email ") . $values["name"] . t(" has not been registered.")
+        );
+    } else {
+        $name = $values["name"];
+        $langcode = \Drupal::languageManager()
+            ->getCurrentLanguage()
+            ->getId();
+        // Try to load by email.
+        $users = \Drupal::entityTypeManager()
+            ->getStorage("user")
+            ->loadByProperties(["mail" => $name]);
+        if (empty($users)) {
+            // No success, try to load by name.
+            $users = \Drupal::entityTypeManager()
+                ->getStorage("user")
+                ->loadByProperties(["name" => $name]);
+        }
+        $account = reset($users);
+        // Mail one time login URL and instructions using current language.
+        $mail = _user_mail_notify("password_reset", $account, $langcode);
+    }
+}
+
+function FormAlterModule_user_register_validate(array &$form, &$form_state)
+{
+    $values = $form_state->getValues();
+
+    $errors = $form_state->getErrors();
+    if ($form_state->getErrors()) {
+        $form_state->clearErrors();
+    }
+
+    //if (!$form_state->hasValue('field_first_name')) {
+    if (!$values["field_first_name"][0]["value"]) {
+        $form_state->setErrorByName(
+            "field_first_name",
+            t("First name is required.")
+        );
+    }
+    if (!$values["field_last_name"][0]["value"]) {
+        $form_state->setErrorByName(
+            "field_last_name",
+            t("Last name is required.")
+        );
+    }
+    if (!$values["mail"]) {
+        $form_state->setErrorByName("mail", t("Email address is required."));
+    }
+    /*$password='12345678';
+   $hub = \Drupal::service('ah_client.authentication_hub');
+   $user = $hub->addUser($values['mail'], $password);
+   
+   print '<pre>';print_r($hub);exit;*/
+}
+/**
+ * Deletes status message after user registration.
+ */
+function FormAlterModule_user_register_form_submit($form, &$form_state)
+{
+    $messenger = \Drupal::messenger();
+    $messenger->deleteByType("status");
+    \Drupal::messenger()->addMessage(t("Account created"));
+}
+
+/**
+ * Deletes status message after user registration.
+ */
+function FormAlterModule_user_cancel_form_submit($form, &$form_state)
+{
+    $messenger = \Drupal::messenger();
+    $messenger->deleteByType("status");
+    \Drupal::messenger()->addMessage(t("Account deleted"));
+}
+
+/**
+ * Deletes status message after user registration.
+ */
+function FormAlterModule_user_form_submit($form, &$form_state)
+{
+    $user_a = \Drupal::routeMatch()->getParameter("user");
+    $uid = $user_a->id();
+    $roles = $user_a->getRoles();
+    //$roles = \Drupal::currentUser()->getRoles();
+    //$current_user = \Drupal::currentUser();
+    //$uid = $current_user->id();
+    //$uid = \Drupal::currentUser()->id();
+    $user = User::load($uid);
+    foreach ($roles as $key => $value) {
+        if ($value != "anonymous" && $value != "authenticated") {
+            $user->addRole($value);
+        }
+        $user->save();
+    }
+    $messenger = \Drupal::messenger();
+    $messenger->deleteByType("status");
+    \Drupal::messenger()->addMessage(t("Changes saved"));
+}
+/**
+ * Deletes status message after user registration.
+ */
+function FormAlterModule_user_pass_submit($form, &$form_state)
+{
+    $messenger = \Drupal::messenger();
+    $messenger->deleteByType("status");
+    \Drupal::messenger()->addMessage(
+        t("Further instructions have been sent to your email address")
+    );
+}
+
+/**
+ * Form element validation handler for the user login form.
+ *
+ * Allows users to authenticate by email.
+ */
+function login_onlyemail_user_login_validate(
+    $form,
+    FormStateInterface $form_state
+) {
+    // Use $form_state->getUserInput() in the error message to guarantee
+    // that we send exactly what the user typed in.
+    $user_input = $form_state->getUserInput();
+    $name_input = $user_input["name"];
+
+    // Try loading by email.
+    if ($user = user_load_by_mail($name_input)) {
+        // Set the username for further validation.
+        $form_state->setValue("name", $user->getAccountName());
+        return true;
+    }
+
+    // Set error message.
+    $query = isset($name_input) ? ["name" => $name_input] : [];
+    $form_state->setErrorByName(
+        "name",
+        t(
+            'Unrecognized email or password. <a href=":password">Forgot your password?</a>',
+            [
+                ":password" => URL::fromRoute(
+                    "user.pass",
+                    [],
+                    ["query" => $query]
+                )->toString(),
+            ]
+        )
+    );
+    $form_state->setRebuild();
+    return false;
+}
+
+/**
+ * Form element validation handler for the forgot password form.
+ *
+ * Allows users to recover the password using email.
+ */
+function login_onlyemail_user_pass_validate(
+    $form,
+    FormStateInterface $form_state
+) {
+    // Use $form_state->getUserInput() in the error message to guarantee
+    // that we send exactly what the user typed in.
+    $user_input = $form_state->getUserInput();
+    $name_input = trim($user_input["name"]);
+
+    // Try loading by email.
+    if ($user = user_load_by_mail($name_input)) {
+        // Set the username for further validation.
+        $form_state->setValue("name", $user->getAccountName());
+        return true;
+    }
+
+    // Set error message.
+    $query = $name_input != "" ? $name_input : "This";
+    $form_state->setErrorByName(
+        "name",
+        t("%email is not a registered email address.", ["%email" => $query])
+    );
+    $form_state->setRebuild();
+    return false;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+
+/*function FormAlterModule_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add reset password link.
+ 
+ 
+  $url_object = Url::fromRoute('user.pass');
+  $form['password_reset_link'] = [
+    '#type' => 'link',
+    '#url' => $url_object,
+    '#title' => new TranslatableMarkup('Forgotten your username or password?'),
+    '#attributes' => [
+      'class' => ['user-reset-password-link'],
+    ],
+  ];
+}*/
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function FormAlterModule_form_user_register_form_alter(
+    &$form,
+    FormStateInterface $form_state,
+    $form_id
+) {
+    $inst_id = (int) \Drupal::request()->query->get("inst_id");
+    if (is_numeric($inst_id) && $inst_id > 0) {
+        $form["field_institution"]["widget"]["#default_value"] = $inst_id;
+    }
+}
+
+/**
+ * Implements hook_pathauto_alias_alter().
+ */
+function FormAlterModule_pathauto_alias_alter(&$alias, array &$context)
+{
+    // Check if the content is node and the bundle is an article.
+
+    if (
+        $context["bundle"] === "modules_content_type" &&
+        ($context["op"] == "insert" || $context["op"] == "update")
+    ) {
+        $node = $context["data"]["node"];
+        $parent_module = $node->field_select_parent->entity;
+
+        if (isset($parent_module)) {
+            $parent_module_title = $parent_module->getTitle();
+
+            $alias_ar = "/" . \Drupal::service('pathauto.alias_cleaner')->cleanString($parent_module_title);
+
+        }
+
+        $node_title = \Drupal::service('pathauto.alias_cleaner')->cleanString($node->getTitle());
+        $alias_re = $alias_ar . "/" . $node_title;
+        $alias = $alias_re;
+    } elseif (
+        $context["bundle"] === "topic" &&
+        ($context["op"] == "insert" || $context["op"] == "update")
+    ) {
+        $node = $context["data"]["node"];
+        $parent_module = $node->field_select_topic->entity;
+        if (isset($parent_module) && !empty($parent_module)) {
+            $parent_module_title = $parent_module->getTitle();
+            $parent_parent_source = $parent_module
+                ->get("field_select_parent")
+                ->getValue();
+            $alias_ar = "/" . \Drupal::service('pathauto.alias_cleaner')->cleanString($parent_module_title);
+            if (isset($parent_parent_source) && !empty($parent_parent_source)) {
+                $parent_parent_nodeId = $parent_parent_source[0]["target_id"];
+                $parent_parent_module_title = Node::load($parent_parent_nodeId)
+                    ->title->value;
+                $alias_pr =
+                    "/" . \Drupal::service('pathauto.alias_cleaner')->cleanString($parent_parent_module_title) .
+                    $alias_ar;
+            } else {
+                $alias_pr = $alias_ar;
+            }
+        }
+        $node_title = \Drupal::service('pathauto.alias_cleaner')->cleanString($node->getTitle());
+
+        $alias_re = $alias_pr . "/" . $node_title;
+        $alias = $alias_re;
+    } elseif (
+        ($context["bundle"] === "faqs" ||
+            $context["bundle"] === "test" ||
+            $context["bundle"] === "practice") &&
+        ($context["op"] == "insert" || $context["op"] == "update")
+    ) {
+        $node = $context["data"]["node"];
+        $parent_module = $node->field_select_topic->entity;
+        $node_title_val = $node->getTitle();
+        if (isset($parent_module) && !empty($parent_module)) {
+            $parent_nodeId = $parent_module->id();
+            $parent_module_title = $parent_module->getTitle();
+            $alias_ar = "/" . \Drupal::service('pathauto.alias_cleaner')->cleanString($parent_module_title);
+            $parent_parent_source = $parent_module
+                ->get("field_select_topic")
+                ->getValue();
+
+            if (isset($parent_parent_source) && !empty($parent_parent_source)) {
+                $parent_parent_nodeId = $parent_parent_source[0]["target_id"];
+                $parent_parent_module_title = Node::load($parent_parent_nodeId)
+                    ->title->value;
+                $alias_pr =
+                    "/" .
+                    \Drupal::service('pathauto.alias_cleaner')->cleanString($parent_parent_module_title) .
+                    $alias_ar;
+                $parent_parent_parent_nodeId_ar = Node::load(
+                    $parent_parent_nodeId
+                )
+                    ->get("field_select_parent")
+                    ->getValue();
+
+                if (
+                    isset($parent_parent_parent_nodeId_ar) &&
+                    !empty($parent_parent_parent_nodeId_ar)
+                ) {
+                    $parent_parent_parent_nodeId =
+                        $parent_parent_parent_nodeId_ar[0]["target_id"];
+                    $parent_parent_parent_module_title = Node::load(
+                        $parent_parent_parent_nodeId
+                    )->title->value;
+                    $alias_pr_pr =
+                        "/" .
+                        \Drupal::service('pathauto.alias_cleaner')->cleanString($parent_parent_parent_module_title) .
+                        $alias_pr;
+                } else {
+                    $alias_pr_pr = $alias_pr;
+                }
+            }
+        }
+        $node_title = \Drupal::service('pathauto.alias_cleaner')->cleanString($node->getTitle());
+        // Clean string service.
+        
+
+        $alias_re =
+            $alias_pr_pr .
+            "/" .
+            $node_title;
+        $alias = $alias_re;
+    }
+}
+
+
+function FormAlterModule_node_insert(\Drupal\node\NodeInterface $node)
+{
+    $type = $node->getType();
+    if ($type == "modules_content_type") {
+        $parent_module = $node->field_select_parent->entity;
+        if (isset($parent_module)) {
+            $parent_nodeId = $parent_module->id();
+            $parent_module_title = $parent_module->getTitle();
+            $database = \Drupal::database();
+            $result_val = $database
+                ->select("menu_link_content_data", "n")
+                ->fields("n", ["id", "enabled"])
+                ->condition("menu_name", "account")
+                ->condition("title", $parent_module_title)
+                ->execute()
+                ->fetchAll();
+            if (count($result_val) === 0) {
+                $node_title = $node->getTitle();
+                $nodeId = $node->id();
+                $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                    "menu_link_content"
+                );
+                $menu_link_content = current(
+                    $menu_content_storage->loadByProperties([
+                        "title" => "Modules",
+                        "menu_name" => "account",
+                    ])
+                );
+                // Build a specific value for a parent property.
+                $top_level = "menu_link_content:{$menu_link_content->uuid()}";
+                $menu_link_1 = MenuLinkContent::create([
+                    "title" => $parent_module_title,
+                    "link" => ["uri" => "internal:/node/" . $parent_nodeId],
+                    "menu_name" => "account",
+                    "status" => true,
+                    "parent" => $top_level,
+                    "expanded" => true,
+                ]);
+                $menu_link_1->save();
+
+                $menu_link_2 = MenuLinkContent::create([
+                    "title" => $node_title,
+                    "link" => ["uri" => "internal:/node/" . $nodeId],
+                    "menu_name" => "account",
+                    "expanded" => true,
+                    "status" => true,
+                    "parent" => $menu_link_1->getPluginId(),
+                ]);
+                $menu_link_2->save();
+            } else {
+                $node_title = $node->getTitle();
+                $nodeId = $node->id();
+                if (isset($node->original)) {
+                    $node_old_title = $node->original->getTitle();
+                    $old_menu_links_node = \Drupal::entityTypeManager()
+                        ->getStorage("menu_link_content")
+                        ->loadByProperties(["title" => $node_old_title]);
+                    foreach ($old_menu_links_node as $old_menu_link) {
+                        $old_menu_link->delete();
+                    }
+                }
+                foreach ($result_val as $link_id) {
+                    $menu_link_content_id = $link_id->id;
+                    // Use the 'menu_link_content' entity storage.
+                    $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                        "menu_link_content"
+                    );
+                    $menu_link_content = current(
+                        $menu_content_storage->loadByProperties([
+                            "id" => $menu_link_content_id,
+                        ])
+                    );
+                    // Build a specific value for a parent property.
+                    $parent_prop = "menu_link_content:{$menu_link_content->uuid()}";
+                    $menu_link_2 = MenuLinkContent::create([
+                        "title" => $node_title,
+                        "link" => ["uri" => "internal:/node/" . $nodeId],
+                        "status" => true,
+                        "menu_name" => "account",
+                        "expanded" => true,
+                        "status" => true,
+                        "parent" => $parent_prop,
+                    ]);
+                    $menu_link_2->save();
+                }
+            }
+        } else {
+            $node_title = $node->getTitle();
+            $nodeId = $node->id();
+            $database = \Drupal::database();
+            $result_val = $database
+                ->select("menu_link_content_data", "n")
+                ->fields("n", ["id", "enabled"])
+                ->condition("menu_name", "account")
+                ->condition("title", $node_title)
+                ->execute()
+                ->fetchAll();
+            if (count($result_val) === 0) {
+                $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                    "menu_link_content"
+                );
+                $menu_link_content = current(
+                    $menu_content_storage->loadByProperties([
+                        "title" => "Modules",
+                        "menu_name" => "account",
+                    ])
+                );
+                // Build a specific value for a parent property.
+                $top_level = "menu_link_content:{$menu_link_content->uuid()}";
+                $menu_link_1 = MenuLinkContent::create([
+                    "title" => $node_title,
+                    "link" => ["uri" => "internal:/node/" . $nodeId],
+                    "menu_name" => "account",
+                    "status" => true,
+                    "parent" => $top_level,
+                    "expanded" => true,
+                ]);
+                $menu_link_1->save();
+            }
+        }
+    }
+}
+
+function FormAlterModule_node_update(\Drupal\node\NodeInterface $node)
+{
+    $type = $node->getType();
+    if ($type == "modules_content_type") {
+        $parent_module = $node->field_select_parent->entity;
+        if (isset($parent_module)) {
+            $node_title = $node->getTitle();
+            $original_node_title = $node->original->getTitle();
+            $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                        "menu_link_content"
+                    );
+            $menu_link_content = current(
+            $menu_content_storage->loadByProperties([
+                    "title" => $parent_module->getTitle(),
+                    "menu_name" => "account",
+                ])
+            );
+            // Build a specific value for a parent property.
+            $top_level = "menu_link_content:{$menu_link_content->uuid()}";
+            $old_menu_links = \Drupal::entityTypeManager()
+                        ->getStorage("menu_link_content")
+                        ->loadByProperties([
+                            "title" => $original_node_title,
+                            "menu_name" => "account",
+                        ]);
+
+            foreach ($old_menu_links as $key => $old_menu_link) {
+                $old_menu_link->set('title', $node_title);
+                $old_menu_link->set('parent', $top_level);
+                $old_menu_link->save();
+            }
+            if (isset($node->original->field_select_parent->entity)) {
+                $original_parent_module_title = $node->original->field_select_parent->entity->getTitle();
+                $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                    "menu_link_content"
+                );
+                $parent_links = current(
+                    $menu_content_storage->loadByProperties([
+                        "title" => $original_parent_module_title,
+                        "menu_name" => "account",
+                    ])
+                );
+                $parent_prop = "menu_link_content:{$parent_links->uuid()}";
+                // Load child menu items by 'parent' property.
+                $menu_link_content_childs = $menu_content_storage->loadByProperties(
+                    ["parent" => $parent_prop]
+                );
+                if (count($menu_link_content_childs) == 0) {
+                    $menu_link = MenuLinkContent::load($parent_links->id());
+                    $menu_link->save();
+                }
+            }
+        } else {
+            $node_title = $node->getTitle();
+            $original_node_title = $node->original->getTitle();
+            $nodeId = $node->id();
+            if (isset($node->original->field_select_parent->entity)) {
+                    $original_parent_module_title = $node->original->field_select_parent->entity->getTitle();
+                    $original_parent_module_nid = $node->original->field_select_parent->entity->id();
+                    $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                        "menu_link_content"
+                    );
+                    $parent_links = current(
+                        $menu_content_storage->loadByProperties([
+                            "title" => $original_parent_module_title,
+                            "menu_name" => "account",
+                        ])
+                    );
+                    $parent_prop = "menu_link_content:{$parent_links->uuid()}";
+                    // Load child menu items by 'parent' property.
+                    $menu_link_content_childs = $menu_content_storage->loadByProperties(
+                        ["parent" => $parent_prop]
+                    );
+                    if (count($menu_link_content_childs) <= 1) {
+                        $menu_link = MenuLinkContent::load($parent_links->id());
+                        $menu_link->save();
+                    }
+
+                $database = \Drupal::database();
+                $result_val = $database
+                    ->select("menu_link_content_data", "n")
+                    ->fields("n", ["id", "enabled"])
+                    ->condition("menu_name", "account")
+                    ->condition("title", $original_node_title)
+                    ->execute()
+                    ->fetchAll();
+                if (count($result_val) === 0) {
+                    $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                        "menu_link_content"
+                    );
+                    $menu_link_content = current(
+                        $menu_content_storage->loadByProperties([
+                            "title" => "Modules",
+                            "menu_name" => "account",
+                        ])
+                    );
+                    // Build a specific value for a parent property.
+                    $top_level = "menu_link_content:{$menu_link_content->uuid()}";
+                    $menu_link_1 = MenuLinkContent::create([
+                        "title" => $node_title,
+                        "link" => ["uri" => "internal:/node/" . $nodeId],
+                        "menu_name" => "account",
+                        "status" => true,
+                        "parent" => $top_level,
+                        "expanded" => true,
+                    ]);
+                    $menu_link_1->save();
+                } else {
+                    $node_title = $node->getTitle();
+                    $nodeId = $node->id();
+                    if (isset($node->original)) {
+                        $original_module_title = $node->original->getTitle();
+                        $old_menu_links = \Drupal::entityTypeManager()
+                            ->getStorage("menu_link_content")
+                            ->loadByProperties([
+                                "title" => $original_module_title,
+                                "menu_name" => "account",
+                            ]);
+
+                        $menu_content_storage = \Drupal::entityTypeManager()->getStorage(
+                            "menu_link_content"
+                        );
+                        $menu_link_content = current(
+                            $menu_content_storage->loadByProperties([
+                                "title" => "Modules",
+                                "menu_name" => "account",
+                            ])
+                        );
+                        // Build a specific value for a parent property.
+                        $top_level = "menu_link_content:{$menu_link_content->uuid()}";
+                        foreach ($old_menu_links as $key => $old_menu_link) {
+                            $old_menu_link->set('title', $node_title);
+                            $old_menu_link->set('parent', $top_level);
+                            $old_menu_link->save();
+                        }
+                    }
+                }
+            }else{
+                $node_title = $node->getTitle();
+                $original_node_title = $node->original->getTitle();
+                $old_menu_links = \Drupal::entityTypeManager()
+                            ->getStorage("menu_link_content")
+                            ->loadByProperties([
+                                "title" => $original_node_title,
+                                "menu_name" => "account",
+                            ]);
+
+                foreach ($old_menu_links as $key => $old_menu_link) {
+                    $old_menu_link->set('title', $node_title);
+                    $old_menu_link->save();
+                }
+            }
+        }
+         $menu_tree_storage =\Drupal::entityTypeManager()->getStorage('menu')->load('account');
+         $menu_tree_storage->save();
+    } 
+}
+
+
+function FormAlterModule_node_delete(\Drupal\node\NodeInterface $node)
+{
+    $type = $node->getType();
+    if ($type == "modules_content_type") {
+            $node_title = $node->getTitle();
+            if (isset($node->original)) {
+                $old_menu_links = \Drupal::entityTypeManager()
+                    ->getStorage("menu_link_content")
+                    ->loadByProperties([
+                        "title" => $node_title,
+                        "menu_name" => "account",
+                    ]);
+
+                foreach ($old_menu_links as $key => $old_menu_link) {
+                    $old_menu_link->delete();
+                }
+            }
+            $menu_tree_storage =\Drupal::entityTypeManager()->getStorage('menu')->load('account');
+            $menu_tree_storage->save();
+    } 
+}

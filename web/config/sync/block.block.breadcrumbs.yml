@@ -1,0 +1,20 @@
+uuid: 892eeccb-6ce4-4a8d-ae91-58b3e075d569
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - research
+id: breadcrumbs
+theme: research
+region: breadcrumbs
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

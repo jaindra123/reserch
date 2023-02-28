@@ -1,0 +1,23 @@
+uuid: 497bee40-ded9-4562-90e8-52b1e3194997
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suggestion_form
+    - node.type.institution
+  module:
+    - opigno_module
+id: node.institution.field_suggestion_form
+field_name: field_suggestion_form
+entity_type: node
+bundle: institution
+label: 'Suggestion form'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

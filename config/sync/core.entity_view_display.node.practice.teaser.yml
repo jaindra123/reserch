@@ -1,0 +1,58 @@
+uuid: cfce1013-96f6-41e9-83d2-4c81780ea67f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.practice.body
+    - field.field.node.practice.field_breadcrumb
+    - field.field.node.practice.field_exclude_from_search
+    - field.field.node.practice.field_exclude_the_page_from_lti
+    - field.field.node.practice.field_meta_tags
+    - field.field.node.practice.field_para_refer
+    - field.field.node.practice.field_paragraph
+    - field.field.node.practice.field_select_topic
+    - field.field.node.practice.field_sub_title
+    - field.field.node.practice.field_summary
+    - field.field.node.practice.field_visible_to_anonymous_users
+    - field.field.node.practice.field_weight
+    - node.type.practice
+  module:
+    - text
+    - user
+id: node.practice.teaser
+targetEntityType: node
+bundle: practice
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_breadcrumb: true
+  field_exclude_from_search: true
+  field_exclude_the_page_from_lti: true
+  field_meta_tags: true
+  field_para_refer: true
+  field_paragraph: true
+  field_select_topic: true
+  field_sub_title: true
+  field_summary: true
+  field_visible_to_anonymous_users: true
+  field_weight: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

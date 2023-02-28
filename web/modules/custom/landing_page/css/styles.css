@@ -1,0 +1,27 @@
+
+.tagfields-wrapper {
+    padding-top: 10px;
+}
+.card-wrapper {
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.card-group-wrapper.hide .card-group-title {
+    display: none;
+}
+.card-group-wrapper.show .card-group-title {
+    display: block;
+}
+
+/* Removing arrows from number input in institution backend form page */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card-grp-buttons {
+    margin-bottom: 20px;
+}

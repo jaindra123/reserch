@@ -1,0 +1,18 @@
+uuid: 83b3845a-cbc0-4a87-87bb-26b0bd2e23ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_h5p
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: opigno_activity.opigno_h5p
+target_entity_type_id: opigno_activity
+target_bundle: opigno_h5p
+default_langcode: site_default
+language_alterable: false

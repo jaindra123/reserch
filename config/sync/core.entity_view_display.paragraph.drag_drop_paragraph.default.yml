@@ -1,0 +1,34 @@
+uuid: 67fed3fa-cb8c-47a6-aebc-2dd2cabaf49f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drag_drop_paragraph.field_drag_drop_paragraph_value
+    - field.field.paragraph.drag_drop_paragraph.field_drag_drop_paragraph_word
+    - paragraphs.paragraphs_type.drag_drop_paragraph
+id: paragraph.drag_drop_paragraph.default
+targetEntityType: paragraph
+bundle: drag_drop_paragraph
+mode: default
+content:
+  field_drag_drop_paragraph_value:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_drag_drop_paragraph_word:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

@@ -1,0 +1,13 @@
+diff --git a/quiz/question_types/quiz_page/src/Plugin/quiz/QuizQuestion/QuizPageQuestion.php b/quiz/question_types/quiz_page/src/Plugin/quiz/QuizQuestion/QuizPageQuestion.php
+index f4e9f82..277a16f 100644
+--- a/quiz/question_types/quiz_page/src/Plugin/quiz/QuizQuestion/QuizPageQuestion.php
++++ b/quiz/question_types/quiz_page/src/Plugin/quiz/QuizQuestion/QuizPageQuestion.php
+@@ -20,7 +20,7 @@ use Drupal\quiz\Entity\QuizResultAnswer;
+ /**
+  * @QuizQuestion (
+  *   id = "page",
+- *   label = @Translation("Quiz page"),
++ *   label = @Translation("Quiz Wrapper"),
+  *   handlers = {
+  *     "response" = "\Drupal\quiz_page\Plugin\quiz\QuizQuestion\QuizPageResponse"
+  *   }

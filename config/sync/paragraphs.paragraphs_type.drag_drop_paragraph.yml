@@ -1,0 +1,10 @@
+uuid: cf63e157-c407-46f4-a991-379045361d47
+langcode: en
+status: true
+dependencies: {  }
+id: drag_drop_paragraph
+label: 'Drag Drop Paragraph'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,51 @@
+uuid: c51ca7d1-4132-4655-82b7-fa3f5f113697
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.analysing_data.field_analysing_data_content
+    - field.field.paragraph.analysing_data.field_analysing_data_title
+    - field.field.paragraph.analysing_data.field_margin
+    - field.field.paragraph.analysing_data.field_status_analyse_data
+    - paragraphs.paragraphs_type.analysing_data
+  module:
+    - opigno_module
+    - text
+id: paragraph.analysing_data.default
+targetEntityType: paragraph
+bundle: analysing_data
+mode: default
+content:
+  field_analysing_data_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_analysing_data_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_margin:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_status_analyse_data:
+    type: opigno_true_false_widget_type
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

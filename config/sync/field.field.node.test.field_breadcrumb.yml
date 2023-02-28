@@ -1,0 +1,19 @@
+uuid: 3b3bc547-7d5c-41e6-bf4b-103f01de1740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breadcrumb
+    - node.type.test
+id: node.test.field_breadcrumb
+field_name: field_breadcrumb
+entity_type: node
+bundle: test
+label: Breadcrumb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

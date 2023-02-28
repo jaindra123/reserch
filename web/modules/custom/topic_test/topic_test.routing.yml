@@ -1,0 +1,25 @@
+# route for test question answer result
+topic_test.test-result:
+  path: '/test-result'
+  defaults:
+    _title: 'Test Result'
+    _controller: '\Drupal\topic_test\Controller\TopicTestController::topicTestResult'
+  requirements:
+    _permission: 'access content'
+
+# manage topic test page
+topic_test.manage-topictest:
+  path: '/manage-topictest'
+  defaults:
+    _title: 'Manage Topic Test'
+    _controller: '\Drupal\topic_test\Controller\TopicTestController::topicTestManage'
+  requirements:
+    _role: 'institute+administrator'
+
+topic_test.manage-topictest-save:
+  path: '/manage-topictest-save'
+  defaults:
+    _title: 'Manage Topic Test Save'
+    _controller: '\Drupal\topic_test\Controller\TopicTestController::topicTestManageSave'
+  requirements:
+    _role: 'institute'

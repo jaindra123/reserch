@@ -1,0 +1,30 @@
+uuid: dbc050c5-aeff-4e0b-afcd-1612b30cc503
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_within_this_topic
+    - node.type.topic
+    - node.type.topic_faq
+id: node.topic.field_within_this_topic
+field_name: field_within_this_topic
+entity_type: node
+bundle: topic
+label: 'Within this topic'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      topic: topic
+      topic_faq: topic_faq
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: topic
+field_type: entity_reference

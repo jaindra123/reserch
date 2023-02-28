@@ -1,0 +1,11 @@
+uuid: 015e5291-0c97-4b37-a039-db8fc7670136
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_module
+id: user_module_status.user_module_status
+target_entity_type_id: user_module_status
+target_bundle: user_module_status
+default_langcode: site_default
+language_alterable: false

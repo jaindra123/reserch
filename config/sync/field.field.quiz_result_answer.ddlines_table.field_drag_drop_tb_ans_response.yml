@@ -1,0 +1,21 @@
+uuid: 8ae72c71-5f46-4f42-a23c-f45f50d7c80b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_result_answer.field_drag_drop_tb_ans_response
+    - quiz.result.answer.type.ddlines_table
+  module:
+    - options
+id: quiz_result_answer.ddlines_table.field_drag_drop_tb_ans_response
+field_name: field_drag_drop_tb_ans_response
+entity_type: quiz_result_answer
+bundle: ddlines_table
+label: 'Drag Drop Table  Answer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

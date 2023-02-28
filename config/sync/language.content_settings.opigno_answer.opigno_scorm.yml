@@ -1,0 +1,18 @@
+uuid: 9af81e76-01cf-424f-9c3a-6157771311b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_answer_type.opigno_scorm
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: opigno_answer.opigno_scorm
+target_entity_type_id: opigno_answer
+target_bundle: opigno_scorm
+default_langcode: site_default
+language_alterable: false

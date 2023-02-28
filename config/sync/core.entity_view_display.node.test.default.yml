@@ -1,0 +1,99 @@
+uuid: 429fe960-d6eb-4eb0-95ac-5d06c3f94b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test.body
+    - field.field.node.test.field_box_text
+    - field.field.node.test.field_breadcrumb
+    - field.field.node.test.field_exclude_from_search
+    - field.field.node.test.field_exclude_the_page_from_lti
+    - field.field.node.test.field_meta_tags
+    - field.field.node.test.field_paragraph_ref
+    - field.field.node.test.field_questions
+    - field.field.node.test.field_select_module
+    - field.field.node.test.field_select_topic
+    - field.field.node.test.field_sub_title
+    - field.field.node.test.field_summary
+    - field.field.node.test.field_visible_to_anonymous_users
+    - field.field.node.test.field_weight
+    - field.field.node.test.field_within_this_topic
+    - node.type.test
+  module:
+    - entity_reference_revisions
+    - metatag
+    - text
+    - user
+id: node.test.default
+targetEntityType: node
+bundle: test
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_box_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraph_ref:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_questions:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_select_module:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_breadcrumb: true
+  field_exclude_from_search: true
+  field_exclude_the_page_from_lti: true
+  field_select_topic: true
+  field_sub_title: true
+  field_summary: true
+  field_visible_to_anonymous_users: true
+  field_weight: true
+  field_within_this_topic: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

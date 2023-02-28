@@ -1,0 +1,19 @@
+uuid: d4921adf-a443-45f2-a0fd-a049db09244f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.practice
+id: node.practice.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: practice
+label: 'Title for Search (Optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

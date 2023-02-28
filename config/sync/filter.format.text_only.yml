@@ -1,0 +1,14 @@
+uuid: cdb8729c-7b76-424b-b240-ca0c2fbe72b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Text Only'
+format: text_only
+weight: 0
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }

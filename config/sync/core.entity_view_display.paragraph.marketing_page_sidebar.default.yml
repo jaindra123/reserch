@@ -1,0 +1,49 @@
+uuid: b797bcd3-20b4-4b46-8bec-79ad1870e59f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketing_page_sidebar.field_sidebar_description
+    - field.field.paragraph.marketing_page_sidebar.field_sidebar_link
+    - field.field.paragraph.marketing_page_sidebar.field_sidebar_title
+    - paragraphs.paragraphs_type.marketing_page_sidebar
+  module:
+    - link
+    - text
+id: paragraph.marketing_page_sidebar.default
+targetEntityType: paragraph
+bundle: marketing_page_sidebar
+mode: default
+content:
+  field_sidebar_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sidebar_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sidebar_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

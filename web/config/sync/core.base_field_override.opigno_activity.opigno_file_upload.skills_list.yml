@@ -1,0 +1,20 @@
+uuid: e6e0cd3c-6b2c-41f1-b64a-6d759ede6aee
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_file_upload
+id: opigno_activity.opigno_file_upload.skills_list
+field_name: skills_list
+entity_type: opigno_activity
+bundle: opigno_file_upload
+label: Skill
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

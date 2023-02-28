@@ -1,0 +1,17 @@
+uuid: 2d4016c9-90ac-4b32-a01f-58607cf2e9f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.learning_path
+  enforced:
+    config:
+      - user.role.bloomsbury_staff
+id: learning_path-efa4e4d7b
+label: 'Bloomsbury staff'
+weight: 5
+internal: true
+audience: outsider
+group_type: learning_path
+permissions_ui: false
+permissions: {  }

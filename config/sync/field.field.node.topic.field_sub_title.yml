@@ -1,0 +1,19 @@
+uuid: 34368d18-9a1e-4b76-a2bb-946288cb1b1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.topic
+id: node.topic.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: topic
+label: 'Title for Search (Optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

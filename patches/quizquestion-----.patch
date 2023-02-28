@@ -1,0 +1,15 @@
+--- quiz/src/Form/QuizQuestionsForm.php	2022-11-01 20:35:30.809519600 +0530
++++ quiz/src/QuizQuestionsForm.php	2022-11-01 20:26:29.666055900 +0530
+@@ -368,9 +368,9 @@
+ 
+       $edit_url = Url::fromRoute('entity.quiz_question.edit_form', ['quiz_question' => $quiz_question->id()], [
+         'attributes' => [
+-          'class' => 'use-ajax',
+-          'data-dialog-type' => 'modal',
+-          'data-dialog-options' => Json::encode(['width' => 800]),
++        //  'class' => 'use-ajax',
++         // 'data-dialog-type' => 'modal',
++          //'data-dialog-options' => Json::encode(['width' => 800]),
+         ],
+         'query' => \Drupal::destination()->getAsArray(),
+       ]);

@@ -1,0 +1,145 @@
+uuid: e5585543-c854-41bb-b84a-fce422a215c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_option_single
+    - paragraphs.paragraphs_type.single_choice_answer_option
+    - paragraphs.paragraphs_type.singlechoice_answer
+  module:
+    - entity_reference_revisions
+id: paragraph.singlechoice_answer.field_option_single
+field_name: field_option_single
+entity_type: paragraph
+bundle: singlechoice_answer
+label: Option
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      single_choice_answer_option: single_choice_answer_option
+    negate: 0
+    target_bundles_drag_drop:
+      analysing_data:
+        weight: 40
+        enabled: false
+      anonymous_slider:
+        weight: 41
+        enabled: false
+      answer_option:
+        weight: 42
+        enabled: false
+      carousel_child:
+        weight: 43
+        enabled: false
+      drag_and_drop:
+        weight: 44
+        enabled: false
+      drag_and_drop_table:
+        weight: 45
+        enabled: false
+      drag_drop_paragraph:
+        weight: 46
+        enabled: false
+      embed:
+        weight: 47
+        enabled: false
+      faq:
+        weight: 48
+        enabled: false
+      faqs_outer_para:
+        weight: 49
+        enabled: false
+      home_page_content_section:
+        weight: 50
+        enabled: false
+      home_page_inner_content_section:
+        weight: 51
+        enabled: false
+      home_page_inner_content_section_:
+        weight: 52
+        enabled: false
+      home_page_section_2:
+        weight: 53
+        enabled: false
+      home_page_section_3:
+        weight: 54
+        enabled: false
+      image:
+        weight: 55
+        enabled: false
+      inner_content_section_3:
+        weight: 56
+        enabled: false
+      marketing_page_bottom_content:
+        weight: 57
+        enabled: false
+      marketing_page_sidebar:
+        weight: 58
+        enabled: false
+      multichoice:
+        weight: 59
+        enabled: false
+      multichoice_answer:
+        weight: 60
+        enabled: false
+      practice_analysis_inner:
+        weight: 61
+        enabled: false
+      practice_page:
+        weight: 62
+        enabled: false
+      question:
+        weight: 63
+        enabled: false
+      question_show:
+        weight: 64
+        enabled: false
+      quiz:
+        weight: 65
+        enabled: false
+      quiz_matching:
+        weight: 66
+        enabled: false
+      quiz_matching_answer:
+        weight: 67
+        enabled: false
+      quiz_question_answer:
+        weight: 68
+        enabled: false
+      quiz_question_term_pool:
+        weight: 69
+        enabled: false
+      quiz_result_feedback:
+        weight: 70
+        enabled: false
+      single_choice_answer_option:
+        weight: 72
+        enabled: true
+      singlechoice_answer:
+        weight: 71
+        enabled: false
+      slider:
+        weight: 73
+        enabled: false
+      template_one:
+        weight: 74
+        enabled: false
+      template_three:
+        weight: 75
+        enabled: false
+      template_two:
+        weight: 76
+        enabled: false
+      topic_questions:
+        weight: 77
+        enabled: false
+      video:
+        weight: 78
+        enabled: false
+field_type: entity_reference_revisions

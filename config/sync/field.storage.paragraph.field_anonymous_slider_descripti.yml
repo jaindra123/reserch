@@ -1,0 +1,23 @@
+uuid: e058363b-56d9-47c0-826e-1f42ddcbed79
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_anonymous_slider_descripti
+field_name: field_anonymous_slider_descripti
+entity_type: paragraph
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

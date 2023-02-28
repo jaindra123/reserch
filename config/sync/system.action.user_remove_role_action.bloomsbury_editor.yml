@@ -1,0 +1,14 @@
+uuid: 2502d1d5-7273-4341-a0a2-b5ba0911eed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bloomsbury_editor
+  module:
+    - user
+id: user_remove_role_action.bloomsbury_editor
+label: 'Remove the Bloomsbury Editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bloomsbury_editor

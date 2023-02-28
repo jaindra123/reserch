@@ -1,0 +1,21 @@
+uuid: 55aeb763-e155-4089-b7ef-0c2a8f195fb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - views_exposed_filter_blocks
+  theme:
+    - research
+id: viewsexposedfilterblock
+theme: research
+region: search_block
+weight: 0
+provider: null
+plugin: views_exposed_filter_blocks_block
+settings:
+  id: views_exposed_filter_blocks_block
+  label: 'Views exposed filter block'
+  label_display: '0'
+  provider: views_exposed_filter_blocks
+  view_display: 'search:page_1'
+visibility: {  }

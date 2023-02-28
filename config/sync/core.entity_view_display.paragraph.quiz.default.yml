@@ -1,0 +1,28 @@
+uuid: 91cac041-6431-44f1-94b0-627d2a12b5c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quiz.field_select_quiz
+    - paragraphs.paragraphs_type.quiz
+  module:
+    - entity_reference_revisions
+id: paragraph.quiz.default
+targetEntityType: paragraph
+bundle: quiz
+mode: default
+content:
+  field_select_quiz:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

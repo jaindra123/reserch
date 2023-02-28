@@ -1,0 +1,22 @@
+uuid: 85915aa3-5d92-4899-8acf-ad772ba0e8a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tft_tree
+id: taxonomy_term.tft_tree.status
+field_name: status
+entity_type: taxonomy_term
+bundle: tft_tree
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

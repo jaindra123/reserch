@@ -1,0 +1,44 @@
+uuid: 3d406ac9-e63e-4232-a324-7e74b0bffcd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.topic_questions.field_questions_content
+    - field.field.paragraph.topic_questions.field_status
+    - field.field.paragraph.topic_questions.field_title
+    - paragraphs.paragraphs_type.topic_questions
+  module:
+    - opigno_module
+    - text
+id: paragraph.topic_questions.default
+targetEntityType: paragraph
+bundle: topic_questions
+mode: default
+content:
+  field_questions_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_status:
+    type: opigno_true_false_formatter_type
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

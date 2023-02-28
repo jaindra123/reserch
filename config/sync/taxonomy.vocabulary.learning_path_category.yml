@@ -1,0 +1,10 @@
+uuid: 43824e6b-e721-4254-b0e8-61583baa2cbe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fOgClQ39qzj_uPgl_HVH6RkWdMxMwztPSt6jop_L2sA
+name: 'Learning path category'
+vid: learning_path_category
+description: 'Use this taxonomy to assign categories for learning path'
+weight: 0

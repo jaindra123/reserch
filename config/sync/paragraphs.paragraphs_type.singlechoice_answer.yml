@@ -1,0 +1,10 @@
+uuid: 570eb7e5-9baa-4052-810c-511eb44920f3
+langcode: en
+status: true
+dependencies: {  }
+id: singlechoice_answer
+label: 'Single choice option'
+icon_uuid: null
+icon_default: null
+description: 'Single choice answers'
+behavior_plugins: {  }

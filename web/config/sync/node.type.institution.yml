@@ -1,0 +1,21 @@
+uuid: db80077c-24b2-4bc6-b86f-c00d97f7ba20
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - unique_entity_title
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  unique_entity_title:
+    enabled: true
+name: institution
+type: institution
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

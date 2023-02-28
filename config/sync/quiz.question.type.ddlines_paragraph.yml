@@ -1,0 +1,11 @@
+uuid: 0bc4f4b9-f744-4861-a457-80367316a7b1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - quiz_ddlines_paragraph
+_core:
+  default_config_hash: 8iv0xkUBZx4xssSjp9DLJSgAeJc35IMoskPi4c45goQ
+id: ddlines_paragraph
+label: 'Drag & Drop Paragraph'

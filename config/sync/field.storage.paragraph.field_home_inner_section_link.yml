@@ -1,0 +1,23 @@
+uuid: 55913ac8-5acc-4ae7-95a6-d2fe9d63075a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - link
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_home_inner_section_link
+field_name: field_home_inner_section_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

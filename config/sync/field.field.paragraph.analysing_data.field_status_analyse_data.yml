@@ -1,0 +1,23 @@
+uuid: 8aa77253-48f5-45e9-a1e7-9bdafbd33c96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_status_analyse_data
+    - paragraphs.paragraphs_type.analysing_data
+  module:
+    - opigno_module
+id: paragraph.analysing_data.field_status_analyse_data
+field_name: field_status_analyse_data
+entity_type: paragraph
+bundle: analysing_data
+label: 'Accordion Open'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

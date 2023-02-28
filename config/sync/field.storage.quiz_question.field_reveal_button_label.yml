@@ -1,0 +1,25 @@
+uuid: 3e66b15f-a9d5-4044-8cf1-199332687c6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_question.field_reveal_button_label
+field_name: field_reveal_button_label
+entity_type: quiz_question
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

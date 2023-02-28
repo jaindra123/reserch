@@ -1,0 +1,25 @@
+uuid: cb82356e-d367-45a8-8f15-1a089a39fd15
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - field_permissions
+    - paragraphs
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_question.field_drag_drop_tb_qns_ans
+field_name: field_drag_drop_tb_qns_ans
+entity_type: quiz_question
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

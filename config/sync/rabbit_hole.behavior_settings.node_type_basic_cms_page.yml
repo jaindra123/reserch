@@ -1,0 +1,14 @@
+uuid: b44918df-2355-44fa-a447-76748be66626
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_cms_page
+id: node_type_basic_cms_page
+entity_type_id: node_type
+entity_id: basic_cms_page
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,25 @@
+uuid: 1c80f819-8db2-4ac0-9ca9-997c489fe366
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - quiz
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_question.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

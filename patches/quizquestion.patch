@@ -1,0 +1,28 @@
+--- quiz/src/Form//QuizQuestionsForm.php	2022-11-02 23:05:31.559457100 +0530
++++ quiz/src/QuizQuestionsForm.php	2022-11-02 23:04:44.555032500 +0530
+@@ -55,9 +55,9 @@
+           'vid' => $quiz->getRevisionId(),
+         ],
+         'attributes' => [
+-          'class' => 'use-ajax',
+-          'data-dialog-type' => 'modal',
+-          'data-dialog-options' => Json::encode(['width' => 800]),
++          //'class' => 'use-ajax',
++          //'data-dialog-type' => 'modal',
++          //'data-dialog-options' => Json::encode(['width' => 800]),
+         ],
+       ];
+ 
+@@ -368,9 +368,9 @@
+ 
+       $edit_url = Url::fromRoute('entity.quiz_question.edit_form', ['quiz_question' => $quiz_question->id()], [
+         'attributes' => [
+-          'class' => 'use-ajax',
+-          'data-dialog-type' => 'modal',
+-          'data-dialog-options' => Json::encode(['width' => 800]),
++        //  'class' => 'use-ajax',
++         // 'data-dialog-type' => 'modal',
++          //'data-dialog-options' => Json::encode(['width' => 800]),
+         ],
+         'query' => \Drupal::destination()->getAsArray(),
+       ]);

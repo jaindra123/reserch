@@ -1,0 +1,21 @@
+uuid: fe6565d1-a804-4079-9f37-73917c9a360a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_result_answer.field_click_to_reveal
+    - quiz.result.answer.type.multichoice
+  module:
+    - text
+id: quiz_result_answer.multichoice.field_click_to_reveal
+field_name: field_click_to_reveal
+entity_type: quiz_result_answer
+bundle: multichoice
+label: 'Click To Reveal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

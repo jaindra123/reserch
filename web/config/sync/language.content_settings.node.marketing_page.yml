@@ -1,0 +1,18 @@
+uuid: 49faf5e1-b854-4e09-9a0a-6414f668633e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.marketing_page
+target_entity_type_id: node
+target_bundle: marketing_page
+default_langcode: site_default
+language_alterable: false

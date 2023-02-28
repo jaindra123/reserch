@@ -1,0 +1,37 @@
+uuid: 010d81a3-127d-4d12-8bf7-c963971f9513
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.template_three.field_heading_tem2
+    - field.field.paragraph.template_three.field_title
+    - paragraphs.paragraphs_type.template_three
+  module:
+    - entity_reference_revisions
+id: paragraph.template_three.default
+targetEntityType: paragraph
+bundle: template_three
+mode: default
+content:
+  field_heading_tem2:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

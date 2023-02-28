@@ -1,0 +1,10 @@
+uuid: dff88e69-cf3b-4fb7-a7b7-3bccd32ccfa2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8nnCZQ2FZjUivXQqkTyPwGHZd-zOiApwRcgNDZ-LEBQ
+id: meeting_calendar_event
+label: 'Live meeting calendar event'
+description: ''
+date_field_type: daterange

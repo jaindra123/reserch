@@ -1,0 +1,33 @@
+_core:
+  default_config_hash: cww6CsFH5qmjZ-ftNyPkJ7xazRiPNU8ydGYtxrudWic
+title: 'Institution admin hub'
+description:
+  value: "<p>Instructor desc</p>\r\n"
+  format: full_html
+bottom_title: 'Instructor bottom title'
+not: 4
+title_0: 'Manage appearance'
+icon_0: 'fa fa-paint-brush'
+description_0: 'Tailor Research Right for your students, by uploading your institution''s logo.'
+link_0: /manage-appearance
+title_1: 'Integrate LTI'
+icon_1: 'fa fa-cogs'
+description_1: 'LTI lets users access Research Right from within your VLE/LMS. It''s a great way to embed Research Right resources and drive usage.'
+link_1: /LTI-Integration
+title_2: 'Find LTI content links'
+icon_2: 'fa fa-link'
+description_2: 'Generate deep-links to provide your students with easy access to content pages.'
+link_2: /Create-LTI-content-links
+card_group_title_0: Customisation
+card_group_title_1: 'LTI integration and content links'
+card_group_title_2: ''
+card_group_title_3: 'User management'
+title_3: 'Manage instructors'
+icon_3: 'fa fa-user-plus'
+description_3: 'Create new or edit existing instructor accounts.'
+link_3: /manage-instructor
+card_group_title_4: ''
+title_4: 'View licence count'
+icon_4: 'fa fa-users'
+description_4: ' See how many individual student licences you have remaining.'
+link_4: /institution-licence-count

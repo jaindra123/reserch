@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: mGMaTirfr5M9MpoVg7LJJuhPOE5HIHhExniKdKk0EOs
+title: 'Administrator hub'
+description:
+  value: "<p>main description</p>\r\n"
+  format: full_html
+bottom_title: 'bottom title'
+not: 2
+title_0: 'Manage institutions'
+icon_0: 'fa fa-university'
+description_0: 'Create Institutions and manage their access to modules, licence levels and expiry dates, authentication methods, and appearance'
+link_0: /manage-institutions
+title_1: 'View licence count'
+icon_1: 'fa fa-users'
+description_1: 'See how many individual student licences you have remaining.'
+link_1: /institution-licence-count
+card_group_title_0: Customisation
+card_group_title_1: ''
+card_group_title_2: ''
+title_2: 'Manage Tests'
+icon_2: 'fa fa-cogs'
+description_2: 'Create a new quiz'
+link_2: /quiz/add/quiz

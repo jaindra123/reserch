@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: orYfEqGwg750z2o1JMsVnIgjGCcIF-BFo_Apcu9EN5E
+name: 'Research Right'
+mail: info.researchright@gmail.com
+simple_address: false
+sitestyle: false
+textonly: false
+linkonly: false
+user_plaintext_field: ''
+format: full_html
+advanced:
+  incoming: false
+  key: ggCkc_D0c5n9zS-E4kFLgKdza4l-M-HZbIS-dvH6Yak

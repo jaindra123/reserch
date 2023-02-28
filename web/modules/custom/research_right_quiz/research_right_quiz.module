@@ -1,0 +1,76 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+
+function research_right_quiz_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+    if($form_id == 'quiz_question_answering_form') {
+        //dump($form); die;
+        $form['#prefix'] = '<div id="accordionExample" class="accordion">';
+        $form['#suffix'] = '</div>';
+        $questions = $form_state->getBuildInfo()['args'][0];
+        foreach($form['question'] as $key=>$question) {
+            if($form['question'][$key]['header']) {
+            $QnTitle = strip_tags($form['question'][$key]['title']['value']['#markup']);
+            $form['question'][$key]['header']['#markup'] = '<div class="card-headers" id="heading'.$key.'">
+            <h2 class="mb-0">
+              <button type="button" class="btn-linkssr w-100 " data-toggle="collapse" data-target="#collapse'.$key.'">'.$QnTitle.'<i class="fa fa-plus-circle"></i></button>
+            </h2>
+          </div>
+          <div id="collapse'.$key.'" class="collapse show" aria-labelledby="heading'.$key.'" data-parent="#accordionExample" style="">
+          <div class="card-bodys">';
+
+           $form['question'][$key]['header']['#allowed_tags'] = ['button', 'title', 'i', 'h2', 'div'];
+          $form['question'][$key]['#prefix'] = '<div class="cards">';
+          $form['question'][$key]['#suffix'] = '</div></div></div>';
+          $form['question'][$key]['#attributes']['id'] = 'general_questions';
+            }
+
+        }
+    }
+    if($form_id == 'quiz_quiz_form') {
+      $form["backwards_navigation"]["widget"]["value"]["#default_value"] = false;
+      $form["allow_skipping"]["widget"]["value"]["#default_value"] = false;
+      $form["allow_resume"]["widget"]["value"]["#default_value"] = false;
+      $form["allow_change"]["widget"]["value"]["#default_value"] = false;
+      $form["show_passed"]["widget"]["value"]["#default_value"] = false;
+      $form["show_attempt_stats"]["widget"]["value"]["#default_value"] = false;
+    }
+
+    if($form_id == 'quiz_questions_form') {
+      unset($form["additional_questions"]["directions"]);
+      unset($form["additional_questions"]["matching"]);
+      unset($form["additional_questions"]["truefalse"]);
+      unset($form["additional_questions"]["long_answer"]);
+      $form["additional_questions"]["multichoice"]['#weight'] = 1;
+      $form["additional_questions"]["short_answer"]['#weight'] = 2;
+      $form["additional_questions"]["ddlines_table"]['#weight'] = 3;
+      $form["additional_questions"]["ddlines_paragraph"]['#weight'] = 4;
+      $form["additional_questions"]["ddlines"]['#weight'] = 5;
+      $form["additional_questions"]["page"]['#weight'] = 6;
+    }
+    if($form_id == "quiz_question_multichoice_form") {
+      unset($form["alternatives"]["widget"][0]);
+    }
+}
+
+function research_right_quiz_preprocess_node_add_list(&$variables) {
+  unset($variables['content']['forum']);
+  unset($variables['types']['forum']);
+}
+
+function research_right_quiz_cron() {
+
+  \Drupal::database()->truncate('quiz_result')->execute();
+  \Drupal::database()->truncate('quiz_result_answer')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__3cf8e754c6')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__aa28ebe98e')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__e0ccbc78b1')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__field_click_to_reveal')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__field_drag_drop_answer')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__field_drag_drop_tb_ans_res')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__long_answer')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__matching_user_answer')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__multichoice_answer')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__short_answer')->execute();
+  \Drupal::database()->truncate('quiz_result_answer__truefalse_answer')->execute();
+}

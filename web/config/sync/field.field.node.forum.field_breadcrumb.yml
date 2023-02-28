@@ -1,0 +1,19 @@
+uuid: 8a3ee333-f876-47c9-b64f-264e63140ced
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breadcrumb
+    - node.type.forum
+id: node.forum.field_breadcrumb
+field_name: field_breadcrumb
+entity_type: node
+bundle: forum
+label: Breadcrumb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

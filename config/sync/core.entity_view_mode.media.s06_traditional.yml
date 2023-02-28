@@ -1,0 +1,12 @@
+uuid: 3b021d3f-6912-4e15-a4e1-49d516a17949
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: lwZ32_pm95WvMxRg_CcLXj0EpxHwi9dXV1MDa9H6o5Y
+id: media.s06_traditional
+label: 'Size 06 traditional 4:3'
+targetEntityType: media
+cache: true

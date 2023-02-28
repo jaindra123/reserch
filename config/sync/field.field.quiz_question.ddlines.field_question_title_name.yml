@@ -1,0 +1,19 @@
+uuid: 9bae442e-8d44-45bf-8fe7-8e99f486fea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_question_title_name
+    - quiz.question.type.ddlines
+id: quiz_question.ddlines.field_question_title_name
+field_name: field_question_title_name
+entity_type: quiz_question
+bundle: ddlines
+label: 'Question Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 4b149a9b-84ad-4b46-b0bc-a6de3e00cd64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.basic_cms_page
+  module:
+    - text
+id: node.basic_cms_page.body
+field_name: body
+entity_type: node
+bundle: basic_cms_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

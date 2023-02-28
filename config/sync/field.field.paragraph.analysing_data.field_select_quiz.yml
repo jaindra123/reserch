@@ -1,0 +1,31 @@
+uuid: bacbd88a-5c51-4fb6-b9e4-3d6b329ba7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_select_quiz
+    - paragraphs.paragraphs_type.analysing_data
+    - quiz.type.quiz
+  module:
+    - entity_reference_revisions
+id: paragraph.analysing_data.field_select_quiz
+field_name: field_select_quiz
+entity_type: paragraph
+bundle: analysing_data
+label: 'Quiz suggestive'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:quiz'
+  handler_settings:
+    target_bundles:
+      quiz: quiz
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

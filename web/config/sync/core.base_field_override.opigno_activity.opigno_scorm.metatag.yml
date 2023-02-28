@@ -1,0 +1,18 @@
+uuid: efd72397-c260-47cf-87fd-588ec218dadf
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_scorm
+id: opigno_activity.opigno_scorm.metatag
+field_name: metatag
+entity_type: opigno_activity
+bundle: opigno_scorm
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,23 @@
+uuid: 5c4b9b64-09b5-4b5d-b0f6-1d52b122a115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_option
+    - node.type.decision_tree
+  module:
+    - opigno_module
+id: node.decision_tree.field_slider_option
+field_name: field_slider_option
+entity_type: node
+bundle: decision_tree
+label: 'Slider Option'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: opigno_true_false_field

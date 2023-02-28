@@ -1,0 +1,72 @@
+uuid: 29f3365d-e135-4d9a-aec5-115bed550fb6
+langcode: en
+status: true
+dependencies: {  }
+id: entity_user_edit_form
+label: entity.user.edit_form
+tabs:
+  -
+    label: change_pwd_page.change_password_form
+    link: 'Change Password'
+    weight: -10
+    access: true
+  -
+    label: entity.user.contact_form
+    link: Contact
+    weight: 2
+    access: true
+  -
+    label: 'devel.entities:user.devel_tab'
+    link: Devel
+    weight: 100
+    access: true
+  -
+    label: 'entityqueue.entities:entity.user.entityqueue'
+    link: Entityqueue
+    weight: 21
+    access: true
+  -
+    label: role_delegation.edit_form
+    link: Roles
+    weight: -10
+    access: true
+  -
+    label: shortcut.set_switch
+    link: Shortcuts
+    weight: -10
+    access: true
+  -
+    label: entity.user.canonical
+    link: View
+    weight: -10
+    access: false
+  -
+    label: entity.user.edit_form
+    link: Edit
+    weight: -10
+    access: true
+  -
+    label: entity.webform_submission.user
+    link: Submissions
+    weight: -10
+    access: true
+  -
+    label: 'ds.entities:user.display_tab'
+    link: 'Manage display'
+    weight: 10
+    access: true
+  -
+    label: 'content_translation.local_tasks:entity.user.content_translation_overview'
+    link: Translate
+    weight: 100
+    access: true
+  -
+    label: 'views_view:view.quiz_unevaluated_results.page_2'
+    link: 'Score quizzes'
+    weight: 0
+    access: true
+  -
+    label: 'views_view:view.quiz_unevaluated_results.page_3'
+    link: 'Score quiz attempts'
+    weight: 0
+    access: true

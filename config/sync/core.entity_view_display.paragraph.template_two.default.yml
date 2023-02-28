@@ -1,0 +1,40 @@
+uuid: 2cb5cc16-edbf-467f-ba1a-be7feb4b2d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.template_two.field_heading
+    - field.field.paragraph.template_two.field_page_url
+    - paragraphs.paragraphs_type.template_two
+  module:
+    - link
+id: paragraph.template_two.default
+targetEntityType: paragraph
+bundle: template_two
+mode: default
+content:
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_page_url:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

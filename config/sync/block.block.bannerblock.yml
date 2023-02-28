@@ -1,0 +1,25 @@
+uuid: 42c5766b-d7d8-46c4-b0b1-162a0689feb4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:38b96543-e1f4-4a40-87f5-858c0bcac48d'
+  module:
+    - block_content
+  theme:
+    - research
+id: bannerblock
+theme: research
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:38b96543-e1f4-4a40-87f5-858c0bcac48d'
+settings:
+  id: 'block_content:38b96543-e1f4-4a40-87f5-858c0bcac48d'
+  label: 'banner  block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

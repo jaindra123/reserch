@@ -1,0 +1,11 @@
+uuid: 1444ea82-7776-48b2-b7db-2fb144dfe688
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - quiz_ddlines
+_core:
+  default_config_hash: _x3r9n2nZQLh2i-EQ7e6VkYxPplnoRz_E-KKFJeEcbY
+id: ddlines
+label: 'Drag & Drop response'

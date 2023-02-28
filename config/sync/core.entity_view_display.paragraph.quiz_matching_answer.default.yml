@@ -1,0 +1,41 @@
+uuid: a04893c8-3d2c-4014-a4e4-7d6b408dfb25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quiz_matching_answer.matching_user_answer
+    - field.field.paragraph.quiz_matching_answer.matching_user_question
+    - paragraphs.paragraphs_type.quiz_matching_answer
+  enforced:
+    module:
+      - quiz_matching
+_core:
+  default_config_hash: E7i3_85fxM_1slja9hHd1IJ7riJgX1zNM4D1Q2udES8
+id: paragraph.quiz_matching_answer.default
+targetEntityType: paragraph
+bundle: quiz_matching_answer
+mode: default
+content:
+  matching_user_answer:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  matching_user_question:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

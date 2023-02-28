@@ -1,0 +1,21 @@
+uuid: 8c793680-f3a4-4899-ba35-e3748af3e5fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_analysing_data_content
+    - paragraphs.paragraphs_type.analysing_data
+  module:
+    - text
+id: paragraph.analysing_data.field_analysing_data_content
+field_name: field_analysing_data_content
+entity_type: paragraph
+bundle: analysing_data
+label: 'Accordion Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

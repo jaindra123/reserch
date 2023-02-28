@@ -1,0 +1,18 @@
+uuid: e6991eac-1e86-4023-8941-5d0f65e4753b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.institution
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.institution
+target_entity_type_id: node
+target_bundle: institution
+default_langcode: site_default
+language_alterable: false

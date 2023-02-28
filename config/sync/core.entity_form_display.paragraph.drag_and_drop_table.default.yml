@@ -1,0 +1,50 @@
+uuid: 63566fd2-cbb0-46de-a413-43318bdc63c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drag_and_drop_table.field_drag_drop_answer_table
+    - field.field.paragraph.drag_and_drop_table.field_drag_drop_question_table
+    - paragraphs.paragraphs_type.drag_and_drop_table
+  module:
+    - advanced_text_formatter
+    - length_indicator
+    - maxlength
+    - text
+id: paragraph.drag_and_drop_table.default
+targetEntityType: paragraph
+bundle: drag_and_drop_table
+mode: default
+content:
+  field_drag_drop_answer_table:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      length_indicator:
+        indicator: false
+        indicator_opt:
+          optimin: 10
+          optimax: 15
+          tolerance: 5
+      maxlength:
+        maxlength_js: 35
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_drag_drop_question_table:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

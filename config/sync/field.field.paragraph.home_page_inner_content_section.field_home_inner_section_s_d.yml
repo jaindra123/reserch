@@ -1,0 +1,21 @@
+uuid: 7d6b929c-1c6c-4a67-926a-e45d7ffe1d57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_inner_section_s_d
+    - paragraphs.paragraphs_type.home_page_inner_content_section
+  module:
+    - text
+id: paragraph.home_page_inner_content_section.field_home_inner_section_s_d
+field_name: field_home_inner_section_s_d
+entity_type: paragraph
+bundle: home_page_inner_content_section
+label: 'Promo summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

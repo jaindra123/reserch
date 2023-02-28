@@ -1,0 +1,46 @@
+uuid: a5446cf5-93b1-4442-9073-02dd939c799b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketing_page_sidebar.field_sidebar_description
+    - field.field.paragraph.marketing_page_sidebar.field_sidebar_link
+    - field.field.paragraph.marketing_page_sidebar.field_sidebar_title
+    - paragraphs.paragraphs_type.marketing_page_sidebar
+  module:
+    - link
+    - text
+id: paragraph.marketing_page_sidebar.default
+targetEntityType: paragraph
+bundle: marketing_page_sidebar
+mode: default
+content:
+  field_sidebar_description:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_sidebar_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_sidebar_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

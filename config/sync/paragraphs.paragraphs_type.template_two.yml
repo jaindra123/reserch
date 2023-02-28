@@ -1,0 +1,10 @@
+uuid: 23077e57-4e77-484f-83d9-2f01b5a972dc
+langcode: en
+status: true
+dependencies: {  }
+id: template_two
+label: 'Tile with arrow (Grid)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

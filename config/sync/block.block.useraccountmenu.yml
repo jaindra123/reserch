@@ -1,0 +1,20 @@
+uuid: fbc6e915-3fe1-4de4-8a7b-26fb14e7a2cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - research
+id: useraccountmenu
+theme: research
+region: menu
+weight: -12
+provider: null
+plugin: 'we_megamenu_block:account'
+settings:
+  id: 'we_megamenu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: we_megamenu
+visibility: {  }

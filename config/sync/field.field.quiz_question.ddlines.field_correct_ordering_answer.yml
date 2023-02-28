@@ -1,0 +1,21 @@
+uuid: d7e2a7b8-8f69-450c-99c7-4e61075f8122
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_correct_ordering_answer
+    - quiz.question.type.ddlines
+  module:
+    - text
+id: quiz_question.ddlines.field_correct_ordering_answer
+field_name: field_correct_ordering_answer
+entity_type: quiz_question
+bundle: ddlines
+label: 'Correct Ordering Answer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

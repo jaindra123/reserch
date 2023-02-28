@@ -1,0 +1,21 @@
+uuid: 980b0d36-915b-4104-8f32-32ad0c04bf71
+langcode: en
+status: false
+dependencies:
+  module:
+    - private_message
+  theme:
+    - research
+id: privatemessagenotification
+theme: research
+region: status_messages
+weight: 0
+provider: null
+plugin: private_message_notification_block
+settings:
+  id: private_message_notification_block
+  label: 'Private Message Notification'
+  label_display: '0'
+  provider: private_message
+  ajax_refresh_rate: 15
+visibility: {  }

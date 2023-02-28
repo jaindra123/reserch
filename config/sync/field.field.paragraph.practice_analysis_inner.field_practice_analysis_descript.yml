@@ -1,0 +1,23 @@
+uuid: 5bc64f7f-4163-451f-a19f-49d54d827364
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_practice_analysis_descript
+    - paragraphs.paragraphs_type.practice_analysis_inner
+  module:
+    - text
+id: paragraph.practice_analysis_inner.field_practice_analysis_descript
+field_name: field_practice_analysis_descript
+entity_type: paragraph
+bundle: practice_analysis_inner
+label: 'practice analysis description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

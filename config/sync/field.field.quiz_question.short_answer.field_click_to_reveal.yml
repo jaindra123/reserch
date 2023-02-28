@@ -1,0 +1,21 @@
+uuid: 97bc4abf-a28c-4a88-8df2-170cf684a827
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_click_to_reveal
+    - quiz.question.type.short_answer
+  module:
+    - text
+id: quiz_question.short_answer.field_click_to_reveal
+field_name: field_click_to_reveal
+entity_type: quiz_question
+bundle: short_answer
+label: 'Reveal answer'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

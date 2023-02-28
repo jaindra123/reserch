@@ -1,0 +1,23 @@
+uuid: ad8c82c1-1bc9-417b-b2f1-6320cf67c1cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - opigno_module
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_exclude_from_search
+field_name: field_exclude_from_search
+entity_type: node
+type: opigno_true_false_field
+settings: {  }
+module: opigno_module
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

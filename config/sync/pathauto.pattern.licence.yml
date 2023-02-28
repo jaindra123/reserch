@@ -1,0 +1,22 @@
+uuid: 93c2e72b-1c4c-46a2-b589-186024b38537
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: licence
+label: Licence
+type: 'canonical_entities:node'
+pattern: '/licence/[node:title]'
+selection_criteria:
+  e59f5fdf-1780-4a13-a7ba-8601a4ed9bb4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e59f5fdf-1780-4a13-a7ba-8601a4ed9bb4
+    context_mapping:
+      node: node
+    bundles:
+      licence_count: licence_count
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,63 @@
+<?php
+namespace Drupal\quiz_ddlines_paragraph\Plugin\quiz\QuizQuestion;
+
+use Drupal;
+use Drupal\quiz\Util\QuizUtil;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\quiz\Entity\QuizQuestion;
+use Drupal\quiz\Entity\QuizResultAnswer;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+
+class DDLinesParagraphResponse extends QuizResultAnswer {
+
+  use StringTranslationTrait;
+
+  public function score($values): ?int {
+    //public function score(array $values): ?int {
+    $question = $this->getQuizQuestion();
+    $correct = $question->get('field_correct_paragraph_answer')->getString();
+    $this->set('field_drag_drop_paragraph_answer', $values['answer']);
+    return NULL;
+  }
+
+
+  public function getResponse() {
+    return $this->get('field_drag_drop_paragraph_answer')->getString();
+  }
+  
+  public function getFeedbackValues(): array {
+    $data = [];
+    $score = $this->getPoints();
+    $max = $this->getMaxScore();
+
+    if ($this->isEvaluated()) {
+      // Question has been graded.
+      if ($score == 0) {
+        $icon = QuizUtil::icon('incorrect');
+      }
+      if ($score > 0) {
+        $icon = QuizUtil::icon('almost');
+      }
+      if ($score == $max) {
+        $icon = QuizUtil::icon('correct');
+      }
+    }
+    else {
+      $icon = QuizUtil::icon('unknown');
+    }
+    $answer_feedback = $this->get('answer_feedback')->getValue()[0];
+    $data[] = [
+      // Hide this column. Does not make sense for short answer as there are no
+      // choices.
+      'choice' => NULL,
+      'attempt' => $this->get('field_drag_drop_paragraph_answer')->getString(),
+      'correct' => $icon,
+      'score' => !$this->isEvaluated() ? $this->t('This answer has not yet been scored.') : $this->getPoints(),
+      'solution' => $this->getQuizQuestion()->get('field_correct_paragraph_answer')->getString(),
+      'answer_feedback' => check_markup($answer_feedback['value'], $answer_feedback['format']),
+    ];
+    return $data;
+  }
+
+}

@@ -1,0 +1,20 @@
+uuid: a417e103-c7d2-4fe9-9905-5dbd22147f05
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_activity_type.opigno_slide
+id: opigno_activity.opigno_slide.uid
+field_name: uid
+entity_type: opigno_activity
+bundle: opigno_slide
+label: 'Authored by'
+description: 'The user ID of author of the Activity entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 1b3fc174-952e-45c2-b175-bfade1f7c46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authentication_hub_id
+    - node.type.institution
+id: node.institution.field_authentication_hub_id
+field_name: field_authentication_hub_id
+entity_type: node
+bundle: institution
+label: 'Authentication Hub ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

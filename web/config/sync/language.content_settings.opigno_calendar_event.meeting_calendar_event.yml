@@ -1,0 +1,18 @@
+uuid: 3f50fddf-c703-4647-b641-5f5f45a57230
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_calendar_event.type.meeting_calendar_event
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: opigno_calendar_event.meeting_calendar_event
+target_entity_type_id: opigno_calendar_event
+target_bundle: meeting_calendar_event
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,25 @@
+uuid: 2774f796-8f51-4b74-813e-37a814c345c7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fb9bfdd0-589a-46ed-9b84-1164d46a9220'
+  module:
+    - block_content
+  theme:
+    - research
+id: templatone
+theme: research
+region: template_one
+weight: 0
+provider: null
+plugin: 'block_content:fb9bfdd0-589a-46ed-9b84-1164d46a9220'
+settings:
+  id: 'block_content:fb9bfdd0-589a-46ed-9b84-1164d46a9220'
+  label: 'Templat One'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: b56de86d-5981-43cb-bc8e-eaca3453c615
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - quiz
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: quiz_question.field_correct_ans
+field_name: field_correct_ans
+entity_type: quiz_question
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

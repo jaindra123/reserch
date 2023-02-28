@@ -1,0 +1,12 @@
+uuid: ff8c2a00-68ec-4f61-8d9a-c00d52e642ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: BrTL9rwSkL78rhAPWDb5pMCoE9VFylHJGu51nh04iLw
+id: media.s12_standard
+label: 'Size 12 standard 16:9'
+targetEntityType: media
+cache: true

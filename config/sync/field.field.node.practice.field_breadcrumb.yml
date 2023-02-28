@@ -1,0 +1,19 @@
+uuid: 6d43d2e9-c592-4a67-8ee6-68b8d8d1ed48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breadcrumb
+    - node.type.practice
+id: node.practice.field_breadcrumb
+field_name: field_breadcrumb
+entity_type: node
+bundle: practice
+label: Breadcrumb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

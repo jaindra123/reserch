@@ -1,0 +1,29 @@
+uuid: 74deb47a-0a8d-4726-9741-99619536ab73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_topic
+    - node.type.practice
+    - node.type.topic
+id: node.practice.field_select_topic
+field_name: field_select_topic
+entity_type: node
+bundle: practice
+label: 'Select Parent'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      topic: topic
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: test
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: ae04f292-9219-4432-9661-e2d05c3fc8f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_licences
+    - node.type.institution
+id: node.institution.field_number_of_licences
+field_name: field_number_of_licences
+entity_type: node
+bundle: institution
+label: 'Number of licences'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

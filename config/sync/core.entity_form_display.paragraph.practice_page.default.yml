@@ -1,0 +1,34 @@
+uuid: f6f46cc9-1732-4e93-b06a-04a7b07b75af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.practice_page.field_practice_page_description
+    - field.field.paragraph.practice_page.field_practice_page_title
+    - paragraphs.paragraphs_type.practice_page
+  module:
+    - text
+id: paragraph.practice_page.default
+targetEntityType: paragraph
+bundle: practice_page
+mode: default
+content:
+  field_practice_page_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_practice_page_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,51 @@
+landing_page.landing-page:
+  path: '/admin/config/user-interface/landing-page'
+  defaults:
+    _form: '\Drupal\landing_page\Form\AdminLandingPage'
+    _title: 'Admin Landing page'
+  requirements:
+    _permission: 'access content'
+
+landing_page.admin-landing-page:
+  path: '/admin/config/user-interface/admin-landing-page'
+  defaults:
+    _form: '\Drupal\landing_page\Form\AdminLandingPage'
+    _title: 'Admin Landing page'
+  requirements:
+    _permission: 'access content'
+
+landing_page.instructor-landing-page:
+  path: '/admin/config/user-interface/instructor-landing-page'
+  defaults:
+    _form: '\Drupal\landing_page\Form\InstructorLandingPage'
+    _title: 'Instructor Landing page'
+  requirements:
+    _permission: 'access content'
+    
+landing_page.institute-landing-page:
+  path: '/admin/config/user-interface/institute-landing-page'
+  defaults:
+    _form: '\Drupal\landing_page\Form\InstituteLandingPage'
+    _title: 'Institute Admin Landing page'
+  requirements:
+    _permission: 'access content'    
+
+# route for the user login redirect
+landing_page.adminhub:
+  path: '/admin-hub'
+  defaults:
+    _controller: '\Drupal\landing_page\Controller\LandingPageController::landingPage'
+    _title: 'My account'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+# route for user delete custom
+landing_page.user-delete:
+  path: '/user-delete/{user}'
+  defaults:
+    _title: 'Confirm account cancellation'
+    _controller: '\Drupal\landing_page\Controller\LandingPageController::userDelete'
+  requirements:
+    _entity_access: 'user.delete'
+    user: \d+
+    

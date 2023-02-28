@@ -1,0 +1,18 @@
+uuid: a01d8f08-b667-428e-91da-358e0a19c249
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_calendar_event.type.ilt_calendar_event
+id: opigno_calendar_event.ilt_calendar_event.metatag
+field_name: metatag
+entity_type: opigno_calendar_event
+bundle: ilt_calendar_event
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,21 @@
+uuid: a09e18d2-26f3-44e5-8b92-1e467ce76867
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_question.field_click_to_reveal
+    - quiz.question.type.long_answer
+  module:
+    - text
+id: quiz_question.long_answer.field_click_to_reveal
+field_name: field_click_to_reveal
+entity_type: quiz_question
+bundle: long_answer
+label: 'Reveal answer'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

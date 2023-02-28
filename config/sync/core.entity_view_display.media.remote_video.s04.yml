@@ -1,0 +1,72 @@
+uuid: 54f11463-d323-4067-9a86-fdee355bb86a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.s04
+    - field.field.media.remote_video.field_media_cover_image
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_provider
+    - media.type.remote_video
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - thumbnail
+        - field_media_cover_image
+_core:
+  default_config_hash: 0KVslWmTaa5se1t5-1-FHD7J83SH7PONh4mIf47WpoY
+id: media.remote_video.s04
+targetEntityType: media
+bundle: remote_video
+mode: s04
+content:
+  field_media_cover_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  thumbnail:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_media_in_library: true
+  field_media_oembed_video: true
+  field_provider: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

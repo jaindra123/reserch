@@ -1,0 +1,29 @@
+uuid: 374e5ebf-504b-4faf-81b7-153355d1748b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_module
+    - node.type.modules_content_type
+    - node.type.topic
+id: node.topic.field_select_module
+field_name: field_select_module
+entity_type: node
+bundle: topic
+label: 'Select Module'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      modules_content_type: modules_content_type
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

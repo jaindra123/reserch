@@ -1,0 +1,21 @@
+uuid: db5a27f6-9483-4469-910d-679dc1fdc404
+langcode: en
+status: true
+dependencies:
+  module:
+    - opigno_module
+    - options
+id: opigno_module.opigno_module.randomization
+field_name: randomization
+entity_type: opigno_module
+bundle: opigno_module
+label: 'Randomize activities'
+description: '<strong>Random order</strong> - all questions display in random order<br/><strong>Random activities</strong> - specific number of activities are drawn randomly from this module''s pool of questions'
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

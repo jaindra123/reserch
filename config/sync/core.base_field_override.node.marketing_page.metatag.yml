@@ -1,0 +1,18 @@
+uuid: be311321-9a0c-4773-b252-b1ed0b179a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing_page
+id: node.marketing_page.metatag
+field_name: metatag
+entity_type: node
+bundle: marketing_page
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

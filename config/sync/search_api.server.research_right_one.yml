@@ -1,0 +1,50 @@
+uuid: dc32b9c8-b1cc-4a28-9889-233a03562add
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_solr.solr_field_type.text_edge_und_4_5_0
+    - search_api_solr.solr_field_type.text_edgestring_und_4_5_0
+    - search_api_solr.solr_field_type.text_en_4_5_0
+    - search_api_solr.solr_field_type.text_ngram_und_4_5_0
+    - search_api_solr.solr_field_type.text_ngramstring_und_4_5_0
+    - search_api_solr.solr_field_type.text_und_4_5_0
+  module:
+    - search_api_solr
+id: research_right_one
+name: 'Research Right One'
+description: ''
+backend: search_api_solr
+backend_config:
+  retrieve_data: true
+  highlight_data: true
+  site_hash: false
+  server_prefix: ''
+  domain: generic
+  environment: default
+  connector: standard
+  connector_config:
+    scheme: http
+    host: 44.207.243.135
+    port: 8983
+    path: /
+    core: drupal
+    timeout: 50
+    index_timeout: 50
+    optimize_timeout: 50
+    finalize_timeout: 10
+    skip_schema_check: false
+    solr_version: '8'
+    http_method: AUTO
+    commit_within: 100
+    jmx: true
+    jts: true
+    solr_install_dir: /opt/solr
+  optimize: false
+  fallback_multiple: true
+  disabled_field_types: {  }
+  disabled_caches: {  }
+  disabled_request_handlers: {  }
+  disabled_request_dispatchers: {  }
+  rows: 10
+  index_single_documents_fallback_count: 10

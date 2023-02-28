@@ -1,0 +1,316 @@
+diff --git a/src/Config/Entity/QuizListBuilder.php b/src/Config/Entity/QuizListBuilder.php
+index 91d15c6..8a1c712 100644
+--- a/src/Config/Entity/QuizListBuilder.php
++++ b/src/Config/Entity/QuizListBuilder.php
+@@ -5,14 +5,18 @@ namespace Drupal\quiz\Config\Entity;
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityListBuilder;
+ use Drupal\Core\Url;
++use Drupal\Core\Database\Database;
+ 
+ /**
+  * Defines the list builder for Quiz entities.
+  */
+ class QuizListBuilder extends EntityListBuilder {
+ 
++  Protected $limit = 20;
++
+   public function render() {
+-    $build = parent::render();
++    $build['form'] = \Drupal::formBuilder()->getForm('Drupal\quiz\Form\DocumentFilterForm');
++    $build += parent::render();
+     $build['table']['#caption'] = $this->t('Quiz.');
+     return $build;
+   }
+@@ -22,6 +26,11 @@ class QuizListBuilder extends EntityListBuilder {
+    */
+   public function buildHeader() {
+     $header['label'] = $this->t('Quiz');
++    $header['changed'] = [
++      'data' => $this->t('Updated'),
++      'field' => 't.changed',
++      'sord' => 'desc'
++    ];
+     return $header + parent::buildHeader();
+   }
+ 
+@@ -30,6 +39,7 @@ class QuizListBuilder extends EntityListBuilder {
+    */
+   public function buildRow(EntityInterface $entity) {
+     $row['label'] = $entity->toLink(NULL, 'edit-form');
++    $row['changed'] = \Drupal::service('date.formatter')->format($entity->getChangedTime(), 'medium');
+     return $row + parent::buildRow($entity);
+   }
+ 
+@@ -50,4 +60,50 @@ class QuizListBuilder extends EntityListBuilder {
+     return $operations;
+   }
+ 
++  protected function getEntityIds() {
++    $connection = Database::getConnection();
++    $query = \Drupal::entityQuery($this->entityTypeId);
++    $request = \Drupal::request();
++  
++    $title = $request->get('title') ?? 0;
++    if ($title) {
++      $query->condition('title', '%' . $connection->escapeLike($title) . '%', 'LIKE');
++    }
++  
++    $type = $request->get('quiz_type') ?? 0;
++    if ($type) {
++      $query->condition('type', $type);
++    }
++
++    $no_of_pages = $request->get('no_of_pages') ?? 0;
++    if ($no_of_pages) {
++      $this->limit = $no_of_pages;
++    }
++  
++    if ($this->limit != 'all') {
++      $query->pager($this->limit);
++    }
++
++    $order = $request->get('order');
++    if ($order) {
++      $sort = $request->get('sort');
++      foreach ($this->buildHeader() as $name => $field) {
++        if (is_array($field) && $field['data'] == $order) {
++          $header = [$name => $field + [
++            'specifier' => $name,
++            'sort' => $sort ?? $field['sort'] ?? 'asc',
++          ]];
++        }
++      }
++      if ($header) {
++        $query->tableSort($header);
++      }
++    }
++    else {
++      $query->sort('changed', 'desc');
++    }
++  
++    return $query->execute();
++  }
++
+ }
+diff --git a/src/Config/Entity/QuizQuestionListBuilder.php b/src/Config/Entity/QuizQuestionListBuilder.php
+index 15307c2..da7d80f 100644
+--- a/src/Config/Entity/QuizQuestionListBuilder.php
++++ b/src/Config/Entity/QuizQuestionListBuilder.php
+@@ -5,17 +5,22 @@ namespace Drupal\quiz\Config\Entity;
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityListBuilder;
+ use Drupal\quiz\Entity\QuizQuestionType;
++use Drupal\Core\Database\Database;
+ 
+ /**
+  * Defines the list builder for quiz question entities.
+  */
+ class QuizQuestionListBuilder extends EntityListBuilder {
+ 
++  Protected $limit = 20;
++
+   /**
+    * {@inheritdoc}
+    */
+   public function render() {
+-    $build = parent::render();
++    // $build = parent::render();
++    $build['form'] = \Drupal::formBuilder()->getForm('Drupal\quiz\Form\DocumentFilterForm');
++    $build += parent::render();
+     $build['table']['#caption'] = $this->t('Questions.');
+     return $build;
+   }
+@@ -26,6 +31,11 @@ class QuizQuestionListBuilder extends EntityListBuilder {
+   public function buildHeader() {
+     $header['title'] = $this->t('Title');
+     $header['type'] = $this->t('Type');
++    $header['changed'] = [
++      'data' => $this->t('Updated'),
++      'field' => 't.changed',
++      'sord' => 'desc'
++    ];
+     return $header + parent::buildHeader();
+   }
+ 
+@@ -35,7 +45,54 @@ class QuizQuestionListBuilder extends EntityListBuilder {
+   public function buildRow(EntityInterface $entity) {
+     $row['title'] = $entity->toLink(NULL, 'edit-form');
+     $row['type'] = QuizQuestionType::load($entity->bundle())->label();
++    $row['changed'] = \Drupal::service('date.formatter')->format($entity->getChangedTime(), 'medium');
+     return $row + parent::buildRow($entity);
+   }
+ 
++  protected function getEntityIds() {
++    $connection = Database::getConnection();
++    $query = \Drupal::entityQuery($this->entityTypeId);
++    $request = \Drupal::request();
++  
++    $title = $request->get('title') ?? 0;
++    if ($title) {
++      $query->condition('title', '%' . $connection->escapeLike($title) . '%', 'LIKE');
++    }
++  
++    $type = $request->get('quiz_type') ?? 0;
++    if ($type) {
++      $query->condition('type', $type);
++    }
++
++    $no_of_pages = $request->get('no_of_pages') ?? 0;
++    if ($no_of_pages) {
++      $this->limit = $no_of_pages;
++    }
++  
++    if ($this->limit != 'all') {
++      $query->pager($this->limit);
++    }
++
++    $order = $request->get('order');
++    if ($order) {
++      $sort = $request->get('sort');
++      foreach ($this->buildHeader() as $name => $field) {
++        if (is_array($field) && $field['data'] == $order) {
++          $header = [$name => $field + [
++            'specifier' => $name,
++            'sort' => $sort ?? $field['sort'] ?? 'asc',
++          ]];
++        }
++      }
++      if ($header) {
++        $query->tableSort($header);
++      }
++    }
++    else {
++      $query->sort('changed', 'desc');
++    }
++  
++    return $query->execute();
++  }
++
+ }
+diff --git a/src/Form/DocumentFilterForm.php b/src/Form/DocumentFilterForm.php
+new file mode 100644
+index 0000000..2bb9a4a
+--- /dev/null
++++ b/src/Form/DocumentFilterForm.php
+@@ -0,0 +1,120 @@
++<?php
++
++namespace Drupal\quiz\Form;
++
++use Drupal\Core\Form\FormBase;
++use Drupal\Core\Form\FormStateInterface;
++// use Drupal\quiz\Entity\QuizResult;
++
++/**
++ * Form for adding filters in entitylist Form.
++ */
++class DocumentFilterForm extends FormBase
++{
++
++    protected $currentRoute; 
++
++    public function getFormId()
++    {
++        return 'document-filter-form';
++    }
++
++    public function buildForm(array $form, FormStateInterface $form_state)
++    {
++        $this->currentRoute = \Drupal::routeMatch()->getRouteName();
++        $request = \Drupal::request();
++
++        $form['filter'] = [
++            '#type' => 'container',
++            '#attributes' => [
++                'class' => ['form--inline', 'clearfix'],
++            ],
++        ];
++
++        $form['filter']['title'] = [
++            '#type' => 'textfield',
++            '#title' => 'Title',
++            '#default_value' => $request->get('title') ?? '',
++        ];
++
++        // change the bundle value as per the current page route
++        if( $this->currentRoute == 'entity.quiz.collection' ) {
++            $bundle = 'quiz_type';
++        } else if( $this->currentRoute == 'entity.quiz_question.collection' ) {
++            $bundle = 'quiz_question_type';
++        }
++
++        $entityTypeManager = \Drupal::service('entity_type.manager');
++        $types['0'] = 'Any';
++        $quiz_types = $entityTypeManager->getStorage($bundle)->loadMultiple();
++        foreach ($quiz_types as $quiz_type) {
++            $types[$quiz_type->id()] = $quiz_type->label();
++        }
++        $form['filter']['quiz_type'] = [
++            '#type' => 'select',
++            '#title' => 'Type',
++            '#options' => $types,
++            '#default_value' => $request->get('quiz_type') ?? 0,
++        ];
++
++        $form['filter']['no_of_pages'] = [
++            '#type' => 'select',
++            '#title' => 'No. of Pages',
++            '#options' => [
++                '20' => '20',
++                '50' => '50',
++                '100' => '100',
++                '200' => '200',
++                'all' => 'All',
++            ],
++            '#default_value' => $request->get('no_of_pages') ?? 20,
++        ];
++
++        $form['actions']['wrapper'] = [
++            '#type' => 'container',
++            '#attributes' => ['class' => ['form-item']],
++        ];
++
++        $form['actions']['wrapper']['submit'] = [
++            '#type' => 'submit',
++            '#value' => 'Filter',
++        ];
++
++        if ($request->getQueryString()) {
++            $form['actions']['wrapper']['reset'] = [
++                '#type' => 'submit',
++                '#value' => 'Reset',
++                '#submit' => ['::resetForm'],
++            ];
++        }
++
++        return $form;
++    }
++
++    public function submitForm(array &$form, FormStateInterface $form_state)
++    {
++        $query = [];
++
++        $title = $form_state->getValue('title') ?? '';
++        if ($title) {
++            $query['title'] = $title;
++        }
++
++        $quiz_type = $form_state->getValue('quiz_type') ?? 0;
++        if ($quiz_type) {
++            $query['quiz_type'] = $quiz_type;
++        }
++
++        $no_of_pages = $form_state->getValue('no_of_pages') ?? 20;
++        if ($no_of_pages) {
++            $query['no_of_pages'] = $no_of_pages;
++        }
++
++        $form_state->setRedirect($this->currentRoute, $query);
++    }
++
++    public function resetForm(array $form, FormStateInterface &$form_state)
++    {
++        $form_state->setRedirect($this->currentRoute);
++    }
++}

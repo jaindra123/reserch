@@ -1,0 +1,29 @@
+uuid: f8c8c8f4-8d15-4dc4-b06c-fc512792a2c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_topic
+    - node.type.faqs
+    - node.type.topic
+id: node.faqs.field_select_topic
+field_name: field_select_topic
+entity_type: node
+bundle: faqs
+label: 'Select Parent'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      topic: topic
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: faqs
+field_type: entity_reference

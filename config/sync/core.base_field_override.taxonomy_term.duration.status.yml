@@ -1,0 +1,22 @@
+uuid: a30a20af-008f-4567-a25d-13c379dfcf56
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.duration
+id: taxonomy_term.duration.status
+field_name: status
+entity_type: taxonomy_term
+bundle: duration
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,18 @@
+diff --git a/redirect_after_login.module b/redirect_after_login.module
+index de9f7e2..c4f4d85 100644
+--- a/redirect_after_login.module
++++ b/redirect_after_login.module
+@@ -58,6 +58,7 @@ function redirect_after_login_help($route_name, RouteMatchInterface $route_match
+  */
+ function redirect_after_login_user_login($account) {
+   $current_route = Drupal::routeMatch()->getRouteName();
++  if (!in_array($current_route, ['user.reset', 'user.reset.login', 'change_pwd_page.reset'])) {
+   $request = Drupal::request();
+   if ($request->getRequestFormat() !== 'html') {
+     return;
+@@ -104,4 +105,5 @@ function redirect_after_login_user_login($account) {
+       $homeResponse->send();
+     }
+   }
++  }
+ }

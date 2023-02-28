@@ -1,0 +1,21 @@
+uuid: 4024810b-46aa-4cfb-b2a4-5c52f143f948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_questions_content
+    - paragraphs.paragraphs_type.topic_questions
+  module:
+    - text
+id: paragraph.topic_questions.field_questions_content
+field_name: field_questions_content
+entity_type: paragraph
+bundle: topic_questions
+label: 'Accordion Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

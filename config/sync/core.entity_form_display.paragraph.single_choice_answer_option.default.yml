@@ -1,0 +1,31 @@
+uuid: 6f720c69-9e5b-4c96-8697-3ad894a4c99c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_choice_answer_option.field_correct_option
+    - field.field.paragraph.single_choice_answer_option.field_option_text
+    - paragraphs.paragraphs_type.single_choice_answer_option
+id: paragraph.single_choice_answer_option.default
+targetEntityType: paragraph
+bundle: single_choice_answer_option
+mode: default
+content:
+  field_correct_option:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_option_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

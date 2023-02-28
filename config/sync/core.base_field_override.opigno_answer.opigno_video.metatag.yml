@@ -1,0 +1,18 @@
+uuid: 0a7b0a76-7d6c-4676-8398-2bd373516c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - opigno_module.opigno_answer_type.opigno_video
+id: opigno_answer.opigno_video.metatag
+field_name: metatag
+entity_type: opigno_answer
+bundle: opigno_video
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
