@@ -1,0 +1,4940 @@
+{
+	"info": {
+		"_postman_id": "e982a5b2-9e9c-44c8-8590-e0af75b79b02",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20608183"
+	},
+	"item": [
+		{
+			"name": "Philip Constructor",
+			"item": [
+				{
+					"name": "Node",
+					"item": [
+						{
+							"name": "Node Create For Document Template",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\" : [{\"value\" : \"Second Document 20\"}],\r\n\t\"type\" : [{\"target_id\" : \"document_templates\"}],\r\n    \"field_dt_employee_name\" : [{\"value\" : \"Document Emp Name1\"}],\r\n    \"field_dt_date\" : [{\"value\" : \"2022-06-10\"}],\r\n    \"field_bac\" :[{\"target_id\" : 479}],\r\n    \"field_fit_for_work\" :[{\"target_id\" : 482}],\r\n    \"field_job_hazard_analysis\" :[{\"target_id\" : 509}], \r\n    \"field_jha_work_order\" :[{\"value\" : 398988}],\r\n    \"field_jha_date\" :[{\"value\" : \"2022-06-15\"}],\r\n    \"field_jha_equipment\" :[{\"value\" : 23232}],\r\n    \"field_jha_swp\" :[{\"value\" : 273627362}],\r\n    \"field_what_is_the_task\" :[{\"value\" : \"SWP Task 1\"}],\r\n    \"field_task_location_work_area\" :[{\"value\" : \"SWP Task Location 1\"}],\r\n    \"field_jha_risk_check\" :[{\"target_id\" : 483}],\r\n    \"field_jha_permit_rqd\" :[{\"target_id\" : 502}],\r\n    \"field_jha_team_contact\" :[{\"value\" : 1211121212}],\r\n    \"field_jha_name\" :[{\"value\" : \"Team Name Test\"}],\r\n    \"field_jha_sup_sign_on\" :[{\"value\" : \"Supervisor Name Test\"}],\r\n    \"field_jha_sup_sign_on_date\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_jha_sup_sign_on_time\" :[{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_dt_name\" :[{\"target_id\" : 38}],\r\n    \"field_isolation_contact_number\" :[{\"value\" : 33332}],\r\n    \"field_lock_number\" :[{\"value\" : 5656}],\r\n    \"field_permit_issue_date\" :[{\"value\" : \"2022-06-10\"}],\r\n    \"field_permit_expiry_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_permits_images\" :[{\"target_id\" : \"3\" }],\r\n    \"field_jha_supervisor_name\" :[{\"value\" : \"Supervisor Name\" }],\r\n    \"field_step\" :[{\"target_id\" : 530 }],\r\n    \"field_task_what_am_i_going_to_do\" :[{\"value\" : \"TasK What going to do\" }],\r\n    \"field_hazard_what_could_hurt_me_\" :[{\"value\" : \"Hazard: what could hurt me\" }],\r\n    \"field_critical_risk\" :[{\"target_id\" : 532 }],\r\n    \"field_supervisor_hold_points_req\" :[{\"target_id\" : 534 }],\r\n    \"field_impact_what_harm_could_occ\" :[{\"value\" : \"Impact what harm could occur Test\" }],\r\n    \"field_jha_control\" :[{\"value\" : \"what must be in place to prevent\" }],\r\n    \"field_change_management_date_tim\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_change_management_step\" :[{\"target_id\" : 522}],\r\n    \"field_change_management_descript\" :[{\"value\" : \"Change Management Description of change Test\"}],\r\n    \"field_change_management_critical\" :[{\"target_id\" : 532}],\r\n    \"field_jha_cng_mng_hold_point\" :[{\"target_id\" : 534}],\r\n    \"field_new_controls\" :[{\"value\" : \"New Controls Test\"}],\r\n\t\r\n    \"field_change_approved\" :[{\"value\" : \"Change approved Test\"}],\r\n    \"field_jha_review_name\" :[{\"value\" : \"JHA Review Name Test\"}],\r\n    \"field_jha_review_date\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_jha_review_time\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_swp_name\" :[{\"target_id\" : 44}],\r\n    \"field_swp_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_swp_q1\" :[{\"target_id\" : 536}],\r\n    \"field_swp_q2\" :[{\"target_id\" : 537}],\r\n    \"field_q3_does_this_swp_need_to_b\" :[{\"target_id\" : 540}],\r\n    \"field_take_5_name\" :[{\"target_id\" : 48}],\r\n    \"field_tk5_task\" :[{\"value\" : \"Take 5 task\"}],\r\n    \"field_tk5_location\" :[{\"value\" : \"Take 5 Location\"}],\r\n    \"field_tk5_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_tk5_q1\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q2\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q3\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q4\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q5\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q6\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q7\" :[{\"target_id\" : 542}],\r\n    \"field_tks_q8\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q9\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q10\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q11\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q12\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q13\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q14\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q15\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q16\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q17\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q18\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_hazard\" :[{\"value\" : \"Plan Hazard Test\"}],\r\n    \"field_tk5_control\" :[{\"value\" : \"Plan Control Test\"}],\r\n    \"field_tk5_risk\" :[{\"value\" : \"Plan Risk Test\"}],\r\n    \"field_tks_q19\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q20\" :[{\"target_id\" : 541}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Node",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\" : [{\"value\" : \"First Document 1\"}],\r\n\t\"type\" : [{\"target_id\" : \"document_templates\"}],\r\n    \"field_dt_employee_name\" : [{\"value\" : \"Document Emp Name1\"}],\r\n    \"field_dt_date\" : [{\"value\" : \"2022-06-10\"}],\r\n    \"field_bac\" :[{\"target_id\" : 479}],\r\n    \"field_fit_for_work\" :[{\"target_id\" : 482}],\r\n    \"field_job_hazard_analysis\" :[{\"target_id\" : 509}], \r\n    \"field_jha_work_order\" :[{\"value\" : 398988}],\r\n    \"field_jha_date\" :[{\"value\" : \"2022-06-15\"}],\r\n    \"field_jha_equipment\" :[{\"value\" : 23232}],\r\n    \"field_jha_swp\" :[{\"value\" : 273627362}],\r\n    \"field_what_is_the_task\" :[{\"value\" : \"SWP Task 1\"}],\r\n    \"field_task_location_work_area\" :[{\"value\" : \"SWP Task Location 1\"}],\r\n    \"field_jha_risk_check\" :[{\"target_id\" : 483}],\r\n    \"field_jha_permit_rqd\" :[{\"target_id\" : 502}],\r\n    \"field_jha_team_contact\" :[{\"value\" : 1211121212}],\r\n    \"field_jha_name\" :[{\"value\" : \"Team Name Test\"}],\r\n    \"field_jha_sup_sign_on\" :[{\"value\" : \"Supervisor Name Test\"}],\r\n    \"field_jha_sup_sign_on_date\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_jha_sup_sign_on_time\" :[{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_dt_name\" :[{\"target_id\" : 38}],\r\n    \"field_isolation_contact_number\" :[{\"value\" : 33332}],\r\n    \"field_lock_number\" :[{\"value\" : 5656}],\r\n    \"field_permit_issue_date\" :[{\"value\" : \"2022-06-10\"}],\r\n    \"field_permit_expiry_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_permits_images\" :[{\"target_id\" : \"3\" }],\r\n    \"field_jha_supervisor_name\" :[{\"value\" : \"Supervisor Name\" }],\r\n    \"field_step\" :[{\"target_id\" : 530 }],\r\n    \"field_task_what_am_i_going_to_do\" :[{\"value\" : \"TasK What going to do\" }],\r\n    \"field_hazard_what_could_hurt_me_\" :[{\"value\" : \"Hazard: what could hurt me\" }],\r\n    \"field_critical_risk\" :[{\"target_id\" : 532 }],\r\n    \"field_supervisor_hold_points_req\" :[{\"target_id\" : 534 }],\r\n    \"field_impact_what_harm_could_occ\" :[{\"value\" : \"Impact what harm could occur Test\" }],\r\n    \"field_jha_control\" :[{\"value\" : \"what must be in place to prevent\" }],\r\n    \"field_change_management_date_tim\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_change_management_step\" :[{\"target_id\" : 522}],\r\n    \"field_change_management_descript\" :[{\"value\" : \"Change Management Description of change Test\"}],\r\n    \"field_change_management_critical\" :[{\"target_id\" : 532}],\r\n    \"field_jha_cng_mng_hold_point\" :[{\"target_id\" : 534}],\r\n    \"field_new_controls\" :[{\"value\" : \"New Controls Test\"}],\r\n\t\r\n    \"field_change_approved\" :[{\"value\" : \"Change approved Test\"}],\r\n    \"field_jha_review_name\" :[{\"value\" : \"JHA Review Name Test\"}],\r\n    \"field_jha_review_date\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_jha_review_time\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_swp_name\" :[{\"target_id\" : 44}],\r\n    \"field_swp_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_swp_q1\" :[{\"target_id\" : 536}],\r\n    \"field_swp_q2\" :[{\"target_id\" : 537}],\r\n    \"field_q3_does_this_swp_need_to_b\" :[{\"target_id\" : 540}],\r\n    \"field_take_5_name\" :[{\"target_id\" : 48}],\r\n    \"field_tk5_task\" :[{\"value\" : \"Take 5 task\"}],\r\n    \"field_tk5_location\" :[{\"value\" : \"Take 5 Location\"}],\r\n    \"field_tk5_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_tk5_q1\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q2\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q3\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q4\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q5\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q6\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q7\" :[{\"target_id\" : 542}],\r\n    \"field_tks_q8\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q9\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q10\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q11\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q12\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q13\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q14\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q15\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q16\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q17\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q18\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_hazard\" :[{\"value\" : \"Plan Hazard Test\"}],\r\n    \"field_tk5_control\" :[{\"value\" : \"Plan Control Test\"}],\r\n    \"field_tk5_risk\" :[{\"value\" : \"Plan Risk Test\"}],\r\n    \"field_tks_q19\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q20\" :[{\"target_id\" : 541}]\r\n}"
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node/23?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node",
+										"23"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get data using node id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "username",
+											"value": "Jaindra",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "4b3b6eea-b05b-496d-9263-23dcac535458",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://contractor-manager.techinventiv.com/oauth/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "CDcVqo1bnpmxIufRgLWulwszcp7laa1bRMRd7Z2vTlA",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node/16?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node",
+										"16"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Timesheet",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\" : [{\"value\" : \"First Timesheet 8\"}],\r\n\t\"type\" : [{\"target_id\" : \"timesheet\"}],\r\n    \"field_unique_document_number\" : [{\"value\" : \"1001\"}],\r\n    \"field_timesheet_date\" : [{\"value\" : \"2022-06-10\"}], \r\n    \"field_site\" : [{\"target_id\" : 463}],\r\n    \"field_purchase_order_number\" : [{\"value\" : \"10\"}],\r\n    \"field_timesheet_shift_type\" : [{\"target_id\" : 366}],\r\n    \"field_break\" : [{\"target_id\" : 469}],\r\n    \"field_work_description\" : [{\"value\" : \"Work Description\"}],\r\n    \"field_timesheet_comments\" : [{\"value\" : \"Comments\"}],\r\n    \"field_cost_codes\" :[{\"target_id\" : 470}],\r\n    \"field_timesheet_employee_name\" : [{\"value\" : \"Employee Name\"}],\r\n    \"field_timesheet_supervisor_name\" : [{\"value\" : \"Supervisor Name\"}],\r\n    \"field_supervisor_email\" : [{\"value\" : \"abc@gmail.com\"}],\r\n    \"field_name\" : [{\"target_id\" : 28}],\r\n    \"field_start_time\" : [{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_end_time\" : [{\"value\" : \"2022-06-14T12:50:10+00:00\"}],\r\n    \"field_hours_worked\" : [{\"value\" : \"2022-06-15T12:50:10+00:00\"}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node/21?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node",
+										"21"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Timesheet Node with image",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\" : [{\"value\" : \"First Timesheet 70\"}],\r\n\t\"type\" : [{\"target_id\" : \"timesheet\"}],\r\n    \"field_unique_document_number\" : [{\"value\" : \"1001\"}],\r\n    \"field_timesheet_date\" : [{\"value\" : \"2022-06-10\"}], \r\n    \"field_site\" : [{\"target_id\" : 463}],\r\n    \"field_purchase_order_number\" : [{\"value\" : \"10\"}],\r\n    \"field_timesheet_shift_type\" : [{\"target_id\" : 466}],\r\n    \"field_break\" : [{\"target_id\" : 469}],\r\n    \"field_work_description\" : [{\"value\" : \"Work Description\"}],\r\n    \"field_timesheet_comments\" : [{\"value\" : \"Comments\"}],\r\n    \"field_cost_codes\" :[{\"target_id\" : 470}],\r\n    \"field_timesheet_employee_name\" : [{\"value\" : \"Employee Name\"}],\r\n    \"field_timesheet_supervisor_name\" : [{\"value\" : \"Supervisor Name\"}],\r\n    \"field_supervisor_email\" : [{\"value\" : \"abc@gmail.com\"}],\r\n    \"field_name\" : [{\"target_id\" : 28}],\r\n    \"field_start_time\" : [{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_end_time\" : [{\"value\" : \"2022-06-14T12:50:10+00:00\"}],\r\n    \"field_hours_worked\" : [{\"value\" : \"2022-06-15T12:50:10+00:00\"}],\r\n    \"field_timesheet_emp_sign\" : [ {\"target_id\" : \"413\" } ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/entity/node?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"entity",
+										"node"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit HV Pre Start Node",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\" : [{\"value\" : \"Second Document test\"}],\r\n\t\"type\" : [{\"target_id\" : \"document_templates\"}],\r\n    \"field_dt_employee_name\" : [{\"value\" : \"Document Emp Name1\"}],\r\n    \"field_dt_date\" : [{\"value\" : \"2022-06-10\"}],\r\n    \"field_bac\" :[{\"target_id\" : 479}],\r\n    \"field_fit_for_work\" :[{\"target_id\" : 482}],\r\n    \"field_job_hazard_analysis\" :[{\"target_id\" : 509}], \r\n    \"field_jha_work_order\" :[{\"value\" : 398988}],\r\n    \"field_jha_date\" :[{\"value\" : \"2022-06-15\"}],\r\n    \"field_jha_equipment\" :[{\"value\" : 23232}],\r\n    \"field_jha_swp\" :[{\"value\" : 273627362}],\r\n    \"field_what_is_the_task\" :[{\"value\" : \"SWP Task 1\"}],\r\n    \"field_task_location_work_area\" :[{\"value\" : \"SWP Task Location 1\"}],\r\n    \"field_jha_risk_check\" :[{\"target_id\" : 483}],\r\n    \"field_jha_permit_rqd\" :[{\"target_id\" : 502}],\r\n    \"field_jha_team_contact\" :[{\"value\" : 1211121212}],\r\n    \"field_jha_name\" :[{\"value\" : \"Team Name Test\"}],\r\n    \"field_jha_sup_sign_on\" :[{\"value\" : \"Supervisor Name Test\"}],\r\n    \"field_jha_sup_sign_on_date\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_jha_sup_sign_on_time\" :[{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_dt_name\" :[{\"target_id\" : 38}],\r\n    \"field_isolation_contact_number\" :[{\"value\" : 33332}],\r\n    \"field_lock_number\" :[{\"value\" : 5656}],\r\n    \"field_permit_issue_date\" :[{\"value\" : \"2022-06-10\"}],\r\n    \"field_permit_expiry_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_permits_images\" :[{\"target_id\" : \"3\" }],\r\n    \"field_jha_supervisor_name\" :[{\"value\" : \"Supervisor Name\" }],\r\n    \"field_step\" :[{\"target_id\" : 530 }],\r\n    \"field_task_what_am_i_going_to_do\" :[{\"value\" : \"TasK What going to do\" }],\r\n    \"field_hazard_what_could_hurt_me_\" :[{\"value\" : \"Hazard: what could hurt me\" }],\r\n    \"field_critical_risk\" :[{\"target_id\" : 532 }],\r\n    \"field_supervisor_hold_points_req\" :[{\"target_id\" : 534 }],\r\n    \"field_impact_what_harm_could_occ\" :[{\"value\" : \"Impact what harm could occur Test\" }],\r\n    \"field_jha_control\" :[{\"value\" : \"what must be in place to prevent\" }],\r\n    \"field_change_management_date_tim\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_change_management_step\" :[{\"target_id\" : 522}],\r\n    \"field_change_management_descript\" :[{\"value\" : \"Change Management Description of change Test\"}],\r\n    \"field_change_management_critical\" :[{\"target_id\" : 532}],\r\n    \"field_jha_cng_mng_hold_point\" :[{\"target_id\" : 534}],\r\n    \"field_new_controls\" :[{\"value\" : \"New Controls Test\"}],\r\n\t\r\n    \"field_change_approved\" :[{\"value\" : \"Change approved Test\"}],\r\n    \"field_jha_review_name\" :[{\"value\" : \"JHA Review Name Test\"}],\r\n    \"field_jha_review_date\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_jha_review_time\" :[{\"value\" : \"2022-06-13T12:50:10+00:00\"}],\r\n    \"field_swp_name\" :[{\"target_id\" : 44}],\r\n    \"field_swp_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_swp_q1\" :[{\"target_id\" : 536}],\r\n    \"field_swp_q2\" :[{\"target_id\" : 537}],\r\n    \"field_q3_does_this_swp_need_to_b\" :[{\"target_id\" : 540}],\r\n    \"field_take_5_name\" :[{\"target_id\" : 48}],\r\n    \"field_tk5_task\" :[{\"value\" : \"Take 5 task\"}],\r\n    \"field_tk5_location\" :[{\"value\" : \"Take 5 Location\"}],\r\n    \"field_tk5_date\" :[{\"value\" : \"2022-05-10\"}],\r\n    \"field_tk5_q1\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q2\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q3\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q4\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q5\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q6\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q7\" :[{\"target_id\" : 542}],\r\n    \"field_tks_q8\" :[{\"target_id\" : 542}],\r\n    \"field_tk5_q9\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q10\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q11\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q12\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q13\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q14\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q15\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q16\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q17\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q18\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_hazard\" :[{\"value\" : \"Plan Hazard Test\"}],\r\n    \"field_tk5_control\" :[{\"value\" : \"Plan Control Test\"}],\r\n    \"field_tk5_risk\" :[{\"value\" : \"Plan Risk Test\"}],\r\n    \"field_tks_q19\" :[{\"target_id\" : 541}],\r\n    \"field_tk5_q20\" :[{\"target_id\" : 541}],\r\n    \"field_hv_pre_start\" :[{\"target_id\" : \"220\",\"target_revision_id\" : \"220\"}],\r\n    \"field_lv_pre_start\" :[{\"target_id\" : \"224\",\"target_revision_id\" : \"224\"}],\r\n    \"field_load_sheet\" :[{\"target_id\" : \"225\",\"target_revision_id\" : \"225\"}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node/35?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node",
+										"35"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Shared Data - View",
+					"item": [
+						{
+							"name": "Personal Information",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-personal-information?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-personal-information"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get Career Histroy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-career-history?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-career-history"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Share Bank Details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-bank-details?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-bank-details"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared voc details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-voc-details",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-voc-details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared drivers licence",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-drivers-licence",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-drivers-licence"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-education-languages",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-education-languages",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-education-languages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-referees",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-referees",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-referees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-resume",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-resume",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-resume"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-induction",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-induction",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-induction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-hourly-rate",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-hourly-rate",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-hourly-rate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-emergency-contact",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-emergency-contact",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-emergency-contact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-tax-details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-tax-details",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-tax-details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-signature",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-signature",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-signature"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-ppe-sizes",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-ppe-sizes",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-ppe-sizes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shared-annual-salary",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Deeksha",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shared-annual-salary",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shared-annual-salary"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user-data",
+					"item": [
+						{
+							"name": "User Register",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : [{\"value\" : \"Surendra21212\"}],\r\n\t\"mail\" : [{\"value\" : \"surendra@techinventive1252.com\"}],\r\n\t\"pass\" : [{\"value\" : \"test1523\"}]\r\n}"
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/user/register?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"user",
+										"register"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Surendra21212\",\r\n    \"pass\": \"test1523\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/user/login?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"user",
+										"login"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Access Token",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/session/token",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"session",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Details by  User ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/user/47?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"user",
+										"47"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User Profile Data",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"type\" : \"user_profile\" ,\r\n   \"uid\": [ {\"target_id\": 41 } ],\r\n   \"field_sur_name\": [ {\"value\": \"Philip\"}],\r\n   \"field_preferred_name\": [ {\"value\": \"Philip Singh\"}],\r\n   \"field_date_of_birth\": [ {\"value\": \"1985-05-26\"}],\r\n   \"field_home_phone\": [ {\"value\": \"9988776655\"}],\r\n   \"field_mobile\": [ {\"value\": \"5566778899\"}],\r\n   \"field_alternative_mobile\": [ {\"value\": \"6666666666\"}],\r\n   \"field_email\": [ {\"value\": \"surendra@techinventive.com\"}],\r\n   \"field_usi_number\": [ {\"value\": \"1122\"}],\r\n   \"field_qantas\": [ {\"value\": \"4455\"}],\r\n   \"field_virgin\": [ {\"value\": \"7788\"}],\r\n   \"field_title\": [ {\"target_id\": \"199\"}],\r\n   \"field_first_name\": [ {\"value\": \"First Name22\"}],\r\n   \"field_middle_name\": [ {\"value\": \"Middle Name22\"}],\r\n   \"field_usual_place_of_residence\": [ {\"value\": \"\"}],\r\n   \"field_postal_address\": [ {\"value\": \"\"}],\r\n\r\n    \"field_availability\": [ {\"value\": \"2022-06-10\"}],\r\n   \"field_preferred_work_types\": [ {\"target_id\": \"239\"}],\r\n   \"field_preferred_location\": [ {\"target_id\": \"\"}],\r\n   \"field_hourly_rate\": [ {\"target_id\": \"242\"}],\r\n   \"field_preferred_job_role\": [ {\"target_id\": \"248\"}],\r\n   \"field_salary_expectation\": [ {\"target_id\": \"240\"}],\r\n   \"field_do_you_identify_yourself_a\": [ {\"target_id\": \"565\"}],\r\n   \"field_right_to_work_in_australia\": [ {\"target_id\": \"564\"}],\r\n   \r\n   \"field_induction_name\": [ {\"value\": \"Induction Name\"}],\r\n   \"field_issuing_organization\": [ {\"value\": \"Tech Inventive\"}],\r\n   \"field_issue_date\": [ {\"value\": \"2022-05-10\"}],\r\n   \"field_expiry_date\": [ {\"value\": \"2022-06-13T12:50:10+00:00\"}],\r\n   \"field_qualification_number\": [ {\"value\": \"283\"}],\r\n   \"field_description\": [ {\"value\": \"Description Test\"}],\r\n   \"field_image\": [ {\"target_id\": \"463\"}],\r\n\r\n   \"field_employee_tax_file_number\": [ {\"value\": \"232322\"}],\r\n   \"field_tfn_declaration_date\": [ {\"value\": \"2022-04\"}],\r\n   \"field_claim_the_tax_free_thresho\": [ {\"target_id\": \"278\"}],\r\n   \"field_australian_resident_for_ta\": [ {\"target_id\": \"280\", \"target_type\": \"taxonomy_term\"}],\r\n   \"field_higher_education_loan_debt\": [ {\"target_id\": \"283\"}],\r\n   \"field_additional_information\": [ {\"value\": \"Additional Information Test\"}],\r\n   \"field_financial_supplement_debt\": [ {\"target_id\": \"284\"}],\r\n\r\n   \"field_swipe_card_photo\": [ {\"target_id\": \"457\"}],\r\n   \"field_birth_certificate\": [ {\"target_id\": \"469\"}],\r\n   \"field_passport_certificate\": [ {\"target_id\": \"470\"}],\r\n   \"field_resume\": [ {\"target_id\": \"492\"}],\r\n   \"field_upload_a_copy_of_your_npc\": [ {\"target_id\": \"493\"}],\r\n   \r\n    \"field_pf_voc_name\": [{\"value\": \"Philip\"}],\r\n    \"field_pf_voc_organisation\": [ {\"value\": \"Techinventive Pvt ltd\"}],\r\n    \"field_pf_voc_issue_date\": [ {\"value\": \"2022-05-10\"}],\r\n    \"field_pf_voc_issue_location\": [ {\"value\": \"This is Techinventive Location\"}],\r\n    \"field_pf_voc_expiry_date\": [ {\"value\": \"2022-09-12\"}],\r\n    \"field_pf_voc_number\": [ {\"value\": \"9027343094\"}],\r\n    \"field_pf_voc_description\": [ {\"value\": \"Drupal develeloper\"}],\r\n    \"field_upload_image\": [ {\"target_id\": \"359\"}],\r\n\r\n    \"field_pf_lc_cert_name\": [ {\"target_id\": 228  } ],\r\n    \"field_pf_lc_organisation\": [ {\"target_id\": 223  } ],\r\n    \"field_pf_lc_issue_date\": [ {\"value\": \"2022-02-21\"}],  \r\n    \"field_pf_lc_expiry_date\": [ {\"value\": \"2022-10-22\"}], \r\n    \"field_pf_lc_description\": [ {\"value\": \"Description Licence 2\"}], \r\n    \"field_licence_first_name\": [ {\"value\": \"Licence First Name test 2\"}],\r\n    \"field_licence_last_name\": [ {\"value\": \"Licence Last Name test 2\"}], \r\n    \"field_licence_address\": [ {\"value\": \"Licence Address test 2\"}],\r\n    \"field_types_of_vehicle\": [ {\"target_id\": 451 } ],\r\n    \"field_vechile_category\": [ {\"target_id\": 448  } ],\r\n    \"field_vehicle_id_number\": [ {\"value\": \"Vehicle Id Number test 2\"}], \r\n    \"field_vehicle_class\": [ {\"value\": \"Vehicle Class test 2\"}],\r\n    \"field_pf_lc_image_front\": [{ \"target_id\": \"459\" } ], \r\n    \"field_pf_lc_image_back\": [ {\"target_id\": \"461\"}],\r\n\r\n    \"field_pf_rl_job_title\": [ {\"value\": \"Job Title career 2\"}],\r\n    \"field_pf_rl_company_name\": [ {\"value\": \"Tech Inventive 2\"}],   \r\n    \"field_pf_rl_start_date\": [ {\"value\": \"2022-02-10\"}], \r\n    \"field_pf_rl_finish_date\": [ {\"value\": \"2022-10-15\"}], \r\n    \"field_pf_rl_description\": [ {\"value\": \"Description 2\"}],\r\n\r\n    \"field_pf_ec_address\": [ {\"value\": \"Munirka Delhi66\"}],\r\n    \"field_pf_ec_alternate_mobii\": [ {\"value\": \"999992321\"}],   \r\n    \"field_pf_ec_email\": [ {\"value\": \"xyz@gmail.com\"}], \r\n    \"field_emergency_dob\": [ {\"value\": \"2022-10-03\"}], \r\n    \"field_emergency_middle_name\": [ {\"value\": \"Middle Name\"}],\r\n\t\"field_emergency_postal_address\": [ {\"value\": \"Delhi 77\"}],\r\n    \"field_emergency_preferred_name\": [ {\"value\": \"Ram Singh Preferred Name\"}],   \r\n    \"field_pf_ec_first_name\": [ {\"value\": \"Ram Singh\"}], \r\n    \"field_pf_ec_home_phone\": [ {\"value\": \"232222\"}], \r\n    \"field_pf_ec_mobile\": [ {\"value\": \"676565\"}], \r\n\t\"field_pf_ec_relationship_type\": [ {\"target_id\": \"210\"}], \r\n\t\"field_pf_ec_surname\": [ {\"value\": \"Singh Test\"}],\r\n\r\n    \"field_pf_ed_course_highlight\": [ {\"value\": \"Common examples 11\"}],\r\n    \"field_pf_ed_course_qual\": [ {\"target_id\": \"228\"}],   \r\n    \"field_education_course_descripti\": [ {\"value\": \"Common examples of VOCs\"}], \r\n    \"field_education_end_date\": [ {\"value\": \"2022-05-26\"}],\r\n\t\"field_education_start_date\": [ {\"value\": \"2022-05-27\"}],\r\n    \"field_pf_ed_institution\": [ {\"target_id\": \"224\" }],\r\n\t\"field_education_attachments\": [ {\"target_id\": \"458\"}],\r\n\r\n    \"field_boots\": [ {\"target_id\": \"265\"  } ],\r\n    \"field_coveralls_men\": [ {\"target_id\": \"548\" } ],\r\n    \"field_gloves\": [ {\"target_id\": \"267\"}],  \r\n    \"field_jackets\": [ {\"target_id\": \"272\"}], \r\n\t\"field_pants_men\": [ {\"target_id\": \"254\"}],\r\n    \"field_pants_womens\": [ {\"target_id\": \"261\"}],\r\n\t\"field_shirts_men\": [ {\"target_id\": \"259\"}],\r\n\t\"field_shirts_womens\": [ {\"target_id\": \"263\"}],\r\n\t\"field_shorts\": [ {\"target_id\": \"275\"}],\r\n    \r\n    \"field_pf_rfre_job_title\": [ {\"value\": \"Job Title of Referee Test11\"  } ],\r\n    \"field_pf_rfre_first_name\": [ {\"value\": \"ABC Name11\"  } ],\r\n    \"field_pf_rfre_email\": [ {\"value\": \"xyz221@gmail.com\"}],  \r\n    \"field_pf_rfre_home_phone\": [ {\"value\": \"343323\"}], \r\n\t\"field_referees_company_name\": [ {\"value\": \"New Tech Company Test99\"}],\r\n    \"field_referees_attachment\": [ {\"target_id\": \"462\"}],\r\n   \r\n    \"field_pf_exp_amount\": [ {\"value\": \"500\"  } ],\r\n    \"field_pf_exp_date\": [ {\"value\": \"2022-06-15\"  } ],\r\n    \"field_pf_exp_expense\": [ {\"value\": \"600\"}],  \r\n    \"field_pf_exp_description\": [ {\"value\": \"Description Exp ww\"}],\r\n    \"field_pf_exp_image\": [ {\"target_id\": \"462\"}],\r\n\r\n     \"field_what_is_your_approximate_h\": [{\"value\": \"200\"}],\r\n\t\"field_what_is_your_approximate_w\": [{\"value\": \"250\"}],\r\n    \"field_are_you_currently_being_tr\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q4\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q5\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q6\": [{\"value\": \"250\"}],\r\n    \"field_medical_q7\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q8\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q9\": [ {\"target_id\": \"569\"}],\r\n     \"field_medical_q10\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q11\": [{\"value\": \"250\"}],\r\n    \"field_medical_q12\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q13\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q14\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q15\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q16\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q17\": [{\"value\": \"250\"}],\r\n    \"field_medical_q18\": [ {\"target_id\": \"571\"}],\r\n\t\"field_asthma_bronchitis_lung_pro\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q20\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q21\": [{\"value\": \"250\"}],\r\n    \"field_medical_q22\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q23\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q24\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q25\": [{\"value\": \"250\"}],\r\n    \"field_loss_of_hearing\": [ {\"target_id\": \"571\"}],\r\n\t\"field_malaria_other_tropical_dis\": [ {\"target_id\": \"569\"}],\r\n    \"field_back_or_neck_problems\": [{\"value\": \"250\"}],\r\n    \"field_deep_vein_thrombosis\": [ {\"target_id\": \"571\"}],\r\n\t\"field_tuberculosis\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q30\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q31\": [{\"value\": \"250\"}],\r\n    \"field_fits_or_seizures\": [ {\"target_id\": \"571\"}],\r\n\t\"field_foot_ankle_or_knee_trouble\": [ {\"target_id\": \"569\"}],\r\n    \"field_head_injury_or_concussion\": [{\"value\": \"250\"}],\r\n    \"field_hepatitis_jaundice_liver_t\": [ {\"target_id\": \"571\"}],\r\n\t\"field_hernia\": [ {\"target_id\": \"569\"}],\r\n    \"field_palpitations_irregular_hea\": [{\"value\": \"200\"}],\r\n\t\"field_other_joint_injuries_or_co\": [{\"value\": \"250\"}],\r\n    \"field_rsi_carpal_tunnel_syndrome\": [ {\"target_id\": \"571\"}],\r\n\t\"field_shortness_of_breath\": [ {\"target_id\": \"569\"}],\r\n    \"field_skin_disorders_dermatitis\": [{\"value\": \"250\"}],\r\n    \"field_stomach_problems_ulcers\": [ {\"target_id\": \"571\"}],\r\n\t\"field_suffered_blood_pressure_or\": [ {\"target_id\": \"569\"}],\r\n    \"field_suffered_from_heat_stroke\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q46\": [{\"value\": \"250\"}],\r\n    \"field_concentrating_for_any_leng\": [ {\"target_id\": \"571\"}],\r\n\t\"field_reading_ordinary_print\": [ {\"target_id\": \"569\"}],\r\n    \"field_hearing_a_normal_conversat\": [{\"value\": \"250\"}],\r\n    \"field_turning_your_head_rapidly\": [ {\"target_id\": \"571\"}],\r\n\t\"field_bending_or_twisting\": [ {\"target_id\": \"569\"}],\r\n    \"field_repetitive_movements_of_th\": [{\"value\": \"200\"}],\r\n\t\"field_gripping_firmly_with_eithe\": [{\"value\": \"250\"}],\r\n    \"field_sitting_or_standing_for_tw\": [ {\"target_id\": \"571\"}],\r\n    \"field_crouching_or_kneeling\": [ {\"target_id\": \"569\"}],\r\n    \"field_running_100_meters_in_the\": [{\"value\": \"250\"}],\r\n    \"field_walking_on_rough_ground\": [ {\"target_id\": \"571\"}],\r\n\t\"field_climbing_a_ladder\": [ {\"target_id\": \"569\"}],\r\n    \"field_lifting_heavy_weights_obje\": [{\"value\": \"200\"}],\r\n\t\"field_using_hand_tools\": [{\"value\": \"250\"}],\r\n    \"field_working_in_hot_cold_condit\": [ {\"target_id\": \"571\"}],\r\n\t\"field_shift_work_or_sleep\": [ {\"target_id\": \"569\"}],\r\n    \"field_working_at_heights\": [{\"value\": \"250\"}],\r\n    \"field_working_in_confined_spaces\": [ {\"target_id\": \"571\"}],\r\n\t\"field_working_above_shoulder_hei\": [ {\"target_id\": \"569\"}],\r\n    \"field_understanding_english_e_g\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q67\": [{\"value\": \"250\"}]\r\n\r\n}\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/entity/profile?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"entity",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logged Id User details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Surendra",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/user-list-api?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"user-list-api"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Profile Data by User Profile ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/profile/91?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"profile",
+										"91"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Password",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\" : [{\"value\" : \"Deeksha\"}],\r\n  \"mail\" : [{\"value\" : \"deeksha@techinventive.com\"}],\r\n  \"pass\" : [{\"value\" : \"test12345\"}]\r\n}"
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/user/32?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"user",
+										"32"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Paragraph",
+					"item": [
+						{
+							"name": "VOC",
+							"item": [
+								{
+									"name": "Create VOC Paragraph Field Values",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n    \"type\": [ {\"target_id\": \"voc\" }],\r\n    \"field_pf_voc_name\": [{\"value\": \"Philip\"}],\r\n    \"field_pf_voc_organisation\": [ {\"value\": \"Techinventive Pvt ltd\"}],\r\n    \"field_pf_voc_issue_date\": [ {\"value\": \"2022-05\"}],\r\n    \"field_pf_voc_issue_location\": [ {\"value\": \"This is Techinventive Location\"}],\r\n    \"field_pf_voc_expiry_date\": [ {\"value\": \"2022-09\"}],\r\n    \"field_pf_voc_number\": [ {\"value\": \"9027343094\"}],\r\n    \"field_pf_voc_description\": [ {\"value\": \"Drupal develeloper\"}],\r\n    \"field_upload_image\": [ {\"target_id\": \"359\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Paragraph Data by Paragraph ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/193?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"193"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Get Paragraph Data by Paragraph ID",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/152?_format=json",
+													"protocol": "http",
+													"host": [
+														"contractor-manager",
+														"techinventiv",
+														"com"
+													],
+													"path": [
+														"entity",
+														"paragraph",
+														"152"
+													],
+													"query": [
+														{
+															"key": "_format",
+															"value": "json"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Edit VOC Paragraph Fields by Paragraph ID",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "X-CSRF-Token",
+												"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": [ {\"target_id\": \"voc\" }],\r\n    \"field_pf_voc_name\": [{\"value\": \"Philip VOC\"}],\r\n    \"field_pf_voc_organisation\": [ {\"value\": \"Techinventive Pvt ltd\"}],\r\n    \"field_pf_voc_issue_date\": [ {\"value\": \"2022-05\"}],\r\n    \"field_pf_voc_issue_location\": [ {\"value\": \"This is Techinventive Location\"}],\r\n    \"field_pf_voc_expiry_date\": [ {\"value\": \"2022-09\"}],\r\n    \"field_pf_voc_number\": [ {\"value\": \"9027343094\"}],\r\n    \"field_pf_voc_description\": [ {\"value\": \"Drupal develeloper\"}],\r\n    \"field_upload_image\": [ {\"target_id\": \"359\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/170?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"170"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "HV Pre Start",
+							"item": [
+								{
+									"name": "Create HV Pre Start Paragraph",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n    \"type\": [ {\"target_id\": \"hv_pre_start_checklist\" }],\r\n    \"field_ast_number\": [{\"value\": \"454\"}],\r\n    \"field_category_b\": [ {\"target_id\": \"346\"}],\r\n    \"field_category_c_\": [ {\"target_id\": \"359\"}],\r\n    \"field_category_a\": [ {\"target_id\": \"325\"}],\r\n    \"field_comments\": [ {\"value\": \"359\"}],\r\n    \"field_date\": [ {\"value\": \"2022-05-13\"}],\r\n    \"field_hv_date\": [ {\"value\": \"2022-05-13\"}],\r\n    \"field_equipment_type\": [ {\"target_id\": \"321\"}],\r\n    \"field_operator_name\": [ {\"target_id\": \"48\"}],\r\n    \"field_other_damage\": [ {\"value\": \"jyyny\"}],\r\n    \"field_other_faults\": [ {\"value\": \"hjyuj\"}],\r\n    \"field_ast_hv_psc_ref_no\": [ {\"value\": \"rree\"}],\r\n    \"field_shift_type\": [ {\"target_id\": \"466\"}],\r\n    \"field_site\": [ {\"value\": \"trtret\"}],\r\n    \"field_smu_finish_hours\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_smu_start_hours\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_supervisor_name\": [ {\"value\": \"sddsds\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "LV Pre Start",
+							"item": [
+								{
+									"name": "Create LV Pre Paragraph",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n    \"type\": [ {\"target_id\": \"lv_pre_start_checklist\" }],\r\n    \"field_reference_number\": [{\"value\": \"44\"}],\r\n    \"field_asset_number\": [{\"value\": \"454\"}],\r\n    \"field_lv_category_a\": [ {\"target_id\": \"368\"}],\r\n    \"field_lv_category_b\": [ {\"target_id\": \"382\"}],\r\n    \"field_lv_category_c\": [ {\"target_id\": \"388\"}],\r\n    \"field_ast_lv_psc_date\": [ {\"value\": \"2022-05-13\"}],\r\n    \"field_lv_equipment_type\": [ {\"target_id\": \"323\"}],\r\n    \"field_lv_operator_name\": [ {\"value\": \"deddsd\"}],\r\n    \"field_lv_shift\": [ {\"target_id\": \"466\"}],\r\n    \"field_lv_site\": [ {\"value\": \"trtret\"}],\r\n    \"field_lv_smu_finish_hours\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_lv_smu_start_hours\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit LV Pre Paragraph by paragraph ID",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n    \"type\": [ {\"target_id\": \"lv_pre_start_checklist\",\"target_type\": \"paragraphs_type\" }],\r\n    \"field_reference_number\": [{\"value\": \"45\"}],\r\n    \"field_asset_number\": [{\"value\": \"454\"}],\r\n    \"field_lv_category_a\": [ {\"target_id\": \"368\"}],\r\n    \"field_lv_category_b\": [ {\"target_id\": \"382\"}],\r\n    \"field_lv_category_c\": [ {\"target_id\": \"388\"}],\r\n    \"field_ast_lv_psc_date\": [ {\"value\": \"2022-05-13\"}],\r\n    \"field_lv_equipment_type\": [ {\"target_id\": \"323\"}],\r\n    \"field_lv_operator_name\": [ {\"value\": \"Operator Name Edit Test\"}],\r\n    \"field_lv_shift\": [ {\"target_id\": \"466\"}],\r\n    \"field_lv_site\": [ {\"value\": \"trtret\"}],\r\n    \"field_lv_smu_finish_hours\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_lv_smu_start_hours\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/224?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"224"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Load Sheet",
+							"item": [
+								{
+									"name": "Create Load Sheet Paragraph",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n    \"type\": [ {\"target_id\": \"load_sheet\" }],\r\n    \"field_load_sheet_asset_number\": [{\"value\": \"454\"}],\r\n    \"field_load_sheet_date\": [ {\"value\": \"2022-05-13\"}],\r\n    \"field_excavator_loader_no\": [ {\"value\": \"382\"}],\r\n    \"field_finish_smu\": [ {\"value\": \"388\"}],\r\n    \"field_from_location\": [ {\"value\": \"2022-05-13\"}],\r\n    \"field_material_type\": [ {\"target_id\": \"314\"}],\r\n    \"field_name\": [ {\"target_id\": \"28\"}],\r\n    \"field_plant_equipment_type\": [ {\"target_id\": \"321\"}],\r\n    \"field_start_smu\": [ {\"value\": \"12121\"}],\r\n    \"field_timestamp\": [{\"value\" : \"2022-05-13T12:40:10+00:00\"}],\r\n    \"field_to_location\": [{\"value\" : \"erewew\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Career Histroy",
+							"item": [
+								{
+									"name": "Edit Career History by Paragraph ID",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": [ {\"target_id\": \"career_history\",\"target_type\": \"paragraphs_type\" } ],\r\n    \"field_pf_rl_job_title\": [ {\"value\": \"Job Title career 2\"}],\r\n    \"field_pf_rl_company_name\": [ {\"value\": \"Tech Inventive 2\"}],   \r\n    \"field_pf_rl_start_date\": [ {\"value\": \"2022-02\"}], \r\n    \"field_pf_rl_finish_date\": [ {\"value\": \"2022-10\"}], \r\n    \"field_pf_rl_description\": [ {\"value\": \"Description 2\"}]     \r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/148?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"148"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Career Histroy",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"career_history\" }],\r\n    \"field_pf_rl_job_title\": [ {\"value\": \"Job Title career Post\"}],\r\n    \"field_pf_rl_company_name\": [ {\"value\": \"Tech Inventive Post\"}],   \r\n    \"field_pf_rl_start_date\": [ {\"value\": \"2022-02\"}], \r\n    \"field_pf_rl_finish_date\": [ {\"value\": \"2022-10\"}], \r\n    \"field_pf_rl_description\": [ {\"value\": \"Description 2\"}]     \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get Career histroy",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/186?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"186"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Emergency Contact",
+							"item": [
+								{
+									"name": "Create Emergency Contact",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"emergency_contact\" }],\r\n    \"field_pf_ec_address\": [ {\"value\": \"Munirka Delhi\"}],\r\n    \"field_pf_ec_alternate_mobi\": [ {\"value\": \"999992321\"}],   \r\n    \"field_pf_ec_email\": [ {\"value\": \"xyz@gmail.com\"}], \r\n    \"field_emergency_dob\": [ {\"value\": \"2022-10-03\"}], \r\n    \"field_emergency_middle_name\": [ {\"value\": \"Middle Name\"}],\r\n\t\"field_emergency_postal_address\": [ {\"value\": \"Delhi\"}],\r\n    \"field_emergency_preferred_name\": [ {\"value\": \"Ram Singh Preferred Name\"}],   \r\n    \"field_pf_ec_first_name\": [ {\"value\": \"Ram Singh\"}], \r\n    \"field_pf_ec_home_phone\": [ {\"value\": \"232222\"}], \r\n    \"field_pf_ec_mobile\": [ {\"value\": \"676565\"}], \r\n\t\"field_pf_ec_relationship_type\": [ {\"target_id\": \"210\"}], \r\n\t\"field_pf_ec_surname\": [ {\"value\": \"Singh Test\"}]\t\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Emergency Contact",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Transfer-Encoding",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"emergency_contact\",\"target_type\": \"paragraphs_type\" } ], \r\n    \"field_pf_ec_address\": [ {\"value\": \"Munirka Delhi66\"}],\r\n    \"field_pf_ec_alternate_mobi\": [ {\"value\": \"999992321\"}],   \r\n    \"field_pf_ec_email\": [ {\"value\": \"xyz@gmail.com\"}], \r\n    \"field_emergency_dob\": [ {\"value\": \"2022-10-03\"}], \r\n    \"field_emergency_middle_name\": [ {\"value\": \"Middle Name\"}],\r\n\t\"field_emergency_postal_address\": [ {\"value\": \"Delhi 77\"}],\r\n    \"field_emergency_preferred_name\": [ {\"value\": \"Ram Singh Preferred Name\"}],   \r\n    \"field_pf_ec_first_name\": [ {\"value\": \"Ram Singh\"}], \r\n    \"field_pf_ec_home_phone\": [ {\"value\": \"232222\"}], \r\n    \"field_pf_ec_mobile\": [ {\"value\": \"676565\"}], \r\n\t\"field_pf_ec_relationship_type\": [ {\"target_id\": \"210\"}], \r\n\t\"field_pf_ec_surname\": [ {\"value\": \"Singh Test\"}]\t\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/189?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"189"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get emergency contact",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/189?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"189"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Education Language",
+							"item": [
+								{
+									"name": "Create Education and Language",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"education_languages\" }],\r\n    \"field_pf_ed_course_highlight\": [ {\"value\": \"Common examples\"}],\r\n    \"field_pf_ed_course_qual\": [ {\"target_id\": \"228\", \"target_type\": \"taxonomy_term\"}],   \r\n    \"field_education_course_descripti\": [ {\"value\": \"Common examples of VOCs\"}], \r\n    \"field_education_end_date\": [ {\"value\": \"2022-05-26\"}],\r\n\t\"field_education_start_date\": [ {\"value\": \"2022-05-27\"}],\r\n    \"field_pf_ed_institution\": [ {\"target_id\": \"224\", \"target_type\": \"taxonomy_term\" }]\r\n\t\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Education Language",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"education_languages\",\"target_type\": \"paragraphs_type\" } ],\r\n    \"field_pf_ed_course_highlight\": [ {\"value\": \"Common examples 11\"}],\r\n    \"field_pf_ed_course_qual\": [ {\"target_id\": \"228\", \"target_type\": \"taxonomy_term\"}],   \r\n    \"field_education_course_descripti\": [ {\"value\": \"Common examples of VOCs\"}], \r\n    \"field_education_end_date\": [ {\"value\": \"2022-05-26\"}],\r\n\t\"field_education_start_date\": [ {\"value\": \"2022-05-27\"}],\r\n    \"field_pf_ed_institution\": [ {\"target_id\": \"224\", \"target_type\": \"taxonomy_term\" }],\r\n\t\"field_education_attachments\": [ {\"target_id\": \"458\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/188?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"188"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get education",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/188?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"188"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Drivers Licence",
+							"item": [
+								{
+									"name": "Edit Licence Paragraph fields by paragraph ID",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": [ {\"target_id\": \"add_licence_or_certification\",\"target_type\": \"paragraphs_type\" } ],\r\n    \"field_pf_lc_cert_name\": [ {\"target_id\": 228 ,\"target_type\": \"taxonomy_term\" } ],\r\n    \"field_pf_lc_organisation\": [ {\"target_id\": 223 ,\"target_type\": \"taxonomy_term\" } ],\r\n    \"field_pf_lc_issue_date\": [ {\"value\": \"2022-02\"}],  \r\n    \"field_pf_lc_expiry_date\": [ {\"value\": \"2022-10\"}], \r\n    \"field_pf_lc_description\": [ {\"value\": \"Description Licence 2\"}], \r\n    \"field_licence_first_name\": [ {\"value\": \"Licence First Name test 2\"}],\r\n    \"field_licence_last_name\": [ {\"value\": \"Licence Last Name test 2\"}], \r\n    \"field_licence_address\": [ {\"value\": \"Licence Address test 2\"}],\r\n    \"field_types_of_vehicle\": [ {\"target_id\": 451,\"target_type\": \"taxonomy_term\"  } ],\r\n    \"field_vechile_category\": [ {\"target_id\": 448,\"target_type\": \"taxonomy_term\"  } ],\r\n    \"field_vehicle_id_number\": [ {\"value\": \"Vehicle Id Number test 2\"}], \r\n    \"field_vehicle_class\": [ {\"value\": \"Vehicle Class test 2\"}],\r\n    \"field_pf_lc_image_front\": [{ \"target_id\": \"459\" } ], \r\n    \"field_pf_lc_image_back\": [ {\"target_id\": \"461\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/187?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"187"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Drivers Licence",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": [ {\"target_id\": \"add_licence_or_certification\",\"target_type\": \"paragraphs_type\" } ],\r\n    \"field_pf_lc_cert_name\": [ {\"target_id\": 228 ,\"target_type\": \"taxonomy_term\" } ],\r\n    \"field_pf_lc_organisation\": [ {\"target_id\": 223 ,\"target_type\": \"taxonomy_term\" } ],\r\n    \"field_pf_lc_issue_date\": [ {\"value\": \"2022-02\"}],  \r\n    \"field_pf_lc_expiry_date\": [ {\"value\": \"2022-10\"}], \r\n    \"field_pf_lc_description\": [ {\"value\": \"Description Licence 2\"}], \r\n    \"field_licence_first_name\": [ {\"value\": \"Licence First Name test 2\"}],\r\n    \"field_licence_last_name\": [ {\"value\": \"Licence Last Name test 2\"}], \r\n    \"field_licence_address\": [ {\"value\": \"Licence Address test 2\"}],\r\n    \"field_types_of_vehicle\": [ {\"target_id\": 451,\"target_type\": \"taxonomy_term\"  } ],\r\n    \"field_vechile_category\": [ {\"target_id\": 448,\"target_type\": \"taxonomy_term\"  } ],\r\n    \"field_vehicle_id_number\": [ {\"value\": \"Vehicle Id Number test 2\"}], \r\n    \"field_vehicle_class\": [ {\"value\": \"Vehicle Class test 2\"}],\r\n    \"field_pf_lc_image_front\": [{ \"target_id\": 306 } ], \r\n    \"field_pf_lc_image_back\": [ {\"target_id\": \"\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get licence",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/187?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"187"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Reimbursements",
+							"item": [
+								{
+									"name": "Create Reimbrusement",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"resume\" }],\r\n    \"field_pf_exp_amount\": [ {\"value\": \"400\"  } ],\r\n    \"field_pf_exp_date\": [ {\"value\": \"2022-06-15\"  } ],\r\n    \"field_pf_exp_expense\": [ {\"value\": \"556\"}],  \r\n    \"field_pf_exp_description\": [ {\"value\": \"Description Exp\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Reimbrushment",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"resume\",\"target_type\": \"paragraphs_type\" } ], \r\n    \"field_pf_exp_amount\": [ {\"value\": \"500\"  } ],\r\n    \"field_pf_exp_date\": [ {\"value\": \"2022-06-15\"  } ],\r\n    \"field_pf_exp_expense\": [ {\"value\": \"600\"}],  \r\n    \"field_pf_exp_description\": [ {\"value\": \"Description Exp ww\"}],\r\n    \"field_pf_exp_image\": [ {\"target_id\": \"\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/233?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"233"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get reimbru",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/192?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"192"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Referees",
+							"item": [
+								{
+									"name": "Create Referees",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"referees\" }],\r\n    \"field_pf_rfre_job_title\": [ {\"value\": \"Job Title of Referee Test\"  } ],\r\n    \"field_pf_rfre_first_name\": [ {\"value\": \"ABC Name\"  } ],\r\n    \"field_pf_rfre_email\": [ {\"value\": \"xyz221@gmail.com\"}],  \r\n    \"field_pf_rfre_home_phone\": [ {\"value\": \"3433232323\"}], \r\n\t\"field_referees_company_name\": [ {\"value\": \"New Tech Company Test\"}]\r\n}\r\n"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Referees",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"referees\",\"target_type\": \"paragraphs_type\" } ],\r\n    \"field_pf_rfre_job_title\": [ {\"value\": \"Job Title of Referee Test11\"  } ],\r\n    \"field_pf_rfre_first_name\": [ {\"value\": \"ABC Name11\"  } ],\r\n    \"field_pf_rfre_email\": [ {\"value\": \"xyz221@gmail.com\"}],  \r\n    \"field_pf_rfre_home_phone\": [ {\"value\": \"3433232323\"}], \r\n\t\"field_referees_company_name\": [ {\"value\": \"New Tech Company Test99\"}],\r\n    \"field_referees_attachment\": [ {\"target_id\": \"462\"}]\r\n}\r\n"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/191?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"191"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get referrs",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/191?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"191"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Personal Protective Equipment",
+							"item": [
+								{
+									"name": "Create PPE",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"personal_protective_equipment_pp\" }],\r\n    \"field_boots\": [ {\"target_id\": \"265\"  } ],\r\n    \"field__coveralls_men\": [ {\"target_id\": \"548\"  } ],\r\n    \"field_gloves\": [ {\"target_id\": \"267\"}],  \r\n    \"field_jackets\": [ {\"target_id\": \"272\"}], \r\n\t\"field_personal_protective_equipm\": [ {\"target_id\": \"254\"}],\r\n    \"field_pants_womens\": [ {\"target_id\": \"261\"}],\r\n\t\"field_shirts_men\": [ {\"target_id\": \"259\"}],\r\n\t\"field_shirts_womens\": [ {\"target_id\": \"263\"}],\r\n\t\"field_shorts\": [ {\"target_id\": \"275\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit PPE",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"type\": [ {\"target_id\": \"personal_protective_equipment_pp\",\"target_type\": \"paragraphs_type\" } ],\r\n    \"field_boots\": [ {\"target_id\": \"265\"  } ],\r\n    \"field__coveralls_men\": [ {\"target_id\": \"548\"  } ],\r\n    \"field_gloves\": [ {\"target_id\": \"267\"}],  \r\n    \"field_jackets\": [ {\"target_id\": \"272\"}], \r\n\t\"field_personal_protective_equipm\": [ {\"target_id\": \"254\"}],\r\n    \"field_pants_womens\": [ {\"target_id\": \"261\"}],\r\n\t\"field_shirts_men\": [ {\"target_id\": \"259\"}],\r\n\t\"field_shirts_womens\": [ {\"target_id\": \"263\"}],\r\n\t\"field_shorts\": [ {\"target_id\": \"275\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/235?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"235"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get ppe",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/190?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"190"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Medical",
+							"item": [
+								{
+									"name": "Edit Medical Data",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": [ {\"target_id\": \"medical_questionaire\" }],\r\n    \"field_what_is_your_approximate_h\": [{\"value\": \"200\"}],\r\n\t\"field_what_is_your_approximate_w\": [{\"value\": \"250\"}],\r\n    \"field_are_you_currently_being_tr\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q4\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q5\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q6\": [{\"value\": \"250\"}],\r\n    \"field_medical_q7\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q8\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q9\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q10\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q11\": [{\"value\": \"250\"}],\r\n    \"field_medical_q12\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q13\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q14\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q15\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q16\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q17\": [{\"value\": \"250\"}],\r\n    \"field_medical_q18\": [ {\"target_id\": \"571\"}],\r\n\t\"field_asthma_bronchitis_lung_pro\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q20\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q21\": [{\"value\": \"250\"}],\r\n    \"field_medical_q122\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q23\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q24\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q25\": [{\"value\": \"250\"}],\r\n    \"field_loss_of_hearing_\": [ {\"target_id\": \"571\"}],\r\n\t\"field_malaria_other_tropical_dis\": [ {\"target_id\": \"569\"}],\r\n    \"field_back_or_neck_problems_\": [{\"value\": \"250\"}],\r\n    \"field_deep_vein_thrombosis_\": [ {\"target_id\": \"571\"}],\r\n\t\"field_tuberculosis_\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q30\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q31\": [{\"value\": \"250\"}],\r\n    \"field_fits_or_seizures_\": [ {\"target_id\": \"571\"}],\r\n\t\"field_foot_ankle_or_knee_trouble\": [ {\"target_id\": \"569\"}],\r\n    \"field_head_injury_or_concussion_\": [{\"value\": \"250\"}],\r\n    \"field_hepatitis_jaundice_liver_t\": [ {\"target_id\": \"571\"}],\r\n\t\"field_hernia_\": [ {\"target_id\": \"569\"}],\r\n    \"field_palpitations_irregular_hea\": [{\"value\": \"200\"}],\r\n\t\"field_other_joint_injuries_or_co\": [{\"value\": \"250\"}],\r\n    \"field_rsi_carpal_tunnel_syndrome\": [ {\"target_id\": \"571\"}],\r\n\t\"field_shortness_of_breath_\": [ {\"target_id\": \"569\"}],\r\n    \"field_skin_disorders_dermatitis_\": [{\"value\": \"250\"}],\r\n    \"field_stomach_problems_ulcers_\": [ {\"target_id\": \"571\"}],\r\n\t\"field_suffered_blood_pressure_or\": [ {\"target_id\": \"569\"}],\r\n    \"field_suffered_from_heat_stroke_\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q46\": [{\"value\": \"250\"}],\r\n    \"field_concentrating_for_any_leng\": [ {\"target_id\": \"571\"}],\r\n\t\"field_reading_ordinary_print_\": [ {\"target_id\": \"569\"}],\r\n    \"field_hearing_a_normal_conversat\": [{\"value\": \"250\"}],\r\n    \"field_turning_your_head_rapidly_\": [ {\"target_id\": \"571\"}],\r\n\t\"field_bending_or_twisting_\": [ {\"target_id\": \"569\"}],\r\n    \"field_repetitive_movements_of_th\": [{\"value\": \"200\"}],\r\n\t\"field_gripping_firmly_with_eithe\": [{\"value\": \"250\"}],\r\n    \"field_sitting_or_standing_for_tw\": [ {\"target_id\": \"571\"}],\r\n\t\"field_crouching_or_kneeling_\": [ {\"target_id\": \"569\"}],\r\n    \"field_running_100_meters_in_the_\": [{\"value\": \"250\"}],\r\n    \"field_walking_on_rough_ground_\": [ {\"target_id\": \"571\"}],\r\n\t\"field_climbing_a_ladder_\": [ {\"target_id\": \"569\"}],\r\n    \"field_lifting_heavy_weights_obje\": [{\"value\": \"200\"}],\r\n\t\"field_using_hand_tools_\": [{\"value\": \"250\"}],\r\n    \"field_working_in_hot_cold_condit\": [ {\"target_id\": \"571\"}],\r\n\t\"field_shift_work_or_sleep_\": [ {\"target_id\": \"569\"}],\r\n    \"field_working_at_heights_\": [{\"value\": \"250\"}],\r\n    \"field_working_in_confined_spaces\": [ {\"target_id\": \"571\"}],\r\n\t\"field_working_above_shoulder_hei\": [ {\"target_id\": \"569\"}],\r\n    \"field_understanding_english_e_g_\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q67\": [{\"value\": \"250\"}]\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph/236?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph",
+												"236"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Medical Data",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": [ {\"target_id\": \"medical_questionaire\" }],\r\n     \"field_what_is_your_approximate_h\": [{\"value\": \"200\"}],\r\n\t\"field_what_is_your_approximate_w\": [{\"value\": \"250\"}],\r\n\r\n    \"field_are_you_currently_being_tr\": [ {\"target_id\": \"571\"}]\r\n\r\n}"
+										},
+										"url": {
+											"raw": "http://contractor-manager.techinventiv.com/entity/paragraph?_format=json",
+											"protocol": "http",
+											"host": [
+												"contractor-manager",
+												"techinventiv",
+												"com"
+											],
+											"path": [
+												"entity",
+												"paragraph"
+											],
+											"query": [
+												{
+													"key": "_format",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Taxonomy",
+					"item": [
+						{
+							"name": "Add 0r Create Term in any Taxonomy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : [{\"value\" : 10000}],\r\n\t\"vid\" : [{\"target_id\" : \"annual_salary\"}]\r\n}"
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/taxonomy/term?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"taxonomy",
+										"term"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all details by taxonomy Terms ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/taxonomy/term/474?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"taxonomy",
+										"term",
+										"474"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get  Vocabulary ID and value",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/entity/taxonomy_vocabulary/annual_salary?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"entity",
+										"taxonomy_vocabulary",
+										"annual_salary"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Annual Salary Taxonomy List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/annual-salary?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"annual-salary"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Languages",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vid\" : [{\"target_id\" : \"languages\"}],\r\n\t\"name\" : [{\"value\" : \"Gujarati\" }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/taxonomy/term?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"taxonomy",
+										"term"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Image Upload",
+					"item": [
+						{
+							"name": "Image Upload for timesheet node",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/node/timesheet/field_timesheet_emp_sign?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"node",
+										"timesheet",
+										"field_timesheet_emp_sign"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload Back",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/paragraph/add_licence_or_certification/field_pf_lc_image_back?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"paragraph",
+										"add_licence_or_certification",
+										"field_pf_lc_image_back"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/paragraph/referees/field_referees_attachment?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"paragraph",
+										"referees",
+										"field_referees_attachment"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload Front",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Downloads/Screenshot 2022-06-28 at 10.23.14 AM.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/paragraph/add_licence_or_certification/field_pf_lc_image_front?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"paragraph",
+										"add_licence_or_certification",
+										"field_pf_lc_image_front"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Downloads/Screenshot 2022-06-24 at 6.34.43 PM.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/paragraph/education_languages/field_education_attachments?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"paragraph",
+										"education_languages",
+										"field_education_attachments"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload in Paragraph field",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/paragraph/voc/field_upload_image?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"paragraph",
+										"voc",
+										"field_upload_image"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload for User Profile Swipre Card",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/profile/user_profile/field_swipe_card_photo?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"profile",
+										"user_profile",
+										"field_swipe_card_photo"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Image Upload User Profile for Induction",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/profile/user_profile/field_image?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"profile",
+										"user_profile",
+										"field_image"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Image  Birth  Certificate for User Profile",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/profile/user_profile/field_birth_certificate?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"profile",
+										"user_profile",
+										"field_birth_certificate"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Passport Image Upload for User Profile",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"img.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/profile/user_profile/field_passport_certificate?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"profile",
+										"user_profile",
+										"field_passport_certificate"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resume Upload",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"resume.docx\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Downloads/Anurag_updated_resume.docx"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/profile/user_profile/field_resume?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"profile",
+										"user_profile",
+										"field_resume"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Resume Url Path",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/entity/file/492?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"entity",
+										"file",
+										"492"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload NPC",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Surendra",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Disposition",
+										"value": "file; filename=\"npc.png\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/Jaindra Kumar/Desktop/flag.png"
+									}
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/file/upload/profile/user_profile/field_upload_a_copy_of_your_npc?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"file",
+										"upload",
+										"profile",
+										"user_profile",
+										"field_upload_a_copy_of_your_npc"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Jobs Data",
+					"item": [
+						{
+							"name": "Listing of All Jobs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/jobs-json?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"jobs-json"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter Jobs by Skill",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/jobs-json?_format=json&field_job_skill_target_id=PHP",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"jobs-json"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										},
+										{
+											"key": "field_job_skill_target_id",
+											"value": "PHP"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter Job by Job Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/jobs-json?_format=json&field_category_target_id=Audit%20-%20Internal",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"jobs-json"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										},
+										{
+											"key": "field_category_target_id",
+											"value": "Audit%20-%20Internal"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter by both category and skill",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/jobs-json?_format=json&field_category_target_id=%22Mining%2C+Resources%2C+Energy+%28410%29%22&field_job_skill_target_id=React+%28433%29",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"jobs-json"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										},
+										{
+											"key": "field_category_target_id",
+											"value": "%22Mining%2C+Resources%2C+Energy+%28410%29%22"
+										},
+										{
+											"key": "field_job_skill_target_id",
+											"value": "React+%28433%29"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\" : [{\"value\" : \"Larvel Job Title\"}],\r\n\t\"type\" : [{\"target_id\" : \"job_title\"}],\r\n    \"field_job_snippet\" : [{\"value\" : \"Job Snippet\"}],\r\n    \"field_job_description\" : [{\"value\" : \"Job Description\"}],\r\n    \"field_job_role\" : [{\"target_id\" : 246}],\r\n    \"field_functional_area\" : [{\"value\" : \"Functional Area\"}],\r\n    \"field_employee_type\" : [{\"value\" : \"Employee Type\"}],\r\n    \"field_education_requirement\" : [{\"value\" : \"Education requirement\"}],\r\n    \"field_contacting_details\" : [{\"value\" : \"Contacting details\"}],\r\n    \"field_tenure_contract_time\" : [{\"value\" : \"Tenure / contract time\"}],\r\n    \"field_salary_in_range\" : [{\"value\" : \"Salary in range\"}],\r\n    \"field_faq\" : [{\"value\" : \"Faq\"}],\r\n    \"field_privacy_policy\" : [{\"value\" : \"Privacy Policy\"}],\r\n    \"field_terms_conditions\" : [{\"value\" : \"Terms & Conditions\"}],\r\n    \"field_category\" : [{\"target_id\" : 397}],\r\n    \"field_job_skill\" :[{\"target_id\" : 433}],\r\n    \"field_job_work_type1\" : [{\"target_id\" : 439}],\r\n    \"field_job_location\" : [{\"country_code\" : \"IN\", \"organization\" : \"Tech Inventive\" }]\r\n}"
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/entity/node/?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"entity",
+										"node",
+										""
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Job",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\" : [{\"value\" : \"Larvel Job Title1\"}],\r\n  \"type\" : [{\"target_id\" : \"job_title\"}],\r\n    \"field_job_snippet\" : [{\"value\" : \"Job Snippet1\"}],\r\n    \"field_job_description\" : [{\"value\" : \"Job Description1\"}],\r\n    \"field_job_role\" : [{\"target_id\" : 246}],\r\n    \"field_functional_area\" : [{\"value\" : \"Functional Area1\"}],\r\n    \"field_employee_type\" : [{\"value\" : \"Employee Type1\"}],\r\n    \"field_education_requirement\" : [{\"value\" : \"Education requirement1\"}],\r\n    \"field_contacting_details\" : [{\"value\" : \"Contacting details1\"}],\r\n    \"field_tenure_contract_time\" : [{\"value\" : \"Tenure / contract time1\"}],\r\n    \"field_salary_in_range\" : [{\"value\" : \"Salary in range1\"}],\r\n    \"field_faq\" : [{\"value\" : \"Faq1\"}],\r\n    \"field_privacy_policy\" : [{\"value\" : \"Privacy Policy1\"}],\r\n    \"field_terms_conditions\" : [{\"value\" : \"Terms & Conditions1\"}],\r\n    \"field_category\" : [{\"target_id\" : 413}],\r\n    \"field_job_skill\" :[{\"target_id\" : 432}],\r\n    \"field_job_work_type1\" : [{\"target_id\" : 441}],\r\n    \"field_job_location\" : [{\"country_code\" : \"AF\", \"organization\" : \"Tech\" }]\r\n}"
+								},
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node/8?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node",
+										"8"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Job Details Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/node/12?_format=json",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"node",
+										"12"
+									],
+									"query": [
+										{
+											"key": "_format",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login User Data tab wise by view",
+					"item": [
+						{
+							"name": "VOC-Data",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Surendra",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/voc-details/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"voc-details",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "personal-information",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Surendra",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/personal-information/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"personal-information",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "bank-details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/bank-details/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"bank-details",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "drivers-licence",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/drivers-licence/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"drivers-licence",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "education-languages",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/education-languages/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"education-languages",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "career-history",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/career-history/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"career-history",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "emergency-contact",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/emergency-contact/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"emergency-contact",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tax-details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/tax-details/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"tax-details",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ppe-sizes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/ppe-sizes/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"ppe-sizes",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "hourly-rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/hourly-rate/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"hourly-rate",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "induction",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/induction/47",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"induction",
+										"47"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drop Down Data",
+					"item": [
+						{
+							"name": "annual-salary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/annual-salary",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"annual-salary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "gender-api",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/gender-api",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"gender-api"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "asset-category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/asset-category",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"asset-category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "australian-resident-for-tax-purposes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/australian-resident-for-tax-purposes",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"australian-resident-for-tax-purposes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "relationship-type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/relationship-type",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"relationship-type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "institution",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/institution",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"institution"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "course-qualification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/course-qualification",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"course-qualification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "licence-certification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/licence-certification",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"licence-certification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "issuing-organisation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/issuing-organisation",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"issuing-organisation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "types-of-vehicle",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/types-of-vehicle",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"types-of-vehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "preferred-work-types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/preferred-work-types",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"preferred-work-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "australian-resident-for-tax-purposes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/australian-resident-for-tax-purposes",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"australian-resident-for-tax-purposes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "claim-the-tax-free-threshold",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/claim-the-tax-free-threshold",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"claim-the-tax-free-threshold"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ppe-work-clothes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/ppe-work-clothes",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"ppe-work-clothes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "vechile-category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/vechile-category",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"vechile-category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shirts-men",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shirts-men",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shirts-men"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pants-men",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/pants-men",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"pants-men"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "salary-expectation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/salary-expectation",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"salary-expectation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "preferred-job-role",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/preferred-job-role",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"preferred-job-role"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "annual-salary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/annual-salary",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"annual-salary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "hourly-rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/hourly-rate",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"hourly-rate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "coveralls-men",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/coveralls-men",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"coveralls-men"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pants-womens",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/pants-womens",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"pants-womens"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shirts-womens",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shirts-womens",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shirts-womens"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "boots",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/boots",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"boots"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "gloves",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/gloves",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"gloves"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "jackets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/jackets",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"jackets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shorts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/shorts",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"shorts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "title",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/title",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"title"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "personal-title",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Languages",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://contractor-manager.techinventiv.com/languages",
+									"protocol": "http",
+									"host": [
+										"contractor-manager",
+										"techinventiv",
+										"com"
+									],
+									"path": [
+										"languages"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://contractor-manager.techinventiv.com/node/2?_format=json",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "username",
+									"value": "Jaindra",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "4b3b6eea-b05b-496d-9263-23dcac535458",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://contractor-manager.techinventiv.com/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "CDcVqo1bnpmxIufRgLWulwszcp7laa1bRMRd7Z2vTlA",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://contractor-manager.techinventiv.com/node/2?_format=json",
+							"protocol": "http",
+							"host": [
+								"contractor-manager",
+								"techinventiv",
+								"com"
+							],
+							"path": [
+								"node",
+								"2"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Personal Information",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Surendra",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://contractor-manager.techinventiv.com/personal-information?_format=json",
+							"protocol": "http",
+							"host": [
+								"contractor-manager",
+								"techinventiv",
+								"com"
+							],
+							"path": [
+								"personal-information"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User Profile All Data by user profile id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "mpEHQZ1gvd7vbnVanJzcStlQwPVpMn_vJGn_L6zUJLw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"uid\": [ {\"target_id\": 47 } ],\r\n   \"type\": [ {\"target_id\": \"user_profile\",\"target_type\": \"profile_type\" } ],\r\n   \"field_sur_name\": [ {\"value\": \"Surendra Singh Edit\"}],\r\n   \"field_preferred_name\": [ {\"value\": \"Surendra Preferred Name Edit\"}],\r\n   \"field_date_of_birth\": [ {\"value\": \"1900-05-26\"}],\r\n   \"field_home_phone\": [ {\"value\": \"666778888\"}],\r\n   \"field_mobile\": [ {\"value\": \"3312556666\"}],\r\n   \"field_alternative_mobile\": [ {\"value\": \"121212121212\"}],\r\n   \"field_email\": [ {\"value\": \"surendra.singh@techinventive.com\"}],\r\n   \"field_usi_number\": [ {\"value\": \"22222\"}],\r\n   \"field_qantas\": [ {\"value\": \"3333\"}],\r\n   \"field_virgin\": [ {\"value\": \"444444\"}],\r\n   \"field_title\": [ {\"target_id\": \"199\"}],\r\n   \"field_first_name\": [ {\"value\": \"First Name22\"}],\r\n   \"field_middle_name\": [ {\"value\": \"Middle Name22\"}],\r\n   \"field_usual_place_of_residence\": [ {\"value\": \"\"}],\r\n   \"field_postal_address\": [ {\"value\": \"\"}],\r\n\r\n   \"field_availability\": [ {\"value\": \"2022-06-10\"}],\r\n   \"field_preferred_work_types\": [ {\"target_id\": \"239\"}],\r\n   \"field_preferred_location\": [ {\"target_id\": \"\"}],\r\n   \"field_hourly_rate\": [ {\"target_id\": \"242\"}],\r\n   \"field_preferred_job_role\": [ {\"target_id\": \"248\"}],\r\n   \"field_salary_expectation\": [ {\"target_id\": \"240\"}],\r\n   \"field_do_you_identify_yourself_a\": [ {\"target_id\": \"565\"}],\r\n   \"field_right_to_work_in_australia\": [ {\"target_id\": \"564\"}],\r\n   \r\n   \"field_induction_name\": [ {\"value\": \"Induction Name\"}],\r\n   \"field_issuing_organization\": [ {\"value\": \"Tech Inventive\"}],\r\n   \"field_issue_date\": [ {\"value\": \"2022-05-10\"}],\r\n   \"field_expiry_date\": [ {\"value\": \"2022-06-13T12:50:10+00:00\"}],\r\n   \"field_qualification_number\": [ {\"value\": \"283\"}],\r\n   \"field_description\": [ {\"value\": \"Description Test\"}],\r\n   \"field_image\": [ {\"target_id\": \"463\"}],\r\n\r\n   \"field_employee_tax_file_number\": [ {\"value\": \"232322\"}],\r\n   \"field_tfn_declaration_date\": [ {\"value\": \"2022-04\"}],\r\n   \"field_claim_the_tax_free_thresho\": [ {\"target_id\": \"278\"}],\r\n   \"field_australian_resident_for_ta\": [ {\"target_id\": \"280\", \"target_type\": \"taxonomy_term\"}],\r\n   \"field_higher_education_loan_debt\": [ {\"target_id\": \"283\"}],\r\n   \"field_additional_information\": [ {\"value\": \"Additional Information Test\"}],\r\n   \"field_financial_supplement_debt\": [ {\"target_id\": \"284\"}],\r\n\r\n   \"field_swipe_card_photo\": [ {\"target_id\": \"457\"}],\r\n   \"field_birth_certificate\": [ {\"target_id\": \"469\"}],\r\n   \"field_passport_certificate\": [ {\"target_id\": \"470\"}],\r\n   \"field_resume1\": [ {\"target_id\": \"492\"}],\r\n   \"field_upload_a_copy_of_your_npc\": [ {\"target_id\": \"493\"}],\r\n   \r\n    \"field_pf_voc_name\": [{\"value\": \"Philip\"}],\r\n    \"field_pf_voc_organisation\": [ {\"value\": \"Techinventive Pvt ltd\"}],\r\n    \"field_pf_voc_issue_date\": [ {\"value\": \"2022-05-10\"}],\r\n    \"field_pf_voc_issue_location\": [ {\"value\": \"This is Techinventive Location\"}],\r\n    \"field_pf_voc_expiry_date\": [ {\"value\": \"2022-09-12\"}],\r\n    \"field_pf_voc_number\": [ {\"value\": \"9027343094\"}],\r\n    \"field_pf_voc_description\": [ {\"value\": \"Drupal develeloper\"}],\r\n    \"field_upload_image\": [ {\"target_id\": \"359\"}],\r\n\r\n    \"field_pf_lc_cert_name\": [ {\"target_id\": 228  } ],\r\n    \"field_pf_lc_organisation\": [ {\"target_id\": 223  } ],\r\n    \"field_pf_lc_issue_date\": [ {\"value\": \"2022-02-21\"}],  \r\n    \"field_pf_lc_expiry_date\": [ {\"value\": \"2022-10-22\"}], \r\n    \"field_pf_lc_description\": [ {\"value\": \"Description Licence 2\"}], \r\n    \"field_licence_first_name\": [ {\"value\": \"Licence First Name test 2\"}],\r\n    \"field_licence_last_name\": [ {\"value\": \"Licence Last Name test 2\"}], \r\n    \"field_licence_address\": [ {\"value\": \"Licence Address test 2\"}],\r\n    \"field_types_of_vehicle\": [ {\"target_id\": 451 } ],\r\n    \"field_vechile_category\": [ {\"target_id\": 448  } ],\r\n    \"field_vehicle_id_number\": [ {\"value\": \"Vehicle Id Number test 2\"}], \r\n    \"field_vehicle_class\": [ {\"value\": \"Vehicle Class test 2\"}],\r\n    \"field_pf_lc_image_front\": [{ \"target_id\": \"459\" } ], \r\n    \"field_pf_lc_image_back\": [ {\"target_id\": \"461\"}],\r\n\r\n    \"field_pf_rl_job_title\": [ {\"value\": \"Job Title career 2\"}],\r\n    \"field_pf_rl_company_name\": [ {\"value\": \"Tech Inventive 2\"}],   \r\n    \"field_pf_rl_start_date\": [ {\"value\": \"2022-02-10\"}], \r\n    \"field_pf_rl_finish_date\": [ {\"value\": \"2022-10-15\"}], \r\n    \"field_pf_rl_description\": [ {\"value\": \"Description 2\"}],\r\n\r\n    \"field_pf_ec_address\": [ {\"value\": \"Munirka Delhi66\"}],\r\n    \"field_pf_ec_alternate_mobii\": [ {\"value\": \"999992321\"}],   \r\n    \"field_pf_ec_email\": [ {\"value\": \"xyz@gmail.com\"}], \r\n    \"field_emergency_dob\": [ {\"value\": \"2022-10-03\"}], \r\n    \"field_emergency_middle_name\": [ {\"value\": \"Middle Name\"}],\r\n\t\"field_emergency_postal_address\": [ {\"value\": \"Delhi 77\"}],\r\n    \"field_emergency_preferred_name\": [ {\"value\": \"Ram Singh Preferred Name\"}],   \r\n    \"field_pf_ec_first_name\": [ {\"value\": \"Ram Singh\"}], \r\n    \"field_pf_ec_home_phone\": [ {\"value\": \"232222\"}], \r\n    \"field_pf_ec_mobile\": [ {\"value\": \"676565\"}], \r\n\t\"field_pf_ec_relationship_type\": [ {\"target_id\": \"210\"}], \r\n\t\"field_pf_ec_surname\": [ {\"value\": \"Singh Test\"}],\r\n\r\n    \"field_pf_ed_course_highlight\": [ {\"value\": \"Common examples 11\"}],\r\n    \"field_pf_ed_course_qual\": [ {\"target_id\": \"228\"}],   \r\n    \"field_education_course_descripti\": [ {\"value\": \"Common examples of VOCs\"}], \r\n    \"field_education_end_date\": [ {\"value\": \"2022-05-26\"}],\r\n\t\"field_education_start_date\": [ {\"value\": \"2022-05-27\"}],\r\n    \"field_pf_ed_institution\": [ {\"target_id\": \"224\" }],\r\n\t\"field_education_attachments\": [ {\"target_id\": \"458\"}],\r\n\r\n    \"field_boots\": [ {\"target_id\": \"265\"  } ],\r\n    \"field_coveralls_men\": [ {\"target_id\": \"548\" } ],\r\n    \"field_gloves\": [ {\"target_id\": \"267\"}],  \r\n    \"field_jackets\": [ {\"target_id\": \"272\"}], \r\n\t\"field_pants_men\": [ {\"target_id\": \"254\"}],\r\n    \"field_pants_womens\": [ {\"target_id\": \"261\"}],\r\n\t\"field_shirts_men\": [ {\"target_id\": \"259\"}],\r\n\t\"field_shirts_womens\": [ {\"target_id\": \"263\"}],\r\n\t\"field_shorts\": [ {\"target_id\": \"275\"}],\r\n    \r\n    \"field_pf_rfre_job_title\": [ {\"value\": \"Job Title of Referee Test11\"  } ],\r\n    \"field_pf_rfre_first_name\": [ {\"value\": \"ABC Name11\"  } ],\r\n    \"field_pf_rfre_email\": [ {\"value\": \"xyz221@gmail.com\"}],  \r\n    \"field_pf_rfre_home_phone\": [ {\"value\": \"343323\"}], \r\n\t\"field_referees_company_name\": [ {\"value\": \"New Tech Company Test99\"}],\r\n    \"field_referees_attachment\": [ {\"target_id\": \"462\"}],\r\n   \r\n    \"field_pf_exp_amount\": [ {\"value\": \"500\"  } ],\r\n    \"field_pf_exp_date\": [ {\"value\": \"2022-06-15\"  } ],\r\n    \"field_pf_exp_expense\": [ {\"value\": \"600\"}],  \r\n    \"field_pf_exp_description\": [ {\"value\": \"Description Exp ww\"}],\r\n    \"field_pf_exp_image\": [ {\"target_id\": \"462\"}],\r\n    \r\n    \"field_what_is_your_approximate_h\": [{\"value\": \"200\"}],\r\n\t\"field_what_is_your_approximate_w\": [{\"value\": \"250\"}],\r\n    \"field_are_you_currently_being_tr\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q4\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q5\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q6\": [{\"value\": \"250\"}],\r\n    \"field_medical_q7\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q8\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q9\": [ {\"target_id\": \"569\"}],\r\n     \"field_medical_q10\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q11\": [{\"value\": \"250\"}],\r\n    \"field_medical_q12\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q13\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q14\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q15\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q16\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q17\": [{\"value\": \"250\"}],\r\n    \"field_medical_q18\": [ {\"target_id\": \"571\"}],\r\n\t\"field_asthma_bronchitis_lung_pro\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q20\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q21\": [{\"value\": \"250\"}],\r\n    \"field_medical_q22\": [ {\"target_id\": \"571\"}],\r\n\t\"field_medical_q23\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q24\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q25\": [{\"value\": \"250\"}],\r\n    \"field_loss_of_hearing\": [ {\"target_id\": \"571\"}],\r\n\t\"field_malaria_other_tropical_dis\": [ {\"target_id\": \"569\"}],\r\n    \"field_back_or_neck_problems\": [{\"value\": \"250\"}],\r\n    \"field_deep_vein_thrombosis\": [ {\"target_id\": \"571\"}],\r\n\t\"field_tuberculosis\": [ {\"target_id\": \"569\"}],\r\n    \"field_medical_q30\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q31\": [{\"value\": \"250\"}],\r\n    \"field_fits_or_seizures\": [ {\"target_id\": \"571\"}],\r\n\t\"field_foot_ankle_or_knee_trouble\": [ {\"target_id\": \"569\"}],\r\n    \"field_head_injury_or_concussion\": [{\"value\": \"250\"}],\r\n    \"field_hepatitis_jaundice_liver_t\": [ {\"target_id\": \"571\"}],\r\n\t\"field_hernia\": [ {\"target_id\": \"569\"}],\r\n    \"field_palpitations_irregular_hea\": [{\"value\": \"200\"}],\r\n\t\"field_other_joint_injuries_or_co\": [{\"value\": \"250\"}],\r\n    \"field_rsi_carpal_tunnel_syndrome\": [ {\"target_id\": \"571\"}],\r\n\t\"field_shortness_of_breath\": [ {\"target_id\": \"569\"}],\r\n    \"field_skin_disorders_dermatitis\": [{\"value\": \"250\"}],\r\n    \"field_stomach_problems_ulcers\": [ {\"target_id\": \"571\"}],\r\n\t\"field_suffered_blood_pressure_or\": [ {\"target_id\": \"569\"}],\r\n    \"field_suffered_from_heat_stroke\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q46\": [{\"value\": \"250\"}],\r\n    \"field_concentrating_for_any_leng\": [ {\"target_id\": \"571\"}],\r\n\t\"field_reading_ordinary_print\": [ {\"target_id\": \"569\"}],\r\n    \"field_hearing_a_normal_conversat\": [{\"value\": \"250\"}],\r\n    \"field_turning_your_head_rapidly\": [ {\"target_id\": \"571\"}],\r\n\t\"field_bending_or_twisting\": [ {\"target_id\": \"569\"}],\r\n    \"field_repetitive_movements_of_th\": [{\"value\": \"200\"}],\r\n\t\"field_gripping_firmly_with_eithe\": [{\"value\": \"250\"}],\r\n    \"field_sitting_or_standing_for_tw\": [ {\"target_id\": \"571\"}],\r\n    \"field_crouching_or_kneeling\": [ {\"target_id\": \"569\"}],\r\n    \"field_running_100_meters_in_the\": [{\"value\": \"250\"}],\r\n    \"field_walking_on_rough_ground\": [ {\"target_id\": \"571\"}],\r\n\t\"field_climbing_a_ladder\": [ {\"target_id\": \"569\"}],\r\n    \"field_lifting_heavy_weights_obje\": [{\"value\": \"200\"}],\r\n\t\"field_using_hand_tools\": [{\"value\": \"250\"}],\r\n    \"field_working_in_hot_cold_condit\": [ {\"target_id\": \"571\"}],\r\n\t\"field_shift_work_or_sleep\": [ {\"target_id\": \"569\"}],\r\n    \"field_working_at_heights\": [{\"value\": \"250\"}],\r\n    \"field_working_in_confined_spaces\": [ {\"target_id\": \"571\"}],\r\n\t\"field_working_above_shoulder_hei\": [ {\"target_id\": \"569\"}],\r\n    \"field_understanding_english_e_g\": [{\"value\": \"200\"}],\r\n\t\"field_medical_q67\": [{\"value\": \"250\"}]\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://contractor-manager.techinventiv.com/profile/91?_format=json",
+							"protocol": "http",
+							"host": [
+								"contractor-manager",
+								"techinventiv",
+								"com"
+							],
+							"path": [
+								"profile",
+								"91"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Articles custom apis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/contractor-manager/get/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"contractor-manager",
+								"get",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

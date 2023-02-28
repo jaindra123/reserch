@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "6b0c40dd-7906-4bfd-9668-057f65018905",
+		"name": "DSCI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20608183"
+	},
+	"item": [
+		{
+			"name": "post dcpp data",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "kIxSH9isSMEs_CCbgaMjvhjoVsGUVa91WePBFGN5dSg",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Jaindra\",\r\n    \"contact\" : \"98989898\",\r\n    \"address\" : \"Dummy Address NASSCOM Campus\",\r\n    \"city\" : \"Saket\",\r\n    \"state\" : \"Delhi\",\r\n    \"country\" : \"India\",\r\n    \"designation\" : \"Developer\",\r\n    \"pincode\" : \"110030\",\r\n    \"organization\" : \"Tech Inventive\",\r\n    \"email\" : \"jaindradcpp5.com\",\r\n    \"referal_code\" : \"Test10\",\r\n    \"promocode\" : \"DSCIFULL510GX\",\r\n\r\n    \"benificiary_name\" : \"Jaindra Kumar\",\r\n    \"billing_mobile\" : \"8787878787\",\r\n    \"billing_comm_address\" : \"A-10\",\r\n    \"billing_city\" : \"Hauz Khas\",\r\n    \"billing_state\" : \"Delhi\",\r\n    \"billing_country\" : \"India\",\r\n    \"billing_pincode\" : \"110067\",\r\n    \"is_GSTN\" : \"1\",\r\n    \"GSTIN\" : \"543876219527954\",\r\n    \"iaccept\" : \"checked\",\r\n    \"accept_dcpp\" : \"checked\"\r\n}"
+				},
+				"url": {
+					"raw": "http://dsci-dev9.lndo.site/certifications/dcpp/registration?_format=json",
+					"protocol": "http",
+					"host": [
+						"dsci-dev9",
+						"lndo",
+						"site"
+					],
+					"path": [
+						"certifications",
+						"dcpp",
+						"registration"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DCPLA User Post Data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jaindra DCPLA\",\r\n    \"contact\": \"87878787\",\r\n    \"address\": \"Dummy Address NASSCOM Campus\",\r\n    \"city\": \"Saket\",\r\n    \"state\": \"Delhi\",\r\n    \"country\": \"India\",\r\n    \"designation\": \"Developer\",\r\n    \"pincode\": \"110031\",\r\n    \"organization\": \"Tech Inventive\",\r\n    \"email\": \"dcpl38.kumartechinventive.com\",\r\n    \"referal_code\": \"Test14\",\r\n    \"promocode\": \"DSCIFULL510GX\",\r\n    \"benificiary_name\": \"Jaindra Kumar DCPLA\",\r\n    \"billing_mobile\": \"8787878787\",\r\n    \"billing_comm_address\": \"A-10\",\r\n    \"billing_city\": \"Hauz Khas\",\r\n    \"billing_state\": \"Delhi\",\r\n    \"billing_country\": \"India\",\r\n    \"billing_pincode\": \"110067\",\r\n    \"is_GSTN\" : \"1\",\r\n    \"GSTIN\" : \"543876219527954\",\r\n    \"iaccept\" : \"checked\",\r\n    \"accept_dcpp\" : \"checked\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dsci-dev9.lndo.site/certifications/dcpla/registration?_format=json",
+					"protocol": "http",
+					"host": [
+						"dsci-dev9",
+						"lndo",
+						"site"
+					],
+					"path": [
+						"certifications",
+						"dcpla",
+						"registration"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DCPP Post Data on Server",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "DuXJQstztwWQHqCrHUI0aNPFcxF27LoHCbBR7ZVQ21k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Jaindra\",\r\n    \"contact\" : \"98989898\",\r\n    \"address\" : \"Dummy Address NASSCOM Campus\",\r\n    \"city\" : \"Saket\",\r\n    \"state\" : \"Delhi\",\r\n    \"country\" : \"India\",\r\n    \"designation\" : \"Developer\",\r\n    \"pincode\" : \"110030\",\r\n    \"organization\" : \"Tech Inventive\",\r\n    \"email\" : \"jaindrs_dcpp1.com\",\r\n    \"referal_code\" : \"Test10\",\r\n    \"promocode\" : \"DSCIFULL510GX\",\r\n\r\n    \"benificiary_name\" : \"Jaindra Kumar\",\r\n    \"billing_mobile\" : \"8787878787\",\r\n    \"billing_comm_address\" : \"A-10\",\r\n    \"billing_city\" : \"Hauz Khas\",\r\n    \"billing_state\" : \"Delhi\",\r\n    \"billing_country\" : \"India\",\r\n    \"billing_pincode\" : \"110067\",\r\n    \"is_GSTN\" : \"1\",\r\n    \"GSTIN\" : \"543876219527954\",\r\n    \"iaccept\" : \"checked\",\r\n    \"accept_dcpp\" : \"checked\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dscid9.techinventiv.com/certifications/dcpp/registration?_format=json",
+					"protocol": "http",
+					"host": [
+						"dscid9",
+						"techinventiv",
+						"com"
+					],
+					"path": [
+						"certifications",
+						"dcpp",
+						"registration"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DCPLA Post Data on Server",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "DuXJQstztwWQHqCrHUI0aNPFcxF27LoHCbBR7ZVQ21k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jaindra DCPLA\",\r\n    \"contact\": \"87878787\",\r\n    \"address\": \"Dummy Address NASSCOM Campus\",\r\n    \"city\": \"Saket\",\r\n    \"state\": \"Delhi\",\r\n    \"country\": \"India\",\r\n    \"designation\": \"Developer\",\r\n    \"pincode\": \"110031\",\r\n    \"organization\": \"Tech Inventive\",\r\n    \"email\": \"dcpla123@gmail.com\",\r\n    \"referal_code\": \"Test14\",\r\n    \"promocode\": \"DSCIFULL510GX\",\r\n    \"benificiary_name\": \"Jaindra Kumar DCPLA\",\r\n    \"billing_mobile\": \"8787878787\",\r\n    \"billing_comm_address\": \"A-10\",\r\n    \"billing_city\": \"Hauz Khas\",\r\n    \"billing_state\": \"Delhi\",\r\n    \"billing_country\": \"India\",\r\n    \"billing_pincode\": \"110067\",\r\n    \"is_GSTN\" : \"1\",\r\n    \"GSTIN\" : \"543876219527954\",\r\n    \"iaccept\" : \"checked\",\r\n    \"accept_dcpp\" : \"checked\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dscid9.techinventiv.com/certifications/dcpla/registration?_format=json",
+					"protocol": "http",
+					"host": [
+						"dscid9",
+						"techinventiv",
+						"com"
+					],
+					"path": [
+						"certifications",
+						"dcpla",
+						"registration"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referal Code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dscid9.techinventiv.com/certifications/registration/referal?referal_code=Test10&email=jaie78@te3entive.com&cert_type=DCPP",
+					"protocol": "http",
+					"host": [
+						"dscid9",
+						"techinventiv",
+						"com"
+					],
+					"path": [
+						"certifications",
+						"registration",
+						"referal"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json",
+							"disabled": true
+						},
+						{
+							"key": "referal_code",
+							"value": "Test10"
+						},
+						{
+							"key": "email",
+							"value": "jaie78@te3entive.com"
+						},
+						{
+							"key": "cert_type",
+							"value": "DCPP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Promocode ",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dscid9.techinventiv.com/certifications/registration/promocode?promocode=DSCIFULL510GX&email=jaie78@te3entive.com&cert_type=DCPP",
+					"protocol": "http",
+					"host": [
+						"dscid9",
+						"techinventiv",
+						"com"
+					],
+					"path": [
+						"certifications",
+						"registration",
+						"promocode"
+					],
+					"query": [
+						{
+							"key": "promocode",
+							"value": "DSCIFULL510GX"
+						},
+						{
+							"key": "email",
+							"value": "jaie78@te3entive.com"
+						},
+						{
+							"key": "cert_type",
+							"value": "DCPP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cyber Skisha user save",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "@Adm!n!@#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jainadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "9nXxpxTpadJItcZ2k17Q-8k2WR2K2BSPl0TqROnSwTQ",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Cyber Shiksha\",\r\n    \"contact\" : \"9898989898\",\r\n    \"email\" : \"abc@devdsci.in\",\r\n    \"university\" : \"Saket\",\r\n    \"score_graduation\" : \"60\",\r\n    \"graduation_year\" : \"2010\",\r\n    \"score_12\" : \"50\",\r\n    \"score_10\" : \"70\",\r\n    \"training_centre\" : \"41\",\r\n    \"batchstart\" : \"2023-Jan\",\r\n    \"resume\" : \"JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVzIDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9PdXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEyLjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0KPDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1vbnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRvcmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBwYWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAgUiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4wMDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGggNjc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5nIHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3JpbmcuICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9iag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0YxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9uYS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRlIChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAwMTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAwMDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQowMDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0KJSVFT0YNCg==\",\r\n    \"type\" : \"Delhi\",\r\n    \"is_dcpp\" : \"NO\",\r\n    \"exam_scheduled_date\" : \"21-01-2024\",\r\n    \"dsci_client_id\" : \"2\",\r\n    \"terms\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dsci-dev9.lndo.site/content/recruitment/cyber-shikshaa?_format=json",
+					"protocol": "http",
+					"host": [
+						"dsci-dev9",
+						"lndo",
+						"site"
+					],
+					"path": [
+						"content",
+						"recruitment",
+						"cyber-shikshaa"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
